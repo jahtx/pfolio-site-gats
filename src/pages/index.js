@@ -8,9 +8,9 @@ const IndexPage = () => {
   return (
     <main>
       <Container>
-        Trust
+        Love it seems has triumphed over virtue.
         <ul>
-          <li>five</li>
+          <li>here</li>
           <li>two</li>
           <li>change</li>
         </ul>
