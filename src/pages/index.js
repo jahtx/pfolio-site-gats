@@ -1,18 +1,22 @@
-import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react"
+import "bootstrap/dist/css/bootstrap.min.css"
+
+import { Container } from "react-bootstrap"
 
 // markup
 const IndexPage = () => {
   return (
-    <main>this is wild. it's taken this long just to get this far
-
-<ul>
-      <li>there</li>
-      <li>here</li>
-    </ul>
+    <main>
+      <Container>
+        Trust
+        <ul>
+          <li>five</li>
+          <li>two</li>
+          <li>change</li>
+        </ul>
+      </Container>
     </main>
+  )
+}
 
-    )
-  }
-  
 export default IndexPage
