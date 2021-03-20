@@ -1,22 +1,10 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
-
-import { Container } from "react-bootstrap"
+import App from "../components/App"
 
 // markup
 const IndexPage = () => {
-  return (
-    <main>
-      <Container>
-        Love it seems has triumphed over virtue.
-        <ul>
-          <li>here</li>
-          <li>two</li>
-          <li>change</li>
-        </ul>
-      </Container>
-    </main>
-  )
+  return <App></App>
 }
 
 export default IndexPage
