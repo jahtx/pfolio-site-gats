@@ -58,8 +58,16 @@ typings/
 .cache/
 public
 
-# Mac files
+# OS generated files #
+######################
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Icon?
 
 # Yarn
 yarn-error.log
