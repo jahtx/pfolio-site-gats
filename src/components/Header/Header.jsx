@@ -1,15 +1,22 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import { Container } from "react-bootstrap"
+import { Navbar } from "react-bootstrap"
 
 // markup
 const Header = () => {
   return (
-    <Container>
-      <h1>There</h1>
-      <p>Testing</p>
-    </Container>
+    <div>
+      <Navbar bg="dark">
+        <Navbar.Brand href="#home">
+          <div class="container-lg">
+            <h1 style={{ color: `white`, fontSize: `36px` }}>
+              James Hernandez
+            </h1>
+          </div>
+        </Navbar.Brand>
+      </Navbar>
+    </div>
   )
 }
 
