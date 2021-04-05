@@ -1,6 +1,7 @@
 // In your gatsby-config.js
 module.exports = {
   plugins: [
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-prettier-eslint",
       options: {
@@ -25,4 +26,4 @@ module.exports = {
       },
     },
   ],
-};
+}

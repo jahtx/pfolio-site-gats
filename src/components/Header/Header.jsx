@@ -2,7 +2,7 @@ import React from "react"
 
 // markup
 const Header = () => {
-  return <div class="container-fluid">Testing</div>
+  return <div className="container-fluid">Testing</div>
 }
 
 export default Header

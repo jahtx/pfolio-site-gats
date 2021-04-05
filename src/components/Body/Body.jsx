@@ -1,7 +1,11 @@
 import React from "react"
 
 const Body = () => {
-  return <div>Huh</div>
+  return (
+    <div>
+      <div className="container-fluid jah-topBar"></div>
+    </div>
+  )
 }
 
 export default Body
