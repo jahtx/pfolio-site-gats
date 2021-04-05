@@ -1,11 +1,12 @@
 import React from "react"
 
-import { Navbar, Nav, NavDropdown } from "react-bootstrap"
+import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap"
 
 // markup
 const Header = () => {
   return (
     <div>
+      <Container fluid>blah blah</Container>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
