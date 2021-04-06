@@ -5,8 +5,8 @@ import "./header.scss"
 const Header = () => {
   return (
     <div>
-      <div className="container-fluid jah-topBar"></div>
-      <div className="container-fluid jah-txSpacer"></div>
+      <div className="container-fluid j-topBar"></div>
+      <div className="container-fluid j-txSpacer"></div>
     </div>
   )
 }
