@@ -3,6 +3,13 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Permanent Marker`],
+        display: "swap",
+      },
+    },
+    {
       resolve: "gatsby-plugin-prettier-eslint",
       options: {
         prettier: {

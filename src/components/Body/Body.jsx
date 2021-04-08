@@ -19,6 +19,7 @@ const Body = () => {
         the web is ultimately delivered as HTML, CSS, and plain JavaScript.
       </p>
       <p>Based in San Antonio, TX. Available to work remotely.</p>
+      <p className="j-common-marker">This is a test.</p>
       <h2>CV</h2>
       <p>
         As an efficient and effective UX designer, James has done work for
