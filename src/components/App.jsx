@@ -1,8 +1,7 @@
 import React from "react"
-import Header from "./Header/Header"
-import Body from "./Body/Body"
+import Header from "./theme/Header/Header"
+import Body from "./theme/Body/Body"
 import "./app.scss"
-// import "bootstrap/dist/css/bootstrap.min.css"
 
 const App = () => {
   return (
