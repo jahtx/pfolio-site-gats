@@ -1,9 +1,18 @@
 import React from "react"
-import App from "../components/App"
+import Header from "../components/theme/Header/Header"
+import Body from "../components/theme/Body/Body"
+import Footer from "../components/theme/Footer/Footer"
+import "../styles/main.scss"
 
 // markup
 const IndexPage = () => {
-  return <App></App>
+  return (
+    <div>
+      <Header></Header>
+      <Body></Body>
+      <Footer></Footer>
+    </div>
+  )
 }
 
 export default IndexPage
