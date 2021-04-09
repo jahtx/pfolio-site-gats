@@ -1,0 +1,19 @@
+.j {
+  &-bottomBar {
+    height: 5em;
+    background: url("../../../images/stitch.png") repeat-x;
+    background-position: center;
+    background-size: 7px 35px;
+    margin-top: 5em;
+    margin-bottom: 3em;
+    display: flex;
+    justify-content: center;
+  }
+  &-buckle {
+    height: 5em;
+    width: 3em;
+    background: url("../../../images/star.png") no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

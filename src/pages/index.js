@@ -1,10 +1,8 @@
 import React from "react"
 import Header from "../components/theme/Header/Header"
-import Body from "../components/theme/Body/Body"
 import Footer from "../components/theme/Footer/Footer"
 import "../styles/main.scss"
 
-// markup
 const IndexPage = () => {
   return (
     <div>
@@ -16,8 +14,8 @@ const IndexPage = () => {
         </h1>
         <p>
           Ally for accessibility and inclusiveness. Applications should always
-          be created and maintained for a comprehensive audience. Everyone is
-          invited! 🥳
+          be created and maintained for a comprehensive audience. Everyone
+          should be invited! 🥳
         </p>
         <p>
           Applications should apply the best new technologies where they enhance
@@ -26,7 +24,9 @@ const IndexPage = () => {
           JavaScript.
         </p>
         <p>Based in San Antonio, TX. Available to work remotely.</p>
-        <p className="j-common-marker">This is a test.</p>
+        <p className="j-common-mainNav">
+          Portfolio | Articles | Résumé | Contact
+        </p>
         <h2>CV</h2>
         <p>
           As an efficient and effective UX designer, James has done work for
