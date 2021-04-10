@@ -1,5 +1,10 @@
 // In your gatsby-config.js
 module.exports = {
+  siteMetadata: {
+    title: `Read the Signs`,
+    description: `Now is the winter of our discontent. Made glorious summer by this sun of York;`,
+    author: `@gatsbyjs`,
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,

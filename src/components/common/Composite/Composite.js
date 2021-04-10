@@ -1,18 +1,20 @@
 import React, { useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button, Modal } from "react-bootstrap"
-import graphql from "gatsby"
+// import { graphql } from "gatsby"
 import "./composite.scss"
 const Composite = props => {
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
-  const imageLocation = "../images/composites/RBFCU_Auto_Loans-1.png"
-  const title = props.fileName
-
+  const imageLocation = "../../../images/comp.png"
+  // console.log({ data })
+  // console.log("from composite page: " + JSON.stringify({ data }))
   return (
     <div>
+      {/* <p>{data.site.siteMetadata.description}</p> */}
+
       <div className="j-thumbnail">
         <StaticImage
           src={imageLocation}
@@ -27,7 +29,7 @@ const Composite = props => {
 
       <Modal dialogClassName="j-modal" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>{title}</Modal.Title>
+          <Modal.Title>{props.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body className="j-modalBody">
           <StaticImage
