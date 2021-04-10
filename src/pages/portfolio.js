@@ -11,7 +11,7 @@ const PortfolioPage = () => {
     <div id="root">
       <Header></Header>
       <div className="container-lg">
-        <Composite></Composite>
+        <Composite title="Boomer" fileName="RBFCU_Auto_Loans-1.png" />
       </div>
       <Footer></Footer>
     </div>

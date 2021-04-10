@@ -1,25 +1,37 @@
 import React, { useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button, Modal } from "react-bootstrap"
-
-const Composite = () => {
+import graphql from "gatsby"
+import "./composite.scss"
+const Composite = props => {
   const [show, setShow] = useState(false)
-
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
+
+  const imageLocation = "../images/composites/RBFCU_Auto_Loans-1.png"
+  const title = props.fileName
+
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
+      <div className="j-thumbnail">
+        <StaticImage
+          src={imageLocation}
+          alt="black hex"
+          loading="lazy"
+          onClick={handleShow}
+        />
+      </div>
+      {/* <Button variant="primary" onClick={handleShow}>
         Launch demo modal
-      </Button>
+      </Button> */}
 
       <Modal dialogClassName="j-modal" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>RBFCU Auto Loans Page (Mobile)</Modal.Title>
+          <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
         <Modal.Body className="j-modalBody">
           <StaticImage
-            src="../images/composites/RBFCU_Auto_Loans-1.png"
+            src={imageLocation}
             alt="black hex"
             loading="lazy"
             width={200}
