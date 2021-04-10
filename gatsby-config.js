@@ -2,11 +2,21 @@
 module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Permanent Marker`, `Open Sans`, `Roboto`],
         display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {

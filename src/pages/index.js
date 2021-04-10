@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Header from "../components/theme/Header/Header"
 import Footer from "../components/theme/Footer/Footer"
 import "../styles/main.scss"
@@ -21,25 +22,25 @@ const IndexPage = () => {
           Applications should apply the best new technologies where they enhance
           maintainability and function. Angular and React are excellent tools,
           but the web is ultimately delivered as HTML, CSS, and plain
-          JavaScript.
+          JavaScript. Our job is to reduce complexity wherever we can.
         </p>
         <p>Based in San Antonio, TX. Available to work remotely.</p>
         <p className="j-common-mainNav">
-          Portfolio | Articles | Résumé | Contact
+          <Link to="/portfolio">Portfolio</Link> | Articles | Résumé | Contact
         </p>
-        <h2>CV</h2>
         <p>
           As an efficient and effective UX designer, James has done work for
-          Accenture, RBFCU, IBM, and USAA.
+          Accenture, RBFCU, IBM, and USAA. He prefers Agile/SCRUM methodologies
+          and diverse, expressive teams.
         </p>
         <h3>Why James Would Be Great For Your Project</h3>
         <ul>
-          <li>Industry expeience with high-profile projects</li>
+          <li>Industry experience with high-profile projects</li>
           <li>
             Excellent integration with front-end and back-end development teams
           </li>
           <li>
-            Practive communication with stakeholders, analysts, and other
+            Proactive communication with stakeholders, analysts, and other
             essential collaborators
           </li>
         </ul>
