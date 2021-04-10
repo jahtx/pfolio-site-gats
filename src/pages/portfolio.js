@@ -21,24 +21,17 @@ const PortfolioPage = () => {
           Launch demo modal
         </Button>
         <br />
-        <br />
-        <StaticImage
-          src="../images/black-hex.jpeg"
-          alt="black hex"
-          loading="lazy"
-        />
-        <Modal
-          show={show}
-          onHide={handleClose}
-          backdrop="static"
-          keyboard={false}
-        >
+        <Modal dialogClassName="j-modal" show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Modal title</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            I will not close if you click outside me. Don't even try to press
-            escape key.
+          <Modal.Body className="j-modalBody">
+            <StaticImage
+              src="../images/composites/RBFCU_Auto_Loans-1.png"
+              alt="black hex"
+              loading="lazy"
+              width={200}
+            />
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
