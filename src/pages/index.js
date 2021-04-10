@@ -25,7 +25,7 @@ const IndexPage = () => {
           JavaScript. Our job is to reduce complexity wherever we can.
         </p>
         <p>Based in San Antonio, TX. Available to work remotely.</p>
-        <p className="j-common-mainNav">
+        <p className="j-mainNav">
           <Link to="/portfolio">Portfolio</Link> | Articles | Résumé | Contact
         </p>
         <p>
