@@ -1,26 +1,24 @@
-import React from "react"
-import { Button } from "react-bootstrap"
-import Modal from "react-modal"
+import React, { useState } from "react"
+import { Button, Modal } from "react-bootstrap"
+//import Modal from "react-modal"
 import Header from "../components/theme/Header/Header"
 import Footer from "../components/theme/Footer/Footer"
 import "../styles/main.scss"
 import { StaticImage } from "gatsby-plugin-image"
 
 const PortfolioPage = () => {
-  const [modalIsOpen, setIsOpen] = React.useState(false)
-  function openModal() {
-    setIsOpen(true)
-  }
-  function closeModal() {
-    setIsOpen(false)
-  }
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+
   return (
     <div id="root">
       <Header></Header>
       <div className="container-lg j-common">
         <br />
-        <Button variant="primary" onClick={openModal}>
-          Primary
+        <Button variant="primary" onClick={handleShow}>
+          Launch demo modal
         </Button>
         <br />
         <br />
@@ -30,15 +28,24 @@ const PortfolioPage = () => {
           loading="lazy"
         />
         <Modal
-          isOpen={modalIsOpen}
-          onRequestClose={closeModal}
-          contentLabel="ExampleModal"
-          ariaHideApp={false}
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
         >
-          <div>here</div>
-          <Button variant="primary" onClick={closeModal}>
-            Close
-          </Button>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal title</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            I will not close if you click outside me. Don't even try to press
+            escape key.
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary">Understood</Button>
+          </Modal.Footer>
         </Modal>
       </div>
       <Footer></Footer>
