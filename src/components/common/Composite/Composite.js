@@ -7,16 +7,21 @@ const Composite = props => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
+  console.log("props.mobile: " + props.mobile)
   return (
     <div>
-      <div className="j-thumbnail">
+      <div className={props.mobile ? "j-mobThumb" : "j-deskThumb"}>
         <GatsbyImage
           image={props.imageInfo}
           alt={props.altInfo}
           onClick={handleShow}
         />
       </div>
-      <Modal dialogClassName="j-modal" show={show} onHide={handleClose}>
+      <Modal
+        dialogClassName={props.mobile ? "j-modalMobile" : "j-modalDesktop"}
+        show={show}
+        onHide={handleClose}
+      >
         <Modal.Header closeButton>
           <Modal.Title>{props.title}</Modal.Title>
         </Modal.Header>

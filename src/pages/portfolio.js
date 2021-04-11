@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 //import Modal from "react-modal"
 import Header from "../components/theme/Header/Header"
 import Footer from "../components/theme/Footer/Footer"
@@ -16,8 +16,15 @@ const PortfolioPage = ({ data }) => {
       <div className="container-lg">
         <Composite
           title="Checking Mobile"
-          imageInfo={getImage(data.checkingMobile)}
+          imageInfo={getImage(data.checkingMobile.childImageSharp)}
           altInfo="Checking Mobile"
+          mobile={true}
+        />
+        <Composite
+          title="Checking Desktop"
+          imageInfo={getImage(data.checkingDesktop)}
+          altInfo="Checking Desktop"
+          mobile={false}
         />
       </div>
       <Footer></Footer>
@@ -27,19 +34,27 @@ const PortfolioPage = ({ data }) => {
 export const query = graphql`
   query PortfolioQuery {
     autoLoansMobile: file(
-      relativePath: { eq: "composites/RBFCU_Auto_Loans_1.png" }
+      relativePath: { eq: "composites/RBFCU_Auto_Loans-1.png" }
+    ) {
+      id
+      childImageSharp {
+        gatsbyImageData(quality: 90)
+      }
+    }
+    checkingMobile: file(
+      relativePath: { eq: "composites/RBFCU_Checking-1.png" }
     ) {
       id
       childImageSharp {
         gatsbyImageData(quality: 90, width: 300, layout: CONSTRAINED)
       }
     }
-    checkingMobile: file(
-      relativePath: { eq: "composites/RBFCU_Checking_1.png" }
+    checkingDesktop: file(
+      relativePath: { eq: "composites/RBFCU_Checking-2.png" }
     ) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90, width: 300, layout: CONSTRAINED)
+        gatsbyImageData(quality: 90, layout: CONSTRAINED)
       }
     }
   }
