@@ -8,8 +8,6 @@ import Composite from "../components/common/Composite/Composite"
 import "../styles/main.scss"
 
 const PortfolioPage = ({ data }) => {
-  console.log(data)
-
   return (
     <div>
       <Header></Header>
@@ -92,13 +90,25 @@ export const query = graphql`
     mainMobile: file(relativePath: { eq: "composites/RBFCU_Main-1.png" }) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+        gatsbyImageData(
+          quality: 80
+          width: 270
+          placeholder: BLURRED
+          formats: [WEBP]
+          layout: CONSTRAINED
+        )
       }
     }
     mainDesktop: file(relativePath: { eq: "composites/RBFCU_Main-2.png" }) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+        gatsbyImageData(
+          quality: 80
+          width: 760
+          placeholder: BLURRED
+          formats: [WEBP]
+          layout: CONSTRAINED
+        )
       }
     }
     mortgageMobile: file(
@@ -106,7 +116,13 @@ export const query = graphql`
     ) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+        gatsbyImageData(
+          quality: 80
+          width: 270
+          placeholder: BLURRED
+          formats: [WEBP]
+          layout: CONSTRAINED
+        )
       }
     }
 
@@ -115,7 +131,13 @@ export const query = graphql`
     ) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+        gatsbyImageData(
+          quality: 80
+          width: 760
+          placeholder: BLURRED
+          formats: [WEBP]
+          layout: CONSTRAINED
+        )
       }
     }
     autoLoansMobile: file(
@@ -123,16 +145,27 @@ export const query = graphql`
     ) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+        gatsbyImageData(
+          quality: 80
+          width: 270
+          placeholder: BLURRED
+          formats: [WEBP]
+          layout: CONSTRAINED
+        )
       }
     }
 
     autoLoansDesktop: file(
       relativePath: { eq: "composites/RBFCU_Auto_Loans-2.png" }
     ) {
-      id
       childImageSharp {
-        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+        gatsbyImageData(
+          quality: 80
+          width: 760
+          placeholder: BLURRED
+          formats: [WEBP]
+          layout: CONSTRAINED
+        )
       }
     }
     checkingMobile: file(
@@ -140,7 +173,13 @@ export const query = graphql`
     ) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+        gatsbyImageData(
+          quality: 80
+          width: 270
+          placeholder: BLURRED
+          formats: [WEBP]
+          layout: CONSTRAINED
+        )
       }
     }
     checkingDesktop: file(
@@ -148,7 +187,13 @@ export const query = graphql`
     ) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+        gatsbyImageData(
+          quality: 80
+          width: 760
+          placeholder: BLURRED
+          formats: [WEBP]
+          layout: CONSTRAINED
+        )
       }
     }
   }
