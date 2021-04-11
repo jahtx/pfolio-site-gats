@@ -16,64 +16,68 @@ const PortfolioPage = ({ data }) => {
 
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
+          <h2 className="j-compHeading">Home Page</h2>
+        </div>
+        <div className="d-flex justify-content-center">
           <Composite
             title="Home Page Mobile"
             imageInfo={getImage(data.mainMobile)}
-            altInfo="Home Page Mobile"
             mobile={true}
           />
           <Composite
             title="Home Page Desktop"
             imageInfo={getImage(data.mainDesktop)}
-            altInfo="Home Page Desktop"
             mobile={false}
           />
         </div>
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
+          <h2 className="j-compHeading">Mortgages</h2>
+        </div>
+        <div className="d-flex justify-content-center">
           <Composite
             title="Mortgage Mobile"
             imageInfo={getImage(data.mortgageMobile)}
-            altInfo="Mortgage Mobile"
             mobile={true}
           />
           <Composite
             title="Mortgage Desktop"
             imageInfo={getImage(data.mortgageDesktop)}
-            altInfo="Mortgage Desktop"
             mobile={false}
           />
         </div>
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
+          <h2 className="j-compHeading">Checking</h2>
+        </div>
+        <div className="d-flex justify-content-center">
           <Composite
             title="Checking Mobile"
             imageInfo={getImage(data.checkingMobile)}
-            altInfo="Checking Mobile"
             mobile={true}
           />
           <Composite
             title="Checking Desktop"
             imageInfo={getImage(data.checkingDesktop)}
-            altInfo="Checking Desktop"
             mobile={false}
           />
         </div>
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
+          <h2 className="j-compHeading">Auto Loans</h2>
+        </div>
+        <div className="d-flex justify-content-center">
           <Composite
             title="Auto Loans Mobile"
             imageInfo={getImage(data.autoLoansMobile)}
-            altInfo="Auto Loans Mobile"
             mobile={true}
           />
           <Composite
             title="Auto Loans Desktop"
             imageInfo={getImage(data.autoLoansDesktop)}
-            altInfo="Auto Loans Desktop"
             mobile={false}
           />
         </div>

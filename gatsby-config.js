@@ -13,7 +13,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Permanent Marker`, `Open Sans`, `Roboto`],
+        fonts: [
+          `Permanent Marker`,
+          `Open Sans`,
+          `Roboto`,
+          `Oswald`,
+          `Open Sans Condensed`,
+          `Bebas Neue`,
+        ],
         display: "swap",
       },
     },

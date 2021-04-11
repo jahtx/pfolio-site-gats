@@ -12,7 +12,7 @@ const Composite = props => {
       <div className={props.mobile ? "j-mobThumb" : "j-deskThumb"}>
         <GatsbyImage
           image={props.imageInfo}
-          alt={props.altInfo}
+          alt={props.title}
           onClick={handleShow}
         />
       </div>
@@ -25,13 +25,12 @@ const Composite = props => {
           <Modal.Title>{props.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body className="j-modalBody">
-          <GatsbyImage image={props.imageInfo} alt={props.altInfo} />
+          <GatsbyImage image={props.imageInfo} alt={props.title} />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary">Understood</Button>
         </Modal.Footer>
       </Modal>
     </div>
