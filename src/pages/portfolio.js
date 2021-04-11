@@ -1,9 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-//import Modal from "react-modal"
-import Header from "../components/theme/Header/Header"
-import Footer from "../components/theme/Footer/Footer"
+import { Header, Footer } from "../components/theme"
 import Composite from "../components/common/Composite/Composite"
 import "../styles/main.scss"
 
