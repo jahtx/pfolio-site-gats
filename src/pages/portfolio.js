@@ -11,8 +11,9 @@ const PortfolioPage = ({ data }) => {
   console.log(data)
 
   return (
-    <div id="root">
+    <div>
       <Header></Header>
+
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
           <Composite
@@ -25,6 +26,22 @@ const PortfolioPage = ({ data }) => {
             title="Home Page Desktop"
             imageInfo={getImage(data.mainDesktop)}
             altInfo="Home Page Desktop"
+            mobile={false}
+          />
+        </div>
+      </div>
+      <div className="container-sm mt-3">
+        <div className="d-flex justify-content-center">
+          <Composite
+            title="Mortgage Mobile"
+            imageInfo={getImage(data.mortgageMobile)}
+            altInfo="Mortgage Mobile"
+            mobile={true}
+          />
+          <Composite
+            title="Mortgage Desktop"
+            imageInfo={getImage(data.mortgageDesktop)}
+            altInfo="Mortgage Desktop"
             mobile={false}
           />
         </div>
@@ -80,6 +97,23 @@ export const query = graphql`
         gatsbyImageData(quality: 90, layout: CONSTRAINED)
       }
     }
+    mortgageMobile: file(
+      relativePath: { eq: "composites/RBFCU_Mortgage-1.png" }
+    ) {
+      id
+      childImageSharp {
+        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+      }
+    }
+
+    mortgageDesktop: file(
+      relativePath: { eq: "composites/RBFCU_Mortgage-2.png" }
+    ) {
+      id
+      childImageSharp {
+        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+      }
+    }
     autoLoansMobile: file(
       relativePath: { eq: "composites/RBFCU_Auto_Loans-1.png" }
     ) {
@@ -88,6 +122,7 @@ export const query = graphql`
         gatsbyImageData(quality: 90, layout: CONSTRAINED)
       }
     }
+
     autoLoansDesktop: file(
       relativePath: { eq: "composites/RBFCU_Auto_Loans-2.png" }
     ) {
