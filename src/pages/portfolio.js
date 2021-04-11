@@ -13,32 +13,87 @@ const PortfolioPage = ({ data }) => {
   return (
     <div id="root">
       <Header></Header>
-      <div className="container-lg">
-        <Composite
-          title="Checking Mobile"
-          imageInfo={getImage(data.checkingMobile.childImageSharp)}
-          altInfo="Checking Mobile"
-          mobile={true}
-        />
-        <Composite
-          title="Checking Desktop"
-          imageInfo={getImage(data.checkingDesktop)}
-          altInfo="Checking Desktop"
-          mobile={false}
-        />
+      <div className="container-sm mt-3">
+        <div className="d-flex justify-content-center">
+          <Composite
+            title="Home Page Mobile"
+            imageInfo={getImage(data.mainMobile)}
+            altInfo="Home Page Mobile"
+            mobile={true}
+          />
+          <Composite
+            title="Home Page Desktop"
+            imageInfo={getImage(data.mainDesktop)}
+            altInfo="Home Page Desktop"
+            mobile={false}
+          />
+        </div>
       </div>
+      <div className="container-sm mt-3">
+        <div className="d-flex justify-content-center">
+          <Composite
+            title="Checking Mobile"
+            imageInfo={getImage(data.checkingMobile)}
+            altInfo="Checking Mobile"
+            mobile={true}
+          />
+          <Composite
+            title="Checking Desktop"
+            imageInfo={getImage(data.checkingDesktop)}
+            altInfo="Checking Desktop"
+            mobile={false}
+          />
+        </div>
+      </div>
+      <div className="container-sm mt-3">
+        <div className="d-flex justify-content-center">
+          <Composite
+            title="Auto Loans Mobile"
+            imageInfo={getImage(data.autoLoansMobile)}
+            altInfo="Auto Loans Mobile"
+            mobile={true}
+          />
+          <Composite
+            title="Auto Loans Desktop"
+            imageInfo={getImage(data.autoLoansDesktop)}
+            altInfo="Auto Loans Desktop"
+            mobile={false}
+          />
+        </div>
+      </div>
+
       <Footer></Footer>
     </div>
   )
 }
 export const query = graphql`
   query PortfolioQuery {
+    mainMobile: file(relativePath: { eq: "composites/RBFCU_Main-1.png" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+      }
+    }
+    mainDesktop: file(relativePath: { eq: "composites/RBFCU_Main-2.png" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+      }
+    }
     autoLoansMobile: file(
       relativePath: { eq: "composites/RBFCU_Auto_Loans-1.png" }
     ) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90)
+        gatsbyImageData(quality: 90, layout: CONSTRAINED)
+      }
+    }
+    autoLoansDesktop: file(
+      relativePath: { eq: "composites/RBFCU_Auto_Loans-2.png" }
+    ) {
+      id
+      childImageSharp {
+        gatsbyImageData(quality: 90, layout: CONSTRAINED)
       }
     }
     checkingMobile: file(
@@ -46,7 +101,7 @@ export const query = graphql`
     ) {
       id
       childImageSharp {
-        gatsbyImageData(quality: 90, width: 300, layout: CONSTRAINED)
+        gatsbyImageData(quality: 90, layout: CONSTRAINED)
       }
     }
     checkingDesktop: file(

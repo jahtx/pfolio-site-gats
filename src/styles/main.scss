@@ -1,5 +1,14 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+$light-grey: #c7c7c7;
+
+@mixin border_guide {
+  // box-shadow: inset 0px 0px 0px 0.5px $light-grey;
+}
+
+div {
+  @include border_guide;
+}
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2em;
@@ -41,6 +50,6 @@ ul {
   &-modalDesktop {
     text-align: center;
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 1.75rem auto;
   }
 }

@@ -7,7 +7,6 @@ const Composite = props => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
-  console.log("props.mobile: " + props.mobile)
   return (
     <div>
       <div className={props.mobile ? "j-mobThumb" : "j-deskThumb"}>
