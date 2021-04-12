@@ -4,7 +4,7 @@ import "../styles/main.scss"
 
 const ResumePage = () => {
   return (
-    <div className="j-resume">
+    <div className="j">
       <Header></Header>
       <Navigation></Navigation>
       <div className="container-sm">
@@ -45,8 +45,7 @@ const ResumePage = () => {
           Loan website, including designing and coding a variety of page flows
           to spec. Clients include{" "}
           <a href="https://www.accenture.com">Accenture</a> and{" "}
-          <a href="https://https://www.diligent-us.com/">Diligent Consulting</a>
-          .
+          <a href="https://www.diligent-us.com/">Diligent Consulting</a>.
         </p>
         <ul>
           <li>

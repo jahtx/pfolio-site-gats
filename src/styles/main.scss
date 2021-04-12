@@ -47,42 +47,40 @@ ul {
 }
 
 .j {
-  &-resume {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: $standardHeading;
-    }
-    h3 {
-      font-size: 1.7em;
-    }
-    h4 {
-      text-decoration: underline;
-    }
-    h5 {
-      font-size: 1.4em;
-    }
-    h6 {
-      font-weight: bold;
-    }
-    &-firstJobHeading {
-      margin: 1em 0 0 0;
-    }
-    &-jobHeading {
-      margin: 2em 0 0 0;
-    }
-    &-initialDescript {
-      font-style: italic;
-      margin: 0.8em 0;
-    }
-    li {
-      line-height: 1.6em;
-    }
-    &-expand {
-      font-weight: bold;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $standardHeading;
+  }
+  h3 {
+    font-size: 1.7em;
+  }
+  h4 {
+    text-decoration: underline;
+  }
+  h5 {
+    font-size: 1.4em;
+  }
+  h6 {
+    font-weight: bold;
+  }
+  &-firstJobHeading {
+    margin: 1em 0 0 0;
+  }
+  &-jobHeading {
+    margin: 2em 0 0 0;
+  }
+  &-initialDescript {
+    font-style: italic;
+    margin: 0.8em 0;
+  }
+  li {
+    line-height: 1.6em;
+  }
+  &-expand {
+    font-weight: bold;
   }
 
   &-modalMobile {

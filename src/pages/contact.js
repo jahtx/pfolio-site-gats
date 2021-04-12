@@ -8,6 +8,7 @@ const ContactPage = () => {
     <div class="j-resume">
       <Header></Header>
       <Navigation></Navigation>
+      <p>Contact me</p>
       <Footer></Footer>
     </div>
   )
