@@ -13,7 +13,7 @@ const Header = () => {
         {" "}
         <Link to="/">
           <StaticImage
-            src="../../../images/txflag.gif"
+            src="../../../images/txflag.png"
             alt="Texas Outline"
             width={50}
             placeholder="blurred"

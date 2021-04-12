@@ -119,14 +119,14 @@ export const query = graphql`
     rbfcuLogo: file(relativePath: { eq: "rbfcu-logo.png" }) {
       id
       childImageSharp {
-        gatsbyImageData(formats: [WEBP])
+        gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
       }
     }
     mainMobile: file(relativePath: { eq: "composites/RBFCU_Main-1.png" }) {
       id
       childImageSharp {
         gatsbyImageData(
-          quality: 80
+          quality: 85
           width: 270
           placeholder: BLURRED
           formats: [WEBP]
@@ -138,7 +138,7 @@ export const query = graphql`
       id
       childImageSharp {
         gatsbyImageData(
-          quality: 80
+          quality: 85
           width: 760
           placeholder: BLURRED
           formats: [WEBP]
@@ -152,7 +152,7 @@ export const query = graphql`
       id
       childImageSharp {
         gatsbyImageData(
-          quality: 80
+          quality: 85
           width: 270
           placeholder: BLURRED
           formats: [WEBP]
@@ -167,7 +167,7 @@ export const query = graphql`
       id
       childImageSharp {
         gatsbyImageData(
-          quality: 80
+          quality: 85
           width: 760
           placeholder: BLURRED
           formats: [WEBP]
@@ -181,7 +181,7 @@ export const query = graphql`
       id
       childImageSharp {
         gatsbyImageData(
-          quality: 80
+          quality: 85
           width: 270
           placeholder: BLURRED
           formats: [WEBP]
@@ -195,7 +195,7 @@ export const query = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(
-          quality: 80
+          quality: 85
           width: 760
           placeholder: BLURRED
           formats: [WEBP]
@@ -209,7 +209,7 @@ export const query = graphql`
       id
       childImageSharp {
         gatsbyImageData(
-          quality: 80
+          quality: 85
           width: 270
           placeholder: BLURRED
           formats: [WEBP]
@@ -223,7 +223,7 @@ export const query = graphql`
       id
       childImageSharp {
         gatsbyImageData(
-          quality: 80
+          quality: 85
           width: 760
           placeholder: BLURRED
           formats: [WEBP]
