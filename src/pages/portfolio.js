@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Header, Footer } from "../components/theme"
 import Composite from "../components/common/Composite/Composite"
@@ -9,13 +9,16 @@ const PortfolioPage = ({ data }) => {
   return (
     <div>
       <Header></Header>
+      <p className="j-mainNav j-mainNav-portfolio">
+        <Link to="/portfolio">Portfolio</Link> | Résumé | Contact
+      </p>
       <div className="container-sm j-headingBox">
         <div className="j-headingBox__firstSection">
           <h2>Randolph-Brooks Federal Credit Union</h2>
         </div>
         <div className="j-headingBox__lastSection">
           <GatsbyImage
-            image={getImage(data.rbfcuLogo.childImageSharp)}
+            image={getImage(data.rbfcuLogo.childImageSharp.gatsbyImageData)}
             alt="Randolph-Brooks logo"
             className="j-headingBox__logo"
             objectFit={"contain"}

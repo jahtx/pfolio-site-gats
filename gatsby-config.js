@@ -21,6 +21,8 @@ module.exports = {
           `Oswald`,
           `Open Sans Condensed`,
           `Bebas Neue`,
+          `Shadows Into Light`,
+          `Gloria Hallelujah`,
         ],
         display: "swap",
       },

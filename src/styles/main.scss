@@ -6,7 +6,7 @@ $light-grey: #c7c7c7;
 $darker: #575757;
 
 @mixin border_guide {
-  // box-shadow: inset 0px 0px 0px 0.5px $light-grey;
+  box-shadow: inset 0px 0px 0px 0.5px $light-grey;
 }
 
 div {
@@ -47,6 +47,18 @@ $portfolioFont: "Bebas Neue";
     font-family: "Permanent Marker", cursive;
     font-size: 1.5em;
     text-align: center;
+
+    &-portfolio {
+      margin: 0 0 1em 0;
+    }
+    a {
+      color: $darker;
+      text-decoration: underline;
+      &:hover {
+        color: $darker;
+        text-decoration: underline;
+      }
+    }
   }
   &-modalMobile {
     max-width: 300px;
