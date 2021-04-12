@@ -1,5 +1,6 @@
 @import "../../../styles/variables.scss";
 
+$navigation_color: #073f83;
 .mainNav {
   font-family: "Permanent Marker", cursive, "Tahoma", "Georgia";
   // font-family: "Barlow Condensed", "Bebas Neue", "Shadows Into Light",
@@ -7,18 +8,14 @@
   font-size: 1.3em;
   // font-weight: bold;
   text-align: center;
-  color: $primary_color;
-  //   color: $darker;
-  //color: $darker;
+  color: $navigation_color;
+  margin: 0 0 1em 0;
 
-  &-portfolio {
-    margin: 0 0 1em 0;
-  }
   a {
-    // color: $primary_color;
+    color: $navigation_color;
     // text-decoration: underline;
     &:hover {
-      //   color: $primary_color;
+      color: $navigation_color;
       // text-decoration: underline;
     }
   }

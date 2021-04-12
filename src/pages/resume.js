@@ -4,16 +4,14 @@ import "../styles/main.scss"
 
 const ResumePage = () => {
   return (
-    <div class="j-resume">
+    <div className="j-resume">
       <Header></Header>
       <Navigation></Navigation>
       <div className="container-sm">
         <h1 className="j-mainHeader">Résumé</h1>
       </div>
       <div className="container-sm j-headingBox">
-        <div className="j-headingBox__firstSection">
-          <h2>James Alvarado Hernandez</h2>
-        </div>
+        <div className="j-headingBox__firstSection"></div>
       </div>
       <div className="container-sm">
         <h3>Senior User Experience Designer / Front-end Developer</h3>

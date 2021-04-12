@@ -10,7 +10,7 @@ div {
   @include border_guide;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: $standardFont;
   font-size: 1em;
 }
 
@@ -38,7 +38,7 @@ ul {
 }
 
 @mixin portfolio_textStyle {
-  font-family: "Barlow Condensed", "Open Sans", "Tahoma";
+  font-family: $standardHeading;
   // font-family: "Tahoma" "Bebas Neue", "Mukta";
   text-transform: uppercase;
   // font-family: "Open Sans";
@@ -108,6 +108,7 @@ ul {
   &-mainHeader {
     @include portfolio_textStyle;
     color: $light-grey;
+    margin: 2em 0 0 0;
   }
   &-headingBox {
     display: flex;
