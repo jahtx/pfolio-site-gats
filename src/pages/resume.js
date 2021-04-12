@@ -1,16 +1,12 @@
 import React from "react"
-import { Header, Footer } from "../components/theme"
-import { Link } from "gatsby"
+import { Header, Footer, Navigation } from "../components/theme"
 import "../styles/main.scss"
 
 const ResumePage = () => {
   return (
     <div class="j-resume">
       <Header></Header>
-      <p className="j-mainNav j-mainNav-portfolio">
-        <Link to="/portfolio">Portfolio</Link> |&nbsp;
-        <Link to="/resume">Résumé</Link>&nbsp;| Contact
-      </p>
+      <Navigation></Navigation>
       <div className="container-sm">
         <h1 className="j-mainHeader">Résumé</h1>
       </div>
@@ -125,6 +121,68 @@ const ResumePage = () => {
             DevOps integration with Linux/Windows Server instances with cloud
             services provided by AWS, Azure, Digital Ocean, and WPEngine
           </li>
+        </ul>
+        <h5 className="j-resume-jobHeading">
+          Creative Designer I&mdash;USAA, San Antonio, TX
+        </h5>
+
+        <p className="j-resume-initialDescript">
+          Designer and developer for ArcGIS application correlating members'
+          homes with area-mapping capabilities. Primary designer and front-end
+          developer for USAA's internal Enterprise Correspondence Tool to
+          facilitate member communication by postal and digital channels.
+          Developed and deployed A/B tests with SiteSpect. USAA mobile app
+          wireframing and mobile web front-end development. Designed and worked
+          with development on address change process for members.
+        </p>
+        <ul>
+          <li>
+            Developed desktop and mobile web pages with responsive, fluid design
+          </li>
+          <li>
+            Integrated Software-as-a-Service (SaaS) vendor code into custom
+            HTML, CSS
+          </li>
+          <li>
+            Created and documented information architecture and interaction
+            design through UML
+          </li>
+        </ul>
+
+        <h6>Operating Systems and Applications</h6>
+        <ul>
+          <li>UNIX</li>
+          <li>Linux</li>
+          <li>Mac OS</li>
+          <li>Windows</li>
+          <li>Photoshop CC</li>
+          <li>Illustrator CC</li>
+          <li>Sketch</li>
+          <li>Invision</li>
+          <li>Axure</li>
+          <li>SiteSpect</li>
+          <li>Adobe Analytics</li>
+          <li>Google Analytics Solutions</li>
+          <li>Apache</li>
+          <li>MySQL</li>
+          <li>Git</li>
+        </ul>
+        <h6>Languages and Technologies</h6>
+        <ul>
+          <li>Angular 2</li>
+          <li>React/Redux</li>
+          <li>HTML 5</li>
+          <li>CSS3</li>
+          <li>SASS</li>
+          <li>DOM</li>
+          <li>JavaScript</li>
+          <li>JQuery</li>
+          <li>Ruby on Rails</li>
+          <li>Java</li>
+          <li>Spring</li>
+          <li>Amazon Web Services (AWS)</li>
+          <li>Azure</li>
+          <li>Digital Ocean</li>
         </ul>
       </div>
       <Footer></Footer>

@@ -1,7 +1,7 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Header, Footer } from "../components/theme"
+import { Header, Footer, Navigation } from "../components/theme"
 import Composite from "../components/common/Composite/Composite"
 import "../styles/main.scss"
 
@@ -9,10 +9,7 @@ const PortfolioPage = ({ data }) => {
   return (
     <div>
       <Header></Header>
-      <p className="j-mainNav j-mainNav-portfolio">
-        <Link to="/portfolio">Portfolio</Link> |&nbsp;
-        <Link to="/resume">Résumé</Link>&nbsp;| Contact
-      </p>
+      <Navigation></Navigation>
       <div className="container-sm">
         <h1 className="j-mainHeader">Portfolio</h1>
       </div>

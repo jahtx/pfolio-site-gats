@@ -1,13 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Header, Footer } from "../components/theme"
+// import { Link } from "gatsby"
+import { Header, Footer, Navigation } from "../components/theme"
 import "../styles/main.scss"
 
 const IndexPage = () => {
   return (
     <div>
       <Header></Header>
-      <div className="container-lg j-common">
+      <Navigation></Navigation>
+
+      <div className="container-lg j-resume">
         <h1>
           James Alvarado Hernandez is a Product & Services UX Designer,
           Front-end Engineer, and breakfast taco aficionado.
@@ -24,10 +26,7 @@ const IndexPage = () => {
           JavaScript. Our job is to reduce complexity wherever we can.
         </p>
         <p>Based in San Antonio, TX. Available to work remotely.</p>
-        <p className="j-mainNav">
-          <Link to="/portfolio">Portfolio</Link> |&nbsp;
-          <Link to="/resume">Résumé</Link>&nbsp;| Contact
-        </p>
+
         <p>
           As an efficient and effective UX designer, James has done work for
           Accenture, RBFCU, IBM, and USAA. He prefers Agile/SCRUM methodologies

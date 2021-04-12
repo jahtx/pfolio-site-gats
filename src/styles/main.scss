@@ -1,9 +1,6 @@
 @import "~bootstrap/scss/bootstrap.scss";
-
-@import "./breakpoints";
-
-$light-grey: #c7c7c7;
-$darker: #575757;
+@import "./variables.scss";
+@import "./breakpoints.scss";
 
 @mixin border_guide {
   // box-shadow: inset 0px 0px 0px 0.5px $light-grey;
@@ -40,8 +37,6 @@ ul {
   }
 }
 
-$primary_color: #073f83;
-
 @mixin portfolio_textStyle {
   font-family: "Barlow Condensed", "Open Sans", "Tahoma";
   // font-family: "Tahoma" "Bebas Neue", "Mukta";
@@ -50,8 +45,6 @@ $primary_color: #073f83;
   font-weight: bold;
   color: $darker;
 }
-
-$standardHeading: "Barlow Condensed";
 
 .j {
   &-resume {
@@ -71,6 +64,9 @@ $standardHeading: "Barlow Condensed";
     h5 {
       font-size: 1.4em;
     }
+    h6 {
+      font-weight: bold;
+    }
     &-firstJobHeading {
       margin: 1em 0 0 0;
     }
@@ -88,30 +84,7 @@ $standardHeading: "Barlow Condensed";
       font-weight: bold;
     }
   }
-  &-mainNav {
-    font-family: "Barlow Condensed", "Permanent Marker", cursive, "Tahoma",
-      "Georgia";
-    // font-family: "Barlow Condensed", "Bebas Neue", "Shadows Into Light",
-    text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    color: $primary_color;
-    color: $darker;
-    //color: $darker;
 
-    &-portfolio {
-      margin: 0 0 1em 0;
-    }
-    a {
-      color: $primary_color;
-      // text-decoration: underline;
-      &:hover {
-        color: $primary_color;
-        // text-decoration: underline;
-      }
-    }
-  }
   &-modalMobile {
     max-width: 300px;
     margin: 1.75rem auto;
