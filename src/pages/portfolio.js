@@ -17,12 +17,14 @@ const PortfolioPage = ({ data }) => {
           <h2>Randolph-Brooks Federal Credit Union</h2>
         </div>
         <div className="j-headingBox__lastSection">
-          <GatsbyImage
-            image={getImage(data.rbfcuLogo.childImageSharp.gatsbyImageData)}
-            alt="Randolph-Brooks logo"
-            className="j-headingBox__logo"
-            objectFit={"contain"}
-          />
+          <Link to="http://rbfcu.org">
+            <GatsbyImage
+              image={getImage(data.rbfcuLogo.childImageSharp.gatsbyImageData)}
+              alt="Randolph-Brooks logo"
+              className="j-headingBox__logo"
+              objectFit={"contain"}
+            />
+          </Link>
         </div>
       </div>
       <div className="container-sm j-projectInset">
@@ -32,9 +34,9 @@ const PortfolioPage = ({ data }) => {
           credit union in Texas.
         </p>
         <p>
-          Its website had long been overdue for a design refresh and to meet the
-          expectations of a younger and more technically demanding customer
-          base.
+          Their website had long been overdue for a refreshed design and needed
+          to meet the expectations of a younger and more technologically
+          demanding customer base.
         </p>
         <p>
           Challenges included accounting for over a thousand disparate pages and
@@ -46,7 +48,7 @@ const PortfolioPage = ({ data }) => {
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
-          <h2 className="j-compHeading">Home Page</h2>
+          <h3 className="j-compHeading">Home Page</h3>
         </div>
         <div className="d-flex justify-content-center">
           <Composite
@@ -63,7 +65,7 @@ const PortfolioPage = ({ data }) => {
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
-          <h2 className="j-compHeading">Mortgages</h2>
+          <h3 className="j-compHeading">Mortgages</h3>
         </div>
         <div className="d-flex justify-content-center">
           <Composite
@@ -80,7 +82,7 @@ const PortfolioPage = ({ data }) => {
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
-          <h2 className="j-compHeading">Checking</h2>
+          <h3 className="j-compHeading">Checking</h3>
         </div>
         <div className="d-flex justify-content-center">
           <Composite
@@ -97,7 +99,7 @@ const PortfolioPage = ({ data }) => {
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
-          <h2 className="j-compHeading">Auto Loans</h2>
+          <h3 className="j-compHeading">Auto Loans</h3>
         </div>
         <div className="d-flex justify-content-center">
           <Composite
