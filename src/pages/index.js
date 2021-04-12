@@ -25,7 +25,7 @@ const IndexPage = () => {
         </p>
         <p>Based in San Antonio, TX. Available to work remotely.</p>
         <p className="j-mainNav">
-          <Link to="/portfolio">Portfolio</Link> | Articles | Résumé | Contact
+          <Link to="/portfolio">Portfolio</Link> | Résumé | Contact
         </p>
         <p>
           As an efficient and effective UX designer, James has done work for

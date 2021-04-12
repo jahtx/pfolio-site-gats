@@ -1,9 +1,12 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+@import "./breakpoints";
+
 $light-grey: #c7c7c7;
+$darker: #575757;
 
 @mixin border_guide {
-  box-shadow: inset 0px 0px 0px 0.5px $light-grey;
+  // box-shadow: inset 0px 0px 0px 0.5px $light-grey;
 }
 
 div {
@@ -37,6 +40,8 @@ ul {
   }
 }
 
+$portfolioFont: "Bebas Neue";
+
 .j {
   &-mainNav {
     font-family: "Permanent Marker", cursive;
@@ -52,9 +57,42 @@ ul {
     max-width: 800px;
     margin: 1.75rem auto;
   }
+  &-modalTitle {
+    color: $darker;
+    font-family: $portfolioFont;
+    font-size: 1.4em;
+  }
   &-compHeading {
-    font-family: "Bebas Neue";
-    color: grey;
+    font-family: $portfolioFont;
+    color: $darker;
     margin: 1em 0 0.5em;
+  }
+  &-projectInset {
+    font-size: 0.9em;
+  }
+  &-headingBox {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $light-grey;
+    h2 {
+      font-family: $portfolioFont;
+      color: $darker;
+      margin: 0.3em 0 0 0;
+      align-self: flex-end;
+    }
+    &__firstSection {
+      display: flex;
+    }
+    &__lastSection {
+      display: flex;
+      width: 7em;
+    }
+    &__logo {
+      display: none;
+      margin-bottom: 0.3em;
+      @include MQ(L) {
+        display: block;
+      }
+    }
   }
 }

@@ -22,7 +22,7 @@ const Composite = props => {
         onHide={handleClose}
       >
         <Modal.Header closeButton>
-          <Modal.Title>{props.title}</Modal.Title>
+          <Modal.Title className="j-modalTitle">{props.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body className="j-modalBody">
           <GatsbyImage image={props.imageInfo} alt={props.title} />

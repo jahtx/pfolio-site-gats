@@ -15,7 +15,7 @@ const Header = () => {
           <StaticImage
             src="../../../images/txflag.gif"
             alt="Texas Outline"
-            width="50"
+            width={50}
             placeholder="blurred"
           />
         </Link>

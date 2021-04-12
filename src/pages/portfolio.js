@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Header, Footer } from "../components/theme"
 import Composite from "../components/common/Composite/Composite"
 import "../styles/main.scss"
@@ -9,7 +9,38 @@ const PortfolioPage = ({ data }) => {
   return (
     <div>
       <Header></Header>
-
+      <div className="container-sm j-headingBox">
+        <div className="j-headingBox__firstSection">
+          <h2>Randolph-Brooks Federal Credit Union</h2>
+        </div>
+        <div className="j-headingBox__lastSection">
+          <GatsbyImage
+            image={getImage(data.rbfcuLogo.childImageSharp)}
+            alt="Randolph-Brooks logo"
+            className="j-headingBox__logo"
+            objectFit={"contain"}
+          />
+        </div>
+      </div>
+      <div className="container-sm j-projectInset">
+        <p>
+          Randolph-Brooks Federal Credit Union is an accredited financial
+          institution headquartered in Live Oak, Texas and is the second largest
+          credit union in Texas.
+        </p>
+        <p>
+          Its website had long been overdue for a design refresh and to meet the
+          expectations of a younger and more technically demanding customer
+          base.
+        </p>
+        <p>
+          Challenges included accounting for over a thousand disparate pages and
+          content, accessibility, and incorporating a new content management
+          system. Over a period of nine months, James was instrumental in
+          prioritizing product and services content, developing user research,
+          and leading the front-end development effort.
+        </p>
+      </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
           <h2 className="j-compHeading">Home Page</h2>
@@ -85,6 +116,12 @@ const PortfolioPage = ({ data }) => {
 }
 export const query = graphql`
   query PortfolioQuery {
+    rbfcuLogo: file(relativePath: { eq: "rbfcu-logo.png" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(formats: [WEBP])
+      }
+    }
     mainMobile: file(relativePath: { eq: "composites/RBFCU_Main-1.png" }) {
       id
       childImageSharp {
