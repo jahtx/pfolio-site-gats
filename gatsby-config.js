@@ -29,6 +29,7 @@ module.exports = {
           `Mansalva`,
           `Syne Mono`,
           `BioRhyme Expanded`,
+          `Barlow Condensed`,
         ],
         display: "swap",
       },

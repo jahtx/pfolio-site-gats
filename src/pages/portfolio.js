@@ -10,21 +10,25 @@ const PortfolioPage = ({ data }) => {
     <div>
       <Header></Header>
       <p className="j-mainNav j-mainNav-portfolio">
-        <Link to="/portfolio">Portfolio</Link> | Résumé | Contact
+        <Link to="/portfolio">Portfolio</Link> |&nbsp;
+        <Link to="/resume">Résumé</Link>&nbsp;| Contact
       </p>
+      <div className="container-sm">
+        <h1 className="j-mainHeader">Portfolio</h1>
+      </div>
       <div className="container-sm j-headingBox">
         <div className="j-headingBox__firstSection">
           <h2>Randolph-Brooks Federal Credit Union</h2>
         </div>
         <div className="j-headingBox__lastSection">
-          <Link to="http://rbfcu.org">
+          <a href="http://rbfcu.org">
             <GatsbyImage
               image={getImage(data.rbfcuLogo.childImageSharp.gatsbyImageData)}
               alt="Randolph-Brooks logo"
               className="j-headingBox__logo"
               objectFit={"contain"}
             />
-          </Link>
+          </a>
         </div>
       </div>
       <div className="container-sm j-projectInset">

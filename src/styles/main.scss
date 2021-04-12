@@ -13,8 +13,8 @@ div {
   @include border_guide;
 }
 body {
-  font-family: "Mukta", "Open Sans", sans-serif;
-  font-size: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
 }
 
 h1 {
@@ -43,26 +43,61 @@ ul {
 $primary_color: #073f83;
 
 @mixin portfolio_textStyle {
-  font-family: "Mukta", "Bebas Neue";
-  // font-family: "Mukta";
+  font-family: "Barlow Condensed", "Open Sans", "Tahoma";
+  // font-family: "Tahoma" "Bebas Neue", "Mukta";
   text-transform: uppercase;
   // font-family: "Open Sans";
-  // font-weight: bold;
+  font-weight: bold;
   color: $darker;
 }
 
-$portfolioFont: "Bebas Neue";
-
-$portfolioFont: "Open Sans";
+$standardHeading: "Barlow Condensed";
 
 .j {
+  &-resume {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: $standardHeading;
+    }
+    h3 {
+      font-size: 1.7em;
+    }
+    h4 {
+      text-decoration: underline;
+    }
+    h5 {
+      font-size: 1.4em;
+    }
+    &-firstJobHeading {
+      margin: 1em 0 0 0;
+    }
+    &-jobHeading {
+      margin: 2em 0 0 0;
+    }
+    &-initialDescript {
+      font-style: italic;
+      margin: 0.8em 0;
+    }
+    li {
+      line-height: 1.6em;
+    }
+    &-expand {
+      font-weight: bold;
+    }
+  }
   &-mainNav {
-    font-family: "Permanent Marker", cursive, "Tahoma", "Georgia";
+    font-family: "Barlow Condensed", "Permanent Marker", cursive, "Tahoma",
+      "Georgia";
+    // font-family: "Barlow Condensed", "Bebas Neue", "Shadows Into Light",
     text-transform: uppercase;
-    font-size: 1.2em;
-    // font-weight: bold;
+    font-size: 1.5em;
+    font-weight: bold;
     text-align: center;
     color: $primary_color;
+    color: $darker;
     //color: $darker;
 
     &-portfolio {
@@ -70,10 +105,10 @@ $portfolioFont: "Open Sans";
     }
     a {
       color: $primary_color;
-      text-decoration: underline;
+      // text-decoration: underline;
       &:hover {
         color: $primary_color;
-        text-decoration: underline;
+        // text-decoration: underline;
       }
     }
   }
@@ -95,7 +130,11 @@ $portfolioFont: "Open Sans";
     margin: 1em 0 0.5em;
   }
   &-projectInset {
-    font-size: 0.9em;
+    font-size: 1em;
+  }
+  &-mainHeader {
+    @include portfolio_textStyle;
+    color: $light-grey;
   }
   &-headingBox {
     display: flex;
