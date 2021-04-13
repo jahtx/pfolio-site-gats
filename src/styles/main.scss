@@ -46,7 +46,7 @@ ul {
 }
 
 @mixin portfolio_textStyle {
-  font-family: $standardHeading;
+  font-family: $standardHeading, "Tahoma";
   // font-family: "Tahoma" "Bebas Neue", "Mukta";
   text-transform: uppercase;
   // font-family: "Open Sans";

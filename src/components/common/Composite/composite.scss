@@ -5,6 +5,9 @@
   overflow: hidden;
   cursor: pointer;
   margin: 0 1.5em;
+  &:hover {
+    box-shadow: 0 0 15px #a3a3a3;
+  }
 }
 
 .j {
