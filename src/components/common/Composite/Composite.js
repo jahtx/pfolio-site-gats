@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Button, Modal } from "react-bootstrap"
+import Button from "react-bootstrap/Button"
+import Modal from "react-bootstrap/Modal"
 import "./composite.scss"
 const Composite = props => {
   const [show, setShow] = useState(false)
