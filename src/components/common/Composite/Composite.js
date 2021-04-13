@@ -1,6 +1,6 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Button from "react-bootstrap/Button"
+// import Button from "react-bootstrap/Button"
 // import Modal from "react-bootstrap/Modal"
 import "./composite.scss"
 const Composite = props => {
@@ -19,12 +19,12 @@ const Composite = props => {
   return (
     <div>
       <div className={props.mobile ? "j-mobThumb" : "j-deskThumb"}>
-        <Button onClick={handleShow}>Testing</Button>
-        {/* <GatsbyImage
+        {/* <Button onClick={handleShow}>Testing</Button> */}
+        <GatsbyImage
           image={props.imageInfo}
-          alt={props.title}
+          alt="testing"
           onClick={handleShow}
-        /> */}
+        />
       </div>
       {/* <Modal
         dialogClassName={props.mobile ? "j-modalMobile" : "j-modalDesktop"}
@@ -48,3 +48,6 @@ const Composite = props => {
 }
 
 export default Composite
+
+// Goal: Fix problems with GatsbyImage -- for some reason functions will not
+// work if an onclick is Deployed
