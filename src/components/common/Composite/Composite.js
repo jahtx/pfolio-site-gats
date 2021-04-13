@@ -9,15 +9,13 @@ const Composite = props => {
   const handleShow = () => {
     setShow(true)
   }
-  console.log("basic javascript working on page")
-
   return (
     <div>
       <div
         className={props.mobile ? "j-mobThumb" : "j-deskThumb"}
         onClick={handleShow}
       >
-        <GatsbyImage image={props.imageInfo} alt="testing" />
+        <GatsbyImage image={props.imageInfo} alt={props.title} />
       </div>
       <Modal
         dialogClassName={props.mobile ? "j-modalMobile" : "j-modalDesktop"}
