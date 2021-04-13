@@ -32,12 +32,12 @@ const ResumePage = () => {
         </ul>
         <h4>Professional Experience:</h4>
 
-        <h5 className="j-resume-firstJobHeading">
+        <h5 className="j-firstJobHeading">
           User Experience Designer/Front-end Developer&mdash;Insight Global, San
           Antonio, TX (2018-2020)
         </h5>
 
-        <p className="j-resume-initialDescript">
+        <p className="j-initialDescript">
           Designing and developing web application for managing promotions for
           the Air Force. Producing wireframes for prototypes and engineering.
           Incorporating user/client consultations and interviews to refine and
@@ -62,12 +62,12 @@ const ResumePage = () => {
           </li>
         </ul>
 
-        <h5 className="j-resume-jobHeading">
+        <h5 className="j-jobHeading">
           User Experience Designer/Front-end Developer&mdash;Ampcus Inc, San
           Antonio, TX (2016-2017)
         </h5>
 
-        <p className="j-resume-initialDescript">
+        <p className="j-initialDescript">
           Lead User Interface designer for $4M+ effort to redesign and recode
           the primary website for Randolph-Brooks Federal Credit Union (
           <a href="https://rbfcu.org">RBFCU</a>). Collaborated in an Agile
