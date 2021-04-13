@@ -21,7 +21,7 @@ const PortfolioPage = ({ data }) => {
           <a href="http://rbfcu.org">
             <GatsbyImage
               image={getImage(data.rbfcuLogo.childImageSharp.gatsbyImageData)}
-              alt="Randolph-Brooks logo"
+              alt="Randolph-Brooks brand"
               className="j-headingBox__logo"
               objectFit={"contain"}
             />
