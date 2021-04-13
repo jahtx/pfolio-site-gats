@@ -6,10 +6,15 @@ import "./composite.scss"
 const Composite = props => {
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
+  // const handleShow = () => {
+  //   setShow(true)
+  //   console.log("help")
+  // }
+
   const handleShow = () => {
-    setShow(true)
-    console.log("help")
+    console.log("handleShow hit")
   }
+  console.log("basic javascript working on page")
 
   return (
     <div>
