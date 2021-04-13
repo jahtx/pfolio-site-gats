@@ -1,22 +1,3 @@
 @import "../../../styles/variables.scss";
 
 $navigation_color: #073f83;
-.mainNav {
-  font-family: "Permanent Marker", cursive, "Tahoma", "Georgia";
-  // font-family: "Barlow Condensed", "Bebas Neue", "Shadows Into Light",
-  text-transform: uppercase;
-  font-size: 1.3em;
-  // font-weight: bold;
-  text-align: center;
-  color: $navigation_color;
-  margin: 0 0 1em 0;
-
-  a {
-    color: $navigation_color;
-    // text-decoration: underline;
-    &:hover {
-      color: $navigation_color;
-      // text-decoration: underline;
-    }
-  }
-}
