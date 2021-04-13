@@ -1,13 +1,16 @@
 import React from "react"
+import Button from "react-bootstrap/Button"
 import { Header, Footer, Navigation } from "../components/theme"
 import "../styles/main.scss"
 
 const ContactPage = () => {
+  console.log("here")
   return (
-    <div class="j-resume">
+    <div className="j-resume">
       <Header></Header>
       <Navigation></Navigation>
       <div className="container-sm">
+        <Button>This</Button>
         <h1 className="j-mainHeader">Contact</h1>
       </div>
       <div className="container-sm j-headingBox">
