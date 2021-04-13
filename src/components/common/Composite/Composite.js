@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Button from "react-bootstrap/Button"
-import Modal from "react-bootstrap/Modal"
+// import Button from "react-bootstrap/Button"
+// import Modal from "react-bootstrap/Modal"
 import "./composite.scss"
 const Composite = props => {
-  const [show, setShow] = useState(false)
-  const handleClose = () => setShow(false)
+  // const [show, setShow] = useState(false)
+  // const handleClose = () => setShow(false)
   // const handleShow = () => {
   //   setShow(true)
   //   console.log("help")
@@ -25,7 +25,7 @@ const Composite = props => {
           onClick={handleShow}
         />
       </div>
-      <Modal
+      {/* <Modal
         dialogClassName={props.mobile ? "j-modalMobile" : "j-modalDesktop"}
         show={show}
         onHide={handleClose}
@@ -41,7 +41,7 @@ const Composite = props => {
             Close
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </div>
   )
 }
