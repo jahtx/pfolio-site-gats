@@ -134,9 +134,10 @@ ul {
     }
     &__logo {
       display: none;
-      margin-bottom: 0.3em;
+
       @include MQ(L) {
         display: block;
+        margin-bottom: 0.3em;
       }
     }
   }
