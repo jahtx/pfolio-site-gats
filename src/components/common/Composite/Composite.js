@@ -21,9 +21,9 @@ const Composite = props => {
       <div className={props.mobile ? "j-mobThumb" : "j-deskThumb"}>
         {/* <Button onClick={handleShow}>Testing</Button> */}
         <GatsbyImage
+          onClick={handleShow}
           image={props.imageInfo}
           alt="testing"
-          onClick={handleShow}
         />
       </div>
       {/* <Modal
