@@ -13,7 +13,7 @@ div {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 h1 {
@@ -160,7 +160,7 @@ ul {
   }
   &__title {
     font-family: $standardHeading;
-    font-size: 3.2em;
+    font-size: 2.8em;
     letter-spacing: -1px;
     margin: 0;
     padding: 10vh 40px 20px 40px;
@@ -171,7 +171,7 @@ ul {
   &__syn {
     margin: 0;
     padding: 0 2em 3em 2em;
-    font-size: 1.4em;
+    font-size: 1.2em;
     @include MQ(S) {
       @include margin_center;
       text-align: center;
