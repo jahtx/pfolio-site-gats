@@ -1,21 +1,77 @@
 import React from "react"
 // import { Link } from "gatsby"
-import { Header, Footer, Navigation } from "../components/theme"
+import { graphql, useStaticQuery } from "gatsby"
+import styled from "styled-components"
+import { Header, Navigation } from "../components/theme"
 import "../styles/main.scss"
+import BackgroundImage from "gatsby-background-image"
 
-const IndexPage = () => {
+const IndexPage = ({ iPadBackground }) => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "ipad.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const imageData = data.desktop.childImageSharp.fluid
+
   return (
-    <div>
+    <section>
       <Header></Header>
       <Navigation></Navigation>
-
-      <div className="container-lg"></div>
-      <Footer></Footer>
-    </div>
+      <BackgroundImage
+        Tag="section"
+        className={iPadBackground}
+        fluid={imageData}
+        backgroundColor={`#040e18`}
+      >
+        <div className="homeHero">
+          <div class="main__center">
+            <div class="main__title">
+              Product & Services UX Designer and{" "}
+              <span class="no-break">Front-end</span>
+              &nbsp;Engineer
+            </div>
+            <p class="main__syn">
+              User interface strategy, prototyping, and research. Modern &nbsp;
+              <span class="no-break">front-end</span> development using current
+              frameworks and methodologies.
+            </p>
+          </div>
+        </div>
+      </BackgroundImage>
+      {/* <Footer></Footer> */}
+    </section>
   )
 }
 
-export default IndexPage
+const StyledIndexPage = styled(IndexPage)`
+  width: 100%;
+  background-position: bottom center;
+  background-repeat: repeat-y;
+  background-size: cover;
+`
+// const IndexPage = () => {
+//   return (
+//     <div>
+//       <Header></Header>
+//       <Navigation></Navigation>
+
+//       <div className="container-lg"></div>
+//       <Footer></Footer>
+//     </div>
+//   )
+// }
+
+export default StyledIndexPage
 
 // Goal: The purpose of this page is to have an index.
 //

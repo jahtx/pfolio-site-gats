@@ -5,7 +5,9 @@
 @mixin border_guide {
   // box-shadow: inset 0px 0px 0px 0.5px $light-grey;
 }
-
+.no-break {
+  white-space: pre;
+}
 div {
   @include border_guide;
 }
@@ -35,6 +37,12 @@ ul {
   li {
     line-height: 2em;
   }
+}
+
+.homeHero {
+  display: block;
+  height: 700px;
+  width: 100%;
 }
 
 @mixin portfolio_textStyle {
@@ -130,6 +138,45 @@ ul {
       @include MQ(L) {
         display: block;
       }
+    }
+  }
+}
+
+.main {
+  background-position: center;
+  background-size: cover;
+  display: relative;
+  height: auto;
+  width: 100%;
+  @include MQ(S) {
+    min-height: 60vh;
+    @include flex_center;
+  }
+  &__center {
+    @include MQ(S) {
+      padding: 200px 40px;
+      text-align: center;
+    }
+  }
+  &__title {
+    font-family: $standardHeading;
+    font-size: 3.2em;
+    letter-spacing: -1px;
+    margin: 0;
+    padding: 10vh 40px 20px 40px;
+    @include MQ(S) {
+      padding: 0 0 20px 0;
+    }
+  }
+  &__syn {
+    margin: 0;
+    padding: 0 2em 3em 2em;
+    font-size: 1.4em;
+    @include MQ(S) {
+      @include margin_center;
+      text-align: center;
+      max-width: 700px;
+      padding: 0;
     }
   }
 }

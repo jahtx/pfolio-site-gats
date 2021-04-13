@@ -4,3 +4,13 @@ $primary_color: #073f83;
 
 $standardHeading: "Barlow Condensed";
 $standardFont: "Open Sans";
+
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin margin_center {
+  margin: 0 auto;
+}
