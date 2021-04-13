@@ -8,12 +8,7 @@ const Composite = props => {
   const handleClose = () => setShow(false)
   const handleShow = () => {
     setShow(true)
-    console.log("help")
   }
-
-  // const handleShow = () => {
-  //   console.log("handleShow hit")
-  // }
   console.log("basic javascript working on page")
 
   return (
@@ -22,7 +17,6 @@ const Composite = props => {
         className={props.mobile ? "j-mobThumb" : "j-deskThumb"}
         onClick={handleShow}
       >
-        {/* <Button onClick={handleShow}>Testing</Button> */}
         <GatsbyImage image={props.imageInfo} alt="testing" />
       </div>
       <Modal
@@ -48,5 +42,5 @@ const Composite = props => {
 
 export default Composite
 
-// Goal: Fix problems with GatsbyImage -- for some reason functions will not
-// work if an onclick is Deployed
+// Initial problems: GatsbyImage would not execute onClick when deployed.
+// Solved by putting onClick on parent div. Who knows why this works?

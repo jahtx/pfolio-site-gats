@@ -1,12 +1,8 @@
 import React from "react"
 import { Header, Footer, Navigation } from "../components/theme"
-import Button from "react-bootstrap/Button"
 import "../styles/main.scss"
 
 const ResumePage = () => {
-  const resumeButtonHit = () => {
-    console.log("resume button working")
-  }
   return (
     <div className="j">
       <Header></Header>
@@ -18,7 +14,6 @@ const ResumePage = () => {
         <div className="j-headingBox__firstSection"></div>
       </div>
       <div className="container-sm">
-        <Button onClick={resumeButtonHit}>Testing</Button>
         <h3>Senior User Experience Designer / Front-end Developer</h3>
         <p>
           Intuitive developer and designer for mobile and desktop web
