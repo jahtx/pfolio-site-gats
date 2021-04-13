@@ -5,7 +5,10 @@ import "./composite.scss"
 const Composite = props => {
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
+  const handleShow = () => {
+    setShow(true)
+    console.log("help")
+  }
 
   return (
     <div>

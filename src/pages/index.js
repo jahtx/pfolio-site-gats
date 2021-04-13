@@ -34,16 +34,16 @@ const IndexPage = ({ iPadBackground }) => {
         backgroundColor={`#040e18`}
       >
         <div className="homeHero">
-          <div class="main__center">
-            <div class="main__title">
+          <div className="main__center">
+            <div className="main__title">
               Product & Services UX Designer and{" "}
-              <span class="no-break">Front-end</span>
+              <span className="no-break">Front-end</span>
               &nbsp;Engineer
             </div>
-            <p class="main__syn">
+            <p className="main__syn">
               User interface strategy, prototyping, and research. Modern &nbsp;
-              <span class="no-break">front-end</span> development using current
-              frameworks and methodologies.
+              <span className="no-break">front-end</span> development using
+              current frameworks and methodologies.
             </p>
           </div>
         </div>
