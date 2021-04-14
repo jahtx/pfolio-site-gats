@@ -37,8 +37,7 @@ const IndexPage = ({ iPadBackground }) => {
           <div className="main__center">
             <div className="main__title">
               Product & Services UX Designer and&nbsp;
-              <span className="no-break">Front-end</span>
-              &nbsp;Engineer
+              <span className="no-break">Front-end</span> Engineer
             </div>
             <p className="main__syn">
               User interface strategy, prototyping, and research. Modern &nbsp;
