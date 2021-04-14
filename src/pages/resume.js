@@ -21,7 +21,7 @@ const ResumePage = () => {
           methodologies. Dedicated team contributor and coordinator. Explores
           and analyzes industry best practices for user experience and front-end
           development. 10+ years of development experience and 6+ years of
-          experience with direct-to-consumer products.{" "}
+          experience with direct-to-consumer products.
         </p>
         <h4>Core Strengths:</h4>
         <ul>
@@ -44,7 +44,7 @@ const ResumePage = () => {
           adapt interface. Development for U.S. Department of Education Student
           Loan website, including designing and coding a variety of page flows
           to spec. Clients include{" "}
-          <a href="https://www.accenture.com">Accenture</a> and{" "}
+          <a href="https://www.accenture.com">Accenture</a> and
           <a href="https://www.diligent-us.com/">Diligent Consulting</a>.
         </p>
         <ul>
