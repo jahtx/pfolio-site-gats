@@ -39,12 +39,6 @@ ul {
   }
 }
 
-.homeHero {
-  display: block;
-  height: 700px;
-  width: 100%;
-}
-
 @mixin portfolio_textStyle {
   font-family: $standardHeading, "Tahoma";
   // font-family: "Tahoma" "Bebas Neue", "Mukta";
@@ -142,16 +136,10 @@ ul {
   }
 }
 
-.main {
-  background-position: center;
-  background-size: cover;
-  display: relative;
-  height: auto;
+.homeHero {
+  display: block;
+  height: 700px;
   width: 100%;
-  @include MQ(S) {
-    min-height: 60vh;
-    @include flex_center;
-  }
   &__center {
     @include MQ(S) {
       padding: 200px 40px;
