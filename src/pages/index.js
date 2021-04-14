@@ -36,7 +36,7 @@ const IndexPage = ({ iPadBackground }) => {
         <div className="homeHero">
           <div className="main__center">
             <div className="main__title">
-              Product & Services UX Designer and
+              Product & Services UX Designer and&nbsp;
               <span className="no-break">Front-end</span>
               &nbsp;Engineer
             </div>
