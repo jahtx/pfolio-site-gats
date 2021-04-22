@@ -2,7 +2,7 @@ import React from "react"
 // import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-import { Header, Navigation } from "../components/theme"
+import { Header, Footer, Navigation } from "../components/theme"
 import "../styles/main.scss"
 import BackgroundImage from "gatsby-background-image"
 
@@ -48,7 +48,7 @@ const IndexPage = () => {
   const allLogos = data.allLogos.childImageSharp.fluid
 
   return (
-    <section>
+    <div>
       <Header></Header>
       <Navigation></Navigation>
 
@@ -60,8 +60,8 @@ const IndexPage = () => {
           </h1>
           <div className="herox__inset">
             With over 10 years experience in design and development for
-            established companies and organizations, I'm certain I can be an
-            excellent addition to your team or project! 🙂
+            established companies and organizations, I can be an excellent
+            addition to your team or project! 🙂
           </div>
         </div>
       </BackgroundImage>
@@ -83,15 +83,23 @@ const IndexPage = () => {
         tag="div"
         fluid={edgeTable}
       ></BackgroundImage>
-    </section>
+      <div className="container-sm logos-caption">
+        <p>
+          I have worked on a variety of projects for several companies and
+          organizations including Accenture, USAA, RBFCU, the Air Force, and the
+          Department of Education. I've led and contributed to UX design cycles
+          from start to finish, including initial research, user interviews and
+          persona creation, surveys, usability testing, journey mapping, and
+          design iterations.
+        </p>
+      </div>
+      <Footer></Footer>
+    </div>
   )
 }
 
 const StyledIndexPage = styled(IndexPage)`
   width: 100%;
-  background-position: bottom center;
-  background-repeat: repeat-y;
-  background-size: cover;
 `
 
 export default StyledIndexPage

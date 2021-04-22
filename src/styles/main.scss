@@ -124,7 +124,7 @@ div {
   &__inset {
     font-size: 1em;
     font-family: "Nothing You Could Do";
-    padding: 0.5em 0;
+    padding: 0.5em 0 1em 0;
     @include MQ(S) {
       font-size: 1.3em;
       padding: 1em 0;
@@ -179,36 +179,11 @@ div {
     background-size: contain;
   }
 }
-
-.homeHero {
-  display: block;
-  height: 700px;
-  width: 100%;
-  &__center {
-    @include MQ(S) {
-      padding: 200px 40px;
-      text-align: center;
-    }
-  }
-  &__title {
-    font-family: $standardHeading;
-    font-size: 2.8em;
-    letter-spacing: -1px;
-    margin: 0;
-    padding: 10vh 40px 20px 40px;
-    @include MQ(S) {
-      padding: 0 0 20px 0;
-    }
-  }
-  &__syn {
-    margin: 0;
-    padding: 0 2em 3em 2em;
-    font-size: 1.2em;
-    @include MQ(S) {
-      @include margin_center;
-      text-align: center;
-      max-width: 700px;
-      padding: 0;
-    }
+.logos-caption {
+  padding: 0.2em 2em;
+  font-size: 0.8em;
+  @include MQ(S) {
+    padding: 1em 1em;
+    font-size: 0.9em;
   }
 }
