@@ -38,6 +38,13 @@ const IndexPage = () => {
             }
           }
         }
+        placeBk: file(relativePath: { eq: "back-shadow.png" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 400) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     `
   )
@@ -70,12 +77,14 @@ const IndexPage = () => {
         tag="div"
         fluid={mainTable}
       >
-        <div className="herox__placecard">
-          <BackgroundImage
-            className="herox__allLogos"
-            tag="div"
-            fluid={allLogos}
-          ></BackgroundImage>
+        <div className="herox__placecardBk">
+          <div className="herox__placecard">
+            <BackgroundImage
+              className="herox__allLogos"
+              tag="div"
+              fluid={allLogos}
+            ></BackgroundImage>
+          </div>
         </div>
       </BackgroundImage>
       <BackgroundImage
@@ -86,11 +95,11 @@ const IndexPage = () => {
       <div className="container-sm logos-caption">
         <p>
           I have worked on a variety of projects for several companies and
-          organizations including Accenture, USAA, RBFCU, the Air Force, and the
-          Department of Education. I've led and contributed to UX design cycles
-          from start to finish, including initial research, user interviews and
-          persona creation, surveys, usability testing, journey mapping, and
-          design iterations.
+          organizations including Accenture, USAA, RBFCU, U.S. Air Force, and
+          the Department of Education. I've led and contributed to UX design
+          cycles from start to finish, including initial research, user
+          interviews and persona creation, surveys, usability testing, journey
+          mapping, and design iterations.
         </p>
       </div>
       <Footer></Footer>

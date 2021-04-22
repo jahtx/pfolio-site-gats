@@ -152,6 +152,17 @@ div {
       height: 20px;
     }
   }
+  &__placecardBk {
+    display: block;
+    background-image: url("../images/shadow.png");
+    background-size: contain;
+    padding: 0 10px;
+    background-repeat: no-repeat;
+    background-position: bottom 50px;
+    @include MQ(S) {
+      padding: 0 15px;
+    }
+  }
   &__placecard {
     background-color: white;
     height: 60px;
@@ -183,7 +194,7 @@ div {
   padding: 0.2em 2em;
   font-size: 0.8em;
   @include MQ(S) {
-    padding: 1em 1em;
+    padding: 0.7em 1em;
     font-size: 0.9em;
   }
 }
