@@ -1,49 +1,21 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "./variables.scss";
 @import "./breakpoints.scss";
+@import "./tags.scss";
 
 @mixin border_guide {
   // box-shadow: inset 0px 0px 0px 0.5px $light-grey;
 }
-.no-break {
-  white-space: pre;
-}
 div {
   @include border_guide;
 }
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-}
-
-h1 {
-  line-height: 1.5em;
-  font-weight: normal;
-  font-size: 1.8em;
-}
-p {
-  margin-top: 1.8em;
-}
-h2 {
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-top: 1.8em;
-}
-h3 {
-  font-size: 1.4em;
-  margin: 1em 0;
-}
-ul {
-  li {
-    line-height: 2em;
-  }
+.no-break {
+  white-space: pre;
 }
 
 @mixin portfolio_textStyle {
   font-family: $standardHeading, "Tahoma";
-  // font-family: "Tahoma" "Bebas Neue", "Mukta";
   text-transform: uppercase;
-  // font-family: "Open Sans";
   font-weight: bold;
   color: $darker;
 }
@@ -138,6 +110,51 @@ ul {
         visibility: visible;
       }
     }
+  }
+}
+
+.herox {
+  &__mainTitle {
+    font-size: 1.2em;
+    padding: 1em 0 0.5em 0;
+    @include MQ(S) {
+      font-size: 1.5em;
+    }
+  }
+  &__inset {
+    font-size: 1em;
+    font-family: "Nothing You Could Do";
+    padding: 0.5em 0;
+    @include MQ(S) {
+      font-size: 1.3em;
+      padding: 1em 0;
+    }
+  }
+  &__topBk {
+    width: 100%;
+  }
+  &__mainTableBk {
+    height: 120px;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+    @include flex_center;
+  }
+  &__edgeTableBk {
+    height: 30px;
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+  }
+  &__placecard {
+    background-color: white;
+    height: 80px;
+    width: 250px;
+    // box-shadow: inset 0 -3px 5px grey;
+    border: 0;
+    background-image: url("../images/card-back.png");
+    background-repeat: repeat-x;
+    background-size: contain;
   }
 }
 

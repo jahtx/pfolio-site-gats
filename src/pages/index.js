@@ -6,11 +6,25 @@ import { Header, Navigation } from "../components/theme"
 import "../styles/main.scss"
 import BackgroundImage from "gatsby-background-image"
 
-const IndexPage = ({ iPadBackground }) => {
+const IndexPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        desktop: file(relativePath: { eq: "ipad.jpg" }) {
+        blurredRoom: file(relativePath: { eq: "blurred-bk.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        mainTable: file(relativePath: { eq: "main-table.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        edgeTable: file(relativePath: { eq: "edge-table.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
@@ -21,33 +35,42 @@ const IndexPage = ({ iPadBackground }) => {
     `
   )
 
-  const imageData = data.desktop.childImageSharp.fluid
+  const blurredBack = data.blurredRoom.childImageSharp.fluid
+  const mainTable = data.mainTable.childImageSharp.fluid
+  const edgeTable = data.edgeTable.childImageSharp.fluid
 
   return (
     <section>
       <Header></Header>
       <Navigation></Navigation>
-      <BackgroundImage
-        Tag="section"
-        className={iPadBackground}
-        fluid={imageData}
-        backgroundColor={`#040e18`}
-      >
-        <div className="homeHero">
-          <div className="homeHero__center">
-            <div className="homeHero__title">
-              Product & Services UX Designer and&nbsp;
-              <span className="no-break">Front-end</span> Engineer
-            </div>
-            <p className="homeHero__syn">
-              User interface strategy, prototyping, and research. Modern &nbsp;
-              <span className="no-break">front-end</span> development using
-              current frameworks and methodologies.
-            </p>
+
+      <BackgroundImage tag="div" className="herox__topBk" fluid={blurredBack}>
+        <div className="container-sm">
+          <h1 className="herox__mainTitle">
+            Hi, I'm James, a Product & Services UX Designer and Front-end
+            Engineer in the San Antonio area.
+          </h1>
+          <div className="herox__inset">
+            With over 10 years experience in design and development for
+            established companies and organizations, I'm certain I can be an
+            excellent addition to your team or project! 🙂
           </div>
         </div>
       </BackgroundImage>
-      {/* <Footer></Footer> */}
+      <BackgroundImage
+        className="herox__mainTableBk"
+        tag="div"
+        fluid={mainTable}
+      >
+        <div className="herox__placecard">
+          <img src="../../images/logos/usaa-logo.png" alt="usaa" />
+        </div>
+      </BackgroundImage>
+      <BackgroundImage
+        className="herox__edgeTableBk"
+        tag="div"
+        fluid={edgeTable}
+      ></BackgroundImage>
     </section>
   )
 }
@@ -58,17 +81,6 @@ const StyledIndexPage = styled(IndexPage)`
   background-repeat: repeat-y;
   background-size: cover;
 `
-// const IndexPage = () => {
-//   return (
-//     <div>
-//       <Header></Header>
-//       <Navigation></Navigation>
-
-//       <div className="container-lg"></div>
-//       <Footer></Footer>
-//     </div>
-//   )
-// }
 
 export default StyledIndexPage
 
