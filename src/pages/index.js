@@ -31,6 +31,13 @@ const IndexPage = () => {
             }
           }
         }
+        allLogos: file(relativePath: { eq: "logos/all-logos.png" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 400) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     `
   )
@@ -38,6 +45,7 @@ const IndexPage = () => {
   const blurredBack = data.blurredRoom.childImageSharp.fluid
   const mainTable = data.mainTable.childImageSharp.fluid
   const edgeTable = data.edgeTable.childImageSharp.fluid
+  const allLogos = data.allLogos.childImageSharp.fluid
 
   return (
     <section>
@@ -63,7 +71,11 @@ const IndexPage = () => {
         fluid={mainTable}
       >
         <div className="herox__placecard">
-          <img src="../../images/logos/usaa-logo.png" alt="usaa" />
+          <BackgroundImage
+            className="herox__allLogos"
+            tag="div"
+            fluid={allLogos}
+          ></BackgroundImage>
         </div>
       </BackgroundImage>
       <BackgroundImage
