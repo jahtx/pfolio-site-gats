@@ -7,7 +7,6 @@ import "../styles/main.scss"
 import BackgroundImage from "gatsby-background-image"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
