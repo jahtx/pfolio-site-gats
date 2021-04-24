@@ -5,6 +5,10 @@ import styled from "styled-components"
 import { Header, Footer, Navigation } from "../components/theme"
 import "../styles/main.scss"
 import BackgroundImage from "gatsby-background-image"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -38,11 +42,26 @@ const IndexPage = () => {
             }
           }
         }
-        placeBk: file(relativePath: { eq: "back-shadow.png" }) {
+        brushes: file(relativePath: { eq: "brushes.png" }) {
+          id
           childImageSharp {
-            fluid(quality: 90, maxWidth: 400) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(
+              quality: 85
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        laptop: file(relativePath: { eq: "laptop.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
           }
         }
       }
@@ -53,6 +72,8 @@ const IndexPage = () => {
   const mainTable = data.mainTable.childImageSharp.fluid
   const edgeTable = data.edgeTable.childImageSharp.fluid
   const allLogos = data.allLogos.childImageSharp.fluid
+  const brushes = data.brushes.childImageSharp.gatsbyImageData
+  const laptop = data.laptop.childImageSharp.gatsbyImageData
 
   return (
     <div>
@@ -92,16 +113,46 @@ const IndexPage = () => {
         tag="div"
         fluid={edgeTable}
       ></BackgroundImage>
-      <div className="container-sm logos-caption">
+      <div className="container-sm logos-caption mainFontSize">
         <p>
-          I have worked on a variety of projects for several companies and
-          organizations including Accenture, USAA, RBFCU, U.S. Air Force, and
-          the Department of Education. I've led and contributed to UX design
-          cycles from start to finish, including initial research, user
-          interviews and persona creation, surveys, usability testing, journey
-          mapping, and design iterations.
+          I have worked on projects for several companies and organizations
+          including Accenture, USAA, RBFCU, the U.S. Air Force, and the
+          Department of Education. I've led and contributed to UX design cycles
+          from start to finish, including initial research, user interviews and
+          persona creation, surveys, usability testing, journey mapping, and
+          design iterations.
         </p>
       </div>
+      <Container fluid="sm" className="explainBox mainFontSize">
+        <Row className="explainBox__center">
+          <div className="explainBox__left">
+            <GatsbyImage
+              className="explainBox__img-brushes"
+              image={getImage(brushes)}
+              alt="brushes"
+            />
+          </div>
+          <div className="explainBox__right">
+            <h3>Preferred UX Tools</h3>
+            Sketch, Invision, Adobe Illustrator, Adobe Photoshop
+          </div>
+        </Row>
+      </Container>
+      <Container fluid="sm" className="explainBox mainFontSize">
+        <Row className="explainBox__center">
+          <div className="explainBox__left">
+            <GatsbyImage
+              className="explainBox__img-laptop"
+              image={getImage(laptop)}
+              alt="brushes"
+            />
+          </div>
+          <div className="explainBox__right">
+            <h3>Preferred Programming Frameworks and Languages</h3>
+            React, Gatsby, Angular, JQuery
+          </div>
+        </Row>
+      </Container>
       <Footer></Footer>
     </div>
   )
