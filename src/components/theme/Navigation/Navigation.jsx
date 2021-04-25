@@ -1,23 +1,27 @@
 import React from "react"
 import "./navigation.scss"
+import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 
 const Navigation = () => {
   return (
-    <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="/">James A. Hernandez</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/portfolio">Portfolio</Nav.Link>
-            <Nav.Link href="/resume">Résumé</Nav.Link>
-            <Nav.Link href="/contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+    <Navbar className="greyNav" collapseOnSelect expand="sm">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse className="gacCollapse" id="responsive-navbar-nav">
+        <Nav className="gac">
+          <Nav.Link className="gacLink" href="/portfolio">
+            Portfolio
+          </Nav.Link>
+          <Nav.Link className="gacLink" href="/resume">
+            Résumé
+          </Nav.Link>
+          <Nav.Link className="gacLink" href="/contact">
+            Contact
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
 

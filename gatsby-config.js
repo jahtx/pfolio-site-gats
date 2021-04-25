@@ -30,6 +30,7 @@ module.exports = {
           `Open Sans Condensed`,
           `Barlow Condensed`,
           `Nothing You Could Do`,
+          `Permanent Marker`,
         ],
         display: "swap",
       },
