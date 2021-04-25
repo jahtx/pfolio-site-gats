@@ -1,6 +1,5 @@
 import React from "react"
 import { Header, Footer, Navigation } from "../components/theme"
-import "../styles/main.scss"
 
 const ResumePage = () => {
   return (

@@ -3,7 +3,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import { Header, Footer, Navigation } from "../components/theme"
-import "../styles/main.scss"
+import "../styles/indexPage.scss"
 import BackgroundImage from "gatsby-background-image"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
@@ -13,7 +13,7 @@ const IndexPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        blurredRoom: file(relativePath: { eq: "blurred-bk.jpg" }) {
+        spiral: file(relativePath: { eq: "spiral-dim.png" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
@@ -67,91 +67,25 @@ const IndexPage = () => {
     `
   )
 
-  const blurredBack = data.blurredRoom.childImageSharp.fluid
-  const mainTable = data.mainTable.childImageSharp.fluid
-  const edgeTable = data.edgeTable.childImageSharp.fluid
-  const allLogos = data.allLogos.childImageSharp.fluid
-  const brushes = data.brushes.childImageSharp.gatsbyImageData
-  const laptop = data.laptop.childImageSharp.gatsbyImageData
+  const spiral = data.spiral.childImageSharp.fluid
 
   return (
     <div>
       <Header></Header>
       <Navigation></Navigation>
-
-      <BackgroundImage tag="div" className="herox__topBk" fluid={blurredBack}>
+      <BackgroundImage tag="div" className="heroic" fluid={spiral}>
         <div className="container-sm">
-          <h1 className="herox__mainTitle">
+          <h1 className="heroic__mainTitle">
             Hi, I'm James, a Product & Services UX Designer and Front-end
             Engineer in the San Antonio area.
           </h1>
-          <div className="herox__inset">
+          <div className="heroic__inset">
             With over 10 years experience in design and development for
             established companies and organizations, I can be an excellent
             addition to your team or project! 🙂
           </div>
         </div>
       </BackgroundImage>
-      <BackgroundImage
-        className="herox__mainTableBk"
-        tag="div"
-        fluid={mainTable}
-      >
-        <div className="herox__placecardBk">
-          <div className="herox__placecard">
-            <BackgroundImage
-              className="herox__allLogos"
-              tag="div"
-              fluid={allLogos}
-            ></BackgroundImage>
-          </div>
-        </div>
-      </BackgroundImage>
-      <BackgroundImage
-        className="herox__edgeTableBk"
-        tag="div"
-        fluid={edgeTable}
-      ></BackgroundImage>
-      <div className="container-sm logos-caption mainFontSize">
-        <p>
-          I have worked on projects for several companies and organizations
-          including Accenture, USAA, RBFCU, the U.S. Air Force, and the
-          Department of Education. I've led and contributed to UX design cycles
-          from start to finish, including initial research, user interviews and
-          persona creation, surveys, usability testing, journey mapping, and
-          design iterations.
-        </p>
-      </div>
-      <Container fluid="sm" className="explainBox mainFontSize">
-        <Row className="explainBox__center">
-          <div className="explainBox__left">
-            <GatsbyImage
-              className="explainBox__img-brushes"
-              image={getImage(brushes)}
-              alt="brushes"
-            />
-          </div>
-          <div className="explainBox__right">
-            <h3>Preferred UX Tools</h3>
-            Sketch, Invision, Adobe Illustrator, Adobe Photoshop
-          </div>
-        </Row>
-      </Container>
-      <Container fluid="sm" className="explainBox mainFontSize">
-        <Row className="explainBox__center">
-          <div className="explainBox__left">
-            <GatsbyImage
-              className="explainBox__img-laptop"
-              image={getImage(laptop)}
-              alt="brushes"
-            />
-          </div>
-          <div className="explainBox__right">
-            <h3>Preferred Programming Frameworks and Languages</h3>
-            React, Gatsby, Angular, JQuery
-          </div>
-        </Row>
-      </Container>
       <Footer></Footer>
     </div>
   )

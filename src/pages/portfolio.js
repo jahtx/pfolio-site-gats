@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Header, Footer, Navigation } from "../components/theme"
 import Composite from "../components/common/Composite/Composite"
-import "../styles/main.scss"
 
 const PortfolioPage = ({ data }) => {
   return (

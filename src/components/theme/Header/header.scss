@@ -1,4 +1,4 @@
-@import "../../../styles/variables.scss";
+@import "../../../styles/standard/variables.scss";
 
 .cimaBar {
   height: 60px;
@@ -11,6 +11,6 @@
     @include flex_center;
     font-size: 1.3em;
     color: white;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
   }
 }
