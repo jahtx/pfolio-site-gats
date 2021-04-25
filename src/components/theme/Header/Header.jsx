@@ -8,6 +8,10 @@ const Header = () => {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
+        <meta
+          name="description"
+          content="Portfolio website for James A. Hernandez, UX Designer and Front-end Developer"
+        />
         <title>James A. Hernandez | UX Designer and Front-end Developer</title>
       </Helmet>
 
