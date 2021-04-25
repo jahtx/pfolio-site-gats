@@ -1,8 +1,16 @@
-.j {
-  &-topBar {
-    height: 60px;
-    background: black url("../../../images/fiesta-banner.gif") repeat-x;
-    background-size: 500px;
-    background-position: center;
+@import "../../../styles/variables.scss";
+
+.cimaBar {
+  height: 60px;
+  background-color: #ef4059;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__item {
+    font-family: "Permanent Marker";
+    @include flex_center;
+    font-size: 1.3em;
+    color: white;
+    letter-spacing: 0.08em;
   }
 }

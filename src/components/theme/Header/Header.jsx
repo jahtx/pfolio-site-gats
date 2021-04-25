@@ -15,7 +15,10 @@ const Header = () => {
         <title>James A. Hernandez | UX Designer and Front-end Developer</title>
       </Helmet>
 
-      <div className="container-fluid j-topBar"></div>
+      <div className="container-fluid cimaBar">
+        <div className="cimaBar__item">James A. Hernandez</div>
+        <div className="cimaBar__item">210-239-8460</div>
+      </div>
     </div>
   )
 }
