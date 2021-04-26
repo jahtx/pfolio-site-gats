@@ -49,7 +49,7 @@ const IndexPage = () => {
             )
           }
         }
-        devLogos: file(relativePath: { eq: "dev-logos-more.png" }) {
+        devLogos: file(relativePath: { eq: "dev-logos.png" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 85
