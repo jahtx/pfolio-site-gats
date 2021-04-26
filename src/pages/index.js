@@ -49,7 +49,7 @@ const IndexPage = () => {
             )
           }
         }
-        devLogos: file(relativePath: { eq: "dev-logos.png" }) {
+        devLogos: file(relativePath: { eq: "dev-logos-more.png" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -124,7 +124,7 @@ const IndexPage = () => {
             </div>
             <div className="explainBox__section section--devRight">
               <h3>Programming Frameworks and Languages</h3>
-              <p>React, Gastby, Angular, JQuery, Bootstrap</p>
+              <p>React, Gastby, Angular, JQuery, Git, Bootstrap</p>
             </div>
           </div>
         </div>

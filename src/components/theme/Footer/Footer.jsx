@@ -5,8 +5,8 @@ import "./footer.scss"
 const Footer = () => {
   return (
     <div>
-      <div className="container-fluid j-bottomBar">
-        <div className="j-buckle"></div>
+      <div className="container-fluid bottomBar">
+        <div className="buckle"></div>
       </div>
     </div>
   )

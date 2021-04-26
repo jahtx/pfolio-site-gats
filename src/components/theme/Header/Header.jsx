@@ -17,11 +17,11 @@ const Header = () => {
 
       <div className="container-fluid cimaBar">
         <div className="cimaBar__item cimaBar--title">
-          <a className="cimaBar__mainTitle" href="/">
-            James A. Hernandez
-          </a>
+          <a href="/">James A. Hernandez</a>
         </div>
-        <div className="cimaBar__item cimaBar--phone">210-239-8460</div>
+        <div className="cimaBar__item cimaBar--phone">
+          <a href="/contact">210-239-8460</a>
+        </div>
       </div>
     </div>
   )
