@@ -35,4 +35,11 @@
       visibility: visible;
     }
   }
+  &__mainTitle {
+    color: white;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
