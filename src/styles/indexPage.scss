@@ -19,10 +19,11 @@
   &__prevEmp {
     display: flex;
     flex-flow: column;
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
     @include MQ(S) {
       font-size: 0.9rem;
       flex-flow: row;
+      margin: 2rem 0;
     }
   }
 
@@ -36,6 +37,57 @@
       min-width: 200px;
       display: flex;
       justify-content: center;
+    }
+  }
+}
+
+.explainBox {
+  display: flex;
+  flex-flow: column;
+  h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0;
+    margin: 0.5em 0;
+  }
+  p {
+    margin: 0.5em 0;
+    font-size: 0.9rem;
+  }
+  @include MQ(S) {
+    flex-flow: row;
+  }
+  &--ux {
+    background-size: 100% 100%;
+    min-height: 200px;
+    width: 100%;
+    color: white;
+    flex-flow: column-reverse;
+    @include MQ(S) {
+      flex-flow: row;
+    }
+  }
+  &__sectionPicture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.section {
+  width: 100%;
+
+  &--uxLeft {
+    margin: 1rem 0 2rem 0;
+    @include MQ(S) {
+      margin: 1rem 0;
+      width: 30%;
+    }
+  }
+  &--uxRight {
+    margin: 2rem 2rem 0 2rem;
+    @include MQ(S) {
+      margin: 2rem 0;
     }
   }
 }

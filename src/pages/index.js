@@ -1,12 +1,10 @@
 import React from "react"
-// import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import { Header, Footer, Navigation } from "../components/theme"
 import "../styles/indexPage.scss"
 import BackgroundImage from "gatsby-background-image"
 import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
@@ -20,23 +18,9 @@ const IndexPage = () => {
             }
           }
         }
-        mainTable: file(relativePath: { eq: "main-table.jpg" }) {
+        paintBox: file(relativePath: { eq: "paintbox.png" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        edgeTable: file(relativePath: { eq: "edge-table.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        allLogos: file(relativePath: { eq: "logos/all-logos.png" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 400) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -53,12 +37,26 @@ const IndexPage = () => {
             )
           }
         }
+        uxLogos: file(relativePath: { eq: "ux-logos.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: FIXED
+              height: 140
+              transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
+            )
+          }
+        }
       }
     `
   )
 
   const spiral = data.spiral.childImageSharp.fluid
+  const paintBox = data.paintBox.childImageSharp.fluid
   const workLogos = data.workLogos.childImageSharp.gatsbyImageData
+  const uxLogos = data.uxLogos.childImageSharp.gatsbyImageData
 
   return (
     <div>
@@ -88,10 +86,27 @@ const IndexPage = () => {
               <GatsbyImage
                 className="heroic__prevEmp-logos"
                 image={getImage(workLogos)}
-                alt="logos"
+                alt="Previous Employers Logos"
               />
             </div>
           </Container>
+          <BackgroundImage
+            tag="div"
+            className="explainBox explainBox--ux"
+            fluid={paintBox}
+          >
+            <div className="explainBox__sectionPicture section--uxLeft">
+              <GatsbyImage
+                className="heroic__prevEmp-logos"
+                image={getImage(uxLogos)}
+                alt="UX Tools and Applications"
+              />
+            </div>
+            <div className="explainBox__section section--uxRight">
+              <h3>Modern UX Methodology with Industry-leading Tools</h3>
+              <p>Sketch, Invision, Adobe Illustrator, Adobe Photoshop</p>
+            </div>
+          </BackgroundImage>
         </div>
       </BackgroundImage>
       <Footer></Footer>
