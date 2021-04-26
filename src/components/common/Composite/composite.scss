@@ -9,13 +9,21 @@
     box-shadow: 0 0 15px #a3a3a3;
   }
 }
-
-.j {
-  &-mobThumb {
+.portfolio {
+  &__modalMobile {
+    max-width: 300px;
+    margin: 1.75rem auto;
+  }
+  &__modalDesktop {
+    text-align: center;
+    max-width: 800px;
+    margin: 1.75rem auto;
+  }
+  &__mobThumb {
     width: 100px;
     @include comp_border;
   }
-  &-deskThumb {
+  &__deskThumb {
     max-width: 500px;
     @include comp_border;
   }

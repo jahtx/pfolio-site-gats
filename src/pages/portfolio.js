@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Container from "react-bootstrap/Container"
+import { getImage } from "gatsby-plugin-image"
 import { Header, Footer, Navigation } from "../components/theme"
 import Composite from "../components/common/Composite/Composite"
 import "../styles/portfolioPage.scss"
@@ -9,25 +10,12 @@ const PortfolioPage = ({ data }) => {
     <div>
       <Header></Header>
       <Navigation></Navigation>
-      <div className="container-sm genlay">
-        <h1 className="genlay__mainHeader">Portfolio</h1>
-      </div>
-      <div className="container-sm genlay__headingBox">
-        <div className="genlay__headingBox__firstSection">
-          <h2>Randolph-Brooks Federal Credit Union</h2>
-        </div>
-        <div className="genlay__headingBox__lastSection">
-          <a href="http://rbfcu.org">
-            <GatsbyImage
-              image={getImage(data.rbfcuLogo.childImageSharp.gatsbyImageData)}
-              alt="Randolph-Brooks brand"
-              className="genlay__headingBox__logo"
-              objectFit={"contain"}
-            />
-          </a>
-        </div>
-      </div>
-      <div className="container-sm genlay__projectInset">
+
+      <Container fluid="sm" className="portfolio">
+        <h1>Portfolio</h1>
+        <hr></hr>
+
+        <h2>Randolph-Brooks Federal Credit Union</h2>
         <p>
           Randolph-Brooks Federal Credit Union is an accredited financial
           institution headquartered in Live Oak, Texas and is the second largest
@@ -45,7 +33,7 @@ const PortfolioPage = ({ data }) => {
           prioritizing product and services content, developing user research,
           and leading the front-end development effort.
         </p>
-      </div>
+      </Container>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
           <h3 className="genlay__compHeading">Home Page</h3>
