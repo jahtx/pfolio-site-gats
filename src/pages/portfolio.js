@@ -3,31 +3,31 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Header, Footer, Navigation } from "../components/theme"
 import Composite from "../components/common/Composite/Composite"
-
+import "../styles/portfolioPage.scss"
 const PortfolioPage = ({ data }) => {
   return (
     <div>
       <Header></Header>
       <Navigation></Navigation>
-      <div className="container-sm">
-        <h1 className="j-mainHeader">Portfolio</h1>
+      <div className="container-sm genlay">
+        <h1 className="genlay__mainHeader">Portfolio</h1>
       </div>
-      <div className="container-sm j-headingBox">
-        <div className="j-headingBox__firstSection">
+      <div className="container-sm genlay__headingBox">
+        <div className="genlay__headingBox__firstSection">
           <h2>Randolph-Brooks Federal Credit Union</h2>
         </div>
-        <div className="j-headingBox__lastSection">
+        <div className="genlay__headingBox__lastSection">
           <a href="http://rbfcu.org">
             <GatsbyImage
               image={getImage(data.rbfcuLogo.childImageSharp.gatsbyImageData)}
               alt="Randolph-Brooks brand"
-              className="j-headingBox__logo"
+              className="genlay__headingBox__logo"
               objectFit={"contain"}
             />
           </a>
         </div>
       </div>
-      <div className="container-sm j-projectInset">
+      <div className="container-sm genlay__projectInset">
         <p>
           Randolph-Brooks Federal Credit Union is an accredited financial
           institution headquartered in Live Oak, Texas and is the second largest
@@ -48,7 +48,7 @@ const PortfolioPage = ({ data }) => {
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
-          <h3 className="j-compHeading">Home Page</h3>
+          <h3 className="genlay__compHeading">Home Page</h3>
         </div>
         <div className="d-flex justify-content-center">
           <Composite
@@ -65,7 +65,7 @@ const PortfolioPage = ({ data }) => {
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
-          <h3 className="j-compHeading">Mortgages</h3>
+          <h3 className="genlay__compHeading">Mortgages</h3>
         </div>
         <div className="d-flex justify-content-center">
           <Composite
@@ -82,7 +82,7 @@ const PortfolioPage = ({ data }) => {
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
-          <h3 className="j-compHeading">Checking</h3>
+          <h3 className="genlay__compHeading">Checking</h3>
         </div>
         <div className="d-flex justify-content-center">
           <Composite
@@ -99,7 +99,7 @@ const PortfolioPage = ({ data }) => {
       </div>
       <div className="container-sm mt-3">
         <div className="d-flex justify-content-center">
-          <h3 className="j-compHeading">Auto Loans</h3>
+          <h3 className="genlay__compHeading">Auto Loans</h3>
         </div>
         <div className="d-flex justify-content-center">
           <Composite
