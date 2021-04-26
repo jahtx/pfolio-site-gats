@@ -1,5 +1,7 @@
+@import "./variables.scss";
+
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $standardFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.1em;
 }
 
