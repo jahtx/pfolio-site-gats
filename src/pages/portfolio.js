@@ -1,11 +1,133 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import styled from "styled-components"
 import Container from "react-bootstrap/Container"
 import { getImage } from "gatsby-plugin-image"
 import { Header, Footer, Navigation } from "../components/theme"
 import Composite from "../components/common/Composite/Composite"
 import "../styles/portfolioPage.scss"
-const PortfolioPage = ({ data }) => {
+const PortfolioPage = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        rbfcuLogo: file(relativePath: { eq: "rbfcu-logo.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
+          }
+        }
+        mainMobile: file(relativePath: { eq: "composites/RBFCU_Main-1.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 270
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        mainDesktop: file(relativePath: { eq: "composites/RBFCU_Main-2.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 760
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        mortgageMobile: file(
+          relativePath: { eq: "composites/RBFCU_Mortgage-1.png" }
+        ) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 270
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+
+        mortgageDesktop: file(
+          relativePath: { eq: "composites/RBFCU_Mortgage-2.png" }
+        ) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 760
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        autoLoansMobile: file(
+          relativePath: { eq: "composites/RBFCU_Auto_Loans-1.png" }
+        ) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 270
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+
+        autoLoansDesktop: file(
+          relativePath: { eq: "composites/RBFCU_Auto_Loans-2.png" }
+        ) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 760
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        checkingMobile: file(
+          relativePath: { eq: "composites/RBFCU_Checking-1.png" }
+        ) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 270
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        checkingDesktop: file(
+          relativePath: { eq: "composites/RBFCU_Checking-2.png" }
+        ) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 760
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+      }
+    `
+  )
   return (
     <div>
       <Header></Header>
@@ -107,124 +229,8 @@ const PortfolioPage = ({ data }) => {
     </div>
   )
 }
-export const query = graphql`
-  query PortfolioQuery {
-    rbfcuLogo: file(relativePath: { eq: "rbfcu-logo.png" }) {
-      id
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-      }
-    }
-    mainMobile: file(relativePath: { eq: "composites/RBFCU_Main-1.png" }) {
-      id
-      childImageSharp {
-        gatsbyImageData(
-          quality: 85
-          width: 270
-          placeholder: BLURRED
-          formats: [WEBP]
-          layout: CONSTRAINED
-        )
-      }
-    }
-    mainDesktop: file(relativePath: { eq: "composites/RBFCU_Main-2.png" }) {
-      id
-      childImageSharp {
-        gatsbyImageData(
-          quality: 85
-          width: 760
-          placeholder: BLURRED
-          formats: [WEBP]
-          layout: CONSTRAINED
-        )
-      }
-    }
-    mortgageMobile: file(
-      relativePath: { eq: "composites/RBFCU_Mortgage-1.png" }
-    ) {
-      id
-      childImageSharp {
-        gatsbyImageData(
-          quality: 85
-          width: 270
-          placeholder: BLURRED
-          formats: [WEBP]
-          layout: CONSTRAINED
-        )
-      }
-    }
 
-    mortgageDesktop: file(
-      relativePath: { eq: "composites/RBFCU_Mortgage-2.png" }
-    ) {
-      id
-      childImageSharp {
-        gatsbyImageData(
-          quality: 85
-          width: 760
-          placeholder: BLURRED
-          formats: [WEBP]
-          layout: CONSTRAINED
-        )
-      }
-    }
-    autoLoansMobile: file(
-      relativePath: { eq: "composites/RBFCU_Auto_Loans-1.png" }
-    ) {
-      id
-      childImageSharp {
-        gatsbyImageData(
-          quality: 85
-          width: 270
-          placeholder: BLURRED
-          formats: [WEBP]
-          layout: CONSTRAINED
-        )
-      }
-    }
-
-    autoLoansDesktop: file(
-      relativePath: { eq: "composites/RBFCU_Auto_Loans-2.png" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(
-          quality: 85
-          width: 760
-          placeholder: BLURRED
-          formats: [WEBP]
-          layout: CONSTRAINED
-        )
-      }
-    }
-    checkingMobile: file(
-      relativePath: { eq: "composites/RBFCU_Checking-1.png" }
-    ) {
-      id
-      childImageSharp {
-        gatsbyImageData(
-          quality: 85
-          width: 270
-          placeholder: BLURRED
-          formats: [WEBP]
-          layout: CONSTRAINED
-        )
-      }
-    }
-    checkingDesktop: file(
-      relativePath: { eq: "composites/RBFCU_Checking-2.png" }
-    ) {
-      id
-      childImageSharp {
-        gatsbyImageData(
-          quality: 85
-          width: 760
-          placeholder: BLURRED
-          formats: [WEBP]
-          layout: CONSTRAINED
-        )
-      }
-    }
-  }
+const StyledPortfolioPage = styled(PortfolioPage)`
+  width: 100%;
 `
-
-export default PortfolioPage
+export default StyledPortfolioPage

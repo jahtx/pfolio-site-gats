@@ -49,7 +49,7 @@ const IndexPage = () => {
             )
           }
         }
-        devLogos: file(relativePath: { eq: "dev-logos.png" }) {
+        devLogos: file(relativePath: { eq: "dev-logos-more.png" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -87,15 +87,15 @@ const IndexPage = () => {
             established companies and organizations, I can be an excellent
             addition to your team or project! 🙂
           </div>
-          <Container fluid="sm" className="prevEmp">
-            <div className="prevEmp-left">
+          <Container fluid="sm" className="indexBk__prevEmp">
+            <div className="indexBk__prevEmp-left">
               Throughout my career I’ve worked on large efforts for Accenture,
               USAA, RBFCU, U.S. Air Force, and the Department of Education.
               While I’ve specialized in design research, wireframing, and
               development, I have also led teams for requirements gathering,
               user testing, and evaluation.
             </div>
-            <div className="prevEmp-right">
+            <div className="indexBk__prevEmp-right">
               <GatsbyImage
                 image={getImage(workLogos)}
                 alt="Previous Employers Logos"
