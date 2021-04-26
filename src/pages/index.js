@@ -44,7 +44,19 @@ const IndexPage = () => {
               placeholder: BLURRED
               formats: [WEBP]
               layout: FIXED
-              height: 140
+              height: 130
+              transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
+            )
+          }
+        }
+        devLogos: file(relativePath: { eq: "dev-logos.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: FIXED
+              height: 130
               transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
             )
           }
@@ -57,34 +69,34 @@ const IndexPage = () => {
   const paintBox = data.paintBox.childImageSharp.fluid
   const workLogos = data.workLogos.childImageSharp.gatsbyImageData
   const uxLogos = data.uxLogos.childImageSharp.gatsbyImageData
+  const devLogos = data.devLogos.childImageSharp.gatsbyImageData
 
   return (
     <div>
       <Header></Header>
       <Navigation></Navigation>
-      <BackgroundImage tag="div" className="heroic" fluid={spiral}>
+      <BackgroundImage tag="div" className="indexBk" fluid={spiral}>
         <div className="container-sm">
-          <h1 className="heroic__mainTitle">
+          <h1 className="indexBk__mainTitle">
             Hi, I'm James, a Product & Services UX Designer and{" "}
             <span className="no-break">Front-end</span> Engineer in the San
             Antonio area.
           </h1>
-          <div className="heroic__inset">
+          <div className="indexBk__inset">
             With over 10 years experience in design and development for
             established companies and organizations, I can be an excellent
             addition to your team or project! 🙂
           </div>
-          <Container fluid="sm" className="heroic__prevEmp">
-            <div className="heroic__prevEmp-left">
+          <Container fluid="sm" className="indexBk__prevEmp">
+            <div className="indexBk__prevEmp-left">
               Throughout my career I’ve worked on large efforts for Accenture,
               USAA, RBFCU, U.S. Air Force, and the Department of Education.
               While I’ve specialized in design research, wireframing, and
               development, I have also led teams for requirements gathering,
               user testing, and evaluation.
             </div>
-            <div className="heroic__prevEmp-right">
+            <div className="indexBk__prevEmp-right">
               <GatsbyImage
-                className="heroic__prevEmp-logos"
                 image={getImage(workLogos)}
                 alt="Previous Employers Logos"
               />
@@ -97,7 +109,6 @@ const IndexPage = () => {
           >
             <div className="explainBox__sectionPicture section--uxLeft">
               <GatsbyImage
-                className="heroic__prevEmp-logos"
                 image={getImage(uxLogos)}
                 alt="UX Tools and Applications"
               />
@@ -107,8 +118,18 @@ const IndexPage = () => {
               <p>Sketch, Invision, Adobe Illustrator, Adobe Photoshop</p>
             </div>
           </BackgroundImage>
+          <div className="explainBox explainBox--dev">
+            <div className="explainBox__sectionPicture section--devLeft">
+              <GatsbyImage image={getImage(devLogos)} alt="Dev Tools" />
+            </div>
+            <div className="explainBox__section section--devRight">
+              <h3>Programming Frameworks and Languages</h3>
+              <p>React, Gastby, Angular, JQuery, Bootstrap</p>
+            </div>
+          </div>
         </div>
       </BackgroundImage>
+
       <Footer></Footer>
     </div>
   )

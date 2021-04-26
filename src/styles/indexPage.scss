@@ -4,7 +4,7 @@
 @import "./standard/tags.scss";
 @import "./standard/utilities.scss";
 
-.heroic {
+.indexBk {
   min-height: 400px;
   background-size: cover;
   background-position: left 10px;
@@ -26,6 +26,9 @@
       margin: 2rem 0;
     }
   }
+  &__prevEmp-left {
+    @include flex_center;
+  }
 
   &__prevEmp-right {
     width: 100%;
@@ -44,6 +47,11 @@
 .explainBox {
   display: flex;
   flex-flow: column;
+  margin-bottom: 2em;
+
+  @include MQ(S) {
+    flex-flow: row;
+  }
   h3 {
     font-size: 1.1rem;
     font-weight: bold;
@@ -54,18 +62,20 @@
     margin: 0.5em 0;
     font-size: 0.9rem;
   }
-  @include MQ(S) {
-    flex-flow: row;
-  }
   &--ux {
     background-size: 100% 100%;
     min-height: 200px;
-    width: 100%;
     color: white;
     flex-flow: column-reverse;
     @include MQ(S) {
       flex-flow: row;
     }
+  }
+  &--dev {
+    min-height: 200px;
+    background-color: #4a4a4a;
+    color: white;
+    border-radius: 10px;
   }
   &__sectionPicture {
     display: flex;
@@ -75,19 +85,49 @@
 }
 
 .section {
-  width: 100%;
-
   &--uxLeft {
     margin: 1rem 0 2rem 0;
     @include MQ(S) {
       margin: 1rem 0;
+      width: 45%;
+    }
+    @include MQ(M) {
       width: 30%;
     }
   }
   &--uxRight {
     margin: 2rem 2rem 0 2rem;
+    text-align: center;
     @include MQ(S) {
-      margin: 2rem 0;
+      text-align: left;
+      margin: 2rem 2rem 0 0;
+      width: 55%;
+    }
+    @include MQ(M) {
+      width: 70%;
+    }
+  }
+  &--devLeft {
+    margin: 1rem 0 0rem 0;
+
+    @include MQ(S) {
+      margin: 1rem 0;
+      width: 45%;
+    }
+    @include MQ(M) {
+      width: 30%;
+    }
+  }
+  &--devRight {
+    text-align: center;
+    margin: 0rem 2rem 2rem 2rem;
+    @include MQ(S) {
+      text-align: left;
+      margin: 2rem 2rem 0 0;
+      width: 55%;
+    }
+    @include MQ(M) {
+      width: 70%;
     }
   }
 }
