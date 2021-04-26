@@ -1,3 +1,4 @@
+@import "../../../styles/standard/breakpoints.scss";
 @import "../../../styles/standard/variables.scss";
 
 .cimaBar {
@@ -8,9 +9,30 @@
   justify-content: space-between;
   &__item {
     font-family: "Permanent Marker";
-    @include flex_center;
+
     font-size: 1.3em;
     color: white;
     letter-spacing: 0.06em;
+  }
+  &--phone {
+    visibility: hidden;
+    display: none;
+    @include MQ(S) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      visibility: visible;
+    }
+  }
+  &--title {
+    width: 100%;
+    @include flex_center;
+    @include MQ(S) {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      visibility: visible;
+    }
   }
 }

@@ -9,11 +9,33 @@
   background-size: cover;
   background-position: left 10px;
   &__mainTitle {
-    padding: 1.5em 0;
+    padding: 1.75rem 0;
   }
   &__inset {
     text-align: center;
     font-family: "Nothing You Could Do";
-    font-size: 1.3em;
+    font-size: 1.3rem;
+  }
+  &__prevEmp {
+    display: flex;
+    flex-flow: column;
+    margin: 2rem 0;
+    @include MQ(S) {
+      font-size: 0.9rem;
+      flex-flow: row;
+    }
+  }
+
+  &__prevEmp-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    @include MQ(S) {
+      width: 35%;
+      min-width: 200px;
+      display: flex;
+      justify-content: center;
+    }
   }
 }

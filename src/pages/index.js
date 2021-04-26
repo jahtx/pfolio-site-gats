@@ -41,25 +41,15 @@ const IndexPage = () => {
             }
           }
         }
-        brushes: file(relativePath: { eq: "brushes.png" }) {
-          id
+        workLogos: file(relativePath: { eq: "work-logos.png" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 85
               placeholder: BLURRED
               formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        laptop: file(relativePath: { eq: "laptop.png" }) {
-          id
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
+              layout: FIXED
+              height: 115
+              transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
             )
           }
         }
@@ -68,6 +58,7 @@ const IndexPage = () => {
   )
 
   const spiral = data.spiral.childImageSharp.fluid
+  const workLogos = data.workLogos.childImageSharp.gatsbyImageData
 
   return (
     <div>
@@ -76,14 +67,31 @@ const IndexPage = () => {
       <BackgroundImage tag="div" className="heroic" fluid={spiral}>
         <div className="container-sm">
           <h1 className="heroic__mainTitle">
-            Hi, I'm James, a Product & Services UX Designer and Front-end
-            Engineer in the San Antonio area.
+            Hi, I'm James, a Product & Services UX Designer and{" "}
+            <span className="no-break">Front-end</span> Engineer in the San
+            Antonio area.
           </h1>
           <div className="heroic__inset">
             With over 10 years experience in design and development for
             established companies and organizations, I can be an excellent
             addition to your team or project! 🙂
           </div>
+          <Container fluid="sm" className="heroic__prevEmp">
+            <div className="heroic__prevEmp-left">
+              Throughout my career I’ve worked on large efforts for Accenture,
+              USAA, RBFCU, U.S. Air Force, and the Department of Education.
+              While I’ve specialized in design research, wireframing, and
+              development, I have also led teams for requirements gathering,
+              user testing, and evaluation.
+            </div>
+            <div className="heroic__prevEmp-right">
+              <GatsbyImage
+                className="heroic__prevEmp-logos"
+                image={getImage(workLogos)}
+                alt="logos"
+              />
+            </div>
+          </Container>
         </div>
       </BackgroundImage>
       <Footer></Footer>

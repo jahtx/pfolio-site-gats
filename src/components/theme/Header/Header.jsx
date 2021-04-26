@@ -16,8 +16,8 @@ const Header = () => {
       </Helmet>
 
       <div className="container-fluid cimaBar">
-        <div className="cimaBar__item">James A. Hernandez</div>
-        <div className="cimaBar__item">210-239-8460</div>
+        <div className="cimaBar__item cimaBar--title">James A. Hernandez</div>
+        <div className="cimaBar__item cimaBar--phone">210-239-8460</div>
       </div>
     </div>
   )
