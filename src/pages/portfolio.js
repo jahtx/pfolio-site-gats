@@ -10,12 +10,6 @@ const PortfolioPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        rbfcuLogo: file(relativePath: { eq: "rbfcu-logo.png" }) {
-          id
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [WEBP])
-          }
-        }
         mainMobile: file(relativePath: { eq: "composites/RBFCU_Main-1.png" }) {
           id
           childImageSharp {
