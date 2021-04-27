@@ -6,6 +6,18 @@
   font-weight: bold;
   color: $darker;
 }
+.portBkLeft {
+  min-height: 400px;
+  background-size: 500px;
+  background-position: left top 75px;
+  background-repeat: repeat-y;
+}
+.portBkRight {
+  min-height: 400px;
+  background-size: 500px;
+  background-position: right top 125px;
+  background-repeat: repeat-y;
+}
 
 .portfolio {
   &__modalMobile {
