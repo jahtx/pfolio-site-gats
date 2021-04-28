@@ -4,6 +4,12 @@ import PropTypes from 'prop-types'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import './composite.scss'
+
+/**
+ * @param {object} props - react props
+ * @param {boolean} props.isMobile - if the comp is mobile or not
+ */
+
 const Composite = props => {
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
@@ -14,7 +20,7 @@ const Composite = props => {
   return (
     <React.Fragment>
       <div
-        className={props.mobile ? 'mobThumb' : 'deskThumb'}
+        className={props.isMobile ? 'mobThumb' : 'deskThumb'}
         onClick={handleShow}
       >
         <GatsbyImage image={props.imageInfo} alt={props.title} />
@@ -22,7 +28,7 @@ const Composite = props => {
       <Modal
         show={show}
         onHide={handleClose}
-        dialogClassName={props.mobile ? 'modalMobile' : 'modalDesktop'}
+        dialogClassName={props.isMobile ? 'modalMobile' : 'modalDesktop'}
       >
         <Modal.Header closeButton>
           <Modal.Title className="modalTitle">{props.title}</Modal.Title>
@@ -40,7 +46,7 @@ const Composite = props => {
   )
 }
 Composite.propTypes = {
-  mobile: PropTypes.bool,
+  isMobile: PropTypes.bool,
 }
 
 export default Composite

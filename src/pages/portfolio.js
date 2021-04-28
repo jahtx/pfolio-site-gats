@@ -182,12 +182,12 @@ const PortfolioPage = () => {
               <Composite
                 title="Home Page Mobile"
                 imageInfo={getImage(data.mainMobile)}
-                mobile={true}
+                isMobile={true}
               />
               <Composite
                 title="Home Page Desktop"
                 imageInfo={getImage(data.mainDesktop)}
-                mobile={false}
+                isMobile={false}
               />
             </div>
           </div>
@@ -199,12 +199,12 @@ const PortfolioPage = () => {
               <Composite
                 title="Mortgage Mobile"
                 imageInfo={getImage(data.mortgageMobile)}
-                mobile={true}
+                isMobile={true}
               />
               <Composite
                 title="Mortgage Desktop"
                 imageInfo={getImage(data.mortgageDesktop)}
-                mobile={false}
+                isMobile={false}
               />
             </div>
           </div>
@@ -216,12 +216,12 @@ const PortfolioPage = () => {
               <Composite
                 title="Checking Mobile"
                 imageInfo={getImage(data.checkingMobile)}
-                mobile={true}
+                isMobile={true}
               />
               <Composite
                 title="Checking Desktop"
                 imageInfo={getImage(data.checkingDesktop)}
-                mobile={false}
+                isMobile={false}
               />
             </div>
           </div>
@@ -233,12 +233,12 @@ const PortfolioPage = () => {
               <Composite
                 title="Auto Loans Mobile"
                 imageInfo={getImage(data.autoLoansMobile)}
-                mobile={true}
+                isMobile={true}
               />
               <Composite
                 title="Auto Loans Desktop"
                 imageInfo={getImage(data.autoLoansDesktop)}
-                mobile={false}
+                isMobile={false}
               />
             </div>
           </div>

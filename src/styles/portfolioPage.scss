@@ -1,17 +1,19 @@
-@import './includeInAll/index.scss';
+@import './standard/general.scss';
 
 .modalTitle {
   @include portfolio_textStyle;
   font-size: 1.4em;
 }
-.modalMobile {
-  max-width: 300px !important;
-  margin: 1.75rem auto !important;
+// greater specifity overrides crummy
+// bootstrap defaults (div.modalX)
+div.modalMobile {
+  max-width: 300px;
+  margin: 1.75rem auto;
 }
-.modalDesktop {
+div.modalDesktop {
   text-align: center;
-  max-width: 800px !important;
-  margin: 1.75rem auto !important;
+  max-width: 800px;
+  margin: 1.75rem auto;
 }
 .compHeading {
   @include portfolio_textStyle;
