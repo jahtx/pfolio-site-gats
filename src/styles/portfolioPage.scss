@@ -1,18 +1,5 @@
 @import './includeInAll/index.scss';
 
-.boxesBkLeft {
-  min-height: 400px;
-  background-size: 500px;
-  background-position: left top 75px;
-  background-repeat: repeat-y;
-  padding-bottom: 2em;
-}
-.boxesBkRight {
-  min-height: 400px;
-  background-size: 500px;
-  background-position: right top 125px;
-  background-repeat: repeat-y;
-}
 .modalTitle {
   @include portfolio_textStyle;
   font-size: 1.4em;
