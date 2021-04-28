@@ -14,3 +14,10 @@ $standardFont: "Open Sans";
 @mixin margin_center {
   margin: 0 auto;
 }
+
+@mixin portfolio_textStyle {
+  font-family: $standardHeading, "Tahoma";
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $darker;
+}

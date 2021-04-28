@@ -1,11 +1,5 @@
 @import "./includeInAll/index.scss";
 
-@mixin portfolio_textStyle {
-  font-family: $standardHeading, "Tahoma";
-  text-transform: uppercase;
-  font-weight: bold;
-  color: $darker;
-}
 .portBkLeft {
   min-height: 400px;
   background-size: 500px;
@@ -19,30 +13,18 @@
   background-repeat: repeat-y;
 }
 
-.portfolio {
-  &__modalMobile {
-    max-width: 300px;
-    margin: 1.75rem auto;
-  }
-  &__modalDesktop {
-    text-align: center;
-    max-width: 800px;
-    margin: 1.75rem auto;
-  }
-  &__modalTitle {
-    @include portfolio_textStyle;
-    font-size: 1.4em;
-  }
-  h1 {
-    margin: 1em 0 0.2em 0;
-  }
-  h2 {
-    @include portfolio_textStyle;
-    margin-top: 0.5em;
-  }
-  hr {
-    margin: 0;
-  }
+.modalTitle {
+  @include portfolio_textStyle;
+  font-size: 1.4em;
+}
+.modalMobile {
+  max-width: 300px;
+  margin: 1.75rem auto;
+}
+.modalDesktop {
+  text-align: center;
+  max-width: 800px;
+  margin: 1.75rem auto;
 }
 
 .genlay {

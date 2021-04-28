@@ -6,6 +6,7 @@ import BackgroundImage from "gatsby-background-image"
 import { getImage } from "gatsby-plugin-image"
 import { Header, Footer, Navigation } from "../components/theme"
 import Composite from "../components/common/Composite/Composite"
+import "../styles/standard/general.scss"
 import "../styles/portfolioPage.scss"
 const PortfolioPage = () => {
   const data = useStaticQuery(
@@ -92,7 +93,6 @@ const PortfolioPage = () => {
             )
           }
         }
-
         autoLoansDesktop: file(
           relativePath: { eq: "composites/RBFCU_Auto_Loans-2.png" }
         ) {
@@ -146,7 +146,7 @@ const PortfolioPage = () => {
       <Navigation></Navigation>
       <BackgroundImage tag="div" className="portBkLeft" fluid={boxesBkLeft}>
         <BackgroundImage tag="div" className="portBkRight" fluid={boxesBkRight}>
-          <Container fluid="sm" className="portfolio">
+          <Container fluid="sm" className="portfolio general">
             <h1>Portfolio</h1>
             <hr></hr>
 
@@ -246,6 +246,6 @@ const PortfolioPage = () => {
 }
 
 const StyledPortfolioPage = styled(PortfolioPage)`
-  width: 100%;
+  width: 90%;
 `
 export default StyledPortfolioPage

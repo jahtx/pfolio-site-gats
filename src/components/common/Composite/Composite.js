@@ -12,26 +12,20 @@ const Composite = props => {
   return (
     <div>
       <div
-        className={
-          props.mobile ? "portfolio__mobThumb" : "portfolio__deskThumb"
-        }
+        className={props.mobile ? "mobThumb" : "deskThumb"}
         onClick={handleShow}
       >
         <GatsbyImage image={props.imageInfo} alt={props.title} />
       </div>
       <Modal
-        dialogClassName={
-          props.mobile ? "portfolio__modalMobile" : "portfolio__modalDesktop"
-        }
+        dialogClassName={props.mobile ? "modalMobile" : "modalDesktop"}
         show={show}
         onHide={handleClose}
       >
         <Modal.Header closeButton>
-          <Modal.Title className="portfolio__modalTitle">
-            {props.title}
-          </Modal.Title>
+          <Modal.Title className="modalTitle">{props.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="portfolio__modalBody">
+        <Modal.Body>
           <GatsbyImage image={props.imageInfo} alt={props.title} />
         </Modal.Body>
         <Modal.Footer>

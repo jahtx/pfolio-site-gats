@@ -1,0 +1,14 @@
+@import "../includeInAll/index.scss";
+
+.general {
+  h1 {
+    margin: 1em 0 0.2em 0;
+  }
+  h2 {
+    @include portfolio_textStyle;
+    margin-top: 0.5em;
+  }
+  hr {
+    margin: 0;
+  }
+}
