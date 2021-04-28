@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
+import '../styles/portfolioPage.scss'
 import Container from 'react-bootstrap/Container'
 import BackgroundImage from 'gatsby-background-image'
 import { getImage } from 'gatsby-plugin-image'
 import { Header, Footer, Navigation } from '../components/theme'
 import Composite from '../components/common/Composite/Composite'
-import '../styles/portfolioPage.scss'
+
 const PortfolioPage = () => {
   const data = useStaticQuery(
     graphql`
@@ -149,7 +150,7 @@ const PortfolioPage = () => {
           className="boxesBkRight"
           fluid={boxesBkRight}
         >
-          <Container fluid="sm" className="general">
+          <Container fluid="sm" className="portfolioPage general">
             <h1>Portfolio</h1>
             <hr></hr>
 
