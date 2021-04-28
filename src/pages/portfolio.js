@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
-import Container from "react-bootstrap/Container"
-import BackgroundImage from "gatsby-background-image"
-import { getImage } from "gatsby-plugin-image"
-import { Header, Footer, Navigation } from "../components/theme"
-import Composite from "../components/common/Composite/Composite"
-import "../styles/standard/general.scss"
-import "../styles/portfolioPage.scss"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import styled from 'styled-components'
+import Container from 'react-bootstrap/Container'
+import BackgroundImage from 'gatsby-background-image'
+import { getImage } from 'gatsby-plugin-image'
+import { Header, Footer, Navigation } from '../components/theme'
+import Composite from '../components/common/Composite/Composite'
+import '../styles/standard/general.scss'
+import '../styles/portfolioPage.scss'
 const PortfolioPage = () => {
   const data = useStaticQuery(
     graphql`
@@ -144,8 +144,12 @@ const PortfolioPage = () => {
     <div>
       <Header></Header>
       <Navigation></Navigation>
-      <BackgroundImage tag="div" className="portBkLeft" fluid={boxesBkLeft}>
-        <BackgroundImage tag="div" className="portBkRight" fluid={boxesBkRight}>
+      <BackgroundImage tag="div" className="boxesBkLeft" fluid={boxesBkLeft}>
+        <BackgroundImage
+          tag="div"
+          className="boxesBkRight"
+          fluid={boxesBkRight}
+        >
           <Container fluid="sm" className="general">
             <h1>Portfolio</h1>
             <hr></hr>

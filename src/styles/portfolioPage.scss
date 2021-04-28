@@ -1,12 +1,13 @@
 @import './includeInAll/index.scss';
 
-.portBkLeft {
+.boxesBkLeft {
   min-height: 400px;
   background-size: 500px;
   background-position: left top 75px;
   background-repeat: repeat-y;
+  padding-bottom: 2em;
 }
-.portBkRight {
+.boxesBkRight {
   min-height: 400px;
   background-size: 500px;
   background-position: right top 125px;

@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import styled from "styled-components"
-import { Header, Footer, Navigation } from "../components/theme"
-import "../styles/indexPage.scss"
-import BackgroundImage from "gatsby-background-image"
-import Container from "react-bootstrap/Container"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import styled from 'styled-components'
+import { Header, Footer, Navigation } from '../components/theme'
+import '../styles/indexPage.scss'
+import BackgroundImage from 'gatsby-background-image'
+import Container from 'react-bootstrap/Container'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -75,14 +75,14 @@ const IndexPage = () => {
     <div>
       <Header></Header>
       <Navigation></Navigation>
-      <BackgroundImage tag="div" className="indexBk" fluid={spiral}>
+      <BackgroundImage tag="div" className="homePage" fluid={spiral}>
         <div className="container-sm">
-          <h1 className="indexBk__mainTitle">
-            Hi, I'm James, a Product & Services UX Designer and{" "}
+          <h1 className="homePage__mainTitle">
+            Hi, I'm James, a Product & Services UX Designer and{' '}
             <span className="no-break">Front-end</span> Engineer in the San
             Antonio area.
           </h1>
-          <div className="indexBk__inset">
+          <div className="homePage__inset">
             With over 10 years experience in design and development for
             established companies and organizations, I can be an excellent
             addition to your team or project! 🙂
