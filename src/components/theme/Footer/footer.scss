@@ -1,18 +1,17 @@
 .bottomBar {
-  height: 5em;
-  background: url("../../../images/belt-stitch.png") repeat-x;
+  height: 2.5em;
   background-position: center;
   background-size: 7px 35px;
-  margin-bottom: 2em;
+  background-repeat: repeat-x;
+  margin: 0 0 2em 0;
   padding-top: 0;
-  margin-top: 0;
   display: flex;
   justify-content: center;
 }
 .buckle {
-  height: 5em;
+  height: 2.5em;
   width: 3em;
-  background: url("../../../images/star.png") no-repeat;
+  background: url('../../../images/star.png') no-repeat;
   background-size: contain;
   background-position: center;
 }

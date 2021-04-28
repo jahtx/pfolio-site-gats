@@ -1,6 +1,6 @@
-import React from "react"
-import "./header.scss"
-import { Helmet } from "react-helmet"
+import React from 'react'
+import './header.scss'
+import { Helmet } from 'react-helmet'
 
 // markup
 const Header = () => {

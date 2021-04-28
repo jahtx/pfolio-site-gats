@@ -1,4 +1,4 @@
-@import "./includeInAll/index.scss";
+@import './includeInAll/index.scss';
 
 .indexBk {
   min-height: 400px;
@@ -13,7 +13,7 @@
   }
   &__inset {
     text-align: center;
-    font-family: "Nothing You Could Do";
+    font-family: 'Nothing You Could Do';
     font-size: 1.3rem;
   }
 }
@@ -75,7 +75,7 @@
   &--dev {
     min-height: 200px;
     background-color: #4a4a4a;
-    background-image: url("../images/window-controls.png");
+    background-image: url('../images/window-controls.png');
     background-size: 60px;
     background-repeat: no-repeat;
     background-position: 15px 15px;

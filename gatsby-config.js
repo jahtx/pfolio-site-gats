@@ -1,12 +1,13 @@
 // In your gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `James A. Hernandez - Senior UX Designer and Front-end Engineer`,
+    title: `Portfolio Website James Hernandez`,
     description: `Portfolio and contact information website for freelance front-end jobs and opportunities.`,
     author: `James A. Hernandez`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -26,9 +27,9 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-VFZEZQXCGB", // Google Analytics / GA
-          "AW-CONVERSION_ID", // Google Ads / Adwords / AW
-          "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+          'G-VFZEZQXCGB', // Google Analytics / GA
+          'AW-CONVERSION_ID', // Google Ads / Adwords / AW
+          'DC-FLOODIGHT_ID', // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
       },
     },
@@ -42,7 +43,7 @@ module.exports = {
           `Nothing You Could Do`,
           `Permanent Marker`,
         ],
-        display: "swap",
+        display: 'swap',
       },
     },
     {
@@ -53,21 +54,21 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-prettier-eslint",
+      resolve: 'gatsby-plugin-prettier-eslint',
       options: {
         prettier: {
           patterns: [
             // the pattern "**/*.{js,jsx,ts,tsx}" is not used because we will rely on `eslint --fix`
-            "**/*.{css,scss,less}",
-            "**/*.{json,json5}",
-            "**/*.{graphql}",
-            "**/*.{md,mdx}",
-            "**/*.{html}",
-            "**/*.{yaml,yml}",
+            '**/*.{css,scss,less}',
+            '**/*.{json,json5}',
+            '**/*.{graphql}',
+            '**/*.{md,mdx}',
+            '**/*.{html}',
+            '**/*.{yaml,yml}',
           ],
         },
         eslint: {
-          patterns: "**/*.{js,jsx,ts,tsx}",
+          patterns: '**/*.{js,jsx,ts,tsx}',
           customOptions: {
             fix: true,
             cache: true,
