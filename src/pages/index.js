@@ -115,7 +115,7 @@ const IndexPage = () => {
             </div>
             <div className="explainBox__section section--uxRight">
               <h3>Modern UX Methodology with Industry-leading Tools</h3>
-              <p>Sketch, Invision, Adobe Illustrator, Adobe Photoshop</p>
+              <p>Sketch, Figma, Invision, Adobe Illustrator, Adobe Photoshop</p>
             </div>
           </BackgroundImage>
           <div className="explainBox explainBox--dev">

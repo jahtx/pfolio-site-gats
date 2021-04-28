@@ -1,13 +1,23 @@
 // In your gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Read the Signs`,
-    description: `Now is the winter of our discontent. Made glorious summer by this sun of York;`,
-    author: `@gatsbyjs`,
+    title: `James A. Hernandez - Senior UX Designer and Front-end Engineer`,
+    description: `Portfolio and contact information website for freelance front-end jobs and opportunities.`,
+    author: `James A. Hernandez`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        useResolveUrlLoader: {
+          options: {
+            debug: true,
+            sourceMap: true,
+          },
+        },
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
