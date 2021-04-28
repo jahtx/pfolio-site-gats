@@ -5,7 +5,7 @@ import '../styles/resumePage.scss'
 
 const ResumePage = () => {
   return (
-    <MainLayout pageClass="resumePage general">
+    <MainLayout pageClasses="resumePage general">
       <Container fluid="sm">
         <h1>Résumé</h1>
         <hr></hr>

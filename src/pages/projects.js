@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container'
 import '../styles/projectsPage.scss'
 
 const ProjectsPage = () => (
-  <MainLayout pageClass="resumePage general">
+  <MainLayout pageClasses="resumePage general">
     <Container fluid="sm">
       <h1>Projects</h1>
       <hr></hr>

@@ -1,12 +1,11 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from 'styled-components'
-import '../styles/portfolioPage.scss'
 import Container from 'react-bootstrap/Container'
 import BackgroundImage from 'gatsby-background-image'
 import { getImage } from 'gatsby-plugin-image'
-import { Header, Footer, Navigation } from '../components/theme'
+import MainLayout from '../layouts/MainLayout/MainLayout'
 import Composite from '../components/common/Composite/Composite'
+import '../styles/portfolioPage.scss'
 
 const PortfolioPage = () => {
   const data = useStaticQuery(
@@ -14,14 +13,14 @@ const PortfolioPage = () => {
       query {
         boxesBkLeft: file(relativePath: { eq: "boxes-back-left.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 90, maxWidth: 600) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         boxesBkRight: file(relativePath: { eq: "boxes-back-right.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 90, maxWidth: 600) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -141,16 +140,14 @@ const PortfolioPage = () => {
   const boxesBkLeft = data.boxesBkLeft.childImageSharp.fluid
   const boxesBkRight = data.boxesBkRight.childImageSharp.fluid
   return (
-    <div>
-      <Header></Header>
-      <Navigation></Navigation>
+    <MainLayout pageClasses="portfolioPage general">
       <BackgroundImage tag="div" className="boxesBkLeft" fluid={boxesBkLeft}>
         <BackgroundImage
           tag="div"
           className="boxesBkRight"
           fluid={boxesBkRight}
         >
-          <Container fluid="sm" className="portfolioPage general">
+          <Container fluid="sm">
             <h1>Portfolio</h1>
             <hr></hr>
 
@@ -244,12 +241,8 @@ const PortfolioPage = () => {
           </div>
         </BackgroundImage>
       </BackgroundImage>
-      <Footer></Footer>
-    </div>
+    </MainLayout>
   )
 }
 
-const StyledPortfolioPage = styled(PortfolioPage)`
-  width: 90%;
-`
-export default StyledPortfolioPage
+export default PortfolioPage

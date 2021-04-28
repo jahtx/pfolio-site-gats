@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Header, Footer, Navigation } from '../../components/theme'
-const MainLayout = ({ children, pageClass }) => {
+const MainLayout = ({ children, pageClasses }) => {
   return (
-    <div className={pageClass}>
+    <div className={pageClasses}>
       <Header></Header>
       <Navigation></Navigation>
       {children}
@@ -14,6 +14,6 @@ const MainLayout = ({ children, pageClass }) => {
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  pageClass: PropTypes.node,
+  pageClasses: PropTypes.node,
 }
 export default MainLayout

@@ -6,6 +6,9 @@ import Modal from 'react-bootstrap/Modal'
 import './composite.scss'
 
 /**
+ * A functional component with useState
+ * Allows modal windows for diplaying full pictures of compositess
+ *
  * @param {object} props - react props
  * @param {boolean} props.isMobile - if the comp is mobile or not
  */

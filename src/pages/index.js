@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from 'styled-components'
-import { Header, Footer, Navigation } from '../components/theme'
+import MainLayout from '../layouts/MainLayout/MainLayout'
 import '../styles/indexPage.scss'
 import BackgroundImage from 'gatsby-background-image'
 import Container from 'react-bootstrap/Container'
@@ -72,10 +71,8 @@ const IndexPage = () => {
   const devLogos = data.devLogos.childImageSharp.gatsbyImageData
 
   return (
-    <div>
-      <Header></Header>
-      <Navigation></Navigation>
-      <BackgroundImage tag="div" className="homePage" fluid={spiral}>
+    <MainLayout pageClasses="homePage general">
+      <BackgroundImage tag="div" className="homePage__bk" fluid={spiral}>
         <div className="container-sm">
           <h1 className="homePage__mainTitle">
             Hi, I'm James, a Product & Services UX Designer and{' '}
@@ -129,17 +126,11 @@ const IndexPage = () => {
           </div>
         </div>
       </BackgroundImage>
-
-      <Footer></Footer>
-    </div>
+    </MainLayout>
   )
 }
 
-const StyledIndexPage = styled(IndexPage)`
-  width: 100%;
-`
-
-export default StyledIndexPage
+export default IndexPage
 
 // Goal: The purpose of this page is to have an index.
 //
