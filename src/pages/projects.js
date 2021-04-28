@@ -1,9 +1,14 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout/MainLayout'
+import Container from 'react-bootstrap/Container'
+import '../styles/projectsPage.scss'
 
 const ProjectsPage = () => (
   <MainLayout>
-    <p>It was the best of times, it was the worst of times</p>
+    <Container fluid="sm" className="resumePage general">
+      <h1>Projects</h1>
+      <hr></hr>
+    </Container>
   </MainLayout>
 )
 

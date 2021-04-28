@@ -6,7 +6,6 @@ import BackgroundImage from 'gatsby-background-image'
 import { getImage } from 'gatsby-plugin-image'
 import { Header, Footer, Navigation } from '../components/theme'
 import Composite from '../components/common/Composite/Composite'
-import '../styles/standard/general.scss'
 import '../styles/portfolioPage.scss'
 const PortfolioPage = () => {
   const data = useStaticQuery(
