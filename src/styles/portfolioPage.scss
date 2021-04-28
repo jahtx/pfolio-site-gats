@@ -20,3 +20,10 @@
 .projectInset {
   font-size: 0.9em;
 }
+
+.portfolioPage {
+  h2 {
+    @include portfolio_textStyle;
+    margin-top: 0.5em;
+  }
+}
