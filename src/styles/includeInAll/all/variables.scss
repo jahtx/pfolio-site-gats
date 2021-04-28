@@ -2,7 +2,7 @@ $light-grey: #c7c7c7;
 $darker: #575757;
 $primary_color: #073f83;
 
-$standardHeading: "Barlow Condensed";
+$standardHeading: "Barlow Condensed", "Trebuchet MS", "Tahoma";
 $standardFont: "Open Sans";
 
 @mixin flex_center {
@@ -16,7 +16,7 @@ $standardFont: "Open Sans";
 }
 
 @mixin portfolio_textStyle {
-  font-family: $standardHeading, "Tahoma";
+  font-family: $standardHeading;
   text-transform: uppercase;
   font-weight: bold;
   color: $darker;

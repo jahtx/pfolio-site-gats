@@ -146,7 +146,7 @@ const PortfolioPage = () => {
       <Navigation></Navigation>
       <BackgroundImage tag="div" className="portBkLeft" fluid={boxesBkLeft}>
         <BackgroundImage tag="div" className="portBkRight" fluid={boxesBkRight}>
-          <Container fluid="sm" className="portfolio general">
+          <Container fluid="sm" className="general">
             <h1>Portfolio</h1>
             <hr></hr>
 
@@ -172,7 +172,7 @@ const PortfolioPage = () => {
           </Container>
           <div className="container-sm mt-3">
             <div className="d-flex justify-content-center">
-              <h3 className="genlay__compHeading">Home Page</h3>
+              <h3 className="compHeading">Home Page</h3>
             </div>
             <div className="d-flex justify-content-center">
               <Composite
@@ -189,7 +189,7 @@ const PortfolioPage = () => {
           </div>
           <div className="container-sm mt-3">
             <div className="d-flex justify-content-center">
-              <h3 className="genlay__compHeading">Mortgages</h3>
+              <h3 className="compHeading">Mortgages</h3>
             </div>
             <div className="d-flex justify-content-center">
               <Composite
@@ -206,7 +206,7 @@ const PortfolioPage = () => {
           </div>
           <div className="container-sm mt-3">
             <div className="d-flex justify-content-center">
-              <h3 className="genlay__compHeading">Checking</h3>
+              <h3 className="compHeading">Checking</h3>
             </div>
             <div className="d-flex justify-content-center">
               <Composite
@@ -223,7 +223,7 @@ const PortfolioPage = () => {
           </div>
           <div className="container-sm mt-3">
             <div className="d-flex justify-content-center">
-              <h3 className="genlay__compHeading">Auto Loans</h3>
+              <h3 className="compHeading">Auto Loans</h3>
             </div>
             <div className="d-flex justify-content-center">
               <Composite

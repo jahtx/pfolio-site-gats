@@ -12,7 +12,6 @@
   background-position: right top 125px;
   background-repeat: repeat-y;
 }
-
 .modalTitle {
   @include portfolio_textStyle;
   font-size: 1.4em;
@@ -26,13 +25,10 @@
   max-width: 800px;
   margin: 1.75rem auto;
 }
-
-.genlay {
-  &__compHeading {
-    @include portfolio_textStyle;
-    margin: 1em 0 0.5em;
-  }
-  &__projectInset {
-    font-size: 0.9em;
-  }
+.compHeading {
+  @include portfolio_textStyle;
+  margin: 1em 0 0.5em;
+}
+.projectInset {
+  font-size: 0.9em;
 }
