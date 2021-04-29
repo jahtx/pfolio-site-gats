@@ -66,9 +66,9 @@ const IndexPage = () => {
 
   const spiral = data.spiral.childImageSharp.fluid
   const paintBox = data.paintBox.childImageSharp.fluid
-  const workLogos = data.workLogos.childImageSharp.gatsbyImageData
-  const uxLogos = data.uxLogos.childImageSharp.gatsbyImageData
-  const devLogos = data.devLogos.childImageSharp.gatsbyImageData
+  const workLogos = data.workLogos
+  const uxLogos = data.uxLogos
+  const devLogos = data.devLogos
 
   return (
     <MainLayout pageClasses="homePage">

@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
-import { getImage } from 'gatsby-plugin-image'
 import MainLayout from '../layouts/MainLayout/MainLayout'
+import BackgroundImage from 'gatsby-background-image'
 import Container from 'react-bootstrap/Container'
 import '../styles/contactPage.scss'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const ContactPage = () => {
   const data = useStaticQuery(
@@ -24,12 +24,21 @@ const ContactPage = () => {
             }
           }
         }
+        spongebob: file(
+          relativePath: { eq: "contact-logos/twitter-logo.png" }
+        ) {
+          childImageSharp {
+            gatsbyImageData(quality: 85, placeholder: BLURRED, formats: [WEBP])
+          }
+        }
       }
     `
   )
 
   const boxesBkLeft = data.boxesBkLeft.childImageSharp.fluid
   const boxesBkRight = data.boxesBkRight.childImageSharp.fluid
+  const spongebob = data.spongebob
+  // const githubLogo = data.twitterLogo.childImageSharp.fluid
   return (
     <MainLayout pageClasses="contactPage general">
       <BackgroundImage tag="div" className="boxesBkLeft" fluid={boxesBkLeft}>
@@ -41,6 +50,10 @@ const ContactPage = () => {
           <Container fluid="sm">
             <h1>Contact</h1>
             <hr></hr>
+            <div className="logoContainer">
+              <GatsbyImage image={getImage(spongebob)} alt="Twitter Account" />
+            </div>
+
             <div className="contactPage__spacer"></div>
           </Container>
         </BackgroundImage>

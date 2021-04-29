@@ -23,7 +23,7 @@ const ResumePage = () => {
           experience with direct-to-consumer products.
         </p>
         <h3>Core Strengths:</h3>
-        <ul class="coreStrengths">
+        <ul className="coreStrengths">
           <li>User Interface/User Experience Design</li>
           <li>Front-end Development with React and Angular</li>
           <li>Rapid prototyping</li>
