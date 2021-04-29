@@ -126,6 +126,52 @@ const ResumePage = () => {
             services provided by AWS, Azure, Digital Ocean, and WPEngine
           </li>
         </ul>
+        <h4>Creative Designer I&mdash;USAA, San Antonio, TX (2010-2014)</h4>
+        <p>
+          Designer and developer for ArcGIS application correlating members'
+          homes with area-mapping capabilities. Primary designer and front-end
+          developer for USAA's internal Enterprise Correspondence Tool to
+          facilitate member communication by postal and digital channels.
+          Developed and deployed A/B tests with SiteSpect. USAA mobile app
+          wireframing and mobile web front-end development. Designed and worked
+          with development on address change process for members.
+        </p>
+        <ul>
+          <li>
+            Developed desktop and mobile web pages with responsive, fluid design
+          </li>
+          <li>
+            Integrated Software-as-a-Service (SaaS) vendor code into custom
+            HTML, CSS
+          </li>
+          <li>
+            Created and documented information architecture and interaction
+            design through UML
+          </li>
+        </ul>
+        <h4>Operating Systems and Applications:</h4>
+        <ul>
+          <li>UNIX / Linux</li>
+          <li>MacOS / Windows</li>
+          <li>Photoshop / Illustrator CC</li>
+          <li>Sketch</li>
+          <li>Figma</li>
+          <li>Invision</li>
+          <li>Axure</li>
+          <li>SiteSpect</li>
+        </ul>
+        <h4>Languages and Technologies:</h4>
+        <ul>
+          <li>Angular 2</li>
+          <li>React / Redux</li>
+          <li>HTML 5 / CSS 3</li>
+          <li>SASS</li>
+          <li>JavaScript</li>
+          <li>JQuery</li>
+          <li>Git</li>
+          <li>AWS</li>
+          <li>Digital Ocean</li>
+        </ul>
       </Container>
     </MainLayout>
   )

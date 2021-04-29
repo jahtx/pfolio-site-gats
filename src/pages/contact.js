@@ -1,25 +1,51 @@
-import React from "react"
-import { Header, Footer, Navigation } from "../components/theme"
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
+import { getImage } from 'gatsby-plugin-image'
+import MainLayout from '../layouts/MainLayout/MainLayout'
+import Container from 'react-bootstrap/Container'
+import '../styles/contactPage.scss'
 
 const ContactPage = () => {
-  console.log("hire me!")
+  const data = useStaticQuery(
+    graphql`
+      query {
+        boxesBkLeft: file(relativePath: { eq: "boxes-back-left.png" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        boxesBkRight: file(relativePath: { eq: "boxes-back-right.png" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const boxesBkLeft = data.boxesBkLeft.childImageSharp.fluid
+  const boxesBkRight = data.boxesBkRight.childImageSharp.fluid
   return (
-    <div className="j-resume">
-      <Header></Header>
-      <Navigation></Navigation>
-      <div className="container-sm">
-        <h1 className="j-mainHeader">Contact</h1>
-      </div>
-      <div className="container-sm j-headingBox">
-        <div className="j-headingBox__firstSection"></div>
-      </div>
-      <div className="container-sm">
-        <p>email: contact@jahtx.com</p>
-        <p>phone: 210-649-7265</p>
-        <p>twitter: @jah_uxdev</p>
-      </div>
-      <Footer></Footer>
-    </div>
+    <MainLayout pageClasses="contactPage general">
+      <BackgroundImage tag="div" className="boxesBkLeft" fluid={boxesBkLeft}>
+        <BackgroundImage
+          tag="div"
+          className="boxesBkRight"
+          fluid={boxesBkRight}
+        >
+          <Container fluid="sm">
+            <h1>Contact</h1>
+            <hr></hr>
+            <div className="contactPage__spacer"></div>
+          </Container>
+        </BackgroundImage>
+      </BackgroundImage>
+    </MainLayout>
   )
 }
 

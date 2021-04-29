@@ -1,4 +1,4 @@
-@import './includeInAll/index.scss';
+@import './standard/general.scss';
 
 .homePage {
   min-height: 400px;
@@ -26,7 +26,7 @@
   flex-flow: column;
   margin: 2rem 0 0 0;
   @include MQ(S) {
-    font-size: 0.9rem;
+    font-size: 1rem;
     flex-flow: row;
     margin: 2rem 0;
   }
