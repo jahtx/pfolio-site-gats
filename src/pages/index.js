@@ -71,7 +71,7 @@ const IndexPage = () => {
   const devLogos = data.devLogos.childImageSharp.gatsbyImageData
 
   return (
-    <MainLayout pageClasses="homePage general">
+    <MainLayout pageClasses="homePage">
       <BackgroundImage tag="div" className="homePage__bk" fluid={spiral}>
         <div className="container-sm">
           <h1 className="homePage__mainTitle">
@@ -111,7 +111,9 @@ const IndexPage = () => {
               />
             </div>
             <div className="explainBox__section section--uxRight">
-              <h3>Modern UX Methodology with Industry-leading Tools</h3>
+              <h3 className="explainBox__heading">
+                Modern UX Methodology with Industry-leading Tools
+              </h3>
               <p>Sketch, Figma, Invision, Adobe Illustrator, Adobe Photoshop</p>
             </div>
           </BackgroundImage>
@@ -120,7 +122,9 @@ const IndexPage = () => {
               <GatsbyImage image={getImage(devLogos)} alt="Dev Tools" />
             </div>
             <div className="explainBox__section section--devRight">
-              <h3>Programming Frameworks and Languages</h3>
+              <h3 className="explainBox__heading">
+                Programming Frameworks and Languages
+              </h3>
               <p>React, Gastby, Angular, JQuery, Git, Bootstrap</p>
             </div>
           </div>
@@ -131,8 +135,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-// Goal: The purpose of this page is to have an index.
-//
-// 1. What is the best way to architect this? If this page has <App>,
-// where do I place the content?

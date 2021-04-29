@@ -17,7 +17,9 @@ const Header = () => {
 
       <div className="container-fluid cimaBar">
         <div className="cimaBar__item cimaBar--title">
-          <a href="/">James A. Hernandez</a>
+          <a className="cimaBar__link" href="/">
+            James A. Hernandez
+          </a>
         </div>
         <div className="cimaBar__item cimaBar--phone">
           <a href="/contact">210-239-8460</a>

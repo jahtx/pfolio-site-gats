@@ -55,12 +55,17 @@
 
   @include MQ(S) {
     flex-flow: row;
+    padding-bottom: 0;
   }
-  h3 {
-    font-size: 1.1rem;
+  // h3
+  &__heading {
+    font-size: 1rem;
     font-weight: bold;
     padding: 0;
-    margin: 0.5em 0;
+    margin: 0;
+    @include MQ(S) {
+      font-size: 1.1rem;
+    }
   }
   p {
     margin: 0.5em 0;

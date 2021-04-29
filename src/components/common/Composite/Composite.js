@@ -53,6 +53,3 @@ Composite.propTypes = {
 }
 
 export default Composite
-
-// Initial problems: GatsbyImage would not execute onClick when deployed.
-// Solved by putting onClick on parent div. Who knows why this works?
