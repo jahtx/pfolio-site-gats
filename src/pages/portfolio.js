@@ -198,7 +198,7 @@ const PortfolioPage = () => {
           />
         </div>
       </div>
-      <div className="container-sm mt-3">
+      <div className="container-sm mt-3 portLast">
         <div className="d-flex justify-content-center">
           <h3 className="compHeading">Auto Loans</h3>
         </div>
