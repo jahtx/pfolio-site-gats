@@ -12,14 +12,14 @@ const ContactPage = () => {
       query {
         boxesBkLeft: file(relativePath: { eq: "boxes-back-left.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 600) {
+            fluid(quality: 90, maxWidth: 250) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         boxesBkRight: file(relativePath: { eq: "boxes-back-right.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 600) {
+            fluid(quality: 90, maxWidth: 250) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
