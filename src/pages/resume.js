@@ -5,7 +5,7 @@ import '../styles/resumePage.scss'
 
 const ResumePage = () => {
   return (
-    <MainLayout pageClasses="resumePage general">
+    <MainLayout pageClasses="resumePage">
       <Container fluid="sm">
         <h1>Résumé</h1>
         <hr></hr>
@@ -30,43 +30,36 @@ const ResumePage = () => {
           <li>Product Strategy and Planning</li>
         </ul>
         <hr></hr>
-        <h3>Professional Experience:</h3>
+        <h3>Experience:</h3>
         <h4>
           User Experience Designer/Front-end Developer&mdash;Insight Global, San
           Antonio, TX (2018-2020)
         </h4>
+        <h5>
+          Client: Accenture / U.S. Department of Education (Oct 2019-Oct 2020)
+        </h5>
         <p>
-          Designing and developing web application for managing promotions for
-          the Air Force. Producing wireframes for prototypes and engineering.
-          Incorporating user/client consultations and interviews to refine and
-          adapt interface. Development for U.S. Department of Education Student
-          Loan website, including designing and coding a variety of page flows
-          to spec. Clients include{' '}
-          <a className="link" href="https://www.accenture.com">
-            Accenture
-          </a>
-          &nbsp;and&nbsp;
-          <a className="link" href="https://www.diligent-us.com/">
-            Diligent Consulting
-          </a>
-          .
+          Front-end engineer and designer on a development team for the U.S.
+          Department of Education Student Loans web application. The browser
+          client required Angular 2 and Bootstrap integration while the backend
+          used Java/Spring and Oracle. Augmented and implemented designs from UX
+          teams for mobile and desktop screens. Incorporated REST APIs using
+          RX.js. Experience with SCRUM Agile methodologies utilizing daily
+          stand-ups on 4-week sprints.
         </p>
-
-        <ul>
-          <li>
-            Engineering custom CSS3 and HTML5 to match and adapt to user
-            requirements for multiple screens
-          </li>
-          <li>
-            Graphic design with Illustrator/Sketch to refine and coordinate with
-            client and user expectations
-          </li>
-          <li>
-            Full React/Redux development to craft custom screens, modals, and
-            data retrieval from RESTful APIs
-          </li>
-        </ul>
-
+        <h5>
+          Client: Diligent Consulting / U.S. Air Force (Oct 2018-Oct 2019)
+        </h5>
+        <p>
+          Diligent Consulting had previously developed a custom application
+          (eBOSS) for the U.S. Air Force to manage promotions using an outdated
+          browser plug-in (Silverlight). Requisition of a new version, built
+          using HTML5 and a modern web framework, required our team to enhance
+          the user experience and functionality of the application while
+          maintaining previous requirements and capability. Enhanced the user
+          interface with industry standard components and developed in
+          React/Redux and led team on version control/Git best practices.
+        </p>
         <h4>
           User Experience Designer/Front-end Developer&mdash;Ampcus Inc, San
           Antonio, TX (2016-2017)

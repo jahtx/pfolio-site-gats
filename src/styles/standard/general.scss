@@ -1,32 +1,33 @@
 @import '../includeInAll/index.scss';
 
-.general {
-  h1 {
-    margin: 1em 0 0.2em 0;
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  h3 {
-    font-size: 1.3rem;
-  }
-  h4 {
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-    margin: 1.7rem 0 0.9rem 0;
-    padding: 0;
-  }
-  hr {
-    margin: 0;
-  }
-  p {
-    font-size: 1rem;
-    margin: 0.9rem 0;
-  }
-  li {
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
+h1 {
+  margin: 1em 0 0.2em 0;
+}
+h2 {
+  font-size: 1.4rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  margin: 1.7rem 0 0.9rem 0;
+  padding: 0;
+}
+h5 {
+  font-size: 1.1rem;
+}
+hr {
+  margin: 0;
+}
+p {
+  font-size: 1rem;
+  margin: 0.9rem 0;
+}
+li {
+  font-size: 1rem;
+  line-height: 1.4rem;
 }
 
 a.link {
