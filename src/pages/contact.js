@@ -41,7 +41,13 @@ const ContactPage = () => {
           relativePath: { eq: "contact-logos/github-logo.png" }
         ) {
           childImageSharp {
-            gatsbyImageData(width: 50)
+            gatsbyImageData(
+              quality: 85
+              placeholder: BLURRED
+              formats: [WEBP]
+              width: 50
+              transformOptions: { fit: CONTAIN, cropFocus: CENTER }
+            )
           }
         }
         linkedinLogo: file(
