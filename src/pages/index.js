@@ -10,9 +10,9 @@ const IndexPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        spiral: file(relativePath: { eq: "spiral-dim2.png" }) {
+        spiral: file(relativePath: { eq: "spiral-dim3.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 800) {
+            fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

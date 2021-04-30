@@ -13,14 +13,14 @@ const PortfolioPage = () => {
       query {
         boxesBkLeft: file(relativePath: { eq: "boxes-back-left.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 600) {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         boxesBkRight: file(relativePath: { eq: "boxes-back-right.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 600) {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -141,106 +141,97 @@ const PortfolioPage = () => {
   const boxesBkRight = data.boxesBkRight.childImageSharp.fluid
   return (
     <MainLayout pageClasses="portfolioPage general">
-      <BackgroundImage tag="div" className="boxesBkLeft" fluid={boxesBkLeft}>
-        <BackgroundImage
-          tag="div"
-          className="boxesBkRight"
-          fluid={boxesBkRight}
-        >
-          <Container fluid="sm">
-            <h1>Portfolio</h1>
-            <hr></hr>
+      <Container fluid="sm">
+        <h1>Portfolio</h1>
+        <hr></hr>
 
-            <h2>Randolph-Brooks Federal Credit Union</h2>
-            <p>
-              Randolph-Brooks Federal Credit Union is an accredited financial
-              institution headquartered in Live Oak, Texas and is the second
-              largest credit union in Texas.
-            </p>
-            <p>
-              Their website had long been overdue for a refreshed design and
-              needed to meet the expectations of a younger and more
-              technologically demanding customer base.
-            </p>
-            <p>
-              Challenges included accounting for over a thousand disparate pages
-              and content, accessibility, and incorporating a new content
-              management system. Over a period of nine months, James was
-              instrumental in prioritizing product and services content,
-              developing user research, and leading the front-end development
-              effort.
-            </p>
-          </Container>
-          <div className="container-sm mt-3">
-            <div className="d-flex justify-content-center">
-              <h3 className="compHeading">Home Page</h3>
-            </div>
-            <div className="d-flex justify-content-center">
-              <Composite
-                title="Home Page Mobile"
-                imageInfo={getImage(data.mainMobile)}
-                isMobile={true}
-              />
-              <Composite
-                title="Home Page Desktop"
-                imageInfo={getImage(data.mainDesktop)}
-                isMobile={false}
-              />
-            </div>
-          </div>
-          <div className="container-sm mt-3">
-            <div className="d-flex justify-content-center">
-              <h3 className="compHeading">Mortgages</h3>
-            </div>
-            <div className="d-flex justify-content-center">
-              <Composite
-                title="Mortgage Mobile"
-                imageInfo={getImage(data.mortgageMobile)}
-                isMobile={true}
-              />
-              <Composite
-                title="Mortgage Desktop"
-                imageInfo={getImage(data.mortgageDesktop)}
-                isMobile={false}
-              />
-            </div>
-          </div>
-          <div className="container-sm mt-3">
-            <div className="d-flex justify-content-center">
-              <h3 className="compHeading">Checking</h3>
-            </div>
-            <div className="d-flex justify-content-center">
-              <Composite
-                title="Checking Mobile"
-                imageInfo={getImage(data.checkingMobile)}
-                isMobile={true}
-              />
-              <Composite
-                title="Checking Desktop"
-                imageInfo={getImage(data.checkingDesktop)}
-                isMobile={false}
-              />
-            </div>
-          </div>
-          <div className="container-sm mt-3">
-            <div className="d-flex justify-content-center">
-              <h3 className="compHeading">Auto Loans</h3>
-            </div>
-            <div className="d-flex justify-content-center">
-              <Composite
-                title="Auto Loans Mobile"
-                imageInfo={getImage(data.autoLoansMobile)}
-                isMobile={true}
-              />
-              <Composite
-                title="Auto Loans Desktop"
-                imageInfo={getImage(data.autoLoansDesktop)}
-                isMobile={false}
-              />
-            </div>
-          </div>
-        </BackgroundImage>
-      </BackgroundImage>
+        <h2>Randolph-Brooks Federal Credit Union</h2>
+        <p>
+          Randolph-Brooks Federal Credit Union is an accredited financial
+          institution headquartered in Live Oak, Texas and is the second largest
+          credit union in Texas.
+        </p>
+        <p>
+          Their website had long been overdue for a refreshed design and needed
+          to meet the expectations of a younger and more technologically
+          demanding customer base.
+        </p>
+        <p>
+          Challenges included accounting for over a thousand disparate pages and
+          content, accessibility, and incorporating a new content management
+          system. Over a period of nine months, James was instrumental in
+          prioritizing product and services content, developing user research,
+          and leading the front-end development effort.
+        </p>
+      </Container>
+      <div className="container-sm mt-3">
+        <div className="d-flex justify-content-center">
+          <h3 className="compHeading">Home Page</h3>
+        </div>
+        <div className="d-flex justify-content-center">
+          <Composite
+            title="Home Page Mobile"
+            imageInfo={getImage(data.mainMobile)}
+            isMobile={true}
+          />
+          <Composite
+            title="Home Page Desktop"
+            imageInfo={getImage(data.mainDesktop)}
+            isMobile={false}
+          />
+        </div>
+      </div>
+      <div className="container-sm mt-3">
+        <div className="d-flex justify-content-center">
+          <h3 className="compHeading">Mortgages</h3>
+        </div>
+        <div className="d-flex justify-content-center">
+          <Composite
+            title="Mortgage Mobile"
+            imageInfo={getImage(data.mortgageMobile)}
+            isMobile={true}
+          />
+          <Composite
+            title="Mortgage Desktop"
+            imageInfo={getImage(data.mortgageDesktop)}
+            isMobile={false}
+          />
+        </div>
+      </div>
+      <div className="container-sm mt-3">
+        <div className="d-flex justify-content-center">
+          <h3 className="compHeading">Checking</h3>
+        </div>
+        <div className="d-flex justify-content-center">
+          <Composite
+            title="Checking Mobile"
+            imageInfo={getImage(data.checkingMobile)}
+            isMobile={true}
+          />
+          <Composite
+            title="Checking Desktop"
+            imageInfo={getImage(data.checkingDesktop)}
+            isMobile={false}
+          />
+        </div>
+      </div>
+      <div className="container-sm mt-3">
+        <div className="d-flex justify-content-center">
+          <h3 className="compHeading">Auto Loans</h3>
+        </div>
+        <div className="d-flex justify-content-center">
+          <Composite
+            title="Auto Loans Mobile"
+            imageInfo={getImage(data.autoLoansMobile)}
+            isMobile={true}
+          />
+          <Composite
+            title="Auto Loans Desktop"
+            imageInfo={getImage(data.autoLoansDesktop)}
+            isMobile={false}
+          />
+        </div>
+      </div>
     </MainLayout>
   )
 }
