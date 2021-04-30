@@ -1,3 +1,5 @@
+@import '../../../styles/includeInAll/all/breakpoints.scss';
+
 @mixin comp_border {
   border: 1px solid #cbcbca;
   box-shadow: 0 0 10px #cbcbca;
@@ -10,8 +12,11 @@
   }
 }
 .mobThumb {
-  width: 100px;
+  width: 300px;
   @include comp_border;
+  @include MQ(S) {
+    width: 100px;
+  }
 }
 .deskThumb {
   max-width: 500px;
