@@ -12,7 +12,7 @@ const IndexPage = () => {
       query {
         spiral: file(relativePath: { eq: "spiral-dim2.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 90, maxWidth: 800) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
