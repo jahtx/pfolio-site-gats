@@ -7,3 +7,22 @@
     height: 700px;
   }
 }
+
+.logoContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.contactIcon {
+  margin: 0 15px;
+  width: auto;
+  height: 50px;
+  @include MQ(S) {
+    margin: 0 20px;
+  }
+}
+
+.general .contactNote {
+  font-family: 'Nothing You Could Do';
+  font-size: 1.5em;
+}
