@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Container from 'react-bootstrap/Container'
-import BackgroundImage from 'gatsby-background-image'
 import { getImage } from 'gatsby-plugin-image'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import Composite from '../components/common/Composite/Composite'
@@ -11,20 +10,6 @@ const PortfolioPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        boxesBkLeft: file(relativePath: { eq: "boxes-back-left.png" }) {
-          childImageSharp {
-            fluid(quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        boxesBkRight: file(relativePath: { eq: "boxes-back-right.png" }) {
-          childImageSharp {
-            fluid(quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
         mainMobile: file(relativePath: { eq: "composites/RBFCU_Main-1.png" }) {
           id
           childImageSharp {
@@ -137,8 +122,6 @@ const PortfolioPage = () => {
     `
   )
 
-  const boxesBkLeft = data.boxesBkLeft.childImageSharp.fluid
-  const boxesBkRight = data.boxesBkRight.childImageSharp.fluid
   return (
     <MainLayout pageClasses="portfolioPage general">
       <Container fluid="sm">
