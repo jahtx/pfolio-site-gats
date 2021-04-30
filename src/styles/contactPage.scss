@@ -4,7 +4,7 @@
   display: block;
 
   &__spacer {
-    height: 700px;
+    height: 200px;
   }
 }
 
@@ -25,4 +25,18 @@
 .general .contactNote {
   font-family: 'Nothing You Could Do';
   font-size: 1.5em;
+}
+
+.boxesBkLeft {
+  min-height: 400px;
+  background-size: 400px !important;
+  background-position: left top 75px;
+  background-repeat: repeat-y;
+  padding-bottom: 2em;
+}
+.boxesBkRight {
+  min-height: 400px;
+  background-size: 400px !important;
+  background-position: right top 125px;
+  background-repeat: repeat-y;
 }
