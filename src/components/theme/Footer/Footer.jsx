@@ -28,17 +28,23 @@ const Footer = () => {
   const beltStitch = data.beltStitch.childImageSharp.fluid
   const star = data.star.childImageSharp.fluid
   return (
-    <BackgroundImage
-      tag="div"
-      className="container-fluid bottomBar"
-      fluid={beltStitch}
-    >
+    <React.Fragment>
       <BackgroundImage
         tag="div"
-        className="buckle"
-        fluid={star}
-      ></BackgroundImage>
-    </BackgroundImage>
+        className="container-fluid bottomBar"
+        fluid={beltStitch}
+      >
+        <BackgroundImage
+          tag="div"
+          className="buckle"
+          fluid={star}
+        ></BackgroundImage>
+      </BackgroundImage>
+      <p className="footerTrailer text-center">
+        Built with <a href="https://reactjs.org/">React</a> and{' '}
+        <a href="https://www.gatsbyjs.com/">Gatsby</a>.
+      </p>
+    </React.Fragment>
   )
 }
 

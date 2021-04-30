@@ -51,14 +51,14 @@ const ResumePage = () => {
           Client: Diligent Consulting / U.S. Air Force (Oct 2018-Oct 2019)
         </h5>
         <p>
-          Diligent Consulting had previously developed a custom application
-          (eBOSS) for the U.S. Air Force to manage promotions using an outdated
-          browser plug-in (Silverlight). Requisition of a new version, built
-          using HTML5 and a modern web framework, required our team to enhance
-          the user experience and functionality of the application while
-          maintaining previous requirements and capability. Enhanced the user
-          interface with industry standard components and developed in
-          React/Redux and led team on version control/Git best practices.
+          The client had previously developed a custom application (eBOSS) for
+          the U.S. Air Force to manage promotions using an outdated browser
+          plug-in (Silverlight). Requisition of a new version, built using HTML5
+          and a modern web framework, required our team to enhance the user
+          experience and functionality of the application while maintaining
+          previous requirements and capability. Enhanced the user interface with
+          industry standard components and developed in React/Redux and led team
+          on version control/Git best practices.
         </p>
         <h4>
           User Experience Designer/Front-end Developer&mdash;Ampcus Inc, San
