@@ -61,7 +61,7 @@ const ContactPage = () => {
         <h1>Contact</h1>
         <hr></hr>
         <p className="text-center contactNote">
-          Email or call for full-time work or projects. 🙂
+          Email or call for full-time work or projects.
         </p>
         <p className="text-center">contact@jahtx.com</p>
         <p className="text-center">210-239-8460</p>
