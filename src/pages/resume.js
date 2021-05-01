@@ -51,97 +51,57 @@ const ResumePage = () => {
           Client: Diligent Consulting / U.S. Air Force (Oct 2018-Oct 2019)
         </h5>
         <p>
-          The client had previously developed a custom application (eBOSS) for
-          the U.S. Air Force to manage promotions using an outdated browser
-          plug-in (Silverlight). Requisition of a new version, built using HTML5
-          and a modern web framework, required our team to enhance the user
-          experience and functionality of the application while maintaining
-          previous requirements and capability. Enhanced the user interface with
-          industry standard components and developed in React/Redux and led team
-          on version control/Git best practices.
+          The client had previously developed a custom application for the U.S.
+          Air Force to manage promotions using an outdated browser plug-in
+          (Silverlight). Requisition of a new version, built using HTML5 and a
+          modern web framework, required our team to enhance the user experience
+          and functionality of the application while maintaining previous
+          requirements and capability. Enhanced the user interface with industry
+          standard components and developed in React/Redux and chief
+          administrator for version control/Git best practices.
         </p>
         <h4>
           User Experience Designer/Front-end Developer&mdash;Ampcus Inc, San
           Antonio, TX (2016-2017)
         </h4>
-
+        <h5>Client: Randolph-Brooks Federal Credit Union</h5>
         <p>
-          Lead User Interface designer for $4M+ effort to redesign and recode
-          the primary website for Randolph-Brooks Federal Credit Union (
-          <a className="link" href="https://rbfcu.org">
-            RBFCU
-          </a>
-          ). Collaborated in an Agile project management team environment.
-          Advocate for accessibility standards.
+          Led a full user-experience design process from requirements gathering
+          to implementation. Fully researched metrics, products, and content
+          then prioritized according to user engagement, surveys, and executive
+          initiatives. Created wireframes for user testing/evaluation and final
+          composites of all major landing pages. Structured code environment and
+          templating system incorporating modern-SASS/JavaScript libraries and
+          frameworks. Operated as senior front-end developer and designer.
         </p>
-        <ul>
-          <li>
-            Utilized Sketch and Invision prototypes to present mobile and
-            desktop interactions and design
-          </li>
-          <li>
-            Presented best practices to integrate designs from Photoshop and
-            Illustrator for front-end development
-          </li>
-          <li>
-            Developed CSS3, HTML5, SVG, and JavaScript solutions for
-            interactions and page-flow
-          </li>
-          <li>
-            Customized and applied JavaScript and node packages for integration
-            and development with front-end, including Gulp, JQuery, Webpack,
-            React/Redux
-          </li>
-          <li>
-            Set-up MacOS/Linux/Windows environments for team development and
-            collaboration
-          </li>
-        </ul>
 
         <h4>
-          User Experience Designer/Front-end Developer&mdash;Visage
-          Collaborative LLC, San Antonio, TX (2014-2015)
+          Senior Designer and Technology Lead&mdash;Visage Collaborative LLC,
+          San Antonio, TX (2014-2015)
         </h4>
 
         <p>
-          User interface design consultant for clients with new or existing
-          applications. Developed prototypes with Sketch, Invision, Adobe
-          Creative Suite and applied to custom client apps, WordPress, and other
-          CMS and SaaS products. Developed site maps, use cases, and user flows.
+          As a small team of entrepreneurs motivated to innovate for our
+          clients, all of us assumed multiple roles and responsibilities for a
+          new business. Guided the design process for our early clients and
+          development teams. Project manager and lead developer for web
+          application products and other deliverables. Managed AWS/Azure hosting
+          production environments. Advocated our business towards more
+          profitable and sustainable projects. Sales and engagement lead for new
+          clients. Business process manager for employee/contractor utilization
+          and accounting.
         </p>
-        <ul>
-          <li>
-            HTML5, CSS3, and JavaScript development for all client and internal
-            projects
-          </li>
-          <li>
-            DevOps integration with Linux/Windows Server instances with cloud
-            services provided by AWS, Azure, Digital Ocean, and WPEngine
-          </li>
-        </ul>
+
         <h4>Creative Designer I&mdash;USAA, San Antonio, TX (2010-2014)</h4>
         <p>
-          Designer and developer for ArcGIS application correlating members'
-          homes with area-mapping capabilities. Primary designer and front-end
-          developer for USAA's internal Enterprise Correspondence Tool to
-          facilitate member communication by postal and digital channels.
-          Developed and deployed A/B tests with SiteSpect. USAA mobile app
-          wireframing and mobile web front-end development. Designed and worked
-          with development on address change process for members.
+          Executed design process for multiple web and mobile projects including
+          USAA’s internal Enterprise Correspondence Tool, a web application to
+          facilitate member communication through postal and digital channels.
+          Engineered HTML/CSS/JavaScript functional wireframing and pair
+          programmed with Java development team. Mobile app wireframing and
+          front-end development. Programmed and applied A/B testing.
         </p>
-        <ul>
-          <li>
-            Developed desktop and mobile web pages with responsive, fluid design
-          </li>
-          <li>
-            Integrated Software-as-a-Service (SaaS) vendor code into custom
-            HTML, CSS
-          </li>
-          <li>
-            Created and documented information architecture and interaction
-            design through UML
-          </li>
-        </ul>
+
         <h4>Operating Systems and Applications:</h4>
         <ul>
           <li>UNIX / Linux</li>

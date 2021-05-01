@@ -123,7 +123,7 @@ const PortfolioPage = () => {
   )
 
   return (
-    <MainLayout pageClasses="portfolioPage general">
+    <MainLayout pageClasses="portfolioPage">
       <Container fluid="sm">
         <h1>Portfolio</h1>
         <hr></hr>
