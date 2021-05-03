@@ -2,12 +2,12 @@
 
 .cimaBar {
   height: 60px;
-  background-color: #ef4059;
+  background-color: #199eae;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   &__item {
-    font-family: 'Permanent Marker';
+    font-family: $headerFont;
     font-size: 1.3em;
     color: white;
     letter-spacing: 0.06em;

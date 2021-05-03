@@ -38,6 +38,7 @@ module.exports = {
           `Barlow Condensed`,
           `Nothing You Could Do`,
           `Permanent Marker`,
+          `Montserrat`,
         ],
         display: 'swap',
       },

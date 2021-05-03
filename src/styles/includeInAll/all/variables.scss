@@ -3,7 +3,8 @@ $darker: #575757;
 $primary_color: #073f83;
 
 $standardHeading: 'Barlow Condensed', 'Trebuchet MS', 'Tahoma';
-$standardFont: 'Open Sans';
+$standardFont: 'Montserrat', 'Open Sans';
+$headerFont: 'Montserrat';
 
 @mixin flex_center {
   display: flex;

@@ -5,7 +5,13 @@ import Nav from 'react-bootstrap/Nav'
 
 const Navigation = () => {
   return (
-    <Navbar className="greyNav" collapseOnSelect expand="sm">
+    <Navbar
+      className="greyNav"
+      collapseOnSelect
+      expand="sm"
+      bg="dark"
+      variant="dark"
+    >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse className="gacCollapse" id="responsive-navbar-nav">
         <Nav className="gac">

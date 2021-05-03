@@ -1,14 +1,12 @@
 @import '../../../styles/includeInAll/index.scss';
 @import '~hamburgers/_sass/hamburgers/hamburgers.scss';
 
-$navigation_color: #073f83;
-
-$nav_color: #d8d8d8;
+$nav_color: #4a4a4a;
 
 .greyNav {
   background-color: $nav_color;
-  font-family: 'Permanent Marker';
-  font-size: 1.2em;
+  font-family: $headerFont;
+  font-size: 1.1em;
 }
 
 .gacCollapse {
@@ -16,7 +14,7 @@ $nav_color: #d8d8d8;
 }
 
 .gacLink {
-  color: black !important;
+  color: white !important;
   padding-left: 0.7em !important;
   padding-right: 0.7em !important;
 }

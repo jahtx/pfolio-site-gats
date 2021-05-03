@@ -21,9 +21,6 @@ const Header = () => {
             James A. Hernandez
           </a>
         </div>
-        <div className="cimaBar__item cimaBar--phone">
-          <a href="/contact">210-239-8460</a>
-        </div>
       </div>
     </div>
   )
