@@ -50,6 +50,7 @@ const ResumePage = () => {
             REST APIs using RX.js. Experience with SCRUM Agile methodologies
             utilizing daily stand-ups on 4-week sprints.
           </p>
+          <h6>Primary Technologies Used:</h6>
           <h5>
             Client: Diligent Consulting / U.S. Air Force (Oct 2018-Oct 2019)
           </h5>
