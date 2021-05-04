@@ -31,11 +31,13 @@ const ResumePage = () => {
         </ul>
         <hr></hr>
         <h3>Experience:</h3>
-        <div className="jobExperience">
+        <div className="jobExperience__top">
           <h4>
             User Experience Designer/Front-end Developer&mdash;Insight Global,
             San Antonio, TX (2018-2020)
           </h4>
+        </div>
+        <div className="jobExperience__bottom">
           <h5>
             Client: Accenture / U.S. Department of Education (Oct 2019-Oct 2020)
           </h5>
@@ -63,11 +65,13 @@ const ResumePage = () => {
             practices.
           </p>
         </div>
-        <div className="jobExperience">
+        <div className="jobExperience__top">
           <h4>
             User Experience Designer/Front-end Developer&mdash;Ampcus Inc, San
             Antonio, TX (2016-2017)
           </h4>
+        </div>
+        <div className="jobExperience__bottom">
           <h5>Client: Randolph-Brooks Federal Credit Union</h5>
           <p>
             Led a full user-experience design process from requirements
@@ -80,12 +84,13 @@ const ResumePage = () => {
             front-end developer and designer.
           </p>
         </div>
-        <div className="jobExperience">
+        <div className="jobExperience__top">
           <h4>
             Senior Designer and Technology Lead&mdash;Visage Collaborative LLC,
             San Antonio, TX (2014-2015)
           </h4>
-
+        </div>
+        <div className="jobExperience__bottom">
           <p>
             As a small team of entrepreneurs motivated to innovate for our
             clients, all of us assumed multiple roles and responsibilities for a
@@ -98,8 +103,10 @@ const ResumePage = () => {
             utilization and accounting.
           </p>
         </div>
-        <div className="jobExperience">
+        <div className="jobExperience__top">
           <h4>Creative Designer I&mdash;USAA, San Antonio, TX (2010-2014)</h4>
+        </div>{' '}
+        <div className="jobExperience__bottom">
           <p>
             Executed design process for multiple web and mobile projects
             including USAA’s internal Enterprise Correspondence Tool, a web
