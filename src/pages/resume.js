@@ -132,6 +132,17 @@ const ResumePage = () => {
             )
           }
         }
+        jsLogo: file(relativePath: { eq: "dev-logos/js-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 31
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
         wpLogo: file(relativePath: { eq: "dev-logos/wordpress-logo.png" }) {
           childImageSharp {
             gatsbyImageData(
@@ -170,6 +181,7 @@ const ResumePage = () => {
   const sassLogo = data.sassLogo
   const wpLogo = data.wpLogo
   const linuxLogo = data.linuxLogo
+  const jsLogo = data.jsLogo
 
   return (
     <MainLayout pageClasses="resumePage">
@@ -344,6 +356,13 @@ const ResumePage = () => {
               alt="CSS 3"
             >
               <GatsbyImage image={getImage(css3Logo)} alt="CSS 3" />
+            </a>
+            <a
+              className="jsLogo"
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+              alt="JavaScript"
+            >
+              <GatsbyImage image={getImage(jsLogo)} alt="JavaScript" />
             </a>
           </div>
         </div>
