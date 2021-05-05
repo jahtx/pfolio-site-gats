@@ -92,7 +92,7 @@ const ResumePage = () => {
           childImageSharp {
             gatsbyImageData(
               quality: 85
-              width: 32
+              width: 31
               placeholder: BLURRED
               formats: [WEBP]
               layout: CONSTRAINED
@@ -121,6 +121,39 @@ const ResumePage = () => {
             )
           }
         }
+        sassLogo: file(relativePath: { eq: "dev-logos/sass-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 31
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        wpLogo: file(relativePath: { eq: "dev-logos/wordpress-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 31
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        linuxLogo: file(relativePath: { eq: "dev-logos/linux-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 28
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
       }
     `
   )
@@ -134,6 +167,9 @@ const ResumePage = () => {
   const jqueryLogo = data.jqueryLogo
   const html5Logo = data.html5Logo
   const css3Logo = data.css3Logo
+  const sassLogo = data.sassLogo
+  const wpLogo = data.wpLogo
+  const linuxLogo = data.linuxLogo
 
   return (
     <MainLayout pageClasses="resumePage">
@@ -243,23 +279,14 @@ const ResumePage = () => {
           </p>
           <h6>Primary Technologies Used:</h6>
           <div className="jobExperience_tech">
-            <a href="https://angularjs.org/" alt="AngularJS">
-              <GatsbyImage image={getImage(angjsLogo)} alt="AngularJS" />
+            <a href="https://angular.io/" alt="Angular">
+              <GatsbyImage image={getImage(angLogo)} alt="Angular 2" />
             </a>
             <a href="https://jquery.com/" alt="JQuery">
               <GatsbyImage image={getImage(jqueryLogo)} alt="JQuery" />
             </a>
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
-              alt="HTML 5"
-            >
-              <GatsbyImage image={getImage(html5Logo)} alt="HTML 5" />
-            </a>
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-              alt="CSS 3"
-            >
-              <GatsbyImage image={getImage(css3Logo)} alt="CSS 3" />
+            <a href="https://sass-lang.com/" className="sassLogo" alt="CSS 3">
+              <GatsbyImage image={getImage(sassLogo)} alt="SASS" />
             </a>
           </div>
         </div>
@@ -281,6 +308,15 @@ const ResumePage = () => {
             new clients. Business process manager for employee/contractor
             utilization and accounting.
           </p>
+          <h6>Primary Technologies Used:</h6>
+          <div className="jobExperience_tech">
+            <a href="https://wordpress.org" alt="WordPress">
+              <GatsbyImage image={getImage(wpLogo)} alt="WordPress" />
+            </a>
+            <a href="https://linuxfoundation.org/">
+              <GatsbyImage image={getImage(linuxLogo)} alt="Linux" />
+            </a>
+          </div>
         </div>
         <div className="jobExperience__top">
           <h4>Creative Designer I&mdash;USAA, San Antonio, TX (2010-2014)</h4>
@@ -295,6 +331,21 @@ const ResumePage = () => {
             app wireframing and front-end development. Programmed and applied
             A/B testing.
           </p>
+          <h6>Primary Technologies Used:</h6>
+          <div className="jobExperience_tech">
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+              alt="HTML 5"
+            >
+              <GatsbyImage image={getImage(html5Logo)} alt="HTML 5" />
+            </a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              alt="CSS 3"
+            >
+              <GatsbyImage image={getImage(css3Logo)} alt="CSS 3" />
+            </a>
+          </div>
         </div>
         <h4>Operating Systems and Applications:</h4>
         <ul>
