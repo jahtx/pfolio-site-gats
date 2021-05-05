@@ -10,7 +10,6 @@ const ResumePage = () => {
     graphql`
       query {
         angLogo: file(relativePath: { eq: "dev-logos/ang-logo.png" }) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -22,11 +21,10 @@ const ResumePage = () => {
           }
         }
         angjsLogo: file(relativePath: { eq: "dev-logos/angularjs-logo.png" }) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
-              width: 32
+              width: 34
               placeholder: BLURRED
               formats: [WEBP]
               layout: CONSTRAINED
@@ -34,7 +32,6 @@ const ResumePage = () => {
           }
         }
         rxjsLogo: file(relativePath: { eq: "dev-logos/rxjs-logo.png" }) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -48,7 +45,6 @@ const ResumePage = () => {
         bootstrapLogo: file(
           relativePath: { eq: "dev-logos/bootstrap-logo.png" }
         ) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -60,7 +56,6 @@ const ResumePage = () => {
           }
         }
         reactLogo: file(relativePath: { eq: "dev-logos/react-logo.png" }) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -72,7 +67,6 @@ const ResumePage = () => {
           }
         }
         reduxLogo: file(relativePath: { eq: "dev-logos/redux-logo.png" }) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -84,7 +78,6 @@ const ResumePage = () => {
           }
         }
         gitlabLogo: file(relativePath: { eq: "dev-logos/gitlab-logo.png" }) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -96,11 +89,32 @@ const ResumePage = () => {
           }
         }
         jqueryLogo: file(relativePath: { eq: "dev-logos/jquery-logo.png" }) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
               width: 32
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        html5Logo: file(relativePath: { eq: "dev-logos/html5-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 31
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        css3Logo: file(relativePath: { eq: "dev-logos/css3-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 27
               placeholder: BLURRED
               formats: [WEBP]
               layout: CONSTRAINED
@@ -118,6 +132,9 @@ const ResumePage = () => {
   const reduxLogo = data.reduxLogo
   const gitlabLogo = data.gitlabLogo
   const jqueryLogo = data.jqueryLogo
+  const html5Logo = data.html5Logo
+  const css3Logo = data.css3Logo
+
   return (
     <MainLayout pageClasses="resumePage">
       <Container fluid="md">
@@ -231,6 +248,18 @@ const ResumePage = () => {
             </a>
             <a href="https://jquery.com/" alt="JQuery">
               <GatsbyImage image={getImage(jqueryLogo)} alt="JQuery" />
+            </a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
+              alt="HTML 5"
+            >
+              <GatsbyImage image={getImage(html5Logo)} alt="HTML 5" />
+            </a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              alt="CSS 3"
+            >
+              <GatsbyImage image={getImage(css3Logo)} alt="CSS 3" />
             </a>
           </div>
         </div>
