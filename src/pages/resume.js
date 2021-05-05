@@ -1,16 +1,130 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import Container from 'react-bootstrap/Container'
 import '../styles/resumePage.scss'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const ResumePage = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        angLogo: file(relativePath: { eq: "dev-logos/ang-logo.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 30
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        angjsLogo: file(relativePath: { eq: "dev-logos/angularjs-logo.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 32
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        rxjsLogo: file(relativePath: { eq: "dev-logos/rxjs-logo.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 30
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        bootstrapLogo: file(
+          relativePath: { eq: "dev-logos/bootstrap-logo.png" }
+        ) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 32
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        reactLogo: file(relativePath: { eq: "dev-logos/react-logo.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 32
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        reduxLogo: file(relativePath: { eq: "dev-logos/redux-logo.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 32
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        gitlabLogo: file(relativePath: { eq: "dev-logos/gitlab-logo.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 32
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+        jqueryLogo: file(relativePath: { eq: "dev-logos/jquery-logo.png" }) {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 32
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
+      }
+    `
+  )
+  const angLogo = data.angLogo
+  const angjsLogo = data.angjsLogo
+  const rxjsLogo = data.rxjsLogo
+  const bootstrapLogo = data.bootstrapLogo
+  const reactLogo = data.reactLogo
+  const reduxLogo = data.reduxLogo
+  const gitlabLogo = data.gitlabLogo
+  const jqueryLogo = data.jqueryLogo
   return (
     <MainLayout pageClasses="resumePage">
-      <Container fluid="sm">
+      <Container fluid="md">
         <h1>Résumé</h1>
         <hr></hr>
       </Container>
-      <Container>
+      <Container fluid="md">
         <h2 className="resumePage__h2">
           Senior User Experience Designer / Front-end Developer
         </h2>
@@ -51,6 +165,20 @@ const ResumePage = () => {
             utilizing daily stand-ups on 4-week sprints.
           </p>
           <h6>Primary Technologies Used:</h6>
+          <div className="jobExperience_tech">
+            <a href="https://angular.io/" alt="Angular">
+              <GatsbyImage image={getImage(angLogo)} alt="Angular 2" />
+            </a>
+            <a href="http://reactivex.io/" alt="RxJS">
+              <GatsbyImage image={getImage(rxjsLogo)} alt="RXJS" />
+            </a>
+            <a href="https://getbootstrap.com/" alt="Bootstrap">
+              <GatsbyImage image={getImage(bootstrapLogo)} alt="Bootstrap" />
+            </a>
+            <a href="https://about.gitlab.com/" alt="GitLab">
+              <GatsbyImage image={getImage(gitlabLogo)} alt="Gitlab" />
+            </a>
+          </div>
           <h5>
             Client: Diligent Consulting / U.S. Air Force (Oct 2018-Oct 2019)
           </h5>
@@ -65,6 +193,18 @@ const ResumePage = () => {
             React/Redux and chief administrator for version control/Git best
             practices.
           </p>
+          <h6>Primary Technologies Used:</h6>
+          <div className="jobExperience_tech">
+            <a href="https://reactjs.org" alt="React">
+              <GatsbyImage image={getImage(reactLogo)} alt="React" />
+            </a>
+            <a href="https://redux.js.org/">
+              <GatsbyImage image={getImage(reduxLogo)} alt="Redux" />
+            </a>
+            <a href="https://getbootstrap.com/" alt="Bootstrap">
+              <GatsbyImage image={getImage(bootstrapLogo)} alt="Bootstrap" />
+            </a>
+          </div>
         </div>
         <div className="jobExperience__top">
           <h4>
@@ -84,6 +224,15 @@ const ResumePage = () => {
             modern-SASS/JavaScript libraries and frameworks. Operated as senior
             front-end developer and designer.
           </p>
+          <h6>Primary Technologies Used:</h6>
+          <div className="jobExperience_tech">
+            <a href="https://angularjs.org/" alt="AngularJS">
+              <GatsbyImage image={getImage(angjsLogo)} alt="AngularJS" />
+            </a>
+            <a href="https://jquery.com/" alt="JQuery">
+              <GatsbyImage image={getImage(jqueryLogo)} alt="JQuery" />
+            </a>
+          </div>
         </div>
         <div className="jobExperience__top">
           <h4>
