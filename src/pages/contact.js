@@ -58,7 +58,7 @@ const ContactPage = () => {
   return (
     <MainLayout pageClasses="contactPage general">
       <Container fluid="sm">
-        <h1>Contact</h1>
+        <h1 className="mainHeading">Contact</h1>
         <hr></hr>
         <p className="text-center contactNote">
           Email or call for full-time work or projects. 🙂

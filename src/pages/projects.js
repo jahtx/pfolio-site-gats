@@ -6,7 +6,7 @@ import '../styles/projectsPage.scss'
 const ProjectsPage = () => (
   <MainLayout pageClasses="resumePage general">
     <Container fluid="sm">
-      <h1>Projects</h1>
+      <h1 className="mainHeading">Projects</h1>
       <hr></hr>
     </Container>
   </MainLayout>

@@ -125,7 +125,7 @@ const PortfolioPage = () => {
   return (
     <MainLayout pageClasses="portfolioPage">
       <Container fluid="sm">
-        <h1>Portfolio</h1>
+        <h1 className="mainHeading">Portfolio</h1>
         <hr></hr>
 
         <h2>Randolph-Brooks Federal Credit Union</h2>
