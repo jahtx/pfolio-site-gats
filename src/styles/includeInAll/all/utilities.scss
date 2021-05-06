@@ -14,18 +14,18 @@ h1.mainHeading {
   padding: 1em 0 0 0;
 }
 
-.backgroundTriangles {
-  width: 100%;
-  background-image: url('../../../images/triangle-bkgd.png');
-  background-size: 700px;
-}
+// .backgroundTriangles {
+//   width: 100%;
+//   background-image: url('../../../images/triangle-bkgd.png');
+//   background-size: 700px;
+// }
 
 .backgroundBoxesLeft {
   width: 100%;
   background-image: url('../../../images/left-boxes.png');
   background-size: 400px;
   background-repeat: repeat-y;
-  background-position: 0 200px;
+  background-position: left 4rem;
 }
 
 .backgroundBoxesRight {
@@ -33,5 +33,5 @@ h1.mainHeading {
   background-image: url('../../../images/right-boxes.png');
   background-size: 400px;
   background-repeat: repeat-y;
-  background-position: right;
+  background-position: right 4rem;
 }

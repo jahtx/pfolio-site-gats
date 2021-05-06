@@ -57,40 +57,44 @@ const ContactPage = () => {
   const linkedinLogo = data.linkedinLogo
   return (
     <MainLayout pageClasses="contactPage general">
-      <Container fluid="sm">
-        <h1 className="mainHeading">Contact</h1>
-        <hr></hr>
-        <p className="text-center contactNote">
-          Email or call for full-time work or projects. 🙂
-        </p>
-        <p className="text-center">contact@jahtx.com</p>
-        <p className="text-center">210-239-8460</p>
-        <div className="logoContainer">
-          <a href="https://twitter.com/jah_uxdev">
-            <GatsbyImage
-              className="contactIcon"
-              image={getImage(twitterLogo)}
-              alt="Twitter Profile"
-            />
-          </a>
-          <a href="https://github.com/jahtx">
-            <GatsbyImage
-              className="contactIcon"
-              image={getImage(githubLogo)}
-              alt="Github Profile"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/jameshernandez/">
-            <GatsbyImage
-              className="contactIcon"
-              image={getImage(linkedinLogo)}
-              alt="LinkedIn Profile"
-            />
-          </a>
-        </div>
+      <div class="backgroundBoxesLeft">
+        <div class="backgroundBoxesRight">
+          <Container fluid="sm">
+            <h1 className="mainHeading">Contact</h1>
+            <hr></hr>
+            <p className="text-center contactNote">
+              Email or call for full-time work or projects. 🙂
+            </p>
+            <p className="text-center">contact@jahtx.com</p>
+            <p className="text-center">210-239-8460</p>
+            <div className="logoContainer">
+              <a href="https://twitter.com/jah_uxdev">
+                <GatsbyImage
+                  className="contactIcon"
+                  image={getImage(twitterLogo)}
+                  alt="Twitter Profile"
+                />
+              </a>
+              <a href="https://github.com/jahtx">
+                <GatsbyImage
+                  className="contactIcon"
+                  image={getImage(githubLogo)}
+                  alt="Github Profile"
+                />
+              </a>
+              <a href="https://www.linkedin.com/in/jameshernandez/">
+                <GatsbyImage
+                  className="contactIcon"
+                  image={getImage(linkedinLogo)}
+                  alt="LinkedIn Profile"
+                />
+              </a>
+            </div>
 
-        <div className="contactPage__spacer"></div>
-      </Container>
+            <div className="contactPage__spacer"></div>
+          </Container>
+        </div>
+      </div>
     </MainLayout>
   )
 }
