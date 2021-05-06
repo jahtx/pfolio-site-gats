@@ -34,11 +34,11 @@ const Footer = () => {
         className="container-fluid bottomBar"
         fluid={beltStitch}
       >
-        <BackgroundImage
+        {/* <BackgroundImage
           tag="div"
           className="buckle"
           fluid={star}
-        ></BackgroundImage>
+        ></BackgroundImage> */}
       </BackgroundImage>
       <p className="footerTrailer text-center mb-5">
         Built with <a href="https://reactjs.org/">React</a> and{' '}
