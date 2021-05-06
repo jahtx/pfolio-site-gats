@@ -13,3 +13,25 @@ h1.mainHeading {
   margin: 0;
   padding: 1em 0 0 0;
 }
+
+.backgroundTriangles {
+  width: 100%;
+  background-image: url('../../../images/triangle-bkgd.png');
+  background-size: 700px;
+}
+
+.backgroundBoxesLeft {
+  width: 100%;
+  background-image: url('../../../images/left-boxes.png');
+  background-size: 400px;
+  background-repeat: repeat-y;
+  background-position: 0 200px;
+}
+
+.backgroundBoxesRight {
+  width: 100%;
+  background-image: url('../../../images/right-boxes.png');
+  background-size: 400px;
+  background-repeat: repeat-y;
+  background-position: right;
+}

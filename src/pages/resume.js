@@ -252,7 +252,7 @@ const ResumePage = () => {
 
   return (
     <MainLayout pageClasses="resumePage">
-      <div class="background">
+      <div class="backgroundTriangles">
         <Container fluid="md">
           <h1 className="mainHeading">Résumé</h1>
           <hr></hr>
