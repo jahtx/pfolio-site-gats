@@ -9,18 +9,77 @@ const ResumePage = () => {
   const data = useStaticQuery(
     graphql`
       query {
+        accLogo: file(relativePath: { eq: "job-logos/acc-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              height: 24
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: FIXED
+            )
+          }
+        }
+        edLogo: file(relativePath: { eq: "job-logos/ed-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 40
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: FIXED
+            )
+          }
+        }
+        airforceLogo: file(
+          relativePath: { eq: "job-logos/airforce-logo.png" }
+        ) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 40
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: FIXED
+            )
+          }
+        }
+        diligentLogo: file(
+          relativePath: { eq: "job-logos/diligent-logo.png" }
+        ) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 100
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: FIXED
+            )
+          }
+        }
+        rbfcuLogo: file(relativePath: { eq: "job-logos/rbfcu-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 100
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: FIXED
+            )
+          }
+        }
         angLogo: file(relativePath: { eq: "dev-logos/ang-logo.png" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 85
-              width: 30
+              width: 25
               placeholder: BLURRED
               formats: [WEBP]
               layout: CONSTRAINED
             )
           }
         }
-        angjsLogo: file(relativePath: { eq: "dev-logos/angularjs-logo.png" }) {
+        angjsLogo: file(relativePath: { eq: "dev-logos/angjs-logo.png" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -183,6 +242,14 @@ const ResumePage = () => {
   const linuxLogo = data.linuxLogo
   const jsLogo = data.jsLogo
 
+  // Job Logos
+
+  const accLogo = data.accLogo
+  const edLogo = data.edLogo
+  const airforceLogo = data.airforceLogo
+  const diligentLogo = data.diligentLogo
+  const rbfcuLogo = data.rbfcuLogo
+
   return (
     <MainLayout pageClasses="resumePage">
       <Container fluid="md">
@@ -211,15 +278,31 @@ const ResumePage = () => {
         <hr></hr>
         <h3>Experience:</h3>
         <div className="jobExperience__top">
-          <h4>
-            User Experience Designer/Front-end Developer&mdash;Insight Global,
-            San Antonio, TX (2018-2020)
-          </h4>
+          <h4>User Experience Designer/Front-end Developer</h4>
+          <span className="jobExperience__info">
+            Insight Global, San Antonio, TX (2018-2020)
+          </span>
         </div>
         <div className="jobExperience__bottom">
-          <h5>
-            Client: Accenture / U.S. Department of Education (Oct 2019-Oct 2020)
-          </h5>
+          <div className="clientBox">
+            <div className="clientBox__left">
+              {' '}
+              <h5>Client: Accenture / U.S. Department of Education</h5>
+            </div>
+
+            <div className="clientBox__right">
+              <GatsbyImage
+                className="accLogo"
+                image={getImage(accLogo)}
+                alt="Accenture"
+              />
+              <GatsbyImage
+                className="edLogo"
+                image={getImage(edLogo)}
+                alt="U.S. Department of Education Logo"
+              />
+            </div>
+          </div>
           <p>
             Front-end engineer and designer on a development team for the U.S.
             Department of Education Student Loans web application. The browser
@@ -244,9 +327,26 @@ const ResumePage = () => {
               <GatsbyImage image={getImage(gitlabLogo)} alt="Gitlab" />
             </a>
           </div>
-          <h5>
-            Client: Diligent Consulting / U.S. Air Force (Oct 2018-Oct 2019)
-          </h5>
+          <hr className="jobExperience__hr" />
+          <div className="clientBox">
+            <div className="clientBox__left">
+              {' '}
+              <h5>Client: Diligent Consulting / U.S. Air Force</h5>
+            </div>
+
+            <div className="clientBox__right">
+              <GatsbyImage
+                className="diligentLogo"
+                image={getImage(diligentLogo)}
+                alt="Diligent Logo"
+              />
+              <GatsbyImage
+                className="airforceLogo"
+                image={getImage(airforceLogo)}
+                alt="U.S. Air Force"
+              />
+            </div>
+          </div>
           <p>
             The client had previously developed a custom application for the
             U.S. Air Force to manage promotions using an outdated browser
@@ -272,13 +372,26 @@ const ResumePage = () => {
           </div>
         </div>
         <div className="jobExperience__top">
-          <h4>
-            User Experience Designer/Front-end Developer&mdash;Ampcus Inc, San
-            Antonio, TX (2016-2017)
-          </h4>
+          <h4>User Experience Designer/Front-end Developer</h4>
+          <span className="jobExperience__info">
+            Ampcus Inc, San Antonio, TX (2016-2017)
+          </span>
         </div>
         <div className="jobExperience__bottom">
-          <h5>Client: Randolph-Brooks Federal Credit Union</h5>
+          <div className="clientBox">
+            <div className="clientBox__left">
+              {' '}
+              <h5>Client: Randolph-Brooks Federal Credit Union</h5>
+            </div>
+
+            <div className="clientBox__right">
+              <GatsbyImage
+                className="rbfcuLogo"
+                image={getImage(rbfcuLogo)}
+                alt="RBFCU Logo"
+              />
+            </div>
+          </div>
           <p>
             Led a full user-experience design process from requirements
             gathering to implementation. Fully researched metrics, products, and
@@ -291,8 +404,8 @@ const ResumePage = () => {
           </p>
           <h6>Primary Technologies Used:</h6>
           <div className="jobExperience_tech">
-            <a href="https://angular.io/" alt="Angular">
-              <GatsbyImage image={getImage(angLogo)} alt="Angular 2" />
+            <a href="https://angularjs.org/" alt="Angular">
+              <GatsbyImage image={getImage(angjsLogo)} alt="AngularJS" />
             </a>
             <a href="https://jquery.com/" alt="JQuery">
               <GatsbyImage image={getImage(jqueryLogo)} alt="JQuery" />
@@ -303,10 +416,10 @@ const ResumePage = () => {
           </div>
         </div>
         <div className="jobExperience__top">
-          <h4>
-            Senior Designer and Technology Lead&mdash;Visage Collaborative LLC,
-            San Antonio, TX (2014-2015)
-          </h4>
+          <h4>Senior Designer and Technology Lead</h4>
+          <span className="jobExperience__info">
+            Visage Collaborative LLC, San Antonio, TX (2014-2015)
+          </span>
         </div>
         <div className="jobExperience__bottom">
           <p>
@@ -331,8 +444,12 @@ const ResumePage = () => {
           </div>
         </div>
         <div className="jobExperience__top">
-          <h4>Creative Designer I&mdash;USAA, San Antonio, TX (2010-2014)</h4>
-        </div>{' '}
+          <h4>Creative Designer I</h4>{' '}
+          <span className="jobExperience__info">
+            USAA, San Antonio, TX (2010-2014)
+          </span>
+        </div>
+
         <div className="jobExperience__bottom">
           <p>
             Executed design process for multiple web and mobile projects

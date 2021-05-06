@@ -27,7 +27,49 @@ $fav_border: 1px solid #d6d6d6;
       font-size: 1.1rem;
     }
   }
+  &__info {
+    font-size: 0.9em;
+  }
+  &__hr {
+    margin-bottom: 0.04rem;
+  }
   &__bottom {
+    .clientBox {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      padding: 0;
+      margin: 1em 0;
+      @include MQ(S) {
+        flex-flow: row;
+      }
+      h5 {
+        margin: 0.5em 0;
+        padding: 0;
+      }
+
+      &__left {
+        @include flex_center;
+        justify-content: flex-start;
+      }
+      &__right {
+        @include flex_center;
+        justify-content: flex-start;
+        width: 100%;
+        @include MQ(S) {
+          width: 30%;
+        }
+        .accLogo {
+          margin: 5px;
+        }
+        .diligentLogo {
+          margin: 5px;
+        }
+        @include MQ(S) {
+          justify-content: flex-end;
+        }
+      }
+    }
     border: $fav_border;
     border-bottom-left-radius: $fav_radius;
     border-bottom-right-radius: $fav_radius;
