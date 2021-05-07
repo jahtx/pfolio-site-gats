@@ -1,18 +1,28 @@
 import React from 'react'
 import './header.scss'
 import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
-// markup
 const Header = () => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+          description
+        }
+      }
+    }
+  `)
   return (
     <div>
       <Helmet>
         <meta charSet="utf-8" />
         <meta
           name="description"
-          content="Portfolio website for James A. Hernandez, UX Designer and Front-end Developer"
+          content={data.site.siteMetadata?.description || `Description`}
         />
-        <title>James A. Hernandez | UX Designer and Front-end Developer</title>
+        <title>{data.site.siteMetadata?.title || `Title`}</title>
       </Helmet>
 
       <div className="container-fluid cimaBar">

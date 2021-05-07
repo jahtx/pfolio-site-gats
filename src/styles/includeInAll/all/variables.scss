@@ -4,7 +4,7 @@ $primary_color: #073f83;
 
 $standardHeading: 'Barlow Condensed', 'Trebuchet MS', 'Tahoma';
 $standardFont: 'Montserrat', 'Open Sans';
-$headerFont: 'Montserrat';
+$headerFont: 'Montserrat', 'Open Sans';
 
 @mixin flex_center {
   display: flex;

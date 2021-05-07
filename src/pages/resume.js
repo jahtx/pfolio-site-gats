@@ -295,7 +295,6 @@ const ResumePage = () => {
               <div className="clientBox__right">
                 <a
                   href="https://accenture.com/"
-                  alt="Accenture"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -307,7 +306,6 @@ const ResumePage = () => {
                 </a>
                 <a
                   href="https://www.ed.gov/"
-                  alt="US Dept of Education"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -332,7 +330,6 @@ const ResumePage = () => {
             <div className="jobExperience_tech">
               <a
                 href="https://angular.io/"
-                alt="Angular"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -340,7 +337,6 @@ const ResumePage = () => {
               </a>
               <a
                 href="http://reactivex.io/"
-                alt="RxJS"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -348,7 +344,6 @@ const ResumePage = () => {
               </a>
               <a
                 href="https://getbootstrap.com/"
-                alt="Bootstrap"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -356,7 +351,6 @@ const ResumePage = () => {
               </a>
               <a
                 href="https://about.gitlab.com/"
-                alt="GitLab"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -373,7 +367,6 @@ const ResumePage = () => {
               <div className="clientBox__right">
                 <a
                   href="https://www.diligent-us.com/"
-                  alt="Diligent Consulting"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -385,7 +378,6 @@ const ResumePage = () => {
                 </a>
                 <a
                   href="https://www.airforce.com/"
-                  alt="U.S. Air Force"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -410,13 +402,25 @@ const ResumePage = () => {
             </p>
             <h6>Primary Technologies Used:</h6>
             <div className="jobExperience_tech">
-              <a href="https://reactjs.org" alt="React">
+              <a
+                href="https://reactjs.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GatsbyImage image={getImage(reactLogo)} alt="React" />
               </a>
-              <a href="https://redux.js.org/">
+              <a
+                href="https://redux.js.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GatsbyImage image={getImage(reduxLogo)} alt="Redux" />
               </a>
-              <a href="https://getbootstrap.com/" alt="Bootstrap">
+              <a
+                href="https://getbootstrap.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GatsbyImage image={getImage(bootstrapLogo)} alt="Bootstrap" />
               </a>
             </div>
@@ -437,7 +441,6 @@ const ResumePage = () => {
               <div className="clientBox__right">
                 <a
                   href="https://rbfcu.org"
-                  alt="RBFCU"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -463,7 +466,6 @@ const ResumePage = () => {
             <div className="jobExperience_tech">
               <a
                 href="https://angularjs.org/"
-                alt="Angular"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -471,7 +473,6 @@ const ResumePage = () => {
               </a>
               <a
                 href="https://jquery.com/"
-                alt="JQuery"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -480,7 +481,6 @@ const ResumePage = () => {
               <a
                 href="https://sass-lang.com/"
                 className="sassLogo"
-                alt="CSS 3"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -510,7 +510,6 @@ const ResumePage = () => {
             <div className="jobExperience_tech">
               <a
                 href="https://wordpress.org"
-                alt="WordPress"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -518,7 +517,6 @@ const ResumePage = () => {
               </a>
               <a
                 href="https://linuxfoundation.org/"
-                alt="Linux Foundation"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -547,7 +545,6 @@ const ResumePage = () => {
             <div className="jobExperience_tech">
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
-                alt="HTML 5"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -555,7 +552,6 @@ const ResumePage = () => {
               </a>
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                alt="CSS 3"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -564,7 +560,6 @@ const ResumePage = () => {
               <a
                 className="jsLogo"
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                alt="JavaScript"
                 target="_blank"
                 rel="noopener noreferrer"
               >

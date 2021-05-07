@@ -1,7 +1,7 @@
 // In your gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Portfolio Website James Hernandez`,
+    title: `James A. Hernandez | UX Designer and Front-end Developer`,
     description: `Portfolio and contact information website for freelance front-end jobs and opportunities.`,
     author: `James A. Hernandez`,
   },

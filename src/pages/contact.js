@@ -68,21 +68,33 @@ const ContactPage = () => {
             <p className="text-center">contact@jahtx.com</p>
             <p className="text-center">210-239-8460</p>
             <div className="logoContainer">
-              <a href="https://twitter.com/jah_uxdev">
+              <a
+                href="https://twitter.com/jah_uxdev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GatsbyImage
                   className="contactIcon"
                   image={getImage(twitterLogo)}
                   alt="Twitter Profile"
                 />
               </a>
-              <a href="https://github.com/jahtx">
+              <a
+                href="https://github.com/jahtx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GatsbyImage
                   className="contactIcon"
                   image={getImage(githubLogo)}
                   alt="Github Profile"
                 />
               </a>
-              <a href="https://www.linkedin.com/in/jameshernandez/">
+              <a
+                href="https://www.linkedin.com/in/jameshernandez/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <GatsbyImage
                   className="contactIcon"
                   image={getImage(linkedinLogo)}
