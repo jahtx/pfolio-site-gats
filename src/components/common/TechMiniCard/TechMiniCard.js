@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import './techminicard.scss'
 // import { techListData } from '../../../data/techList'
 
@@ -187,10 +188,41 @@ const TechMiniCard = ({ tech }) => {
   const wpLogo = data.wpLogo
   const linuxLogo = data.linuxLogo
   const jsLogo = data.jsLogo
+
+  const renderSwitch = param => {
+    switch (param) {
+      case 'Angular':
+        return {
+          image: angLogo,
+          weblink: 'https://angular.io/',
+          altText: 'Angular 2',
+        }
+      case 'AngularJS':
+        return {
+          image: angjsLogo,
+          weblink: 'https://angular.io/',
+          altText: 'AngularJS',
+        }
+      case 'RXJS':
+        return {
+          image: rxjsLogo,
+          weblink: 'https://angular.io/',
+          altText: 'RXJS',
+        }
+      default:
+        return 'foo'
+    }
+  }
+
   return (
     <React.Fragment>
       <div className="techCard">
-        <div className="techCard__icon"></div>
+        <div className="techCard__icon">
+          <GatsbyImage
+            image={getImage(renderSwitch(tech).image)}
+            alt={renderSwitch(tech).altText}
+          />
+        </div>
         <div className="techCard__name">{tech}</div>
       </div>
     </React.Fragment>

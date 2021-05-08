@@ -21,6 +21,7 @@ const ProjectsPage = () => (
       </div>
       <div className="projectCard__bottom">
         <TechMiniCard tech="Angular"></TechMiniCard>
+        <TechMiniCard tech="RXJS"></TechMiniCard>
       </div>
     </div>
   </MainLayout>
