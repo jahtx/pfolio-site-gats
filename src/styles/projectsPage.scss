@@ -1,1 +1,29 @@
 @import './standard/general.scss';
+$fav_radius: 1rem;
+$fav_border: 1px solid #d6d6d6;
+
+.projectCard {
+  &__top {
+    border-right: $fav_border;
+    border-top: $fav_border;
+    border-left: $fav_border;
+    border-top-left-radius: $fav_radius;
+    border-top-right-radius: $fav_radius;
+    padding: 1em;
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+    background-color: #e9e9e9;
+    h2 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
+  &__bottom {
+    border: $fav_border;
+    border-bottom-left-radius: $fav_radius;
+    border-bottom-right-radius: $fav_radius;
+    padding: 0 1em 1em 1em;
+    margin-top: 0;
+  }
+}

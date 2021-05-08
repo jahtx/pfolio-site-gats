@@ -18,9 +18,9 @@ const Navigation = () => {
           <Nav.Link className="gacLink" href="/portfolio">
             Portfolio
           </Nav.Link>
-          {/* <Nav.Link className="gacLink" href="/projects">
+          <Nav.Link className="gacLink" href="/projects">
             Projects
-          </Nav.Link> */}
+          </Nav.Link>
           <Nav.Link className="gacLink" href="/resume">
             Résumé
           </Nav.Link>
