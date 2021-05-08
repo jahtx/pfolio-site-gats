@@ -63,7 +63,7 @@ const IndexPage = () => {
   const devLogos = data.devLogos
 
   return (
-    <MainLayout pageClasses="homePage">
+    <MainLayout pageClasses="homePage" showVacMsg>
       <div className="container-sm">
         <h1 className="homePage__mainTitle">
           Hi, I'm James, a Product & Services UX Designer and{' '}

@@ -123,7 +123,7 @@ const PortfolioPage = () => {
   )
 
   return (
-    <MainLayout pageClasses="portfolioPage">
+    <MainLayout pageClasses="portfolioPage" showVacMsg={false}>
       <div class="backgroundBoxesLeft">
         <div class="backgroundBoxesRight">
           <Container fluid="sm">

@@ -1,3 +1,5 @@
+@import '../../../styles/includeInAll/all/variables.scss';
+
 .bottomBar {
   height: 2.5em;
   background-position: center;
@@ -7,6 +9,19 @@
   padding-top: 0;
   display: flex;
   justify-content: center;
+}
+.vaccineAdvocacy {
+  height: 40px;
+  background-color: #eb4242;
+  @include flex_center;
+  color: white;
+  a.vaccineLink {
+    color: white;
+    :hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
 }
 .buckle {
   height: 2.5em;

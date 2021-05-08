@@ -1,10 +1,11 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import PropTypes from 'prop-types'
 import BackgroundImage from 'gatsby-background-image'
 import './footer.scss'
 
 // markup
-const Footer = () => {
+const Footer = props => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -22,6 +23,19 @@ const Footer = () => {
 
   return (
     <React.Fragment>
+      {props.showVaccineMessage ? (
+        <div className="vaccineAdvocacy">
+          <a
+            href="https://www.cdc.gov/vaccines/covid-19/reporting/vaccinefinder/about.html"
+            className="vaccineLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Where to get a Covid-19 Vaccine
+          </a>
+        </div>
+      ) : null}
+
       <BackgroundImage
         tag="div"
         className="container-fluid bottomBar"
@@ -34,5 +48,7 @@ const Footer = () => {
     </React.Fragment>
   )
 }
-
+Footer.propTypes = {
+  showVaccineMessage: PropTypes.bool,
+}
 export default Footer
