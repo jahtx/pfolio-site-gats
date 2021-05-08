@@ -158,12 +158,11 @@ const PortfolioPage = () => {
               <Composite
                 title="Home Page Mobile"
                 imageInfo={getImage(data.mainMobile)}
-                isMobile={true}
+                isMobile
               />
               <Composite
                 title="Home Page Desktop"
                 imageInfo={getImage(data.mainDesktop)}
-                isMobile={false}
               />
             </div>
           </div>
@@ -175,12 +174,11 @@ const PortfolioPage = () => {
               <Composite
                 title="Mortgage Mobile"
                 imageInfo={getImage(data.mortgageMobile)}
-                isMobile={true}
+                isMobile
               />
               <Composite
                 title="Mortgage Desktop"
                 imageInfo={getImage(data.mortgageDesktop)}
-                isMobile={false}
               />
             </div>
           </div>
@@ -192,12 +190,11 @@ const PortfolioPage = () => {
               <Composite
                 title="Checking Mobile"
                 imageInfo={getImage(data.checkingMobile)}
-                isMobile={true}
+                isMobile
               />
               <Composite
                 title="Checking Desktop"
                 imageInfo={getImage(data.checkingDesktop)}
-                isMobile={false}
               />
             </div>
           </div>

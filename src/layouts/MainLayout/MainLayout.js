@@ -7,7 +7,7 @@ import { Header, Footer, Navigation } from '../../components/theme'
  * Allows modal windows for diplaying full pictures of compositess
  *
  * @param {object} props - react props
- * @param {boolean} props.showVacMsg - if the comp is mobile or not
+ * @param {boolean} props.showVacMsg - whether to show vaccination message
  */
 
 const MainLayout = ({ showVacMsg, children, pageClasses }) => {
