@@ -29,9 +29,25 @@ $fav_border: 1px solid #d6d6d6;
     flex-flow: row;
     .left {
       display: block;
+      a {
+        text-decoration: underline;
+      }
     }
     p {
       font-size: 0.9rem;
+    }
+    .right {
+      .postcardComp {
+        border: 1px solid #cbcbca;
+        box-shadow: 0 0 10px #cbcbca;
+        height: 300px;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 1rem 0;
+        &:hover {
+          box-shadow: 0 0 15px #a3a3a3;
+        }
+      }
     }
   }
 }
