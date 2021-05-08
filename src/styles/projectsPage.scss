@@ -29,6 +29,7 @@ $fav_border: 1px solid #d6d6d6;
     flex-flow: row;
     .left {
       display: block;
+      padding: 0.5rem;
       a {
         text-decoration: underline;
       }
@@ -37,6 +38,7 @@ $fav_border: 1px solid #d6d6d6;
       font-size: 0.9rem;
     }
     .right {
+      padding: 0.5rem;
       .postcardComp {
         border: 1px solid #cbcbca;
         box-shadow: 0 0 10px #cbcbca;
