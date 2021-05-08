@@ -1,6 +1,7 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import TechMiniCard from '../components/common/TechMiniCard/TechMiniCard'
+import TechUsed from '../components/common/TechUsed/TechUsed'
 import Container from 'react-bootstrap/Container'
 import '../styles/projectsPage.scss'
 
@@ -29,9 +30,12 @@ const ProjectsPage = () => (
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
+        <TechUsed
+          technologies={['React', 'Redux', 'Gitlab', 'HTML5', 'CSS3', 'SASS']}
+        ></TechUsed>
         <div className="miniCardSection">
           <TechMiniCard tech="React" />
-          <TechMiniCard tech="Bootstrap" />
+          <TechMiniCard tech="Redux" />
           <TechMiniCard tech="Gitlab" />
           <TechMiniCard tech="HTML5" />
           <TechMiniCard tech="CSS3" />

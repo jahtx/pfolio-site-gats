@@ -31,7 +31,7 @@ const Footer = props => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Get Vaccinated for Covid-19
+            Where to get Vaccinated for Covid-19
           </a>
         </div>
       ) : null}

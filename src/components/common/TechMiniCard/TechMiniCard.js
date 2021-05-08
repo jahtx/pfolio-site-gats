@@ -293,7 +293,7 @@ const TechMiniCard = ({ tech }) => {
         return {
           image: whammyDude,
           weblink: 'https://en.wikipedia.org/wiki/Whammy',
-          altText: 'error',
+          altText: 'whammy',
         }
     }
   }
