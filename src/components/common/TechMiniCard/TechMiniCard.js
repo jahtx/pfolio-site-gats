@@ -200,14 +200,82 @@ const TechMiniCard = ({ tech }) => {
       case 'AngularJS':
         return {
           image: angjsLogo,
-          weblink: 'https://angular.io/',
+          weblink: 'https://angularjs.org/',
           altText: 'AngularJS',
         }
       case 'RXJS':
         return {
           image: rxjsLogo,
-          weblink: 'https://angular.io/',
+          weblink: 'http://reactivex.io/',
           altText: 'RXJS',
+        }
+      case 'Bootstrap':
+        return {
+          image: bootstrapLogo,
+          weblink: 'https://getbootstrap.com/',
+          altText: 'Bootstrap',
+        }
+      case 'React':
+        return {
+          image: reactLogo,
+          weblink: 'https://reactjs.org',
+          altText: 'React',
+        }
+      case 'Redux':
+        return {
+          image: reduxLogo,
+          weblink: 'https://redux.js.org/',
+          altText: 'Redux',
+        }
+      case 'Gitlab':
+        return {
+          image: gitlabLogo,
+          weblink: 'https://about.gitlab.com/',
+          altText: 'Gitlab',
+        }
+      case 'JQuery':
+        return {
+          image: jqueryLogo,
+          weblink: 'https://jquery.com/',
+          altText: 'JQuery',
+        }
+      case 'HTML5':
+        return {
+          image: html5Logo,
+          weblink:
+            'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
+          altText: 'HTML5',
+        }
+      case 'CSS3':
+        return {
+          image: css3Logo,
+          weblink: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          altText: 'CSS3',
+        }
+      case 'SASS':
+        return {
+          image: sassLogo,
+          weblink: 'https://sass-lang.com/',
+          altText: 'SASS',
+        }
+
+      case 'WordPress':
+        return {
+          image: wpLogo,
+          weblink: 'https://wordpress.org',
+          altText: 'WordPress',
+        }
+      case 'Linux':
+        return {
+          image: linuxLogo,
+          weblink: 'https://linuxfoundation.org/',
+          altText: 'Linux',
+        }
+      case 'JavaScript':
+        return {
+          image: jsLogo,
+          weblink: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+          altText: 'JavaScript',
         }
       default:
         return 'foo'

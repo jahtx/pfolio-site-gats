@@ -20,8 +20,22 @@ const ProjectsPage = () => (
         <h2>Make a Postcard</h2>
       </div>
       <div className="projectCard__bottom">
-        <TechMiniCard tech="Angular"></TechMiniCard>
-        <TechMiniCard tech="RXJS"></TechMiniCard>
+        <div className="miniCardSection">
+          <TechMiniCard tech="Angular" />
+          <TechMiniCard tech="AngularJS" />
+          <TechMiniCard tech="RXJS" />
+          <TechMiniCard tech="Bootstrap" />
+          <TechMiniCard tech="React" />
+          <TechMiniCard tech="Redux" />
+          <TechMiniCard tech="Gitlab" />
+          <TechMiniCard tech="JQuery" />
+          <TechMiniCard tech="HTML5" />
+          <TechMiniCard tech="CSS3" />
+          <TechMiniCard tech="SASS" />
+          <TechMiniCard tech="WordPress" />
+          <TechMiniCard tech="Linux" />
+          <TechMiniCard tech="JavaScript" />
+        </div>
       </div>
     </div>
   </MainLayout>
