@@ -1,5 +1,5 @@
 @mixin border_guide {
-  //box-shadow: inset 0px 0px 0px 0.5px $light-grey;
+  // box-shadow: inset 0px 0px 0px 0.5px $light-grey;
 }
 div {
   @include border_guide;
@@ -28,12 +28,4 @@ h1.mainHeading {
   background-size: 400px;
   background-repeat: repeat-y;
   background-position: right 4rem;
-}
-
-.miniCardSection {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 1rem 0 0 0;
-  padding: 0;
 }

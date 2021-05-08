@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import './techminicard.scss'
-// import { techListData } from '../../../data/techList'
 
 /**
  *
@@ -171,6 +170,17 @@ const TechMiniCard = ({ tech }) => {
             )
           }
         }
+        graphqlLogo: file(relativePath: { eq: "dev-logos/graphql-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 27
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
         whammyDude: file(relativePath: { eq: "whammy.png" }) {
           childImageSharp {
             gatsbyImageData(
@@ -199,6 +209,7 @@ const TechMiniCard = ({ tech }) => {
   const wpLogo = data.wpLogo
   const linuxLogo = data.linuxLogo
   const jsLogo = data.jsLogo
+  const graphqlLogo = data.graphqlLogo
   const whammyDude = data.whammyDude
 
   const renderSwitch = param => {
@@ -282,6 +293,12 @@ const TechMiniCard = ({ tech }) => {
           image: linuxLogo,
           weblink: 'https://linuxfoundation.org/',
           altText: 'Linux',
+        }
+      case 'GraphQL':
+        return {
+          image: graphqlLogo,
+          weblink: 'https://graphql.org/',
+          altText: 'GraphQL',
         }
       case 'JavaScript':
         return {

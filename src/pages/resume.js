@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
-import TechMiniCard from '../components/common/TechMiniCard/TechMiniCard'
+import TechUsed from '../components/common/TechUsed/TechUsed'
 import Container from 'react-bootstrap/Container'
 import '../styles/resumePage.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -155,15 +155,18 @@ const ResumePage = () => {
               REST APIs using RX.js. Experience with SCRUM Agile methodologies
               utilizing daily stand-ups on 4-week sprints.
             </p>
-            <h6>Primary Technologies Used:</h6>
-            <div className="miniCardSection">
-              <TechMiniCard tech="Angular" />
-              <TechMiniCard tech="RXJS" />
-              <TechMiniCard tech="Gitlab" />
-              <TechMiniCard tech="SASS" />
-              <TechMiniCard tech="HTML5" />
-              <TechMiniCard tech="CSS3" />
-            </div>
+
+            <TechUsed
+              technologies={[
+                'Angular',
+                'RXJS',
+                'Gitlab',
+                'SASS',
+                'HTML5',
+                'CSS3',
+              ]}
+            />
+
             <hr className="jobExperience__hr" />
             <div className="clientBox">
               <div className="clientBox__left">
@@ -207,15 +210,17 @@ const ResumePage = () => {
               React/Redux and chief administrator for version control/Git best
               practices.
             </p>
-            <h6>Primary Technologies Used:</h6>{' '}
-            <div className="miniCardSection">
-              <TechMiniCard tech="React" />
-              <TechMiniCard tech="Redux" />
-              <TechMiniCard tech="Bootstrap" />
-              <TechMiniCard tech="SASS" />
-              <TechMiniCard tech="HTML5" />
-              <TechMiniCard tech="CSS3" />
-            </div>
+
+            <TechUsed
+              technologies={[
+                'React',
+                'Redux',
+                'Bootstrap',
+                'SASS',
+                'HTML5',
+                'CSS3',
+              ]}
+            />
           </div>
           <div className="jobExperience__top">
             <h4>User Experience Designer/Front-end Developer</h4>
@@ -254,14 +259,10 @@ const ResumePage = () => {
               incorporating modern-SASS/JavaScript libraries and frameworks.
               Operated as senior front-end developer and designer.
             </p>
-            <h6>Primary Technologies Used:</h6>{' '}
-            <div className="miniCardSection">
-              <TechMiniCard tech="AngularJS" />
-              <TechMiniCard tech="JQuery" />
-              <TechMiniCard tech="SASS" />
-              <TechMiniCard tech="HTML5" />
-              <TechMiniCard tech="CSS3" />
-            </div>
+
+            <TechUsed
+              technologies={['AngularJS', 'JQuery', 'SASS', 'HTML5', 'CSS3']}
+            />
           </div>
           <div className="jobExperience__top">
             <h4>Senior Designer and Technology Lead</h4>
@@ -281,11 +282,8 @@ const ResumePage = () => {
               lead for new clients. Business process manager for
               employee/contractor utilization and accounting.
             </p>
-            <h6>Primary Technologies Used:</h6>
-            <div className="miniCardSection">
-              <TechMiniCard tech="WordPress" />
-              <TechMiniCard tech="Linux" />
-            </div>
+
+            <TechUsed technologies={['WordPress', 'Linux']} />
           </div>
           <div className="jobExperience__top">
             <h4>Creative Designer I</h4>{' '}
@@ -304,14 +302,10 @@ const ResumePage = () => {
               app wireframing and front-end development. Programmed and applied
               A/B testing.
             </p>
-            <h6>Primary Technologies Used:</h6>
-            <div className="miniCardSection">
-              <TechMiniCard tech="JQuery" />
-              <TechMiniCard tech="SASS" />
-              <TechMiniCard tech="HTML5" />
-              <TechMiniCard tech="CSS3" />
-              <TechMiniCard tech="JavaScript" />
-            </div>
+
+            <TechUsed
+              technologies={['JQuery', 'SASS', 'HTML5', 'CSS3', 'JavaScript']}
+            />
           </div>
           <h4>Operating Systems and Applications:</h4>
           <ul>

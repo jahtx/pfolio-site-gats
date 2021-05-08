@@ -25,6 +25,11 @@ $fav_border: 1px solid #d6d6d6;
     border-bottom-right-radius: $fav_radius;
     padding: 0 1em 0.2rem 1em;
     margin-bottom: 1rem;
+    display: flex;
+    flex-flow: row;
+    .left {
+      display: block;
+    }
     p {
       font-size: 0.9rem;
     }

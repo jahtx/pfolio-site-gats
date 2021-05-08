@@ -26,12 +26,12 @@ const Footer = props => {
       {props.showVaccineMessage ? (
         <div className="vaccineAdvocacy">
           <a
-            href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html"
+            href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/How-Do-I-Get-a-COVID-19-Vaccine.html"
             className="vaccineLink"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Where to get Vaccinated for Covid-19
+            Where to get vaccinated for Covid-19
           </a>
         </div>
       ) : null}
