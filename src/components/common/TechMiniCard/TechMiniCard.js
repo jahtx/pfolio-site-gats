@@ -285,15 +285,21 @@ const TechMiniCard = ({ tech }) => {
   return (
     <React.Fragment>
       <div className="techCard">
-        <div className="techCard__iconArea">
-          <div className="techCard__icon">
-            <GatsbyImage
-              image={getImage(renderSwitch(tech).image)}
-              alt={renderSwitch(tech).altText}
-            />
+        <a
+          href={renderSwitch(tech).weblink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="techCard__iconArea">
+            <div className="techCard__icon">
+              <GatsbyImage
+                image={getImage(renderSwitch(tech).image)}
+                alt={renderSwitch(tech).altText}
+              />
+            </div>
           </div>
-        </div>
-        <div className="techCard__name">{tech}</div>
+          <div className="techCard__name">{tech}</div>
+        </a>
       </div>
     </React.Fragment>
   )

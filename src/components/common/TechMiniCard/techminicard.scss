@@ -3,7 +3,12 @@
   justify-content: flex-end;
   flex-flow: column;
   margin: 1rem 0.2rem;
-  height: 3rem;
+  height: 2rem;
+  a {
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
   &__iconArea {
     display: flex;
     justify-content: center;

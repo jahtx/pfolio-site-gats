@@ -1,5 +1,5 @@
 @mixin border_guide {
-  // box-shadow: inset 0px 0px 0px 0.5px $light-grey;
+  //box-shadow: inset 0px 0px 0px 0.5px $light-grey;
 }
 div {
   @include border_guide;
