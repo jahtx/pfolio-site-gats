@@ -164,7 +164,7 @@ const TechMiniCard = ({ tech }) => {
           childImageSharp {
             gatsbyImageData(
               quality: 85
-              width: 28
+              width: 27
               placeholder: BLURRED
               formats: [WEBP]
               layout: CONSTRAINED
@@ -285,11 +285,13 @@ const TechMiniCard = ({ tech }) => {
   return (
     <React.Fragment>
       <div className="techCard">
-        <div className="techCard__icon">
-          <GatsbyImage
-            image={getImage(renderSwitch(tech).image)}
-            alt={renderSwitch(tech).altText}
-          />
+        <div className="techCard__iconArea">
+          <div className="techCard__icon">
+            <GatsbyImage
+              image={getImage(renderSwitch(tech).image)}
+              alt={renderSwitch(tech).altText}
+            />
+          </div>
         </div>
         <div className="techCard__name">{tech}</div>
       </div>
