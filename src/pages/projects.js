@@ -1,5 +1,6 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout/MainLayout'
+import TechMiniCard from '../components/common/TechMiniCard/TechMiniCard'
 import Container from 'react-bootstrap/Container'
 import '../styles/projectsPage.scss'
 
@@ -18,7 +19,9 @@ const ProjectsPage = () => (
       <div className="projectCard__top">
         <h2>Make a Postcard</h2>
       </div>
-      <div className="projectCard__bottom">here</div>
+      <div className="projectCard__bottom">
+        <TechMiniCard tech="Angular"></TechMiniCard>
+      </div>
     </div>
   </MainLayout>
 )
