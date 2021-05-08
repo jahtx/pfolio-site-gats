@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
+import TechMiniCard from '../components/common/TechMiniCard/TechMiniCard'
 import Container from 'react-bootstrap/Container'
 import '../styles/resumePage.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -68,182 +69,10 @@ const ResumePage = () => {
             )
           }
         }
-        angLogo: file(relativePath: { eq: "dev-logos/ang-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 30
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        angjsLogo: file(relativePath: { eq: "dev-logos/angjs-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 34
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        rxjsLogo: file(relativePath: { eq: "dev-logos/rxjs-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 30
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        bootstrapLogo: file(
-          relativePath: { eq: "dev-logos/bootstrap-logo.png" }
-        ) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 32
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        reactLogo: file(relativePath: { eq: "dev-logos/react-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 32
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        reduxLogo: file(relativePath: { eq: "dev-logos/redux-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 32
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        gitlabLogo: file(relativePath: { eq: "dev-logos/gitlab-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 32
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        jqueryLogo: file(relativePath: { eq: "dev-logos/jquery-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 31
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        html5Logo: file(relativePath: { eq: "dev-logos/html5-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 31
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        css3Logo: file(relativePath: { eq: "dev-logos/css3-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 27
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        sassLogo: file(relativePath: { eq: "dev-logos/sass-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 31
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        jsLogo: file(relativePath: { eq: "dev-logos/js-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 31
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        wpLogo: file(relativePath: { eq: "dev-logos/wordpress-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 31
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
-        linuxLogo: file(relativePath: { eq: "dev-logos/linux-logo.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              quality: 85
-              width: 28
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: CONSTRAINED
-            )
-          }
-        }
       }
     `
   )
-  const angLogo = data.angLogo
-  const angjsLogo = data.angjsLogo
-  const rxjsLogo = data.rxjsLogo
-  const bootstrapLogo = data.bootstrapLogo
-  const reactLogo = data.reactLogo
-  const reduxLogo = data.reduxLogo
-  const gitlabLogo = data.gitlabLogo
-  const jqueryLogo = data.jqueryLogo
-  const html5Logo = data.html5Logo
-  const css3Logo = data.css3Logo
-  const sassLogo = data.sassLogo
-  const wpLogo = data.wpLogo
-  const linuxLogo = data.linuxLogo
-  const jsLogo = data.jsLogo
-
   // Job Logos
-
   const accLogo = data.accLogo
   const edLogo = data.edLogo
   const airforceLogo = data.airforceLogo
@@ -327,35 +156,13 @@ const ResumePage = () => {
               utilizing daily stand-ups on 4-week sprints.
             </p>
             <h6>Primary Technologies Used:</h6>
-            <div className="jobExperience_tech">
-              <a
-                href="https://angular.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(angLogo)} alt="Angular 2" />
-              </a>
-              <a
-                href="http://reactivex.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(rxjsLogo)} alt="RXJS" />
-              </a>
-              <a
-                href="https://getbootstrap.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(bootstrapLogo)} alt="Bootstrap" />
-              </a>
-              <a
-                href="https://about.gitlab.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(gitlabLogo)} alt="Gitlab" />
-              </a>
+            <div className="miniCardSection">
+              <TechMiniCard tech="Angular" />
+              <TechMiniCard tech="RXJS" />
+              <TechMiniCard tech="Gitlab" />
+              <TechMiniCard tech="SASS" />
+              <TechMiniCard tech="HTML5" />
+              <TechMiniCard tech="CSS3" />
             </div>
             <hr className="jobExperience__hr" />
             <div className="clientBox">
@@ -400,29 +207,14 @@ const ResumePage = () => {
               React/Redux and chief administrator for version control/Git best
               practices.
             </p>
-            <h6>Primary Technologies Used:</h6>
-            <div className="jobExperience_tech">
-              <a
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(reactLogo)} alt="React" />
-              </a>
-              <a
-                href="https://redux.js.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(reduxLogo)} alt="Redux" />
-              </a>
-              <a
-                href="https://getbootstrap.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(bootstrapLogo)} alt="Bootstrap" />
-              </a>
+            <h6>Primary Technologies Used:</h6>{' '}
+            <div className="miniCardSection">
+              <TechMiniCard tech="React" />
+              <TechMiniCard tech="Redux" />
+              <TechMiniCard tech="Bootstrap" />
+              <TechMiniCard tech="SASS" />
+              <TechMiniCard tech="HTML5" />
+              <TechMiniCard tech="CSS3" />
             </div>
           </div>
           <div className="jobExperience__top">
@@ -462,30 +254,13 @@ const ResumePage = () => {
               incorporating modern-SASS/JavaScript libraries and frameworks.
               Operated as senior front-end developer and designer.
             </p>
-            <h6>Primary Technologies Used:</h6>
-            <div className="jobExperience_tech">
-              <a
-                href="https://angularjs.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(angjsLogo)} alt="AngularJS" />
-              </a>
-              <a
-                href="https://jquery.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(jqueryLogo)} alt="JQuery" />
-              </a>
-              <a
-                href="https://sass-lang.com/"
-                className="sassLogo"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(sassLogo)} alt="SASS" />
-              </a>
+            <h6>Primary Technologies Used:</h6>{' '}
+            <div className="miniCardSection">
+              <TechMiniCard tech="AngularJS" />
+              <TechMiniCard tech="JQuery" />
+              <TechMiniCard tech="SASS" />
+              <TechMiniCard tech="HTML5" />
+              <TechMiniCard tech="CSS3" />
             </div>
           </div>
           <div className="jobExperience__top">
@@ -507,21 +282,9 @@ const ResumePage = () => {
               employee/contractor utilization and accounting.
             </p>
             <h6>Primary Technologies Used:</h6>
-            <div className="jobExperience_tech">
-              <a
-                href="https://wordpress.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(wpLogo)} alt="WordPress" />
-              </a>
-              <a
-                href="https://linuxfoundation.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(linuxLogo)} alt="Linux" />
-              </a>
+            <div className="miniCardSection">
+              <TechMiniCard tech="WordPress" />
+              <TechMiniCard tech="Linux" />
             </div>
           </div>
           <div className="jobExperience__top">
@@ -542,29 +305,12 @@ const ResumePage = () => {
               A/B testing.
             </p>
             <h6>Primary Technologies Used:</h6>
-            <div className="jobExperience_tech">
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(html5Logo)} alt="HTML 5" />
-              </a>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(css3Logo)} alt="CSS 3" />
-              </a>
-              <a
-                className="jsLogo"
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage image={getImage(jsLogo)} alt="JavaScript" />
-              </a>
+            <div className="miniCardSection">
+              <TechMiniCard tech="JQuery" />
+              <TechMiniCard tech="SASS" />
+              <TechMiniCard tech="HTML5" />
+              <TechMiniCard tech="CSS3" />
+              <TechMiniCard tech="JavaScript" />
             </div>
           </div>
           <h4>Operating Systems and Applications:</h4>

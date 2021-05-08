@@ -171,6 +171,17 @@ const TechMiniCard = ({ tech }) => {
             )
           }
         }
+        whammyDude: file(relativePath: { eq: "whammy.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 33
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
       }
     `
   )
@@ -188,6 +199,7 @@ const TechMiniCard = ({ tech }) => {
   const wpLogo = data.wpLogo
   const linuxLogo = data.linuxLogo
   const jsLogo = data.jsLogo
+  const whammyDude = data.whammyDude
 
   const renderSwitch = param => {
     switch (param) {
@@ -278,7 +290,11 @@ const TechMiniCard = ({ tech }) => {
           altText: 'JavaScript',
         }
       default:
-        return 'foo'
+        return {
+          image: whammyDude,
+          weblink: 'https://en.wikipedia.org/wiki/Whammy',
+          altText: 'error',
+        }
     }
   }
 
