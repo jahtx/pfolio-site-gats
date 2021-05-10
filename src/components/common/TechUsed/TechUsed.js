@@ -8,8 +8,8 @@ import { nanoid } from 'nanoid'
 const TechUsed = ({ technologies }) => {
   return (
     <React.Fragment>
-      <span className="techUsed">Technologies Used:</span>
-      <div className="miniCardSection">
+      <span className="pt-8-rem font-weight-bold">Technologies Used:</span>
+      <div className="d-flex flex-row flex-wrap">
         {technologies &&
           technologies.map(tech => {
             const id = nanoid()

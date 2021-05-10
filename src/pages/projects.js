@@ -44,7 +44,7 @@ const ProjectsPage = () => {
         <div className="duoRoundBox__bottom pb-4 d-flex flex-column">
           <div className="d-flex flex-row">
             <div className="p-1">
-              <p className="oneStepSmaller">
+              <p className="pt-9-rem">
                 This is a very small, simple app that asks the user to select a
                 country, then creates a postcard with a custom image and
                 message. It uses GraphQL to get a list of all countries and

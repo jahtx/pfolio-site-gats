@@ -111,7 +111,7 @@ const ResumePage = () => {
           <h4 className="m-0 font-weight-bold">
             User Experience Designer/Front-end Developer
           </h4>
-          <span className="oneStepSmaller">
+          <span className="pt-9-rem">
             Insight Global, San Antonio, TX (2018-2020)
           </span>
         </div>
@@ -149,7 +149,7 @@ const ResumePage = () => {
               </a>
             </div>
           </div>
-          <p className="oneStepSmaller">
+          <p className="pt-9-rem">
             Front-end engineer and designer on a development team for the U.S.
             Department of Education Student Loans web application. The browser
             client required Angular 2 and Bootstrap integration while the
@@ -204,7 +204,7 @@ const ResumePage = () => {
               </a>
             </div>
           </div>
-          <p className="oneStepSmaller">
+          <p className="pt-9-rem">
             The client had previously developed a custom application for the
             U.S. Air Force to manage promotions using an outdated browser
             plug-in (Silverlight). Requisition of a new version, built using
@@ -231,7 +231,7 @@ const ResumePage = () => {
           <h4 className="m-0 font-weight-bold">
             User Experience Designer/Front-end Developer
           </h4>
-          <span className="oneStepSmaller">
+          <span className="pt-9-rem">
             Ampcus Inc, San Antonio, TX (2016-2017)
           </span>
         </div>
@@ -258,7 +258,7 @@ const ResumePage = () => {
               </a>
             </div>
           </div>
-          <p className="oneStepSmaller">
+          <p className="pt-9-rem">
             Led a full user-experience design process from requirements
             gathering to implementation. Fully researched metrics, products, and
             content then prioritized according to user engagement, surveys, and
@@ -277,12 +277,12 @@ const ResumePage = () => {
           <h4 className="m-0 font-weight-bold">
             Senior Designer and Technology Lead
           </h4>
-          <span className="oneStepSmaller">
+          <span className="pt-9-rem">
             Visage Collaborative LLC, San Antonio, TX (2014-2015)
           </span>
         </div>
         <div className=" duoRoundBox__bottom">
-          <p className="oneStepSmaller">
+          <p className="pt-9-rem">
             As a small team of entrepreneurs motivated to innovate for our
             clients, all of us assumed multiple roles and responsibilities for a
             new business. Guided the design process for our early clients and
@@ -298,13 +298,11 @@ const ResumePage = () => {
         </div>
         <div className=" duoRoundBox__top mt-3">
           <h4 className="m-0 font-weight-bold">Creative Designer I</h4>{' '}
-          <span className="oneStepSmaller">
-            USAA, San Antonio, TX (2010-2014)
-          </span>
+          <span className="pt-9-rem">USAA, San Antonio, TX (2010-2014)</span>
         </div>
 
         <div className=" duoRoundBox__bottom">
-          <p className="oneStepSmaller">
+          <p className="pt-9-rem">
             Executed design process for multiple web and mobile projects
             including USAA’s internal Enterprise Correspondence Tool, a web
             application to facilitate member communication through postal and
