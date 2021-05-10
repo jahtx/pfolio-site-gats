@@ -1,6 +1,6 @@
 $light-grey: #c7c7c7;
 $darker: #575757;
-$primary_color: #073f83;
+$main_link: #004c93;
 
 $standardHeading: 'Barlow Condensed', 'Trebuchet MS', 'Tahoma';
 $standardFont: 'Montserrat', 'Open Sans';
@@ -17,10 +17,10 @@ $headerFont: 'Montserrat', 'Open Sans';
 }
 
 @mixin portfolio_textStyle {
-  font-family: $standardHeading;
+  font-family: $headerFont;
   text-transform: uppercase;
-  font-weight: bold;
-  color: $darker;
+  font-size: 1.1rem;
+  color: black;
 }
 $fav_radius: 0.8rem;
 $fav_border: 1px solid #d6d6d6;

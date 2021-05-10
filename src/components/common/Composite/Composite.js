@@ -42,7 +42,9 @@ const Composite = props => {
         }
       >
         <Modal.Header closeButton>
-          <Modal.Title className="modalTitle">{props.title}</Modal.Title>
+          <Modal.Title className="one-pt-1-rem all-caps font-weight-bold">
+            {props.title}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <GatsbyImage image={props.imageInfo} alt={props.title} />

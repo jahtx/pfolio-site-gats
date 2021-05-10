@@ -1,6 +1,6 @@
 @import '../../../styles/includeInAll/all/variables.scss';
 
-$red_color: #cf3131;
+$covid_msg: #004c93;
 
 .bottomBar {
   height: 2.5em;
@@ -15,12 +15,12 @@ $red_color: #cf3131;
 .vaccineAdvocacy {
   height: 40px;
   @include flex_center;
-  color: $red_color;
+  color: $covid_msg;
   a.vaccineLink {
-    color: $red_color;
+    color: $covid_msg;
     text-decoration: underline;
     :hover {
-      color: $red_color;
+      color: $covid_msg;
       text-decoration: underline;
     }
   }
@@ -36,9 +36,9 @@ $red_color: #cf3131;
   font-size: 0.7rem;
   padding: 0;
   a {
-    color: #065d9c;
+    color: $main_link;
     :hover {
-      color: #065d9c;
+      color: $main_link;
       text-decoration: underline;
     }
   }

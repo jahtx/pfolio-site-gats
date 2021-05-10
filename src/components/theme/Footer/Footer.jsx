@@ -8,7 +8,7 @@ const Footer = props => {
   return (
     <React.Fragment>
       {props.showVaccineMessage ? (
-        <div className="vaccineAdvocacy">
+        <div className="vaccineAdvocacy pt-9-rem">
           <a
             href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/How-Do-I-Get-a-COVID-19-Vaccine.html"
             className="vaccineLink"
