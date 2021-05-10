@@ -32,19 +32,18 @@ const ProjectsPage = () => {
         <h1 className="mainHeading">Projects</h1>
         <hr></hr>
       </Container>
-      <div className="container-sm mb-5">
+      <Container fluid="sm" className="mb-5">
         <p>
           Many of these are small projects to test, learn, and demonstrate new
           frameworks and tools. All are welcome to download the code, ask me any
           questions, or provide feedback.
         </p>
-        <div className="projectCard__top">
-          <h2>Make a Postcard</h2>
+        <div className="projectCard__top mt-4">
+          <h2 className="m-0">Make a Postcard</h2>
         </div>
-        <div className="projectCard__bottom pb-4">
-          <div className="flexSection">
-            <div className="left">
-              {' '}
+        <div className="projectCard__bottom pb-4 d-flex flex-column">
+          <div className="d-flex flex-row">
+            <div className="p-1">
               <p>
                 This is a very small, simple app that asks the user to select a
                 country, then creates a postcard with a custom image and
@@ -55,14 +54,14 @@ const ProjectsPage = () => {
               </p>
               <TechUsed technologies={['React', 'GraphQL', 'Bootstrap']} />
             </div>
-            <div className="right">
+            <div className="p-2">
               <a
                 href="https://countries-to-visit-zwzl3.ondigitalocean.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <GatsbyImage
-                  className="postcardComp"
+                  className="postcardComp overflow-hidden"
                   image={getImage(postcardComp)}
                   alt="Make A Postcard App"
                 />
@@ -70,24 +69,25 @@ const ProjectsPage = () => {
             </div>
           </div>
           <div>
-            {' '}
-            <a
+            <Button
+              variant="outline-primary mr-3"
               href="https://countries-to-visit-zwzl3.ondigitalocean.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline-primary mr-3">Go to App</Button>
-            </a>
-            <a
+              Go to App
+            </Button>
+            <Button
+              variant="outline-primary"
               href="https://github.com/jahtx/countries-to-visit"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline-primary">Git Repo</Button>
-            </a>
+              Git Repo
+            </Button>
           </div>
         </div>
-      </div>
+      </Container>
     </MainLayout>
   )
 }

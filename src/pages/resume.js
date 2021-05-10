@@ -84,11 +84,11 @@ const ResumePage = () => {
       <div class="backgroundTriangles">
         <Container fluid="md">
           <h1 className="mainHeading">Résumé</h1>
-          <hr></hr>
+          <hr />
         </Container>
 
         <Container fluid="md">
-          <h2 className="resumePage__h2">
+          <h2 className="p-0 mt-4">
             Senior User Experience Designer / Front-end Developer
           </h2>
           <p>
@@ -106,19 +106,23 @@ const ResumePage = () => {
             <li>Rapid prototyping</li>
             <li>Product Strategy and Planning</li>
           </ul>
-          <hr></hr>
+          <hr />
           <h3>Experience:</h3>
-          <div className="jobExperience__top">
-            <h4>User Experience Designer/Front-end Developer</h4>
+          <div className="jobExperience__top duoRoundBox__top mt-3">
+            <h4 className="m-0 font-weight-bold">
+              User Experience Designer/Front-end Developer
+            </h4>
             <span className="jobExperience__info">
               Insight Global, San Antonio, TX (2018-2020)
             </span>
           </div>
-          <div className="jobExperience__bottom">
+          <div className="jobExperience__bottom duoRoundBox__bottom">
             <div className="clientBox">
               <div className="clientBox__left">
                 {' '}
-                <h5>Client: Accenture / U.S. Department of Education</h5>
+                <h5 className="font-weight-bold p-0">
+                  Client: Accenture / U.S. Department of Education
+                </h5>
               </div>
 
               <div className="clientBox__right">
@@ -146,7 +150,7 @@ const ResumePage = () => {
                 </a>
               </div>
             </div>
-            <p>
+            <p className="smallerPara">
               Front-end engineer and designer on a development team for the U.S.
               Department of Education Student Loans web application. The browser
               client required Angular 2 and Bootstrap integration while the
@@ -167,11 +171,13 @@ const ResumePage = () => {
               ]}
             />
 
-            <hr className="jobExperience__hr" />
+            <hr className="mb-1" />
             <div className="clientBox">
               <div className="clientBox__left">
                 {' '}
-                <h5>Client: Diligent Consulting / U.S. Air Force</h5>
+                <h5 className="font-weight-bold p-0">
+                  Client: Diligent Consulting / U.S. Air Force
+                </h5>
               </div>
 
               <div className="clientBox__right">
@@ -199,7 +205,7 @@ const ResumePage = () => {
                 </a>
               </div>
             </div>
-            <p>
+            <p className="smallerPara">
               The client had previously developed a custom application for the
               U.S. Air Force to manage promotions using an outdated browser
               plug-in (Silverlight). Requisition of a new version, built using
@@ -222,17 +228,21 @@ const ResumePage = () => {
               ]}
             />
           </div>
-          <div className="jobExperience__top">
-            <h4>User Experience Designer/Front-end Developer</h4>
+          <div className="jobExperience__top duoRoundBox__top mt-3">
+            <h4 className="m-0 font-weight-bold">
+              User Experience Designer/Front-end Developer
+            </h4>
             <span className="jobExperience__info">
               Ampcus Inc, San Antonio, TX (2016-2017)
             </span>
           </div>
-          <div className="jobExperience__bottom">
+          <div className="jobExperience__bottom duoRoundBox__bottom">
             <div className="clientBox">
               <div className="clientBox__left">
                 {' '}
-                <h5>Client: Randolph-Brooks Federal Credit Union</h5>
+                <h5 className="font-weight-bold p-0">
+                  Client: Randolph-Brooks Federal Credit Union
+                </h5>
               </div>
 
               <div className="clientBox__right">
@@ -249,7 +259,7 @@ const ResumePage = () => {
                 </a>
               </div>
             </div>
-            <p>
+            <p className="smallerPara">
               Led a full user-experience design process from requirements
               gathering to implementation. Fully researched metrics, products,
               and content then prioritized according to user engagement,
@@ -264,14 +274,16 @@ const ResumePage = () => {
               technologies={['AngularJS', 'JQuery', 'SASS', 'HTML5', 'CSS3']}
             />
           </div>
-          <div className="jobExperience__top">
-            <h4>Senior Designer and Technology Lead</h4>
+          <div className="jobExperience__top duoRoundBox__top mt-3">
+            <h4 className="m-0 font-weight-bold">
+              Senior Designer and Technology Lead
+            </h4>
             <span className="jobExperience__info">
               Visage Collaborative LLC, San Antonio, TX (2014-2015)
             </span>
           </div>
-          <div className="jobExperience__bottom">
-            <p>
+          <div className="jobExperience__bottom duoRoundBox__bottom">
+            <p className="smallerPara">
               As a small team of entrepreneurs motivated to innovate for our
               clients, all of us assumed multiple roles and responsibilities for
               a new business. Guided the design process for our early clients
@@ -285,15 +297,15 @@ const ResumePage = () => {
 
             <TechUsed technologies={['WordPress', 'Linux']} />
           </div>
-          <div className="jobExperience__top">
-            <h4>Creative Designer I</h4>{' '}
+          <div className="jobExperience__top duoRoundBox__top mt-3">
+            <h4 className="m-0 font-weight-bold">Creative Designer I</h4>{' '}
             <span className="jobExperience__info">
               USAA, San Antonio, TX (2010-2014)
             </span>
           </div>
 
-          <div className="jobExperience__bottom">
-            <p>
+          <div className="jobExperience__bottom duoRoundBox__bottom">
+            <p className="smallerPara">
               Executed design process for multiple web and mobile projects
               including USAA’s internal Enterprise Correspondence Tool, a web
               application to facilitate member communication through postal and
@@ -307,7 +319,9 @@ const ResumePage = () => {
               technologies={['JQuery', 'SASS', 'HTML5', 'CSS3', 'JavaScript']}
             />
           </div>
-          <h4>Operating Systems and Applications:</h4>
+          <h4 className="mt-3 font-weight-bold">
+            Operating Systems and Applications:
+          </h4>
           <ul>
             <li>UNIX / Linux</li>
             <li>MacOS / Windows</li>
@@ -318,7 +332,7 @@ const ResumePage = () => {
             <li>Axure</li>
             <li>SiteSpect</li>
           </ul>
-          <h4>Languages and Technologies:</h4>
+          <h4 className="m-0 font-weight-bold">Languages and Technologies:</h4>
           <ul>
             <li>Angular 2</li>
             <li>React / Redux</li>

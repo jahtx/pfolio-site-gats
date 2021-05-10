@@ -23,7 +23,11 @@ const Composite = props => {
   return (
     <React.Fragment>
       <div
-        className={props.isMobile ? 'mobThumb' : 'deskThumb'}
+        className={
+          props.isMobile
+            ? 'mobThumb overflow-hidden'
+            : 'deskThumb overflow-hidden'
+        }
         onClick={handleShow}
       >
         <GatsbyImage image={props.imageInfo} alt={props.title} />
@@ -31,7 +35,11 @@ const Composite = props => {
       <Modal
         show={show}
         onHide={handleClose}
-        dialogClassName={props.isMobile ? 'modalMobile' : 'modalDesktop'}
+        dialogClassName={
+          props.isMobile
+            ? 'modalMobile overflow-hidden'
+            : 'modalDesktop overflow-hidden'
+        }
       >
         <Modal.Header closeButton>
           <Modal.Title className="modalTitle">{props.title}</Modal.Title>
