@@ -1,5 +1,7 @@
 @import '../../../styles/includeInAll/all/variables.scss';
 
+$red_color: #cf3131;
+
 .bottomBar {
   height: 2.5em;
   background-position: center;
@@ -12,13 +14,13 @@
 }
 .vaccineAdvocacy {
   height: 40px;
-  background-color: #eb4242;
   @include flex_center;
-  color: white;
+  color: $red_color;
   a.vaccineLink {
-    color: white;
+    color: $red_color;
+    text-decoration: underline;
     :hover {
-      color: white;
+      color: $red_color;
       text-decoration: underline;
     }
   }

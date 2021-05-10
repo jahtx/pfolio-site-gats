@@ -64,7 +64,7 @@ const IndexPage = () => {
 
   return (
     <MainLayout pageClasses="homePage" showVacMsg>
-      <div className="container-sm">
+      <div className="container-lg">
         <h1 className="homePage__mainTitle">
           Hi, I'm James, a Product & Services UX Designer and{' '}
           <span className="no-break">Front-end</span> Engineer in the San
@@ -75,7 +75,7 @@ const IndexPage = () => {
           established companies and organizations, I can be an excellent
           addition to your team or project! 🙂
         </div>
-        <Container fluid="sm" className="prevEmp">
+        <Container fluid="lg" className="prevEmp">
           <div className="prevEmp-left">
             Throughout my career I’ve worked on large efforts for Accenture,
             USAA, RBFCU, U.S. Air Force, and the Department of Education. While

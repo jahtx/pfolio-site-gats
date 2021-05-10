@@ -15,6 +15,9 @@ const Navigation = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse className="gacCollapse" id="responsive-navbar-nav">
         <Nav className="gac">
+          <Nav.Link className="gacLink" href="/">
+            Home
+          </Nav.Link>
           <Nav.Link className="gacLink" href="/portfolio">
             Portfolio
           </Nav.Link>
