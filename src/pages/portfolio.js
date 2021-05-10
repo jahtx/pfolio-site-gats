@@ -131,17 +131,17 @@ const PortfolioPage = () => {
             <hr></hr>
 
             <h2>Randolph-Brooks Federal Credit Union</h2>
-            <p>
+            <p className="pt-9-rem">
               Randolph-Brooks Federal Credit Union is an accredited financial
               institution headquartered in Live Oak, Texas and is the second
               largest credit union in Texas.
             </p>
-            <p>
+            <p className="pt-9-rem">
               Their website had long been overdue for a refreshed design and
               needed to meet the expectations of a younger and more
               technologically demanding customer base.
             </p>
-            <p>
+            <p className="pt-9-rem">
               Challenges included accounting for over a thousand disparate pages
               and content, accessibility, and incorporating a new content
               management system. Over a period of nine months, James was
