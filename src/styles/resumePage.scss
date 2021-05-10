@@ -1,60 +1,32 @@
 @import './standard/general.scss';
 
-.jobExperience {
-  &__info {
-    font-size: 0.9em;
-  }
-  &__bottom {
-    .clientBox {
-      display: flex;
-      flex-flow: column;
-      justify-content: space-between;
-      padding: 0;
-      margin: 1em 0;
-      @include MQ(S) {
-        flex-flow: row;
-      }
-      &__left {
-        @include flex_center;
-        justify-content: flex-start;
-      }
-      &__right {
-        @include flex_center;
-        justify-content: flex-start;
-        visibility: hidden;
-        display: none;
-        // width: 100%;
-        @include MQ(S) {
-          @include flex_center;
-          width: 30%;
-          visibility: visible;
-        }
-        .accLogo {
-          margin: 5px;
-        }
-        .diligentLogo {
-          margin: 5px;
-        }
-        @include MQ(S) {
-          justify-content: flex-end;
-        }
-      }
-    }
+h5 {
+  font-size: 1em;
+}
 
-    h5 {
-      font-weight: bold;
-      font-size: 1em;
-      margin: 1em 0;
+.clientBox {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  @include MQ(S) {
+    flex-flow: row;
+  }
+  &__left {
+    @include flex_center;
+    justify-content: flex-start;
+  }
+  &__right {
+    @include flex_center;
+    justify-content: flex-start;
+    visibility: hidden;
+    display: none;
+    @include MQ(S) {
+      @include flex_center;
+      width: 30%;
+      visibility: visible;
     }
-    h6 {
-      font-weight: bold;
-      font-size: 0.8rem;
+    @include MQ(S) {
+      justify-content: flex-end;
     }
   }
-}
-.jsLogo {
-  padding-left: 4px;
-}
-.sassLogo {
-  padding-left: 2px;
 }

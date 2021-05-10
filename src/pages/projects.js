@@ -38,13 +38,13 @@ const ProjectsPage = () => {
           frameworks and tools. All are welcome to download the code, ask me any
           questions, or provide feedback.
         </p>
-        <div className="projectCard__top mt-4">
-          <h2 className="m-0">Make a Postcard</h2>
+        <div className="duoRoundBox__top mt-4">
+          <h2 className="m-0 font-weight-bold">Make a Postcard</h2>
         </div>
-        <div className="projectCard__bottom pb-4 d-flex flex-column">
+        <div className="duoRoundBox__bottom pb-4 d-flex flex-column">
           <div className="d-flex flex-row">
             <div className="p-1">
-              <p>
+              <p className="oneStepSmaller">
                 This is a very small, simple app that asks the user to select a
                 country, then creates a postcard with a custom image and
                 message. It uses GraphQL to get a list of all countries and
