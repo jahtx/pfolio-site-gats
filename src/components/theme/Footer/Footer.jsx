@@ -36,11 +36,11 @@ const Footer = props => {
         </div>
       ) : null}
 
-      <BackgroundImage
+      {/* <BackgroundImage
         tag="div"
         className="container-fluid bottomBar"
         fluid={beltStitch}
-      ></BackgroundImage>
+      ></BackgroundImage> */}
       <p className="footerTrailer text-center mb-5">
         Built with <a href="https://reactjs.org/">React</a> and{' '}
         <a href="https://www.gatsbyjs.com/">Gatsby</a>.
