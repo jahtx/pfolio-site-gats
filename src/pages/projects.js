@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import TechUsed from '../components/common/TechUsed/TechUsed'
 import Container from 'react-bootstrap/Container'
+import Button from 'react-bootstrap/Button'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import '../styles/projectsPage.scss'
 
@@ -40,43 +41,49 @@ const ProjectsPage = () => {
         <div className="projectCard__top">
           <h2>Make a Postcard</h2>
         </div>
-        <div className="projectCard__bottom">
-          <div className="left">
-            {' '}
-            <p>
-              This is a very small, simple app that asks the user to select a
-              country, then creates a postcard with a custom image and message.
-              It uses GraphQL to get a list of all countries and other data,
-              then utlizes the SplashAPI to do an image search and pull down the
-              first option. Fully responsive design utilizing Adobe vector art.
-            </p>
-            <p>
+        <div className="projectCard__bottom pb-4">
+          <div className="flexSection">
+            <div className="left">
               {' '}
-              <a href="https://countries-to-visit-zwzl3.ondigitalocean.app/">
-                App Link
-              </a>
-              &nbsp;&nbsp;&nbsp;
+              <p>
+                This is a very small, simple app that asks the user to select a
+                country, then creates a postcard with a custom image and
+                message. It uses GraphQL to get a list of all countries and
+                other data, then incorporates the SplashAPI to do an image
+                search and pull down the first option. Fully responsive design
+                utilizing Adobe vector art.
+              </p>
+              <TechUsed technologies={['React', 'GraphQL', 'Bootstrap']} />
+            </div>
+            <div className="right">
               <a
-                href="https://github.com/jahtx/countries-to-visit"
+                href="https://countries-to-visit-zwzl3.ondigitalocean.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Git Repo
+                <GatsbyImage
+                  className="postcardComp"
+                  image={getImage(postcardComp)}
+                  alt="Make A Postcard App"
+                />
               </a>
-            </p>
-            <TechUsed technologies={['React', 'GraphQL', 'Bootstrap']} />
+            </div>
           </div>
-          <div className="right">
+          <div>
+            {' '}
             <a
               href="https://countries-to-visit-zwzl3.ondigitalocean.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GatsbyImage
-                className="postcardComp"
-                image={getImage(postcardComp)}
-                alt="Make A Postcard App"
-              />
+              <Button variant="outline-primary mr-3">Go to App</Button>
+            </a>
+            <a
+              href="https://github.com/jahtx/countries-to-visit"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline-primary">Git Repo</Button>
             </a>
           </div>
         </div>

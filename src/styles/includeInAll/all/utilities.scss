@@ -1,5 +1,5 @@
 @mixin border_guide {
-  // box-shadow: inset 0px 0px 0px 0.5px $light-grey;
+  //  box-shadow: inset 0px 0px 0px 0.5px $light-grey;
 }
 div {
   @include border_guide;
@@ -23,9 +23,11 @@ h1.mainHeading {
 }
 
 .backgroundBoxesRight {
-  width: 100%;
-  background-image: url('../../../images/backgrounds/right-boxes.png');
-  background-size: 400px;
-  background-repeat: repeat-y;
-  background-position: right 4rem;
+  @include MQ(S) {
+    width: 100%;
+    background-image: url('../../../images/backgrounds/right-boxes.png');
+    background-size: 400px;
+    background-repeat: repeat-y;
+    background-position: right 4rem;
+  }
 }
