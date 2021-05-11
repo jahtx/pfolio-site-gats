@@ -18,6 +18,7 @@ div.modalDesktop {
 .compHeading {
   @include portfolio_textStyle;
   margin: 1em 0 0.5em;
+  text-align: center;
 }
 .projectInset {
   font-size: 0.9em;
@@ -31,4 +32,7 @@ div.modalDesktop {
 }
 .portLast {
   margin-bottom: 4em;
+}
+.compHolder {
+  width: 700px;
 }

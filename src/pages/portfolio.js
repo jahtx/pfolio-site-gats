@@ -124,8 +124,8 @@ const PortfolioPage = () => {
 
   return (
     <MainLayout pageClasses="portfolioPage" showVacMsg={false}>
-      <div class="backgroundBoxesLeft">
-        <div class="backgroundBoxesRight">
+      <div className="backgroundBoxesLeft">
+        <div className="backgroundBoxesRight">
           <Container fluid="lg">
             <h1 className="mainHeading">Portfolio</h1>
             <hr></hr>
@@ -150,10 +150,9 @@ const PortfolioPage = () => {
               effort.
             </p>
           </Container>
+
           <div className="container-lg mt-3">
-            <div className="d-flex justify-content-center">
-              <h3 className="compHeading">Home Page</h3>
-            </div>
+            <h3 className="compHeading">Home Page</h3>
             <div className="d-flex justify-content-center">
               <Composite
                 title="Home Page Mobile"
@@ -167,9 +166,8 @@ const PortfolioPage = () => {
             </div>
           </div>
           <div className="container-lg mt-3">
-            <div className="d-flex justify-content-center">
-              <h3 className="compHeading">Mortgages</h3>
-            </div>
+            <h3 className="compHeading">Mortgages</h3>
+
             <div className="d-flex justify-content-center">
               <Composite
                 title="Mortgage Mobile"
@@ -183,9 +181,8 @@ const PortfolioPage = () => {
             </div>
           </div>
           <div className="container-lg mt-3">
-            <div className="d-flex justify-content-center">
-              <h3 className="compHeading">Checking</h3>
-            </div>
+            <h3 className="compHeading">Checking</h3>
+
             <div className="d-flex justify-content-center">
               <Composite
                 title="Checking Mobile"
@@ -199,9 +196,8 @@ const PortfolioPage = () => {
             </div>
           </div>
           <div className="container-lg mt-3 portLast">
-            <div className="d-flex justify-content-center">
-              <h3 className="compHeading">Auto Loans</h3>
-            </div>
+            <h3 className="compHeading">Auto Loans</h3>
+
             <div className="d-flex justify-content-center">
               <Composite
                 title="Auto Loans Mobile"
