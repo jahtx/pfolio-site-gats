@@ -81,12 +81,12 @@ const ResumePage = () => {
 
   return (
     <MainLayout pageClasses="resumePage">
-      <Container fluid="md">
+      <Container fluid="lg">
         <h1 className="mainHeading">Résumé</h1>
         <hr />
       </Container>
 
-      <Container fluid="md">
+      <Container fluid="lg">
         <h2 className="p-0 mt-4">
           Senior User Experience Designer / Front-end Developer
         </h2>
