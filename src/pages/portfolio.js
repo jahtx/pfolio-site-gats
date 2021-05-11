@@ -153,7 +153,7 @@ const PortfolioPage = () => {
 
           <div className="container-lg mt-3">
             <h3 className="compHeading">Home Page</h3>
-            <div className="d-flex justify-content-center">
+            <div className="spiralBk d-flex justify-content-center">
               <Composite
                 title="Home Page Mobile"
                 imageInfo={getImage(data.mainMobile)}
@@ -168,7 +168,7 @@ const PortfolioPage = () => {
           <div className="container-lg mt-3">
             <h3 className="compHeading">Mortgages</h3>
 
-            <div className="d-flex justify-content-center">
+            <div className="spiralBk d-flex justify-content-center">
               <Composite
                 title="Mortgage Mobile"
                 imageInfo={getImage(data.mortgageMobile)}
@@ -183,7 +183,7 @@ const PortfolioPage = () => {
           <div className="container-lg mt-3">
             <h3 className="compHeading">Checking</h3>
 
-            <div className="d-flex justify-content-center">
+            <div className="spiralBk d-flex justify-content-center">
               <Composite
                 title="Checking Mobile"
                 imageInfo={getImage(data.checkingMobile)}
@@ -198,7 +198,7 @@ const PortfolioPage = () => {
           <div className="container-lg mt-3 portLast">
             <h3 className="compHeading">Auto Loans</h3>
 
-            <div className="d-flex justify-content-center">
+            <div className="spiralBk d-flex justify-content-center">
               <Composite
                 title="Auto Loans Mobile"
                 imageInfo={getImage(data.autoLoansMobile)}
