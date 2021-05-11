@@ -18,7 +18,7 @@ const IndexPage = () => {
           }
         }
         blurredOutside: file(
-          relativePath: { eq: "backgrounds/blurred-color-outside.png" }
+          relativePath: { eq: "backgrounds/blurred-color-outsidex.png" }
         ) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 3000) {
@@ -75,7 +75,7 @@ const IndexPage = () => {
   return (
     <MainLayout pageClasses="homePage" showVacMsg>
       <BackgroundImage tag="div" className="topHero" fluid={blurredOutside}>
-        <Container fluid="lg" className="mb-4">
+        <Container fluid="lg" className="topArea">
           <h1 className="homePage__mainTitle mt-0">
             Hi, I'm James, a Product & Services UX Designer and{' '}
             <span className="no-break">Front-end</span> Engineer in the San

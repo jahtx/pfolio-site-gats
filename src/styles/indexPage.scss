@@ -17,17 +17,23 @@
 
 .topHero {
   width: 100%;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.topArea {
+  padding-bottom: 0.5rem;
 }
 
 .prevEmp {
   display: flex;
   flex-flow: column;
   margin: 2rem 0 0 0;
+  padding-bottom: 1rem;
   @include MQ(S) {
     font-size: 1rem;
     flex-flow: row;
     margin: 2rem 0;
-    padding-bottom: 2rem;
   }
 }
 .prevEmp-left {
@@ -74,6 +80,7 @@
     background-size: 100% 100%;
     min-height: 200px;
     color: white;
+    margin-top: 2rem;
     flex-flow: column-reverse;
     @include MQ(S) {
       flex-flow: row;
