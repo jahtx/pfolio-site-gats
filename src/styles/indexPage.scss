@@ -1,21 +1,9 @@
 @import './standard/general.scss';
 
 .homePage {
-  min-height: 400px;
-  background-size: cover;
-  background-position: left 10px;
-
-  &__bk {
-    padding-bottom: 2em;
-    margin: 0 auto;
-    max-width: 1000px;
-  }
-  @include MQ(S) {
-    padding-bottom: 2em;
-  }
   &__mainTitle {
     text-align: center;
-    padding: 0 0 1rem 0;
+    padding: 1rem 0 1rem 0;
     @include MQ(S) {
       padding: 1.75rem 0 2rem 0;
     }
@@ -27,6 +15,10 @@
   }
 }
 
+.topHero {
+  width: 100%;
+}
+
 .prevEmp {
   display: flex;
   flex-flow: column;
@@ -35,6 +27,7 @@
     font-size: 1rem;
     flex-flow: row;
     margin: 2rem 0;
+    padding-bottom: 2rem;
   }
 }
 .prevEmp-left {

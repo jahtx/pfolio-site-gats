@@ -25,7 +25,7 @@ const Header = () => {
         <title>{data.site.siteMetadata?.title || `Title`}</title>
       </Helmet>
 
-      <div className="container-fluid cimaBar">
+      <div className="cimaBar">
         <div className="cimaBar__item cimaBar--title">
           <a className="cimaBar__link" href="/">
             James A. Hernandez

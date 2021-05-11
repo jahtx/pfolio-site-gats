@@ -17,6 +17,15 @@ const IndexPage = () => {
             }
           }
         }
+        blurredOutside: file(
+          relativePath: { eq: "backgrounds/blurred-color-outside.png" }
+        ) {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 3000) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         workLogos: file(relativePath: { eq: "work-logos.png" }) {
           childImageSharp {
             gatsbyImageData(
@@ -58,38 +67,43 @@ const IndexPage = () => {
   )
 
   const paintBox = data.paintBox.childImageSharp.fluid
+  const blurredOutside = data.blurredOutside.childImageSharp.fluid
   const workLogos = data.workLogos
   const uxLogos = data.uxLogos
   const devLogos = data.devLogos
 
   return (
     <MainLayout pageClasses="homePage" showVacMsg>
-      <div className="container-lg">
-        <h1 className="homePage__mainTitle">
-          Hi, I'm James, a Product & Services UX Designer and{' '}
-          <span className="no-break">Front-end</span> Engineer in the San
-          Antonio area.
-        </h1>
-        <div className="homePage__inset">
-          With over 10 years experience in design and development for
-          established companies and organizations, I can be an excellent
-          addition to your team or project! 🙂
-        </div>
-        <Container fluid="lg" className="prevEmp">
-          <div className="prevEmp-left">
-            Throughout my career I’ve worked on large efforts for Accenture,
-            USAA, RBFCU, U.S. Air Force, and the Department of Education. While
-            I’ve specialized in design research, wireframing, and development, I
-            have also led teams for requirements gathering, user testing, and
-            evaluation.
+      <BackgroundImage tag="div" className="topHero" fluid={blurredOutside}>
+        <Container fluid="lg" className="mb-4">
+          <h1 className="homePage__mainTitle mt-0">
+            Hi, I'm James, a Product & Services UX Designer and{' '}
+            <span className="no-break">Front-end</span> Engineer in the San
+            Antonio area.
+          </h1>
+          <div className="homePage__inset">
+            With over 10 years experience in design and development for
+            established companies and organizations, I can be an excellent
+            addition to your team or project! 🙂
           </div>
-          <div className="prevEmp-right">
-            <GatsbyImage
-              image={getImage(workLogos)}
-              alt="Previous Employers Logos"
-            />
-          </div>
+          <Container fluid="lg" className="prevEmp">
+            <div className="prevEmp-left">
+              Throughout my career I’ve worked on large efforts for Accenture,
+              USAA, RBFCU, U.S. Air Force, and the Department of Education.
+              While I’ve specialized in design research, wireframing, and
+              development, I have also led teams for requirements gathering,
+              user testing, and evaluation.
+            </div>
+            <div className="prevEmp-right">
+              <GatsbyImage
+                image={getImage(workLogos)}
+                alt="Previous Employers Logos"
+              />
+            </div>
+          </Container>
         </Container>
+      </BackgroundImage>
+      <Container fluid="lg">
         <BackgroundImage
           tag="div"
           className="explainBox explainBox--ux"
@@ -108,6 +122,8 @@ const IndexPage = () => {
             <p>Sketch, Figma, Invision, Adobe Illustrator, Adobe Photoshop</p>
           </div>
         </BackgroundImage>
+      </Container>
+      <Container fluid="lg">
         <div className="explainBox explainBox--dev">
           <div className="explainBox__sectionPicture section--devLeft">
             <GatsbyImage image={getImage(devLogos)} alt="Dev Tools" />
@@ -119,7 +135,7 @@ const IndexPage = () => {
             <p>React, Gastby, Angular, JQuery, Git, Bootstrap</p>
           </div>
         </div>
-      </div>
+      </Container>
     </MainLayout>
   )
 }

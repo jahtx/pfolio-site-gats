@@ -126,7 +126,7 @@ const PortfolioPage = () => {
     <MainLayout pageClasses="portfolioPage" showVacMsg={false}>
       <div class="backgroundBoxesLeft">
         <div class="backgroundBoxesRight">
-          <Container fluid="sm">
+          <Container fluid="lg">
             <h1 className="mainHeading">Portfolio</h1>
             <hr></hr>
 
@@ -150,7 +150,7 @@ const PortfolioPage = () => {
               effort.
             </p>
           </Container>
-          <div className="container-sm mt-3">
+          <div className="container-lg mt-3">
             <div className="d-flex justify-content-center">
               <h3 className="compHeading">Home Page</h3>
             </div>
@@ -166,7 +166,7 @@ const PortfolioPage = () => {
               />
             </div>
           </div>
-          <div className="container-sm mt-3">
+          <div className="container-lg mt-3">
             <div className="d-flex justify-content-center">
               <h3 className="compHeading">Mortgages</h3>
             </div>
@@ -182,7 +182,7 @@ const PortfolioPage = () => {
               />
             </div>
           </div>
-          <div className="container-sm mt-3">
+          <div className="container-lg mt-3">
             <div className="d-flex justify-content-center">
               <h3 className="compHeading">Checking</h3>
             </div>
@@ -198,7 +198,7 @@ const PortfolioPage = () => {
               />
             </div>
           </div>
-          <div className="container-sm mt-3 portLast">
+          <div className="container-lg mt-3 portLast">
             <div className="d-flex justify-content-center">
               <h3 className="compHeading">Auto Loans</h3>
             </div>
