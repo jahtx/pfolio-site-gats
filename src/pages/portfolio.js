@@ -11,7 +11,6 @@ const PortfolioPage = () => {
     graphql`
       query {
         mainMobile: file(relativePath: { eq: "composites/RBFCU_Main-1.png" }) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -23,7 +22,6 @@ const PortfolioPage = () => {
           }
         }
         mainDesktop: file(relativePath: { eq: "composites/RBFCU_Main-2.png" }) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -37,7 +35,6 @@ const PortfolioPage = () => {
         mortgageMobile: file(
           relativePath: { eq: "composites/RBFCU_Mortgage-1.png" }
         ) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -52,7 +49,6 @@ const PortfolioPage = () => {
         mortgageDesktop: file(
           relativePath: { eq: "composites/RBFCU_Mortgage-2.png" }
         ) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -66,7 +62,6 @@ const PortfolioPage = () => {
         autoLoansMobile: file(
           relativePath: { eq: "composites/RBFCU_Auto_Loans-1.png" }
         ) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -93,7 +88,6 @@ const PortfolioPage = () => {
         checkingMobile: file(
           relativePath: { eq: "composites/RBFCU_Checking-1.png" }
         ) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -107,7 +101,6 @@ const PortfolioPage = () => {
         checkingDesktop: file(
           relativePath: { eq: "composites/RBFCU_Checking-2.png" }
         ) {
-          id
           childImageSharp {
             gatsbyImageData(
               quality: 85
