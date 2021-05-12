@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import { nanoid } from 'nanoid'
 import Container from 'react-bootstrap/Container'
 import { getImage } from 'gatsby-plugin-image'
 import MainLayout from '../layouts/MainLayout/MainLayout'
@@ -115,6 +116,33 @@ const PortfolioPage = () => {
     `
   )
 
+  const portItems = [
+    {
+      id: nanoid(),
+      compHeader: 'Home Page',
+      imageFileMobile: data.mainMobile,
+      imageFileDesktop: data.mainDesktop,
+    },
+    {
+      id: nanoid(),
+      compHeader: 'Mortgages',
+      imageFileMobile: data.mortgageMobile,
+      imageFileDesktop: data.mortgageDesktop,
+    },
+    {
+      id: nanoid(),
+      compHeader: 'Checking',
+      imageFileMobile: data.checkingMobile,
+      imageFileDesktop: data.checkingDesktop,
+    },
+    {
+      id: nanoid(),
+      compHeader: 'Auto Loans',
+      imageFileMobile: data.autoLoansMobile,
+      imageFileDesktop: data.autoLoansDesktop,
+    },
+  ]
+
   return (
     <MainLayout pageClasses="portfolioPage" showVacMsg={false}>
       <div className="backgroundBoxesLeft">
@@ -144,66 +172,32 @@ const PortfolioPage = () => {
             </p>
           </Container>
 
-          <div className="container-lg mt-3">
-            <h3 className="compHeading">Home Page</h3>
-            <div className="spiralBk d-flex justify-content-center">
-              <Composite
-                title="Home Page Mobile"
-                imageInfo={getImage(data.mainMobile)}
-                isMobile
-              />
-              <Composite
-                title="Home Page Desktop"
-                imageInfo={getImage(data.mainDesktop)}
-              />
-            </div>
-          </div>
-          <div className="container-lg mt-3">
-            <h3 className="compHeading">Mortgages</h3>
+          {portItems &&
+            portItems.map(portItem => {
+              const {
+                id,
+                compHeader,
+                imageFileMobile,
+                imageFileDesktop,
+              } = portItem
+              return (
+                <div className="container-lg mt-3" key={id}>
+                  <h3 className="compHeading">{compHeader}</h3>
 
-            <div className="spiralBk d-flex justify-content-center">
-              <Composite
-                title="Mortgage Mobile"
-                imageInfo={getImage(data.mortgageMobile)}
-                isMobile
-              />
-              <Composite
-                title="Mortgage Desktop"
-                imageInfo={getImage(data.mortgageDesktop)}
-              />
-            </div>
-          </div>
-          <div className="container-lg mt-3">
-            <h3 className="compHeading">Checking</h3>
-
-            <div className="spiralBk d-flex justify-content-center">
-              <Composite
-                title="Checking Mobile"
-                imageInfo={getImage(data.checkingMobile)}
-                isMobile
-              />
-              <Composite
-                title="Checking Desktop"
-                imageInfo={getImage(data.checkingDesktop)}
-              />
-            </div>
-          </div>
-          <div className="container-lg mt-3 portLast">
-            <h3 className="compHeading">Auto Loans</h3>
-
-            <div className="spiralBk d-flex justify-content-center">
-              <Composite
-                title="Auto Loans Mobile"
-                imageInfo={getImage(data.autoLoansMobile)}
-                isMobile={true}
-              />
-              <Composite
-                title="Auto Loans Desktop"
-                imageInfo={getImage(data.autoLoansDesktop)}
-                isMobile={false}
-              />
-            </div>
-          </div>
+                  <div className="spiralBk d-flex justify-content-center">
+                    <Composite
+                      title="Mortgage Mobile"
+                      imageInfo={getImage(imageFileMobile)}
+                      isMobile
+                    />
+                    <Composite
+                      title="Mortgage Desktop"
+                      imageInfo={getImage(imageFileDesktop)}
+                    />
+                  </div>
+                </div>
+              )
+            })}
         </div>
       </div>
     </MainLayout>
