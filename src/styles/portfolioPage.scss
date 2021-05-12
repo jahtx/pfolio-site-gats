@@ -1,9 +1,5 @@
 @import './standard/general.scss';
 
-.modalTitle {
-  @include portfolio_textStyle;
-  font-size: 1.4em;
-}
 // greater specifity overrides crummy
 // bootstrap defaults (div.modalX)
 div.modalMobile {
@@ -15,24 +11,7 @@ div.modalDesktop {
   max-width: 800px;
   margin: 1.75rem auto;
 }
-.compHeading {
-  @include portfolio_textStyle;
-  margin: 1em 0 0.5em;
-  text-align: center;
-}
-.projectInset {
-  font-size: 0.9em;
-}
 
-.portfolioPage {
-  h2 {
-    @include portfolio_textStyle;
-    margin-top: 0.9em;
-  }
-}
-.portLast {
-  margin-bottom: 4em;
-}
 .spiralBk {
   @media only screen and (min-width: 825px) {
     background-image: url('../images/backgrounds/spiral-total-bk.png');

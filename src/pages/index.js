@@ -76,7 +76,7 @@ const IndexPage = () => {
     <MainLayout pageClasses="homePage" showVacMsg>
       <BackgroundImage tag="div" className="topHero" fluid={blurredOutside}>
         <Container fluid="lg" className="topArea">
-          <h1 className="homePage__mainTitle mt-0">
+          <h1 className="homePage__mainTitle mt-0 line-height-25">
             Hi, I'm James, a Product & Services UX Designer and{' '}
             <span className="no-break">Front-end</span> Engineer in the San
             Antonio area.

@@ -29,7 +29,7 @@ const ProjectsPage = () => {
   return (
     <MainLayout pageClasses="resumePage general">
       <Container fluid="sm">
-        <h1 className="mainHeading">Projects</h1>
+        <h1 className="m-0 pt-4">Projects</h1>
         <hr></hr>
       </Container>
       <Container fluid="sm" className="mb-5">

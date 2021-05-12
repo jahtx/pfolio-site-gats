@@ -82,7 +82,7 @@ const ResumePage = () => {
   return (
     <MainLayout pageClasses="resumePage">
       <Container fluid="lg">
-        <h1 className="mainHeading">Résumé</h1>
+        <h1 className="m-0 pt-4">Résumé</h1>
         <hr />
       </Container>
 

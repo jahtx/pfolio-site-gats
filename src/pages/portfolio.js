@@ -148,10 +148,11 @@ const PortfolioPage = () => {
       <div className="backgroundBoxesLeft">
         <div className="backgroundBoxesRight">
           <Container fluid="lg">
-            <h1 className="mainHeading">Portfolio</h1>
-            <hr></hr>
-
-            <h2>Randolph-Brooks Federal Credit Union</h2>
+            <h1 className="m-0 pt-4">Portfolio</h1>
+            <hr />
+            <h2 className="one-pt-1-rem all-caps mt-3">
+              Randolph-Brooks Federal Credit Union
+            </h2>
             <p className="pt-9-rem">
               Randolph-Brooks Federal Credit Union is an accredited financial
               institution headquartered in Live Oak, Texas and is the second
@@ -173,17 +174,13 @@ const PortfolioPage = () => {
           </Container>
 
           {portItems &&
-            portItems.map(portItem => {
-              const {
-                id,
-                compHeader,
-                imageFileMobile,
-                imageFileDesktop,
-              } = portItem
+            portItems.map(item => {
+              const { id, compHeader, imageFileMobile, imageFileDesktop } = item
               return (
                 <div className="container-lg mt-3" key={id}>
-                  <h3 className="compHeading">{compHeader}</h3>
-
+                  <h3 className="text-center one-pt-1-rem all-caps mt-5 mb-0">
+                    {compHeader}
+                  </h3>
                   <div className="spiralBk d-flex justify-content-center">
                     <Composite
                       title="Mortgage Mobile"

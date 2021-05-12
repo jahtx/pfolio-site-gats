@@ -60,7 +60,7 @@ const ContactPage = () => {
       <div class="backgroundBoxesLeft">
         <div class="backgroundBoxesRight">
           <Container fluid="sm">
-            <h1 className="mainHeading">Contact</h1>
+            <h1 className="m-0 pt-4">Contact</h1>
             <hr />
             <p className="text-center contactNote">
               Email or call for full-time work or projects. 🙂
