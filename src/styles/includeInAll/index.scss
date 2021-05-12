@@ -3,18 +3,8 @@
 @import './all/breakpoints.scss';
 @import './all/utilities.scss';
 
-html {
-  font-size: 1em;
-}
-
 body {
   font-family: $standardFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-ul {
-  li {
-    line-height: 2em;
-  }
 }
 
 h1 {
@@ -29,13 +19,13 @@ h4 {
   font-size: 1.3rem;
   line-height: 1.7rem;
   margin: 1.7rem 0 0.9rem 0;
-  padding: 0;
 }
 h5 {
   font-size: 1.1rem;
 }
-hr {
-  margin: 0;
+
+li {
+  line-height: 2rem;
 }
 
 .one-pt-8-rem {
@@ -60,10 +50,6 @@ hr {
   font-size: 0.6rem;
 }
 
-li {
-  font-size: 1rem;
-  line-height: 1.4rem;
-}
 .line-height-25 {
   line-height: 2.5rem;
 }

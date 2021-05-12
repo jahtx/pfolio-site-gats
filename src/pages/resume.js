@@ -83,7 +83,7 @@ const ResumePage = () => {
     <MainLayout pageClasses="resumePage">
       <Container fluid="lg">
         <h1 className="m-0 pt-4">Résumé</h1>
-        <hr />
+        <hr className="m-0" />
       </Container>
 
       <Container fluid="lg">
@@ -105,8 +105,8 @@ const ResumePage = () => {
           <li>Rapid prototyping</li>
           <li>Product Strategy and Planning</li>
         </ul>
-        <hr />
-        <h3>Experience:</h3>
+        <hr className="m-0" />
+        <h3 className="mt-3">Experience:</h3>
         <div className=" duoRoundBox__top mt-3">
           <h4 className="m-0 font-weight-bold">
             User Experience Designer/Front-end Developer
@@ -282,7 +282,7 @@ const ResumePage = () => {
           </span>
         </div>
         <div className=" duoRoundBox__bottom">
-          <p className="pt-9-rem">
+          <p className="mt-3 pt-9-rem">
             As a small team of entrepreneurs motivated to innovate for our
             clients, all of us assumed multiple roles and responsibilities for a
             new business. Guided the design process for our early clients and
@@ -302,7 +302,7 @@ const ResumePage = () => {
         </div>
 
         <div className=" duoRoundBox__bottom">
-          <p className="pt-9-rem">
+          <p className="mt-3 pt-9-rem">
             Executed design process for multiple web and mobile projects
             including USAA’s internal Enterprise Correspondence Tool, a web
             application to facilitate member communication through postal and

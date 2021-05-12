@@ -149,8 +149,8 @@ const PortfolioPage = () => {
         <div className="backgroundBoxesRight">
           <Container fluid="lg">
             <h1 className="m-0 pt-4">Portfolio</h1>
-            <hr />
-            <h2 className="one-pt-1-rem all-caps mt-3">
+            <hr className="m-0" />
+            <h2 className="one-pt-1-rem all-caps mt-3 mb-3">
               Randolph-Brooks Federal Credit Union
             </h2>
             <p className="pt-9-rem">

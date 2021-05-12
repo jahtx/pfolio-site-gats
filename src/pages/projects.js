@@ -30,10 +30,10 @@ const ProjectsPage = () => {
     <MainLayout pageClasses="resumePage general">
       <Container fluid="sm">
         <h1 className="m-0 pt-4">Projects</h1>
-        <hr></hr>
+        <hr className="m-0" />
       </Container>
       <Container fluid="sm" className="mb-5">
-        <p>
+        <p className="mt-3">
           Many of these are small projects to test, learn, and demonstrate new
           frameworks and tools. All are welcome to download the code, ask me any
           questions, or provide feedback.
