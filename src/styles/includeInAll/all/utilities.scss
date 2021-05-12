@@ -8,21 +8,3 @@ div {
 .no-break {
   white-space: pre;
 }
-
-.backgroundBoxesLeft {
-  width: 100%;
-  background-image: url('../../../images/backgrounds/left-boxes.png');
-  background-size: 400px;
-  background-repeat: repeat-y;
-  background-position: left 4rem;
-}
-
-.backgroundBoxesRight {
-  @include MQ(S) {
-    width: 100%;
-    background-image: url('../../../images/backgrounds/right-boxes.png');
-    background-size: 400px;
-    background-repeat: repeat-y;
-    background-position: right 4rem;
-  }
-}

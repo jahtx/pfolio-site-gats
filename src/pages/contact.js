@@ -67,7 +67,7 @@ const ContactPage = () => {
             </p>
             <p className="text-center">contact@jahtx.com</p>
             <p className="text-center">210-239-8460</p>
-            <div className="logoContainer">
+            <div className="text-center">
               <a
                 href="https://twitter.com/jah_uxdev"
                 target="_blank"

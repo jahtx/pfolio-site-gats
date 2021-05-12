@@ -1,16 +1,10 @@
-@import './standard/general.scss';
-
+@import './includeInAll/index.scss';
 .contactPage {
   display: block;
 
   &__spacer {
     height: 200px;
   }
-}
-
-.logoContainer {
-  width: 100%;
-  text-align: center;
 }
 
 .contactIcon {
