@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import Container from 'react-bootstrap/Container'
+import BackgroundImage from 'gatsby-background-image'
 import '../styles/contactPage.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
@@ -9,6 +10,13 @@ const ContactPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
+        bizCard: file(relativePath: { eq: "backgrounds/business-card.png" }) {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 800) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         twitterLogo: file(
           relativePath: { eq: "contact-logos/twitter-logo.png" }
         ) {
@@ -51,57 +59,59 @@ const ContactPage = () => {
       }
     `
   )
-
+  const bizCard = data.bizCard.childImageSharp.fluid
   const twitterLogo = data.twitterLogo
   const githubLogo = data.githubLogo
   const linkedinLogo = data.linkedinLogo
   return (
     <MainLayout pageClasses="contactPage general">
-      <div class="backgroundBoxesLeft">
-        <div class="backgroundBoxesRight">
+      <div className="backgroundBoxesLeft">
+        <div className="backgroundBoxesRight">
           <Container fluid="sm">
             <h1 className="m-0 pt-4">Contact</h1>
             <hr className="m-0" />
-            <p className="text-center contactNote">
+            <p className="text-center contactNote mt-3">
               Email or call for full-time work or projects. 🙂
             </p>
-            <p className="text-center">contact@jahtx.com</p>
-            <p className="text-center">210-239-8460</p>
-            <div className="text-center">
-              <a
-                href="https://twitter.com/jah_uxdev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage
-                  className="contactIcon"
-                  image={getImage(twitterLogo)}
-                  alt="Twitter Profile"
-                />
-              </a>
-              <a
-                href="https://github.com/jahtx"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage
-                  className="contactIcon"
-                  image={getImage(githubLogo)}
-                  alt="Github Profile"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jameshernandez/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage
-                  className="contactIcon"
-                  image={getImage(linkedinLogo)}
-                  alt="LinkedIn Profile"
-                />
-              </a>
-            </div>
+            <BackgroundImage tag="div" className="bizCard" fluid={bizCard}>
+              <p className="text-center pt-5">contact@jahtx.com</p>
+              <p className="text-center">210-239-8460</p>
+              <div className="text-center">
+                <a
+                  href="https://twitter.com/jah_uxdev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GatsbyImage
+                    className="contactIcon"
+                    image={getImage(twitterLogo)}
+                    alt="Twitter Profile"
+                  />
+                </a>
+                <a
+                  href="https://github.com/jahtx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GatsbyImage
+                    className="contactIcon"
+                    image={getImage(githubLogo)}
+                    alt="Github Profile"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jameshernandez/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GatsbyImage
+                    className="contactIcon"
+                    image={getImage(linkedinLogo)}
+                    alt="LinkedIn Profile"
+                  />
+                </a>
+              </div>
+            </BackgroundImage>
 
             <div className="contactPage__spacer"></div>
           </Container>

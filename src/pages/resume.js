@@ -84,13 +84,10 @@ const ResumePage = () => {
       <Container fluid="lg">
         <h1 className="m-0 pt-4">Résumé</h1>
         <hr className="m-0" />
-      </Container>
-
-      <Container fluid="lg">
-        <h2 className="p-0 mt-4">
+        <h2 className="p-0 mt-4 all-caps one-pt-2-rem font-weight-bold">
           Senior User Experience Designer / Front-end Developer
         </h2>
-        <p>
+        <p className="pt-9-rem">
           Intuitive developer and designer for mobile and desktop web
           applications. Application of new development tools, services, and
           methodologies. Dedicated team contributor and coordinator. Explores
@@ -98,17 +95,19 @@ const ResumePage = () => {
           development. 10+ years of development experience and 6+ years of
           experience with direct-to-consumer products.
         </p>
-        <h3>Core Strengths:</h3>
-        <ul className="coreStrengths">
+        <h3 className="one-rem all-caps font-weight-bold">Core Strengths:</h3>
+        <ul className="pt-9-rem">
           <li>User Interface/User Experience Design</li>
           <li>Front-end Development with React and Angular</li>
           <li>Rapid prototyping</li>
           <li>Product Strategy and Planning</li>
         </ul>
         <hr className="m-0" />
-        <h3 className="mt-3">Experience:</h3>
+        <h3 className="mt-3 all-caps one-pt-2-rem font-weight-bold">
+          Experience:
+        </h3>
         <div className=" duoRoundBox__top mt-3">
-          <h4 className="m-0 font-weight-bold">
+          <h4 className="m-0 all-caps font-weight-bold">
             User Experience Designer/Front-end Developer
           </h4>
           <span className="pt-9-rem">
@@ -228,7 +227,7 @@ const ResumePage = () => {
           />
         </div>
         <div className="duoRoundBox__top mt-3">
-          <h4 className="m-0 font-weight-bold">
+          <h4 className="m-0 all-caps font-weight-bold">
             User Experience Designer/Front-end Developer
           </h4>
           <span className="pt-9-rem">
@@ -274,7 +273,7 @@ const ResumePage = () => {
           />
         </div>
         <div className=" duoRoundBox__top mt-3">
-          <h4 className="m-0 font-weight-bold">
+          <h4 className="m-0 all-caps font-weight-bold">
             Senior Designer and Technology Lead
           </h4>
           <span className="pt-9-rem">
@@ -297,7 +296,7 @@ const ResumePage = () => {
           <TechUsed technologies={['WordPress', 'Linux']} />
         </div>
         <div className=" duoRoundBox__top mt-3">
-          <h4 className="m-0 font-weight-bold">Creative Designer I</h4>{' '}
+          <h4 className="m-0 all-caps font-weight-bold">Creative Designer I</h4>{' '}
           <span className="pt-9-rem">USAA, San Antonio, TX (2010-2014)</span>
         </div>
 
@@ -329,7 +328,7 @@ const ResumePage = () => {
           <li>Axure</li>
           <li>SiteSpect</li>
         </ul>
-        <h4 className="m-0 font-weight-bold">Languages and Technologies:</h4>
+        <h4 className="mb-3 font-weight-bold">Languages and Technologies:</h4>
         <ul>
           <li>Angular 2</li>
           <li>React / Redux</li>
