@@ -311,9 +311,7 @@ const ResumePage = () => {
             A/B testing.
           </p>
 
-          <TechUsed
-            technologies={['YUI', 'JQuery', 'HTML5', 'CSS3', 'JavaScript']}
-          />
+          <TechUsed technologies={['YUI', 'JavaScript']} />
         </div>
         <h4 className="mt-3 font-weight-bold">
           Operating Systems and Applications:
