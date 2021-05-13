@@ -181,6 +181,17 @@ const TechMiniCard = ({ tech }) => {
             )
           }
         }
+        yuiLogo: file(relativePath: { eq: "dev-logos/yui-logo.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              width: 28
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: CONSTRAINED
+            )
+          }
+        }
         whammyDude: file(relativePath: { eq: "whammy.png" }) {
           childImageSharp {
             gatsbyImageData(
@@ -210,6 +221,7 @@ const TechMiniCard = ({ tech }) => {
   const linuxLogo = data.linuxLogo
   const jsLogo = data.jsLogo
   const graphqlLogo = data.graphqlLogo
+  const yuiLogo = data.yuiLogo
   const whammyDude = data.whammyDude
 
   const renderSwitch = param => {
@@ -305,6 +317,12 @@ const TechMiniCard = ({ tech }) => {
           image: jsLogo,
           weblink: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
           altText: 'JavaScript',
+        }
+      case 'YUI':
+        return {
+          image: yuiLogo,
+          weblink: 'https://clarle.github.io/yui3/',
+          altText: 'YUI Library',
         }
       default:
         return {

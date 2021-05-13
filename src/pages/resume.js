@@ -312,7 +312,7 @@ const ResumePage = () => {
           </p>
 
           <TechUsed
-            technologies={['JQuery', 'SASS', 'HTML5', 'CSS3', 'JavaScript']}
+            technologies={['YUI', 'JQuery', 'HTML5', 'CSS3', 'JavaScript']}
           />
         </div>
         <h4 className="mt-3 font-weight-bold">

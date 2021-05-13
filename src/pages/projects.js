@@ -27,12 +27,12 @@ const ProjectsPage = () => {
   )
   const postcardComp = data.postcardComp
   return (
-    <MainLayout pageClasses="resumePage general">
-      <Container fluid="sm">
+    <MainLayout pageClasses="general">
+      <Container fluid="lg">
         <h1 className="m-0 pt-4">Projects</h1>
         <hr className="m-0" />
       </Container>
-      <Container fluid="sm" className="mb-5">
+      <Container fluid="lg" className="mb-5">
         <p className="mt-3">
           Many of these are small projects to test, learn, and demonstrate new
           frameworks and tools. All are welcome to download the code, ask me any
