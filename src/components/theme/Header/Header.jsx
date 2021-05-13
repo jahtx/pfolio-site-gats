@@ -15,7 +15,7 @@ const Header = () => {
     }
   `)
   return (
-    <div>
+    <header>
       <Helmet>
         <meta charSet="utf-8" />
         <meta
@@ -32,7 +32,7 @@ const Header = () => {
           </a>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 

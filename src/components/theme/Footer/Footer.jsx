@@ -6,7 +6,7 @@ import './footer.scss'
 // markup
 const Footer = props => {
   return (
-    <React.Fragment>
+    <footer>
       {props.showVaccineMessage ? (
         <div className="vaccineAdvocacy pt-9-rem">
           <a
@@ -24,7 +24,7 @@ const Footer = props => {
         Built with <a href="https://reactjs.org/">React</a> and{' '}
         <a href="https://www.gatsbyjs.com/">Gatsby</a>.
       </p>
-    </React.Fragment>
+    </footer>
   )
 }
 Footer.propTypes = {

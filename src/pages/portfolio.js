@@ -144,7 +144,7 @@ const PortfolioPage = () => {
   ]
 
   return (
-    <MainLayout pageClasses="portfolioPage" showVacMsg={false}>
+    <MainLayout showVacMsg={false}>
       <div className="backgroundBoxesLeft">
         <div className="backgroundBoxesRight">
           <Container fluid="lg">
@@ -172,29 +172,35 @@ const PortfolioPage = () => {
               effort.
             </p>
           </Container>
-
-          {portItems &&
-            portItems.map(item => {
-              const { id, compHeader, imageFileMobile, imageFileDesktop } = item
-              return (
-                <div className="container-lg mt-3" key={id}>
-                  <h3 className="text-center one-pt-1-rem all-caps mt-5 mb-0">
-                    {compHeader}
-                  </h3>
-                  <div className="spiralBk d-flex justify-content-center">
-                    <Composite
-                      title="Mortgage Mobile"
-                      imageInfo={getImage(imageFileMobile)}
-                      isMobile
-                    />
-                    <Composite
-                      title="Mortgage Desktop"
-                      imageInfo={getImage(imageFileDesktop)}
-                    />
+          <section className="mb-5">
+            {portItems &&
+              portItems.map(item => {
+                const {
+                  id,
+                  compHeader,
+                  imageFileMobile,
+                  imageFileDesktop,
+                } = item
+                return (
+                  <div className="container-lg mt-3" key={id}>
+                    <h3 className="text-center one-pt-1-rem all-caps mt-5 mb-0">
+                      {compHeader}
+                    </h3>
+                    <div className="spiralBk d-flex justify-content-center">
+                      <Composite
+                        title="Mortgage Mobile"
+                        imageInfo={getImage(imageFileMobile)}
+                        isMobile
+                      />
+                      <Composite
+                        title="Mortgage Desktop"
+                        imageInfo={getImage(imageFileDesktop)}
+                      />
+                    </div>
                   </div>
-                </div>
-              )
-            })}
+                )
+              })}
+          </section>
         </div>
       </div>
     </MainLayout>
