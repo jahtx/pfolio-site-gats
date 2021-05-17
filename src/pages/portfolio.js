@@ -188,12 +188,12 @@ const PortfolioPage = () => {
                     </h3>
                     <div className="spiralBk d-flex justify-content-center">
                       <Composite
-                        title="Mortgage Mobile"
+                        title={compHeader}
                         imageInfo={getImage(imageFileMobile)}
                         isMobile
                       />
                       <Composite
-                        title="Mortgage Desktop"
+                        title={compHeader}
                         imageInfo={getImage(imageFileDesktop)}
                       />
                     </div>
