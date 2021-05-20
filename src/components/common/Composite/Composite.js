@@ -30,7 +30,10 @@ const Composite = props => {
         }
         onClick={handleShow}
       >
-        <GatsbyImage image={props.imageInfo} alt={props.title} />
+        <GatsbyImage
+          image={props.imageInfo}
+          alt={props.title + ' ' + (props.isMobile ? 'Mobile' : 'Desktop')}
+        />
       </div>
       <Modal
         show={show}
@@ -43,7 +46,7 @@ const Composite = props => {
       >
         <Modal.Header closeButton>
           <Modal.Title className="one-pt-1-rem all-caps font-weight-bold">
-            {props.title + ' ' + (props.isMobile ? 'mobile' : 'desktop')}
+            {props.title + ' ' + (props.isMobile ? 'Mobile' : 'Desktop')}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
