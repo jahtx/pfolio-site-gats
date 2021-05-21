@@ -24,9 +24,7 @@ const Composite = props => {
     <React.Fragment>
       <div
         className={
-          props.isMobile
-            ? 'mobThumb overflow-hidden'
-            : 'deskThumb overflow-hidden'
+          'overflow-hidden ' + (props.isMobile ? 'mobThumb' : 'deskThumb')
         }
         onClick={handleShow}
       >
@@ -39,9 +37,7 @@ const Composite = props => {
         show={show}
         onHide={handleClose}
         dialogClassName={
-          props.isMobile
-            ? 'modalMobile overflow-hidden'
-            : 'modalDesktop overflow-hidden'
+          'overflow-hidden ' + (props.isMobile ? 'modalMobile' : 'modalDesktop')
         }
       >
         <Modal.Header closeButton>
