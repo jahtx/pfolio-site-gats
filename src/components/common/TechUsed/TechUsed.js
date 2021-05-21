@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import TechMiniCard from '../TechMiniCard/TechMiniCard'
-// import '../../../styles/includeInAll/index.scss'
-import './techused.scss'
 import { nanoid } from 'nanoid'
 
 const TechUsed = ({ technologies }) => {
