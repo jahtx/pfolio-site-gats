@@ -13,10 +13,10 @@ import { Header, Footer, Navigation } from '../../components/theme'
 const MainLayout = ({ showVacMsg, children, pageClasses }) => {
   return (
     <div className={pageClasses}>
-      <Header></Header>
-      <Navigation></Navigation>
+      <Header />
+      <Navigation />
       {children}
-      {showVacMsg ? <Footer showVaccineMessage></Footer> : <Footer></Footer>}
+      {showVacMsg ? <Footer showVaccineMessage /> : <Footer />}
     </div>
   )
 }
