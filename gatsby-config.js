@@ -13,7 +13,7 @@ module.exports = {
       options: {
         useResolveUrlLoader: {
           options: {
-            debug: true,
+            debug: false,
             sourceMap: true,
           },
         },
@@ -37,7 +37,6 @@ module.exports = {
           `Open Sans Condensed`,
           `Barlow Condensed`,
           `Nothing You Could Do`,
-          `Permanent Marker`,
           `Montserrat`,
         ],
         display: 'swap',
