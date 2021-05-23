@@ -5,6 +5,7 @@ import '../styles/indexPage.scss'
 import BackgroundImage from 'gatsby-background-image'
 import Container from 'react-bootstrap/Container'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { default as IndexHeroBackground } from '../components/backgrounds/IndexHero'
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -13,13 +14,6 @@ const IndexPage = () => {
         paintBox: file(relativePath: { eq: "paintbox.png" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-        background: file(relativePath: { eq: "backgrounds/blueprint3.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 3000) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -65,14 +59,13 @@ const IndexPage = () => {
   )
 
   const paintBox = data.paintBox.childImageSharp.fluid
-  const background = data.background.childImageSharp.fluid
   const workLogos = data.workLogos
   const uxLogos = data.uxLogos
   const devLogos = data.devLogos
 
   return (
     <MainLayout pageClasses="homePage" showVacMsg>
-      <BackgroundImage tag="div" className="topHero" fluid={background}>
+      <IndexHeroBackground>
         <Container fluid="lg" className="pb-2 text-white">
           <h1 className="homePage__mainTitle one-pt-8-rem mt-0 line-height-25">
             Hi, I'm James, a Product & Services UX Designer and{' '}
@@ -100,7 +93,7 @@ const IndexPage = () => {
             </div>
           </Container>
         </Container>
-      </BackgroundImage>
+      </IndexHeroBackground>
       <Container fluid="lg">
         <BackgroundImage
           tag="div"
