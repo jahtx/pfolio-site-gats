@@ -1,14 +1,17 @@
 import React from 'react'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql, useStaticQuery } from 'gatsby'
+import styled from 'styled-components'
 
-const IndexHero = ({ children }) => {
+const IndexHero = ({ className, children }) => {
   const data = useStaticQuery(
     graphql`
       query {
-        background: file(relativePath: { eq: "backgrounds/blueprint3.png" }) {
+        background: file(
+          relativePath: { eq: "backgrounds/blueprint-trans.png" }
+        ) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 3000) {
+            fluid(quality: 100, maxWidth: 2000) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -20,10 +23,16 @@ const IndexHero = ({ children }) => {
   const background = data.background.childImageSharp.fluid
 
   return (
-    <BackgroundImage tag="div" className="topHero" fluid={background}>
+    <BackgroundImage tag="div" className={className} fluid={background}>
       {children}
     </BackgroundImage>
   )
 }
 
-export default IndexHero
+const StyledBackgroundSection = styled(IndexHero)`
+  background-position: bottom;
+  background-color: #0054ec;
+  background-size: cover;
+`
+
+export default StyledBackgroundSection
