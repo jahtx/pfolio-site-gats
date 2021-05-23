@@ -7,11 +7,9 @@ const IndexHero = ({ className, children }) => {
   const data = useStaticQuery(
     graphql`
       query {
-        background: file(
-          relativePath: { eq: "backgrounds/blueprint-trans.png" }
-        ) {
+        smallGrid: file(relativePath: { eq: "backgrounds/small-grid.png" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 2000) {
+            fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -20,10 +18,10 @@ const IndexHero = ({ className, children }) => {
     `
   )
 
-  const background = data.background.childImageSharp.fluid
+  const smallGrid = data.smallGrid.childImageSharp.fluid
 
   return (
-    <BackgroundImage tag="div" className={className} fluid={background}>
+    <BackgroundImage tag="div" className={className} fluid={smallGrid}>
       {children}
     </BackgroundImage>
   )
@@ -32,7 +30,8 @@ const IndexHero = ({ className, children }) => {
 const StyledBackgroundSection = styled(IndexHero)`
   background-position: bottom;
   background-color: #0054ec;
-  background-size: cover;
+  background-size: 150px;
+  background-repeat: repeat;
 `
 
 export default StyledBackgroundSection
