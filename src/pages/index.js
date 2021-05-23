@@ -17,7 +17,7 @@ const IndexPage = () => {
             }
           }
         }
-        background: file(relativePath: { eq: "backgrounds/blurred.png" }) {
+        background: file(relativePath: { eq: "backgrounds/blueprint3.png" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 3000) {
               ...GatsbyImageSharpFluid_withWebp
@@ -73,7 +73,7 @@ const IndexPage = () => {
   return (
     <MainLayout pageClasses="homePage" showVacMsg>
       <BackgroundImage tag="div" className="topHero" fluid={background}>
-        <Container fluid="lg" className="pb-2">
+        <Container fluid="lg" className="pb-2 text-white">
           <h1 className="homePage__mainTitle one-pt-8-rem mt-0 line-height-25">
             Hi, I'm James, a Product & Services UX Designer and{' '}
             <span className="no-break">Front-end</span> Engineer in the San
