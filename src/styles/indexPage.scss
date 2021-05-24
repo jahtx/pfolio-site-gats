@@ -15,11 +15,6 @@
   }
 }
 
-.topHero {
-  background-position: bottom;
-  background-size: cover;
-}
-
 .prevEmp {
   display: flex;
   flex-flow: column;
@@ -74,100 +69,5 @@
   }
   @include MQ(M) {
     width: 70%;
-  }
-}
-
-.explainBox {
-  flex-flow: column;
-  margin-bottom: 2em;
-
-  @include MQ(S) {
-    flex-flow: row;
-    padding-bottom: 0;
-  }
-  // h3
-  &__heading {
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-    @include MQ(S) {
-      font-size: 1.1rem;
-    }
-  }
-  p {
-    margin: 0.5em 0;
-    font-size: 0.9rem;
-  }
-  &--ux {
-    color: white;
-    flex-flow: column-reverse;
-    @include MQ(S) {
-      flex-flow: row;
-    }
-  }
-  &--dev {
-    min-height: 200px;
-    background-color: #4a4a4a;
-    background-image: url('../images/window-controls.png');
-    background-size: 60px;
-    background-repeat: no-repeat;
-    background-position: 15px 15px;
-    color: white;
-    border-radius: 10px;
-    margin: 0 0.5rem 3rem 0;
-  }
-  &__sectionPicture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.section {
-  &--uxLeft {
-    margin: 1rem 0 2rem 0;
-    @include MQ(S) {
-      margin: 1rem 0;
-      width: 45%;
-    }
-    @include MQ(M) {
-      width: 30%;
-    }
-  }
-  &--uxRight {
-    margin: 2rem 2rem 0 2rem;
-    text-align: center;
-    @include MQ(S) {
-      text-align: left;
-      margin: 2rem 2rem 0 0;
-      width: 55%;
-    }
-    @include MQ(M) {
-      width: 70%;
-    }
-  }
-  &--devLeft {
-    margin: 1rem 0 0rem 0;
-
-    @include MQ(S) {
-      margin: 1rem 0;
-      width: 45%;
-    }
-    @include MQ(M) {
-      width: 30%;
-    }
-  }
-  &--devRight {
-    text-align: center;
-    margin: 0rem 2rem 2rem 2rem;
-    @include MQ(S) {
-      text-align: left;
-      margin: 2rem 2rem 0 0;
-      width: 55%;
-    }
-    @include MQ(M) {
-      width: 70%;
-    }
   }
 }

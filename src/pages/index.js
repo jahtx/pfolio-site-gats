@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { default as IndexHeroBackground } from '../components/backgrounds/IndexHero'
 import { default as SectionUXBackground } from '../components/backgrounds/SectionUX'
+import { default as SectionDevBackground } from '../components/backgrounds/SectionDev'
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -100,30 +101,27 @@ const IndexPage = () => {
               Modern UX Methodology with Industry-leading Tools
             </h3>
             <p className="pt-9-rem">
-              Orci varius natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Donec at est ligula. In consequat, odio at
-              eleifend mattis, elit sem blandit arcu, non dictum risus mi quis
-              turpis. Donec id diam semper lacus venenatis ultrices. Mauris
-              vitae sagittis ipsum. Interdum et malesuada fames ac ante ipsum
-              primis in faucibus.
+              Sketch, Figma, Invision, Adobe Illustrator, Adobe Photoshop
             </p>
           </div>
         </Container>
       </SectionUXBackground>
 
-      <Container fluid="lg">
-        <div className="explainBox d-flex explainBox--dev">
-          <div className="explainBox__sectionPicture section--devLeft">
+      <SectionDevBackground>
+        <Container fluid="lg" className="p-3 d-flex newExplainBox text-white">
+          <div className="newExplainBox__part1 d-flex justify-content-center align-items-center">
             <GatsbyImage image={getImage(devLogos)} alt="Dev Tools" />
           </div>
-          <div className="explainBox__section section--devRight">
-            <h3 className="explainBox__heading">
+          <div className="newExplainBox__part2 m-0 pr-4">
+            <h3 className="one-pt-1-rem  mt-0 mb-2 font-weight-bold">
               Programming Frameworks and Languages
             </h3>
-            <p>React, Gastby, Angular, JQuery, Git, Bootstrap</p>
+            <p className="pt-9-rem">
+              React, Gastby, Angular, JQuery, Git, Bootstrap
+            </p>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </SectionDevBackground>
     </MainLayout>
   )
 }
