@@ -108,7 +108,7 @@ const ResumePage = () => {
         </h3>
         <div className=" duoRoundBox__top mt-3">
           <h4 className="m-0 all-caps font-weight-bold">
-            User Experience Designer/Front-end Developer
+            User Experience Designer / Front-end Developer
           </h4>
           <span className="pt-9-rem">
             Insight Global, San Antonio, TX (2018-2020)
@@ -228,7 +228,7 @@ const ResumePage = () => {
         </div>
         <div className="duoRoundBox__top mt-3">
           <h4 className="m-0 all-caps font-weight-bold">
-            User Experience Designer/Front-end Developer
+            User Experience Designer / Front-end Developer
           </h4>
           <span className="pt-9-rem">
             Ampcus Inc, San Antonio, TX (2016-2017)

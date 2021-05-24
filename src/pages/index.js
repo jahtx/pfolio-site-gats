@@ -78,7 +78,7 @@ const IndexPage = () => {
           <div className="hero-section w-100 text-center">
             <p className="pt-9-rem">
               During my career, I have contributed to efforts for web projects
-              with USAA, Accenture, RBFCU, the&nbsp;
+              for USAA, Accenture, RBFCU, the&nbsp;
               <span className="no-break">U.S. Air Force,</span>&nbsp;and
               the&nbsp;
               <span className="no-break">U.S. Department of Education.</span>
