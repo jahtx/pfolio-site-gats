@@ -274,7 +274,7 @@ const ResumePage = () => {
         </div>
         <div className=" duoRoundBox__top mt-3">
           <h4 className="m-0 all-caps font-weight-bold">
-            Senior Designer and Technology Lead
+            Senior Designer and Technology Lead / Principal
           </h4>
           <span className="pt-9-rem">
             Visage Collaborative LLC, San Antonio, TX (2014-2015)
