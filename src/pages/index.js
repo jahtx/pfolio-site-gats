@@ -33,7 +33,7 @@ const IndexPage = () => {
               placeholder: BLURRED
               formats: [WEBP]
               layout: FIXED
-              height: 130
+              height: 140
               transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
             )
           }
@@ -45,7 +45,7 @@ const IndexPage = () => {
               placeholder: BLURRED
               formats: [WEBP]
               layout: FIXED
-              height: 130
+              height: 140
               transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
             )
           }
@@ -67,12 +67,15 @@ const IndexPage = () => {
             <span className="no-break">Front-end</span> Engineer in the San
             Antonio area.
           </h1>
-          <div className="w-100 text-center">
+
+          <div className="hero-section w-100 text-center">
             <p className="script-font one-pt-3-rem mb-3">
               I am passionate about solving complex app design problems from
-              conception to deployment&nbsp;
-              <span className="no-break">to continuous improvement.</span>
+              conception to deployment to&nbsp;
+              <span className="no-break">continuous improvement.</span>
             </p>
+          </div>
+          <div className="hero-section w-100 text-center">
             <p className="pt-9-rem">
               During my career, I have contributed to efforts for web projects
               with USAA, Accenture, RBFCU, the&nbsp;
@@ -81,8 +84,7 @@ const IndexPage = () => {
               <span className="no-break">U.S. Department of Education.</span>
             </p>
           </div>
-
-          <div className="d-flex justify-content-center align-items-center mb-3">
+          <div className="hero-section d-flex justify-content-center align-items-center mb-3">
             <a href="/resume">
               <GatsbyImage
                 image={getImage(workLogos)}
@@ -90,7 +92,6 @@ const IndexPage = () => {
               />
             </a>
           </div>
-          <div className="w-100 text-center"></div>
         </Container>
       </IndexHeroBackground>
 
@@ -102,7 +103,7 @@ const IndexPage = () => {
               alt="UX Tools and Applications"
             />
           </div>
-          <div className="newExplainBox__part2 m-0 pr-4">
+          <div className="newExplainBox__part2 m-0">
             <h3 className="one-pt-1-rem  mt-0 mb-3 font-weight-bold">
               Current UX Methodology with Industry-leading Tools
             </h3>
@@ -134,7 +135,7 @@ const IndexPage = () => {
           <div className="newExplainBox__part1 d-flex justify-content-center align-items-center">
             <GatsbyImage image={getImage(devLogos)} alt="Dev Tools" />
           </div>
-          <div className="newExplainBox__part2 m-0 pr-4">
+          <div className="newExplainBox__part2 m-0">
             <h3 className="one-pt-1-rem  mt-0 mb-3 font-weight-bold">
               Modern Development Frameworks and Languages
             </h3>
