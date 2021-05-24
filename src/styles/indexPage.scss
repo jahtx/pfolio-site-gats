@@ -47,9 +47,37 @@
     justify-content: center;
   }
 }
+.newExplainBox {
+  flex-flow: column;
+  @include MQ(S) {
+    flex-flow: row;
+    padding-bottom: 0;
+  }
+}
+
+.newExplainBox__part1 {
+  margin: 1rem 0 2rem 0;
+  @include MQ(S) {
+    margin: 1rem 0;
+    width: 45%;
+  }
+  @include MQ(M) {
+    width: 30%;
+  }
+}
+.newExplainBox__part2 {
+  text-align: center;
+  @include MQ(S) {
+    text-align: left;
+    width: 55%;
+    padding-top: 1rem;
+  }
+  @include MQ(M) {
+    width: 70%;
+  }
+}
 
 .explainBox {
-  display: flex;
   flex-flow: column;
   margin-bottom: 2em;
 
@@ -72,10 +100,7 @@
     font-size: 0.9rem;
   }
   &--ux {
-    background-size: 100% 100%;
-    min-height: 200px;
     color: white;
-    margin-top: 2rem;
     flex-flow: column-reverse;
     @include MQ(S) {
       flex-flow: row;

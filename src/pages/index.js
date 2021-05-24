@@ -2,22 +2,15 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import '../styles/indexPage.scss'
-import BackgroundImage from 'gatsby-background-image'
 import Container from 'react-bootstrap/Container'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { default as IndexHeroBackground } from '../components/backgrounds/IndexHero'
+import { default as SectionUXBackground } from '../components/backgrounds/SectionUX'
 
 const IndexPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        paintBox: file(relativePath: { eq: "paintbox.png" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
         workLogos: file(relativePath: { eq: "work-logos.png" }) {
           childImageSharp {
             gatsbyImageData(
@@ -58,7 +51,6 @@ const IndexPage = () => {
     `
   )
 
-  const paintBox = data.paintBox.childImageSharp.fluid
   const workLogos = data.workLogos
   const uxLogos = data.uxLogos
   const devLogos = data.devLogos
@@ -94,28 +86,33 @@ const IndexPage = () => {
           </Container>
         </Container>
       </IndexHeroBackground>
-      <Container fluid="lg">
-        <BackgroundImage
-          tag="div"
-          className="explainBox explainBox--ux"
-          fluid={paintBox}
-        >
-          <div className="explainBox__sectionPicture section--uxLeft">
+
+      <SectionUXBackground>
+        <Container fluid="lg" className="p-3 d-flex newExplainBox text-white">
+          <div className="newExplainBox__part1 d-flex justify-content-center align-items-center">
             <GatsbyImage
               image={getImage(uxLogos)}
               alt="UX Tools and Applications"
             />
           </div>
-          <div className="explainBox__section section--uxRight">
-            <h3 className="explainBox__heading">
+          <div className="newExplainBox__part2 m-0 pr-4">
+            <h3 className="one-pt-1-rem  mt-0 mb-2 font-weight-bold">
               Modern UX Methodology with Industry-leading Tools
             </h3>
-            <p>Sketch, Figma, Invision, Adobe Illustrator, Adobe Photoshop</p>
+            <p className="pt-9-rem">
+              Orci varius natoque penatibus et magnis dis parturient montes,
+              nascetur ridiculus mus. Donec at est ligula. In consequat, odio at
+              eleifend mattis, elit sem blandit arcu, non dictum risus mi quis
+              turpis. Donec id diam semper lacus venenatis ultrices. Mauris
+              vitae sagittis ipsum. Interdum et malesuada fames ac ante ipsum
+              primis in faucibus.
+            </p>
           </div>
-        </BackgroundImage>
-      </Container>
+        </Container>
+      </SectionUXBackground>
+
       <Container fluid="lg">
-        <div className="explainBox explainBox--dev">
+        <div className="explainBox d-flex explainBox--dev">
           <div className="explainBox__sectionPicture section--devLeft">
             <GatsbyImage image={getImage(devLogos)} alt="Dev Tools" />
           </div>
