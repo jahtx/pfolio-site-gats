@@ -123,7 +123,7 @@ const IndexPage = () => {
             </p>
             <p className="pt-9-rem">
               I am a regular user of Sketch, Invision, Figma, and Adobe Creative
-              Cloud and keep&nbsp; <span class="no-break">up-to-date</span> with
+              Cloud and keep&nbsp;<span class="no-break">up-to-date</span> with
               industry trends.
             </p>
           </div>
@@ -140,7 +140,7 @@ const IndexPage = () => {
               Modern Development Frameworks and Languages
             </h3>
             <p className="pt-9-rem">
-              I started with HTML4 and regular CSS, but have evolved my
+              I started with HTML4 and regular CSS, and have evolved my
               development process to incorporate Node-based libraries and
               JavaScript frameworks including React and Angular. Tools and
               libraries should improve the development lifecycle and facilitate
