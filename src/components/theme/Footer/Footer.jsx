@@ -8,7 +8,7 @@ const Footer = props => {
   return (
     <footer>
       {props.showVaccineMessage ? (
-        <div className="vaccineAdvocacy pt-9-rem">
+        <div className="vaccineAdvocacy pt-9-rem mt-5">
           <a
             href="https://www.cdc.gov/coronavirus/2019-ncov/vaccines/How-Do-I-Get-a-COVID-19-Vaccine.html"
             className="vaccineLink"

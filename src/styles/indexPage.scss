@@ -1,47 +1,13 @@
 @import './includeInAll/index.scss';
 
-.homePage {
-  &__mainTitle {
-    text-align: center;
-    padding: 1rem 0 1rem 0;
-    @include MQ(S) {
-      padding: 1.75rem 0 2rem 0;
-    }
-  }
-  &__inset {
-    text-align: center;
-    font-family: 'Nothing You Could Do';
-    font-size: 1.3rem;
+.mainTitle {
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  @include MQ(S) {
+    padding: 1.75rem 0 1rem 0;
   }
 }
 
-.prevEmp {
-  display: flex;
-  flex-flow: column;
-  margin: 2rem 0 0 0;
-  padding-bottom: 1rem;
-  @include MQ(S) {
-    font-size: 1rem;
-    flex-flow: row;
-    margin: 2rem 0;
-  }
-}
-.prevEmp-left {
-  @include flex_center;
-}
-
-.prevEmp-right {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0;
-  @include MQ(S) {
-    width: 35%;
-    min-width: 200px;
-    display: flex;
-    justify-content: center;
-  }
-}
 .newExplainBox {
   flex-flow: column;
   @include MQ(S) {
