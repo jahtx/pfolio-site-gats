@@ -30,8 +30,8 @@ const SectionDev = ({ className, children }) => {
 const StyledBackgroundSection = styled(SectionDev)`
   background: linear-gradient(
     0deg,
-    rgba(246, 90, 25, 1) 2%,
-    rgba(245, 166, 37, 1) 86%
+    rgba(112, 112, 112, 1) 0%,
+    rgba(75, 75, 75, 1) 86%
   );
   background-size: 500px;
   background-repeat: repeat-x;

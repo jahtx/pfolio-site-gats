@@ -178,9 +178,9 @@ const IndexPage = () => {
               Portfolio, Design, and Coding Samples
             </h3>
             <p className="pt-9-rem">
-              As I incorporate more of my past projects each week to display,
-              feel free to revisit.
+              A sampling of a few of the designs I have crafted for my projects.
             </p>
+
             <Button variant="outline-primary" href="/portfolio">
               View
             </Button>
