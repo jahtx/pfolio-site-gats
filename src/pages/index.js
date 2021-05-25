@@ -178,8 +178,8 @@ const IndexPage = () => {
               Portfolio, Design, and Coding Samples
             </h3>
             <p className="pt-9-rem">
-              As I incorporate more of my past projects to display as a body of
-              work each week, feel free to revisit.
+              As I incorporate more of my past projects each week to display,
+              feel free to revisit.
             </p>
             <Button variant="outline-primary" href="/portfolio">
               View

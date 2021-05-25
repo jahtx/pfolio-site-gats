@@ -29,8 +29,11 @@ const SectionUX = ({ className, children }) => {
 
 const StyledBackgroundSection = styled(SectionUX)`
   background-position: center;
-
-  background-color: white;
+  background: linear-gradient(
+    0deg,
+    rgba(189, 189, 189, 1) 4%,
+    rgba(240, 240, 240, 1) 86%
+  );
   background-size: 500px;
   background-repeat: repeat-x;
   opacity: 0.1;
