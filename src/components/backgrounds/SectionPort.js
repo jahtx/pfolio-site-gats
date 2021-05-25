@@ -3,11 +3,11 @@ import BackgroundImage from 'gatsby-background-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
-const SectionDev = ({ className, children }) => {
+const SectionPort = ({ className, children }) => {
   const data = useStaticQuery(
     graphql`
       query {
-        devBack: file(relativePath: { eq: "backgrounds/pattern.png" }) {
+        uxBack: file(relativePath: { eq: "backgrounds/pattern.png" }) {
           childImageSharp {
             fluid(quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
@@ -18,24 +18,29 @@ const SectionDev = ({ className, children }) => {
     `
   )
 
-  const devBack = data.devBack.childImageSharp.fluid
+  const uxBack = data.uxBack.childImageSharp.fluid
 
   return (
-    <BackgroundImage tag="div" className={className} fluid={devBack}>
+    <BackgroundImage tag="div" className={className} fluid={uxBack}>
       {children}
     </BackgroundImage>
   )
 }
 
-const StyledBackgroundSection = styled(SectionDev)`
-  background: linear-gradient(
+const StyledBackgroundSection = styled(SectionPort)`
+  background-position: center;
+  ${
+    '' /* background: linear-gradient(
     0deg,
-    rgba(246, 90, 25, 1) 2%,
-    rgba(245, 166, 37, 1) 86%
-  );
+    rgba(171, 126, 26, 1) 2%,
+    rgba(255, 190, 36, 1) 89%
+  ); */
+  }
+  background-color: white;
+
   background-size: 500px;
   background-repeat: repeat-x;
-  background-position: center;
+  opacity: 0.1;
 `
 
 export default StyledBackgroundSection

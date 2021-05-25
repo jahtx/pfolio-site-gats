@@ -7,6 +7,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { default as IndexHeroBackground } from '../components/backgrounds/IndexHero'
 import { default as SectionUXBackground } from '../components/backgrounds/SectionUX'
 import { default as SectionDevBackground } from '../components/backgrounds/SectionDev'
+import { default as SectionPortBackground } from '../components/backgrounds/SectionPort'
+import Button from 'react-bootstrap/Button'
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -50,6 +52,18 @@ const IndexPage = () => {
             )
           }
         }
+        portIcon: file(relativePath: { eq: "port-icon.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              placeholder: BLURRED
+              formats: [WEBP]
+              layout: FIXED
+              height: 140
+              transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
+            )
+          }
+        }
       }
     `
   )
@@ -57,25 +71,26 @@ const IndexPage = () => {
   const workLogos = data.workLogos
   const uxLogos = data.uxLogos
   const devLogos = data.devLogos
+  const portIcon = data.portIcon
 
   return (
     <MainLayout showVacMsg>
       <IndexHeroBackground>
-        <Container fluid="lg" className="pb-2 text-white">
+        <Container as="section" fluid="lg" className="pb-2 text-white">
           <h1 className="mainTitle one-pt-8-rem m-0 line-height-25">
             Hi, I'm James, a Product & Services UX Designer and&nbsp;
             <span className="no-break">Front-end</span> Engineer in the San
             Antonio area.
           </h1>
 
-          <div className="hero-section w-100 text-center">
+          <div className="hero-content-section w-100 text-center">
             <p className="script-font one-pt-3-rem mb-3">
               I am passionate about solving complex app design problems from
               conception to deployment to&nbsp;
               <span className="no-break">continuous improvement.</span>
             </p>
           </div>
-          <div className="hero-section w-100 text-center">
+          <div className="hero-content-section w-100 text-center">
             <p className="pt-9-rem">
               During my career, I have contributed to efforts for web projects
               for USAA, Accenture, RBFCU, the&nbsp;
@@ -84,7 +99,7 @@ const IndexPage = () => {
               <span className="no-break">U.S. Department of Education.</span>
             </p>
           </div>
-          <div className="hero-section d-flex justify-content-center align-items-center mb-3">
+          <div className="hero-content-section d-flex justify-content-center align-items-center mb-3">
             <a href="/resume">
               <GatsbyImage
                 image={getImage(workLogos)}
@@ -96,7 +111,7 @@ const IndexPage = () => {
       </IndexHeroBackground>
 
       <SectionUXBackground>
-        <Container fluid="lg" className="p-4 d-flex newExplainBox text-white">
+        <Container as="section" fluid="lg" className="p-4 d-flex newExplainBox">
           <div className="newExplainBox__part1 d-flex justify-content-center align-items-center">
             <GatsbyImage
               image={getImage(uxLogos)}
@@ -111,7 +126,7 @@ const IndexPage = () => {
               I employ a practical and innovative design methodology for
               tackling web application issues. I follow the basic principles of
               user experience as described by UX pioneer Jakob Nielsen,
-              including adherence to{' '}
+              including adherence to&nbsp;
               <a
                 href="https://www.nngroup.com/articles/ten-usability-heuristics/"
                 target="_blank"
@@ -122,16 +137,20 @@ const IndexPage = () => {
               .
             </p>
             <p className="pt-9-rem">
-              I am a regular user of Sketch, Invision, Figma, and Adobe Creative
-              Cloud and keep&nbsp;<span class="no-break">up-to-date</span> with
-              industry trends.
+              I use Sketch, Invision, Figma, and Adobe Creative Cloud and
+              keep&nbsp;<span class="no-break">up-to-date</span> with industry
+              apps, services, and trends.
             </p>
           </div>
         </Container>
       </SectionUXBackground>
 
       <SectionDevBackground>
-        <Container fluid="lg" className="p-4 d-flex newExplainBox text-white">
+        <Container
+          as="section"
+          fluid="lg"
+          className="p-4 d-flex newExplainBox text-white"
+        >
           <div className="newExplainBox__part1 d-flex justify-content-center align-items-center">
             <GatsbyImage image={getImage(devLogos)} alt="Dev Tools" />
           </div>
@@ -149,6 +168,25 @@ const IndexPage = () => {
           </div>
         </Container>
       </SectionDevBackground>
+      <SectionPortBackground>
+        <Container as="section" fluid="lg" className="p-4 d-flex newExplainBox">
+          <div className="newExplainBox__part1 d-flex justify-content-center align-items-center">
+            <GatsbyImage image={getImage(portIcon)} alt="Dev Tools" />
+          </div>
+          <div className="newExplainBox__part2 m-0">
+            <h3 className="one-pt-1-rem  mt-0 mb-3 font-weight-bold">
+              Portfolio, Design, and Coding Samples
+            </h3>
+            <p className="pt-9-rem">
+              As I incorporate more of my past projects to display as a body of
+              work each week, feel free to revisit.
+            </p>
+            <Button variant="outline-primary" href="/portfolio">
+              View
+            </Button>
+          </div>
+        </Container>
+      </SectionPortBackground>
     </MainLayout>
   )
 }
