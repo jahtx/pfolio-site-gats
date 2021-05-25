@@ -39,7 +39,7 @@ const StyledBackgroundSection = styled(SectionPort)`
   background-color: white;
 
   background-size: 500px;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   opacity: 0.1;
 `
 

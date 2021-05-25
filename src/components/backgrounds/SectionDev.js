@@ -34,7 +34,7 @@ const StyledBackgroundSection = styled(SectionDev)`
     rgba(75, 75, 75, 1) 86%
   );
   background-size: 500px;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   background-position: center;
 `
 

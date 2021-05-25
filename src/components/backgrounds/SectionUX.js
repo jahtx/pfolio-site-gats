@@ -35,7 +35,7 @@ const StyledBackgroundSection = styled(SectionUX)`
     rgba(240, 240, 240, 1) 86%
   );
   background-size: 500px;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
   opacity: 0.1;
 `
 
