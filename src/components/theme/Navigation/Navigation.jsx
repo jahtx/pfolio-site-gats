@@ -18,7 +18,7 @@ const Navigation = () => {
           <Nav.Link className="gacLink" href="/">
             Home
           </Nav.Link>
-          <Nav.Link className="gacLink" href="/portfolio">
+          <Nav.Link className="gacLink" href="/anthology">
             Portfolio
           </Nav.Link>
           <Nav.Link className="gacLink" href="/projects">

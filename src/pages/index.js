@@ -52,14 +52,14 @@ const IndexPage = () => {
             )
           }
         }
-        portIcon: file(relativePath: { eq: "port-icon.png" }) {
+        portIcon: file(relativePath: { eq: "port-items.png" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 85
               placeholder: BLURRED
               formats: [WEBP]
               layout: FIXED
-              height: 140
+              height: 160
               transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
             )
           }
@@ -111,14 +111,14 @@ const IndexPage = () => {
       </IndexHeroBackground>
 
       <SectionUXBackground>
-        <Container as="section" fluid="lg" className="p-4 d-flex newExplainBox">
-          <div className="newExplainBox__part1 d-flex justify-content-center align-items-center">
+        <Container as="section" fluid="lg" className="p-4 d-flex explainBox">
+          <div className="explainBox__part1 d-flex justify-content-center align-items-center">
             <GatsbyImage
               image={getImage(uxLogos)}
               alt="UX Tools and Applications"
             />
           </div>
-          <div className="newExplainBox__part2 m-0">
+          <div className="explainBox__part2 m-0">
             <h3 className="one-pt-1-rem  mt-0 mb-3 font-weight-bold">
               Current UX Methodology with Industry-leading Tools
             </h3>
@@ -149,12 +149,12 @@ const IndexPage = () => {
         <Container
           as="section"
           fluid="lg"
-          className="p-4 d-flex newExplainBox text-white"
+          className="p-4 d-flex explainBox text-white"
         >
-          <div className="newExplainBox__part1 d-flex justify-content-center align-items-center">
+          <div className="explainBox__part1 d-flex justify-content-center align-items-center">
             <GatsbyImage image={getImage(devLogos)} alt="Dev Tools" />
           </div>
-          <div className="newExplainBox__part2 m-0">
+          <div className="explainBox__part2 m-0">
             <h3 className="one-pt-1-rem  mt-0 mb-3 font-weight-bold">
               Modern Development Frameworks and Languages
             </h3>
@@ -169,21 +169,24 @@ const IndexPage = () => {
         </Container>
       </SectionDevBackground>
       <SectionPortBackground>
-        <Container as="section" fluid="lg" className="p-4 d-flex newExplainBox">
-          <div className="newExplainBox__part1 d-flex justify-content-center align-items-center">
-            <GatsbyImage image={getImage(portIcon)} alt="Dev Tools" />
+        <Container as="section" fluid="lg" className="p-4 d-flex explainBox">
+          <div className="explainBox__part1 d-flex justify-content-center align-items-center">
+            <GatsbyImage image={getImage(portIcon)} alt="Portfolio" />
           </div>
-          <div className="newExplainBox__part2 m-0">
+          <div className="explainBox__part2 m-0">
             <h3 className="one-pt-1-rem  mt-0 mb-3 font-weight-bold">
-              Portfolio, Design, and Coding Samples
+              Portfolio and Code
             </h3>
             <p className="pt-9-rem">
-              A sampling of a few of the designs I have crafted for my projects.
+              Examples of past work and ongoing projects. I like to work in
+              Sketch first to brainstorm then create HTML/CSS wireframes in
+              either React or a HTML templating system such as Nunjucks.
             </p>
-
-            <Button variant="outline-primary" href="/portfolio">
-              View
-            </Button>
+            <div className="sect-btn w-100">
+              <Button size="sm" variant="primary" href="/portfolio">
+                See More
+              </Button>
+            </div>
           </div>
         </Container>
       </SectionPortBackground>

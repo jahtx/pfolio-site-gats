@@ -11,34 +11,40 @@
 .hero-content-section {
   margin: 0 0 2rem 0;
 }
-.newExplainBox {
+.explainBox {
   flex-flow: column;
   @include MQ(S) {
     flex-flow: row;
     padding-bottom: 0;
   }
-}
-
-.newExplainBox__part1 {
-  margin: 1rem 0 2rem 0;
-
-  @include MQ(S) {
-    margin: 1rem 0;
-    width: 45%;
+  &__part1 {
+    margin: 1rem 0 2rem 0;
+    @include MQ(S) {
+      margin: 1rem 0;
+      width: 45%;
+    }
+    @include MQ(M) {
+      width: 30%;
+    }
   }
-  @include MQ(M) {
-    width: 30%;
+  &__part2 {
+    text-align: center;
+    @include MQ(S) {
+      text-align: left;
+      width: 55%;
+      padding-top: 1rem;
+      padding-left: 0.5rem;
+      padding-right: 3rem;
+    }
+    @include MQ(M) {
+      width: 70%;
+      padding-left: 1rem;
+    }
   }
 }
-.newExplainBox__part2 {
+.sect-btn {
   text-align: center;
   @include MQ(S) {
     text-align: left;
-    width: 55%;
-    padding-top: 1rem;
-    padding-right: 3rem;
-  }
-  @include MQ(M) {
-    width: 70%;
   }
 }
