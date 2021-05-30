@@ -178,9 +178,9 @@ const IndexPage = () => {
               Portfolio and Code
             </h3>
             <p className="pt-9-rem">
-              Examples of past work and ongoing projects. I like to work in
-              Sketch first to brainstorm then create HTML/CSS wireframes in
-              either React or a HTML templating system such as Nunjucks.
+              Examples of past work and ongoing projects. I like to mettle out
+              the design in Sketch first for initial brainstorming sessions then
+              create HTML/CSS wireframes in either React or Angular.
             </p>
             <div className="sect-btn w-100">
               <Button size="sm" variant="primary" href="/portfolio">
