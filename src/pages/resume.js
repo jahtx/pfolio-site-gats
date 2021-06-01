@@ -106,7 +106,7 @@ const ResumePage = () => {
         <h3 className="mt-3 all-caps one-pt-2-rem font-weight-bold">
           Experience:
         </h3>
-        <div className=" duoRoundBox__top mt-3">
+        <div className="duoRoundBox__top mt-3">
           <h4 className="m-0 all-caps font-weight-bold">
             User Experience Designer / Front-end Developer
           </h4>
@@ -115,15 +115,15 @@ const ResumePage = () => {
           </span>
         </div>
         <div className=" duoRoundBox__bottom">
-          <div className="clientBox mt-3 mb-3">
-            <div className="clientBox__left">
+          <div className="clientBox d-flex flex-row justify-content-between mt-3 mb-3">
+            <div className="d-flex justify-content-center align-items-center">
               {' '}
-              <h5 className="font-weight-bold p-0">
+              <h5 className="one-rem font-weight-bold p-0">
                 Client: Accenture / U.S. Department of Education
               </h5>
             </div>
 
-            <div className="clientBox__right">
+            <div className="clientBox__right w-25">
               <a
                 href="https://accenture.com/"
                 target="_blank"
@@ -170,15 +170,15 @@ const ResumePage = () => {
           />
 
           <hr className="mb-1" />
-          <div className="clientBox mt-3 mb-3">
-            <div className="clientBox__left">
+          <div className="clientBox d-flex flex-row justify-content-between mt-3 mb-3">
+            <div className="d-flex justify-content-center align-items-center">
               {' '}
-              <h5 className="font-weight-bold p-0">
+              <h5 className="one-rem font-weight-bold p-0">
                 Client: Diligent Consulting / U.S. Air Force
               </h5>
             </div>
 
-            <div className="clientBox__right">
+            <div className="clientBox__right w-25">
               <a
                 href="https://www.diligent-us.com/"
                 target="_blank"
@@ -235,15 +235,15 @@ const ResumePage = () => {
           </span>
         </div>
         <div className=" duoRoundBox__bottom">
-          <div className="clientBox mt-3 mb-3">
-            <div className="clientBox__left">
+          <div className="clientBox d-flex flex-row justify-content-between mt-3 mb-3">
+            <div className="d-flex justify-content-center align-items-center">
               {' '}
-              <h5 className="font-weight-bold p-0">
+              <h5 className="one-rem font-weight-bold p-0">
                 Client: Randolph-Brooks Federal Credit Union
               </h5>
             </div>
 
-            <div className="clientBox__right">
+            <div className="clientBox__right w-25">
               <a
                 href="https://rbfcu.org"
                 target="_blank"
