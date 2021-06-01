@@ -116,6 +116,7 @@ const IndexPage = () => {
             <GatsbyImage
               image={getImage(uxLogos)}
               alt="UX Tools and Applications"
+              objectFit="contain"
             />
           </div>
           <div className="explainBox__part2 m-0">
@@ -152,7 +153,11 @@ const IndexPage = () => {
           className="p-4 d-flex explainBox text-white"
         >
           <div className="explainBox__part1 d-flex justify-content-center align-items-center">
-            <GatsbyImage image={getImage(devLogos)} alt="Dev Tools" />
+            <GatsbyImage
+              image={getImage(devLogos)}
+              alt="Dev Tools"
+              objectFit="contain"
+            />
           </div>
           <div className="explainBox__part2 m-0">
             <h3 className="one-pt-1-rem  mt-0 mb-3 font-weight-bold">
@@ -171,10 +176,14 @@ const IndexPage = () => {
       <SectionPortBackground>
         <Container as="section" fluid="lg" className="p-4 d-flex explainBox">
           <div className="explainBox__part1 d-flex justify-content-center align-items-center">
-            <GatsbyImage image={getImage(portIcon)} alt="Portfolio" />
+            <GatsbyImage
+              image={getImage(portIcon)}
+              alt="Portfolio"
+              objectFit="contain"
+            />
           </div>
           <div className="explainBox__part2 m-0">
-            <h3 className="one-pt-1-rem  mt-0 mb-3 font-weight-bold">
+            <h3 className="one-pt-1-rem mt-0 mb-3 font-weight-bold">
               Portfolio and Code
             </h3>
             <p className="pt-9-rem">

@@ -64,6 +64,7 @@ const AnthologyPage = () => {
             <GatsbyImage
               image={getImage(data.rbfcuPhone)}
               alt="RBFCU Portfolio"
+              objectFit="contain"
             />
           </div>
         </Container>
