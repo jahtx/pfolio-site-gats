@@ -104,6 +104,7 @@ const IndexPage = () => {
               <GatsbyImage
                 image={getImage(workLogos)}
                 alt="Previous Employers"
+                objectFit="contain"
               />
             </a>
           </div>
@@ -192,7 +193,7 @@ const IndexPage = () => {
               create HTML/CSS wireframes in either React or Angular.
             </p>
             <div className="sect-btn w-100">
-              <Button size="sm" variant="primary" href="/portfolio">
+              <Button size="sm" variant="primary" href="/anthology">
                 See More
               </Button>
             </div>
