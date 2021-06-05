@@ -33,6 +33,9 @@ li {
 
 .btn-primary {
   background-color: #2b89d5;
+  .dark {
+    color: black;
+  }
 }
 .btn-primary:hover {
   background-color: #2477bb;

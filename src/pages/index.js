@@ -193,7 +193,7 @@ const IndexPage = () => {
               create HTML/CSS wireframes in either React or Angular.
             </p>
             <div className="sect-btn w-100">
-              <Button size="sm" variant="primary" href="/anthology">
+              <Button size="sm" variant="primary" href="/portfolio">
                 See More
               </Button>
             </div>
