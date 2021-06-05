@@ -2,6 +2,7 @@ import React from 'react'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
+import { respondTo } from './_respondTo'
 import './rbfcuBk.scss'
 
 const RbfcuBk = ({ className, children }) => {
@@ -34,9 +35,10 @@ const StyledBackgroundSection = styled(RbfcuBk)`
   background-position: 0 0;
   background-color: #0e2e70;
   background-size: 630px;
-  @media (min-width: 576px) {
-    background-position: 25% 20%;
-  }
+
+  ${respondTo.sm`
+  background-position: 25% 20%;
+  `}
 `
 
 export default StyledBackgroundSection
