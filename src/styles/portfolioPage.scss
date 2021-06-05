@@ -8,15 +8,16 @@
   }
   &__part1 {
     @include MQ(S) {
-      width: 65%;
+      width: 70%;
     }
   }
   &__part2 {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0;
     @include MQ(S) {
+      padding-top: 1rem;
       text-align: left;
-      width: 35%;
+      width: 30%;
       padding-left: 0.5rem;
       padding-right: 1rem;
     }

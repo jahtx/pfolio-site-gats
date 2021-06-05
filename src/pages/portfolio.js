@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import '../styles/portfolioPage.scss'
 import Button from 'react-bootstrap/Button'
-import { default as SectionRbfcuBk } from '../components/backgrounds/portfolio/rbfcuBk'
+import { default as SectionRbfcuBk } from '../components/backgrounds/portfolio/ClientRbfcuBack'
 
 const PortfolioPage = () => {
   const data = useStaticQuery(
@@ -33,7 +33,7 @@ const PortfolioPage = () => {
       <SectionRbfcuBk>
         <Container fluid="lg text-white">
           <h1 className="m-0 pt-4">Portfolio</h1>
-          <hr className="m-0 border-white" />
+          <hr className="m-0 border-grey" />
         </Container>
         <Container as="section" fluid="lg" className="p-4 d-flex exBox">
           <div className="exBox__part1 m-0 d-flex justify-content-center align-items-center">

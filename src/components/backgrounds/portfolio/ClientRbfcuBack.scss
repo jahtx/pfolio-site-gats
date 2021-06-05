@@ -1,0 +1,19 @@
+@import '../../../styles/includeInAll/index.scss';
+
+.RbfcuGradient {
+  background: linear-gradient(
+    323deg,
+    rgba(14, 46, 112, 1) 9%,
+    rgba(31, 93, 219, 1) 100%
+  );
+}
+.clientRbfcuBack {
+  background-image: url('../../../images/backgrounds/big-star.png');
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include MQ(S) {
+    background-size: 500px;
+    background-position: 25% 20%;
+  }
+}
