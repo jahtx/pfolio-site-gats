@@ -1,7 +1,7 @@
 import React from 'react'
 import './ClientRbfcuBack.scss'
 
-const ClientRbfcuBack = ({ className, children }) => {
+const ClientRbfcuBack = ({ children }) => {
   return (
     <div className="RbfcuGradient">
       <div className="clientRbfcuBack">{children}</div>
