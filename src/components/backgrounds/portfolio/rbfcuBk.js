@@ -23,21 +23,22 @@ const RbfcuBk = ({ className, children }) => {
   const uxBack = data.uxBack.childImageSharp.fluid
 
   return (
-    <div className="bkGradient">
-      <BackgroundImage tag="div" className={className} fluid={uxBack}>
-        {children}
-      </BackgroundImage>
-    </div>
+    <BackgroundImage tag="div" className={className} fluid={uxBack}>
+      {children}
+    </BackgroundImage>
   )
 }
 
 const StyledBackgroundSection = styled(RbfcuBk)`
-  background-position: 0 0;
+    background-size: 300px;
+    background-position: 0 0;
+  @media screen and (min-width: 0) {
+    background-size: 300px;
   background-color: #0e2e70;
-  background-size: 630px;
-
   ${respondTo.sm`
   background-position: 25% 20%;
+  background-color: blue;
+  background-size: 300px;
   `}
 `
 
