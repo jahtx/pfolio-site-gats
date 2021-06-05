@@ -35,7 +35,7 @@ const PortfolioPage = () => {
           <h1 className="m-0 pt-4">Portfolio</h1>
           <hr className="m-0 border-grey" />
         </Container>
-        <Container as="section" fluid="lg" className="p-4 d-flex exBox">
+        <Container as="section" fluid="lg" className="p-4 d-flex exBox mb-5">
           <div className="exBox__part1 m-0 d-flex justify-content-center align-items-center">
             <div>
               {' '}
@@ -49,11 +49,7 @@ const PortfolioPage = () => {
                 development of a comprehensive templating system.
               </p>
               <div className="sect-btn2 w-100">
-                <Button
-                  size="sm"
-                  variant="light"
-                  href="/portfolio/rbfcu-portfolio"
-                >
+                <Button size="sm" variant="light" href="/portfolio/rbfcu">
                   See More
                 </Button>
               </div>
