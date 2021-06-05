@@ -7,12 +7,7 @@
     padding-bottom: 0;
   }
   &__part1 {
-    margin: 1rem 0 2rem 0;
     @include MQ(S) {
-      margin: 1rem 0;
-      width: 45%;
-    }
-    @include MQ(M) {
       width: 65%;
     }
   }
@@ -21,12 +16,11 @@
     padding-top: 1rem;
     @include MQ(S) {
       text-align: left;
-      width: 55%;
+      width: 35%;
       padding-left: 0.5rem;
       padding-right: 1rem;
     }
     @include MQ(M) {
-      width: 35%;
       padding-left: 1rem;
     }
   }
