@@ -1,33 +1,11 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 import Container from 'react-bootstrap/Container'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import '../styles/portfolioPage.scss'
 import Button from 'react-bootstrap/Button'
 import { default as SectionRbfcuBk } from '../components/backgrounds/portfolio/ClientRbfcuBack'
 
 const PortfolioPage = () => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        rbfcuPhone: file(relativePath: { eq: "phone-with-rbfcu.png" }) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 240
-              quality: 85
-              placeholder: BLURRED
-              formats: [WEBP]
-              layout: FIXED
-
-              transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
-            )
-          }
-        }
-      }
-    `
-  )
-
   return (
     <MainLayout showVacMsg={false}>
       <SectionRbfcuBk>
@@ -55,13 +33,7 @@ const PortfolioPage = () => {
               </div>
             </div>
           </div>
-          <div className="exBox__part2 d-flex justify-content-center align-items-center">
-            <GatsbyImage
-              image={getImage(data.rbfcuPhone)}
-              alt="RBFCU Portfolio"
-              objectFit="contain"
-            />
-          </div>
+          <div className="exBox__part2 d-flex justify-content-center align-items-center"></div>
         </Container>
       </SectionRbfcuBk>
     </MainLayout>

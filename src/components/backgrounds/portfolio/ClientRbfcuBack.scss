@@ -8,12 +8,16 @@
   );
 }
 .clientRbfcuBack {
-  background-image: url('../../../images/backgrounds/big-star.png');
+  //background-image: url('../../../images/backgrounds/big-star.png');
   background-size: 300px;
   background-repeat: no-repeat;
   background-position: center;
   @include MQ(S) {
-    background-size: 500px;
-    background-position: 25% 20%;
+    background-size: 550px;
+    background-position: 10% 20%;
+  }
+  @include MQ(M) {
+    background-size: 550px;
+    background-position: 10% 20%;
   }
 }

@@ -105,20 +105,6 @@ a.link {
   }
 }
 
-.boxesBkLeft {
-  min-height: 400px;
-  background-size: cover;
-  background-position: left top 75px;
-  background-repeat: repeat-y !important;
-  padding-bottom: 2em;
-}
-.boxesBkRight {
-  min-height: 400px;
-  background-size: cover;
-  background-position: right top 125px;
-  background-repeat: repeat-y !important;
-}
-
 .duoRoundBox {
   &__top {
     border-right: $fav_border;
@@ -138,23 +124,5 @@ a.link {
     border-bottom-left-radius: $fav_radius;
     border-bottom-right-radius: $fav_radius;
     padding: 0 1em 0.2rem 1em;
-  }
-}
-
-.backgroundBoxesLeft {
-  width: 100%;
-  background-image: url('../../images/backgrounds/left-boxes.png');
-  background-size: 400px;
-  background-repeat: repeat-y;
-  background-position: left 4rem;
-}
-
-.backgroundBoxesRight {
-  @include MQ(S) {
-    width: 100%;
-    background-image: url('../../images/backgrounds/right-boxes.png');
-    background-size: 400px;
-    background-repeat: repeat-y;
-    background-position: right 4rem;
   }
 }
