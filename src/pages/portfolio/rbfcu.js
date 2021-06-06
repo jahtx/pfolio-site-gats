@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import { getImage } from 'gatsby-plugin-image'
 import MainLayout from '../../layouts/MainLayout/MainLayout'
 import Composite from '../../components/common/Composite/Composite'
+import { default as BoxesBackground } from '../../components/backgrounds/boxes/BoxesBack'
 import './rbfcuPortPage.scss'
 
 const PortfolioPage = () => {
@@ -145,64 +146,57 @@ const PortfolioPage = () => {
 
   return (
     <MainLayout showVacMsg={false}>
-      <div className="backgroundBoxesLeft">
-        <div className="backgroundBoxesRight">
-          <Container fluid="lg">
-            <h1 className="m-0 pt-4">Portfolio</h1>
-            <hr className="m-0" />
-            <h2 className="one-pt-1-rem all-caps mt-3 mb-3">
-              Randolph-Brooks Federal Credit Union
-            </h2>
-            <p className="pt-9-rem">
-              Randolph-Brooks Federal Credit Union is an accredited financial
-              institution headquartered in Live Oak, Texas and is the second
-              largest credit union in Texas.
-            </p>
-            <p className="pt-9-rem">
-              Their website had long been overdue for a refreshed design and
-              needed to meet the expectations of a younger and more
-              technologically demanding customer base.
-            </p>
-            <p className="pt-9-rem">
-              Challenges included accounting for over a thousand disparate pages
-              and content, accessibility, and incorporating a new content
-              management system. Over a period of nine months, James was
-              instrumental in prioritizing product and services content,
-              developing user research, and leading the front-end development
-              effort.
-            </p>
-          </Container>
-          <section className="mb-5">
-            {portItems &&
-              portItems.map(item => {
-                const {
-                  id,
-                  compHeader,
-                  imageFileMobile,
-                  imageFileDesktop,
-                } = item
-                return (
-                  <div className="container-lg mt-3" key={id}>
-                    <h3 className="text-center one-pt-1-rem all-caps mt-5 mb-0">
-                      {compHeader}
-                    </h3>
-                    <div className="spiralBk d-flex justify-content-center">
-                      <Composite
-                        title={compHeader}
-                        imageInfo={getImage(imageFileMobile)}
-                        isMobile
-                      />
-                      <Composite
-                        title={compHeader}
-                        imageInfo={getImage(imageFileDesktop)}
-                      />
-                    </div>
+      <BoxesBackground>
+        <Container fluid="lg">
+          <h1 className="m-0 pt-4">Portfolio</h1>
+          <hr className="m-0" />
+          <h2 className="one-pt-1-rem all-caps mt-3 mb-3">
+            Randolph-Brooks Federal Credit Union
+          </h2>
+          <p className="pt-9-rem">
+            Randolph-Brooks Federal Credit Union is an accredited financial
+            institution headquartered in Live Oak, Texas and is the second
+            largest credit union in Texas.
+          </p>
+          <p className="pt-9-rem">
+            Their website had long been overdue for a refreshed design and
+            needed to meet the expectations of a younger and more
+            technologically demanding customer base.
+          </p>
+          <p className="pt-9-rem">
+            Challenges included accounting for over a thousand disparate pages
+            and content, accessibility, and incorporating a new content
+            management system. Over a period of nine months, James was
+            instrumental in prioritizing product and services content,
+            developing user research, and leading the front-end development
+            effort.
+          </p>
+        </Container>
+        <section className="mb-5">
+          {portItems &&
+            portItems.map(item => {
+              const { id, compHeader, imageFileMobile, imageFileDesktop } = item
+              return (
+                <div className="container-lg mt-3" key={id}>
+                  <h3 className="text-center one-pt-1-rem all-caps mt-5 mb-0">
+                    {compHeader}
+                  </h3>
+                  <div className="spiralBk d-flex justify-content-center">
+                    <Composite
+                      title={compHeader}
+                      imageInfo={getImage(imageFileMobile)}
+                      isMobile
+                    />
+                    <Composite
+                      title={compHeader}
+                      imageInfo={getImage(imageFileDesktop)}
+                    />
                   </div>
-                )
-              })}
-          </section>
-        </div>
-      </div>
+                </div>
+              )
+            })}
+        </section>
+      </BoxesBackground>
     </MainLayout>
   )
 }

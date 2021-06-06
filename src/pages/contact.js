@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import BackgroundImage from 'gatsby-background-image'
 import '../styles/contactPage.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { default as BoxesBackground } from '../components/backgrounds/boxes/BoxesBack'
 
 const ContactPage = () => {
   const data = useStaticQuery(
@@ -65,58 +66,56 @@ const ContactPage = () => {
   const linkedinLogo = data.linkedinLogo
   return (
     <MainLayout pageClasses="contactPage general">
-      <div className="backgroundBoxesLeft">
-        <div className="backgroundBoxesRight">
-          <Container fluid="sm">
-            <h1 className="m-0 pt-4">Contact</h1>
-            <hr className="m-0" />
-            <p className="text-center contactNote mt-3">
-              Email or call for full-time work or projects. 🙂
-            </p>
-            <BackgroundImage tag="div" className="bizCard" fluid={bizCard}>
-              <p className="text-center pt-5">contact@jahtx.com</p>
-              <p className="text-center">210-239-8460</p>
-              <div className="text-center">
-                <a
-                  href="https://twitter.com/jah_uxdev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GatsbyImage
-                    className="contactIcon"
-                    image={getImage(twitterLogo)}
-                    alt="Twitter Profile"
-                  />
-                </a>
-                <a
-                  href="https://github.com/jahtx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GatsbyImage
-                    className="contactIcon"
-                    image={getImage(githubLogo)}
-                    alt="Github Profile"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/jameshernandez/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GatsbyImage
-                    className="contactIcon"
-                    image={getImage(linkedinLogo)}
-                    alt="LinkedIn Profile"
-                  />
-                </a>
-              </div>
-            </BackgroundImage>
+      <BoxesBackground>
+        <Container fluid="sm">
+          <h1 className="m-0 pt-4">Contact</h1>
+          <hr className="m-0" />
+          <p className="text-center contactNote mt-3">
+            Email or call for full-time work or projects. 🙂
+          </p>
+          <BackgroundImage tag="div" className="bizCard" fluid={bizCard}>
+            <p className="text-center pt-5">contact@jahtx.com</p>
+            <p className="text-center">210-239-8460</p>
+            <div className="text-center">
+              <a
+                href="https://twitter.com/jah_uxdev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GatsbyImage
+                  className="contactIcon"
+                  image={getImage(twitterLogo)}
+                  alt="Twitter Profile"
+                />
+              </a>
+              <a
+                href="https://github.com/jahtx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GatsbyImage
+                  className="contactIcon"
+                  image={getImage(githubLogo)}
+                  alt="Github Profile"
+                />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jameshernandez/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GatsbyImage
+                  className="contactIcon"
+                  image={getImage(linkedinLogo)}
+                  alt="LinkedIn Profile"
+                />
+              </a>
+            </div>
+          </BackgroundImage>
 
-            <div className="contactPage__spacer"></div>
-          </Container>
-        </div>
-      </div>
+          <div className="contactPage__spacer"></div>
+        </Container>
+      </BoxesBackground>
     </MainLayout>
   )
 }

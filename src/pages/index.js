@@ -185,7 +185,7 @@ const IndexPage = () => {
           </div>
           <div className="explainBox__part2 m-0">
             <h3 className="one-pt-1-rem mt-0 mb-3 font-weight-bold">
-              Portfolio and Code
+              Portfolio
             </h3>
             <p className="pt-9-rem">
               Examples of past work and ongoing projects. I like to mettle out
