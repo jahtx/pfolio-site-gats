@@ -6,7 +6,7 @@ import { getImage } from 'gatsby-plugin-image'
 import MainLayout from '../../layouts/MainLayout/MainLayout'
 import Composite from '../../components/common/Composite/Composite'
 import { default as BoxesBackground } from '../../components/backgrounds/boxes/BoxesBack'
-import './rbfcuPortPage.scss'
+import './rbfcu.scss'
 
 const PortfolioPage = () => {
   const data = useStaticQuery(
