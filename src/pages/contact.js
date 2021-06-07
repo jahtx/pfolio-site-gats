@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import Container from 'react-bootstrap/Container'
 import BackgroundImage from 'gatsby-background-image'
-import '../styles/contactPage.scss'
+import './contact.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { default as BoxesBackground } from '../components/backgrounds/boxes/BoxesBack'
 

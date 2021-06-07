@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import TechUsed from '../components/common/TechUsed/TechUsed'
 import Container from 'react-bootstrap/Container'
-import '../styles/resumePage.scss'
+import './resume.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const ResumePage = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
-import '../styles/indexPage.scss'
+import './indexPage.scss'
 import Container from 'react-bootstrap/Container'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { default as IndexHeroBackground } from '../components/backgrounds/index/IndexHero'

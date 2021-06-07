@@ -5,7 +5,7 @@ import TechUsed from '../components/common/TechUsed/TechUsed'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import '../styles/projectsPage.scss'
+import './projects.scss'
 
 const ProjectsPage = () => {
   const data = useStaticQuery(

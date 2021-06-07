@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import MainLayout from '../layouts/MainLayout/MainLayout'
-import '../styles/portfolioPage.scss'
+import './portfolio.scss'
 import Button from 'react-bootstrap/Button'
 import { default as SectionRbfcuBk } from '../components/backgrounds/portfolio/ClientRbfcuBack'
 
