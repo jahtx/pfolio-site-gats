@@ -31,6 +31,11 @@ li {
   line-height: 2rem;
 }
 
+ol.breadcrumb {
+  background-color: transparent;
+  margin: 0;
+  padding: 1rem 0;
+}
 .border-grey {
   border-color: #cccccc;
 }
@@ -135,14 +140,18 @@ $box-size: 18rem;
   border-radius: $fav_radius;
   height: $box-size;
   width: $box-size;
-  padding: 1rem 1rem;
-  &:hover {
-    box-shadow: 0 0 15px #a3a3a3;
-    text-decoration: none !important;
-  }
+  position: relative;
+  top: 0;
+  transition: top ease 0.2s;
   :hover {
     color: white;
-    text-decoration: none !important;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+  &:hover {
+    box-shadow: 0 0 15px #a3a3a3;
+    top: -5px;
   }
   &--rbfcu {
     background-color: $rbfcu_color;
@@ -150,8 +159,5 @@ $box-size: 18rem;
     background-size: 270px;
     background-position: center;
     background-repeat: no-repeat;
-    h2 {
-      text-transform: uppercase;
-    }
   }
 }

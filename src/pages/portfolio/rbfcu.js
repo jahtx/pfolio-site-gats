@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import { getImage } from 'gatsby-plugin-image'
 import MainLayout from '../../layouts/MainLayout/MainLayout'
 import Composite from '../../components/common/Composite/Composite'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import { default as BoxesBackground } from '../../components/backgrounds/boxes/BoxesBack'
 import './rbfcu.scss'
 
@@ -148,12 +149,14 @@ const PortfolioPage = () => {
     <MainLayout showVacMsg={false}>
       <BoxesBackground>
         <Container fluid="lg">
-          <h1 className="m-0 pt-4">Portfolio</h1>
+          <Breadcrumb>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item href="/portfolio">Portfolio</Breadcrumb.Item>
+            <Breadcrumb.Item active>RBFCU</Breadcrumb.Item>
+          </Breadcrumb>
+          <h1 className="m-0 pt-2">Randolph-Brooks Federal Credit Union</h1>
           <hr className="m-0" />
-          <h2 className="one-pt-1-rem all-caps mt-3 mb-3">
-            Randolph-Brooks Federal Credit Union
-          </h2>
-          <p className="pt-9-rem">
+          <p className="mt-4 pt-9-rem">
             Randolph-Brooks Federal Credit Union is an accredited financial
             institution headquartered in Live Oak, Texas and is the second
             largest credit union in Texas.
