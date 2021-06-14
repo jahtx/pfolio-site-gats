@@ -1,6 +1,7 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import Container from 'react-bootstrap/Container'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import { Link } from 'gatsby'
 import './portfolio.scss'
 
@@ -8,7 +9,11 @@ const PortfolioPage = () => {
   return (
     <MainLayout hideFooter>
       <Container fluid="lg">
-        <h1 className="m-0 pt-4">Portfolio</h1>
+        <Breadcrumb>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item active>Portfolio</Breadcrumb.Item>
+        </Breadcrumb>
+        <h1 className="m-0 pt-1">Portfolio</h1>
         <hr className="m-0" />
       </Container>
       <Container className="mt-3 d-flex">

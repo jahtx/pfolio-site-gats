@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import TechUsed from '../components/common/TechUsed/TechUsed'
 import Container from 'react-bootstrap/Container'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import './resume.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
@@ -82,7 +83,11 @@ const ResumePage = () => {
   return (
     <MainLayout pageClasses="resumePage">
       <Container fluid="lg">
-        <h1 className="m-0 pt-4">Résumé</h1>
+        <Breadcrumb>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item active>Résumé</Breadcrumb.Item>
+        </Breadcrumb>
+        <h1 className="m-0 pt-1">Résumé</h1>
         <hr className="m-0" />
         <h2 className="p-0 mt-4 all-caps one-pt-2-rem font-weight-bold">
           Senior User Experience Designer / Front-end Developer

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import MainLayout from '../layouts/MainLayout/MainLayout'
 import Container from 'react-bootstrap/Container'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import BackgroundImage from 'gatsby-background-image'
 import './contact.scss'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -67,8 +68,12 @@ const ContactPage = () => {
   return (
     <MainLayout pageClasses="contactPage general">
       <BoxesBackground>
-        <Container fluid="sm">
-          <h1 className="m-0 pt-4">Contact</h1>
+        <Container fluid="lg">
+          <Breadcrumb>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item active>Contact</Breadcrumb.Item>
+          </Breadcrumb>
+          <h1 className="m-0 pt-2">Contact</h1>
           <hr className="m-0" />
           <p className="text-center contactNote mt-3">
             Email or call for full-time work or projects. 🙂
