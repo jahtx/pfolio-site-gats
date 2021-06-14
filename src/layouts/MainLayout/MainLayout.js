@@ -10,13 +10,17 @@ import { Header, Footer, Navigation } from '../../components/theme'
  * @param {boolean} props.showVacMsg - whether to show vaccination message
  */
 
-const MainLayout = ({ showVacMsg, children, pageClasses }) => {
+const MainLayout = ({ hideFooter, showVacMsg, children, pageClasses }) => {
   return (
     <div className={pageClasses}>
       <Header />
       <Navigation />
       {children}
-      {showVacMsg ? <Footer showVaccineMessage /> : <Footer />}
+      {hideFooter ? null : showVacMsg ? (
+        <Footer showVaccineMessage />
+      ) : (
+        <Footer />
+      )}
     </div>
   )
 }
@@ -24,6 +28,7 @@ const MainLayout = ({ showVacMsg, children, pageClasses }) => {
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
   pageClasses: PropTypes.node,
+  hideFooter: PropTypes.bool,
   showVacMsg: PropTypes.bool,
 }
 export default MainLayout

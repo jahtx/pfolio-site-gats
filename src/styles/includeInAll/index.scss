@@ -87,6 +87,7 @@ li {
     text-decoration: underline;
     :hover {
       color: white;
+      text-decoration: none;
     }
   }
 }
@@ -94,6 +95,7 @@ a {
   color: #004683;
   :hover {
     color: #004683;
+    text-decoration: none !important;
   }
 }
 
@@ -124,5 +126,32 @@ a.link {
     border-bottom-left-radius: $fav_radius;
     border-bottom-right-radius: $fav_radius;
     padding: 0 1em 0.2rem 1em;
+  }
+}
+
+$box-size: 18rem;
+
+.hyperBox {
+  border-radius: $fav_radius;
+  height: $box-size;
+  width: $box-size;
+  padding: 1rem 1rem;
+  &:hover {
+    box-shadow: 0 0 15px #a3a3a3;
+    text-decoration: none !important;
+  }
+  :hover {
+    color: white;
+    text-decoration: none !important;
+  }
+  &--rbfcu {
+    background-color: $rbfcu_color;
+    background-image: url('../../images/backgrounds/rbfcu-trans-white-bk.png');
+    background-size: 270px;
+    background-position: center;
+    background-repeat: no-repeat;
+    h2 {
+      text-transform: uppercase;
+    }
   }
 }
