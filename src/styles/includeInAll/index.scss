@@ -3,6 +3,9 @@
 @import './all/breakpoints.scss';
 @import './all/utilities.scss';
 
+html {
+  font-size: 110%;
+}
 body {
   font-family: $standardFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -11,7 +14,7 @@ body {
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 1em 0 0.2em 0;
 }
 h2,
@@ -27,7 +30,7 @@ h5 {
   font-size: 1.1rem;
 }
 
-li {
+.tall-line-bullets {
   line-height: 2rem;
 }
 
