@@ -96,6 +96,7 @@ ol.breadcrumb {
     }
   }
 }
+
 a {
   color: #004683;
   :hover {
@@ -109,6 +110,17 @@ a.link {
   :hover {
     color: #065d9c;
     text-decoration: underline;
+  }
+}
+.text-black {
+  color: black;
+  a {
+    color: black;
+    text-decoration: underline;
+    :hover {
+      color: black;
+      text-decoration: none;
+    }
   }
 }
 
@@ -135,29 +147,56 @@ a.link {
 }
 
 $box-size: 18rem;
-
+.hyperBoxOuter {
+  transition: top ease 0.3s;
+  &:hover .hyperBox {
+    box-shadow: 0 10px 13px #a3a3a3;
+    top: -5px;
+    transition: top ease 0.3s;
+  }
+}
 .hyperBox {
   border-radius: $fav_radius;
   height: $box-size;
   width: $box-size;
   position: relative;
   top: 0;
-  transition: top ease 0.2s;
-  :hover {
-    color: white;
-  }
+  box-sizing: border-box;
+
   h2 {
     text-transform: uppercase;
   }
-  &:hover {
-    box-shadow: 0 0 15px #a3a3a3;
-    top: -5px;
-  }
+
   &--rbfcu {
     background-color: $rbfcu_color;
     background-image: url('../../images/backgrounds/rbfcu-trans-white-bk.png');
     background-size: 270px;
     background-position: center;
     background-repeat: no-repeat;
+    margin-right: 2rem;
+    :hover {
+      color: white;
+    }
+  }
+  &--usaaGeo {
+    background-color: #f8f8f8;
+    background-image: url('../../images/backgrounds/usaa-grey-bk.png');
+    background-size: 320px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #cecece;
+    color: black;
+    &:hover {
+      color: black;
+    }
+    :hover {
+      color: black;
+    }
+    a {
+      color: black;
+      :hover {
+        color: black;
+      }
+    }
   }
 }
