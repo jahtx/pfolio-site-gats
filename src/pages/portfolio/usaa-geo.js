@@ -2,6 +2,7 @@ import React from 'react'
 import MainLayout from '../../layouts/MainLayout/MainLayout'
 import Container from 'react-bootstrap/Container'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
+import { default as UsaaHeroBackground } from '../../components/backgrounds/usaaGeo/UsaaGeoHero'
 import './usaa-geo.scss'
 
 const USAAGeo = () => {
@@ -13,8 +14,14 @@ const USAAGeo = () => {
           <Breadcrumb.Item href="/portfolio">Portfolio</Breadcrumb.Item>
           <Breadcrumb.Item active>USAA GeoEagle</Breadcrumb.Item>
         </Breadcrumb>
+      </Container>
+
+      <Container>
         <h1 className="m-0 pt-2">USAA GeoEagle</h1>
         <hr className="m-0" />
+      </Container>
+      <UsaaHeroBackground></UsaaHeroBackground>
+      <Container>
         <article className="pt-9-rem">
           <h2 className="one-pt-1-rem font-weight-bold mt-4">My Work</h2>
           <p>
