@@ -22,7 +22,7 @@ const USAAGeo = () => {
       </Container>
       <UsaaHeroBackground></UsaaHeroBackground>
       <Container>
-        <article className="pt-9-rem">
+        <article className="pt-9-rem mb-5">
           <h2 className="one-pt-1-rem font-weight-bold mt-4">My Work</h2>
           <p>
             When appropriating a “starter” stack from a company like ESRI, some

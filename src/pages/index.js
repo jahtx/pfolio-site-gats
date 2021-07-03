@@ -140,8 +140,8 @@ const IndexPage = () => {
             </p>
             <p className="pt-9-rem ">
               I use Sketch, Invision, Figma, and Adobe Creative Cloud and
-              keep&nbsp;<span class="no-break">up-to-date</span> with industry
-              apps, services, and trends.
+              keep&nbsp;<span className="no-break">up-to-date</span> with
+              industry apps, services, and trends.
             </p>
           </div>
         </Container>
