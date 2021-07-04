@@ -7,7 +7,7 @@ import './portfolio.scss'
 
 const PortfolioPage = () => {
   return (
-    <MainLayout hideFooter>
+    <MainLayout>
       <Container fluid="lg">
         <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
@@ -16,7 +16,7 @@ const PortfolioPage = () => {
         <h1 className="m-0 pt-1">Portfolio</h1>
         <hr className="m-0" />
       </Container>
-      <Container fluid="lg" className="mt-3 d-flex hyperBoxContainer">
+      <Container fluid="lg" className="mt-3 d-flex hyperBoxContainer mb-5">
         <Link to="rbfcu" className="not-underline hyperBox-child">
           <div className="hyperBoxOuter">
             <div
