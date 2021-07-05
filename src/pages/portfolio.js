@@ -18,7 +18,7 @@ const PortfolioPage = () => {
       </Container>
       <Container fluid="lg" className="mt-3 d-flex hyperBoxContainer mb-5">
         <Link to="rbfcu" className="not-underline hyperBox-child">
-          <div className="hyperBoxOuter">
+          <div className="hyperBoxOuter d-flex">
             <div
               className="hyperBox 
                     hyperBox--rbfcu 
@@ -42,7 +42,7 @@ const PortfolioPage = () => {
           </div>
         </Link>
         <Link to="usaa-geo" className="not-underline hyperBox-child">
-          <div className="hyperBoxOuter">
+          <div className="hyperBoxOuter d-flex">
             <div
               className="hyperBox 
                     hyperBox--usaaGeo

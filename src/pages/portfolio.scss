@@ -10,7 +10,6 @@
 
 $box-size: 18rem;
 .hyperBoxOuter {
-  display: flex;
   justify-content: center;
   transition: top ease 0.3s;
   &:hover .hyperBox {
@@ -35,16 +34,15 @@ $box-size: 18rem;
   position: relative;
   top: 0;
   box-sizing: border-box;
+  background-repeat: no-repeat;
   h2 {
     text-transform: uppercase;
   }
-
   &--rbfcu {
     background-color: $rbfcu_color;
     background-image: url('../images/backgrounds/rbfcu-trans-white-bk.png');
     background-size: 270px;
     background-position: center;
-    background-repeat: no-repeat;
     :hover {
       color: white;
     }
@@ -54,9 +52,11 @@ $box-size: 18rem;
     background-image: url('../images/backgrounds/usaa-grey-bk.png');
     background-size: 320px;
     background-position: center;
-    background-repeat: no-repeat;
     border: 1px solid #cecece;
     color: black;
+    &:hover {
+      color: black;
+    }
     :hover {
       color: black;
     }
