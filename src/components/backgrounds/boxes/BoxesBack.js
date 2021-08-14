@@ -1,5 +1,5 @@
 import React from 'react'
-import './BoxesBack.scss'
+import './BoxesBackTwo.scss'
 
 const BoxesBack = ({ children }) => {
   return <div className="boxesBack">{children}</div>
