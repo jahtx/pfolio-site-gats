@@ -61,7 +61,7 @@ const ProjectsPage = () => {
             </div>
             <div className="p-2">
               <a
-                href="https://countries-to-visit-zwzl3.ondigitalocean.app/"
+                href=" https://countries-to-visit-87she.ondigitalocean.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
