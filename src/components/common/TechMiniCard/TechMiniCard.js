@@ -334,7 +334,7 @@ const TechMiniCard = ({ tech }) => {
   }
 
   return (
-    <React.Fragment>
+    <>
       <div className="techCard d-flex flex-column justify-content-end">
         <a
           href={renderSwitch(tech).weblink}
@@ -354,7 +354,7 @@ const TechMiniCard = ({ tech }) => {
           </div>
         </a>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 
