@@ -1,0 +1,17 @@
+@import '../../../styles/includeInAll/index.scss';
+@import '~hamburgers/_sass/hamburgers/hamburgers.scss';
+
+.new-navigation {
+  background-color: green;
+}
+
+.hamburger-inner,
+.hamburger-inner:before,
+.hamburger-inner:after {
+  background-color: white;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:before,
+.hamburger.is-active .hamburger-inner:after {
+  background-color: white;
+}

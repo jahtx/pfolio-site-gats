@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Header, Footer, Navigation } from '../../components/theme'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Header, Footer, NewNavigation } from '../../components/theme';
 
 /**
  * A functional component with useState
@@ -14,7 +14,7 @@ const MainLayout = ({ hideFooter, showVacMsg, children, pageClasses }) => {
   return (
     <div className={pageClasses}>
       <Header />
-      <Navigation />
+      <NewNavigation />
       {children}
       {hideFooter ? null : showVacMsg ? (
         <Footer showVaccineMessage />
@@ -22,13 +22,13 @@ const MainLayout = ({ hideFooter, showVacMsg, children, pageClasses }) => {
         <Footer />
       )}
     </div>
-  )
-}
+  );
+};
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
   pageClasses: PropTypes.node,
   hideFooter: PropTypes.bool,
   showVacMsg: PropTypes.bool,
-}
-export default MainLayout
+};
+export default MainLayout;
