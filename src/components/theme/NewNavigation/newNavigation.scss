@@ -5,12 +5,13 @@ $nav_color: #4a4a4a;
 
 .new-navigation {
   background-color: $nav_color;
-  font-family: $headerFont;
-  text-transform: uppercase;
   height: 3em;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  @include MQ(S) {
+    display: none;
+  }
 }
 
 .hamburger,
@@ -22,17 +23,42 @@ $nav_color: #4a4a4a;
   }
 }
 
+.menuDrop {
+  display: none;
+  @include MQ(S) {
+    display: block;
+  }
+  &--visible {
+    display: block;
+  }
+}
 #mainMenu {
   background-color: $nav_color;
   list-style: none;
   padding: 0.2em 0 0.5em 0;
+  font-family: $headerFont;
+  text-transform: uppercase;
   margin: 0;
   text-align: center;
+  @include MQ(S) {
+    padding: 0;
+  }
+  li {
+    @include MQ(S) {
+      display: inline;
+    }
+  }
 }
 
-.menuDrop {
-  display: none;
-  &--visible {
-    display: block;
+.gacLink {
+  color: white !important;
+  padding-left: 0.7em !important;
+  padding-right: 0.7em !important;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  @include MQ(S) {
+    font-size: 0.8rem;
+    line-height: 2.5rem;
   }
 }
