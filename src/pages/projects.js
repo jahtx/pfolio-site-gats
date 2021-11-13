@@ -1,12 +1,12 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import MainLayout from '../layouts/MainLayout/MainLayout'
-import TechUsed from '../components/common/TechUsed/TechUsed'
-import Container from 'react-bootstrap/Container'
-import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import Button from 'react-bootstrap/Button'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import './projects.scss'
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import MainLayout from '../layouts/MainLayout/MainLayout';
+import TechUsed from '../components/common/TechUsed/TechUsed';
+import Container from 'react-bootstrap/Container';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import Button from 'react-bootstrap/Button';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import './projects.scss';
 
 const ProjectsPage = () => {
   const data = useStaticQuery(
@@ -25,8 +25,8 @@ const ProjectsPage = () => {
         }
       }
     `
-  )
-  const postcardComp = data.postcardComp
+  );
+  const postcardComp = data.postcardComp;
   return (
     <MainLayout pageClasses="general">
       <Container fluid="lg">
@@ -60,28 +60,28 @@ const ProjectsPage = () => {
               <TechUsed technologies={['React', 'GraphQL', 'Bootstrap']} />
             </div>
             <div className="p-2">
-              <a
+              {/* <a
                 href=" https://countries-to-visit-87she.ondigitalocean.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <GatsbyImage
-                  className="postcardComp overflow-hidden"
-                  image={getImage(postcardComp)}
-                  alt="Make A Postcard App"
-                />
-              </a>
+              > */}
+              <GatsbyImage
+                className="postcardComp overflow-hidden"
+                image={getImage(postcardComp)}
+                alt="Make A Postcard App"
+              />
+              {/* </a> */}
             </div>
           </div>
           <div>
-            <Button
+            {/* <Button
               variant="outline-primary mr-3"
               href="https://countries-to-visit-zwzl3.ondigitalocean.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Go to App
-            </Button>
+            </Button> */}
             <Button
               variant="outline-primary"
               href="https://github.com/jahtx/countries-to-visit"
@@ -94,7 +94,7 @@ const ProjectsPage = () => {
         </div>
       </Container>
     </MainLayout>
-  )
-}
+  );
+};
 
-export default ProjectsPage
+export default ProjectsPage;
