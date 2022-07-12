@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header, Footer, NewNavigation } from '../../components/theme';
+import { Header, Footer, Navigation } from '../../components/theme';
 
 /**
  * A functional component with useState
@@ -14,7 +14,7 @@ const MainLayout = ({ hideFooter, showVacMsg, children, pageClasses }) => {
   return (
     <div className={pageClasses}>
       <Header />
-      <NewNavigation />
+      <Navigation />
       {children}
       {hideFooter ? null : showVacMsg ? (
         <Footer showVaccineMessage />

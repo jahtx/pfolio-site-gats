@@ -1,39 +1,59 @@
-import React from 'react'
-import './navigation.scss'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import React, { useState } from 'react';
+import './navigation.scss';
 
 const Navigation = () => {
-  return (
-    <Navbar
-      className="greyNav"
-      collapseOnSelect
-      expand="sm"
-      bg="dark"
-      variant="dark"
-    >
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse className="gacCollapse" id="responsive-navbar-nav">
-        <Nav className="gac">
-          <Nav.Link className="gacLink" href="/">
-            Home
-          </Nav.Link>
-          <Nav.Link className="gacLink" href="/portfolio">
-            Portfolio
-          </Nav.Link>
-          <Nav.Link className="gacLink" href="/projects">
-            Projects
-          </Nav.Link>
-          <Nav.Link className="gacLink" href="/resume">
-            Résumé
-          </Nav.Link>
-          <Nav.Link className="gacLink" href="/contact">
-            Contact
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  )
-}
+  const [isActive, setActive] = useState('false');
 
-export default Navigation
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+  return (
+    <>
+      <div className="navigation">
+        <button
+          className={
+            'hamburger hamburger--vortex-r ' + (isActive ? null : 'is-active')
+          }
+          onClick={handleToggle}
+        >
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <div className={'menuDrop ' + (isActive ? null : 'menuDrop--visible')}>
+        <nav>
+          <ul id="mainMenu">
+            <li>
+              <a className="gacLink" href="/">
+                Home
+              </a>
+            </li>
+            <li>
+              <a className="gacLink" href="/portfolio">
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a className="gacLink" href="/projects">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a className="gacLink" href="/resume">
+                Résumé
+              </a>
+            </li>
+            <li>
+              <a className="gacLink" href="/contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </>
+  );
+};
+
+export default Navigation;
