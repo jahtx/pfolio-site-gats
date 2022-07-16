@@ -1,12 +1,13 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import MainLayout from '../layouts/MainLayout/MainLayout'
-import Container from 'react-bootstrap/Container'
-import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import BackgroundImage from 'gatsby-background-image'
-import './contact.scss'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { default as BoxesBackground } from '../components/backgrounds/boxes/BoxesBack'
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+import { graphql, useStaticQuery } from 'gatsby';
+import MainLayout from '../layouts/MainLayout/MainLayout';
+import Container from 'react-bootstrap/Container';
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import './contact.scss';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const ContactPage = () => {
   const data = useStaticQuery(
@@ -60,69 +61,81 @@ const ContactPage = () => {
         }
       }
     `
-  )
-  const bizCard = data.bizCard.childImageSharp.fluid
-  const twitterLogo = data.twitterLogo
-  const githubLogo = data.githubLogo
-  const linkedinLogo = data.linkedinLogo
+  );
+  const [state, handleSubmit] = useForm('meqnyjkp');
+
+  const twitterLogo = data.twitterLogo;
+  const githubLogo = data.githubLogo;
+  const linkedinLogo = data.linkedinLogo;
+
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
   return (
     <MainLayout pageClasses="contactPage general">
-      <BoxesBackground>
-        <Container fluid="lg">
-          <Breadcrumb>
-            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-            <Breadcrumb.Item active>Contact</Breadcrumb.Item>
-          </Breadcrumb>
-          <h1 className="m-0 pt-2">Contact</h1>
-          <hr className="m-0" />
-          <p className="text-center contactNote mt-3">
-            Email or call for full-time work or projects. 🙂
-          </p>
-          <BackgroundImage tag="div" className="bizCard" fluid={bizCard}>
-            <p className="text-center pt-5">contact@jahtx.com</p>
-            <p className="text-center">210-239-8460</p>
-            <div className="text-center">
-              <a
-                href="https://twitter.com/jah_uxdev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage
-                  className="contactIcon"
-                  image={getImage(twitterLogo)}
-                  alt="Twitter Profile"
-                />
-              </a>
-              <a
-                href="https://github.com/jahtx"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage
-                  className="contactIcon"
-                  image={getImage(githubLogo)}
-                  alt="Github Profile"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jameshernandez/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GatsbyImage
-                  className="contactIcon"
-                  image={getImage(linkedinLogo)}
-                  alt="LinkedIn Profile"
-                />
-              </a>
-            </div>
-          </BackgroundImage>
+      <Container fluid="lg">
+        <Breadcrumb>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item active>Contact</Breadcrumb.Item>
+        </Breadcrumb>
+        <h1 className="m-0 pt-2">Contact</h1>
+        <hr className="m-0" />
+        <Form onSubmit={handleSubmit} className="mt-4">
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Message *</Form.Label>
+            <Form.Control as="textarea" rows={3} />
+          </Form.Group>
+          <Button variant="primary" type="submit" disabled={state.submitting}>
+            Submit
+          </Button>
+        </Form>
+        {/* <div className="contactPage__spacer"></div> */}
 
-          <div className="contactPage__spacer"></div>
-        </Container>
-      </BoxesBackground>
+        <div className="text-center contactNote mt-3 mb-3">
+          <a
+            href="https://twitter.com/jah_uxdev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GatsbyImage
+              className="contactIcon"
+              image={getImage(twitterLogo)}
+              alt="Twitter Profile"
+            />
+          </a>
+          <a
+            href="https://github.com/jahtx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GatsbyImage
+              className="contactIcon"
+              image={getImage(githubLogo)}
+              alt="Github Profile"
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jameshernandez/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GatsbyImage
+              className="contactIcon"
+              image={getImage(linkedinLogo)}
+              alt="LinkedIn Profile"
+            />
+          </a>
+        </div>
+      </Container>
     </MainLayout>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;
