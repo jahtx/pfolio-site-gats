@@ -13,11 +13,15 @@ const ContactPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        bizCard: file(relativePath: { eq: "backgrounds/business-card.png" }) {
+        stampImage: file(relativePath: { eq: "contact-logos/stamp.png" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 800) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(
+              quality: 85
+              placeholder: BLURRED
+              formats: [WEBP]
+              height: 135
+              transformOptions: { fit: CONTAIN, cropFocus: CENTER }
+            )
           }
         }
         twitterLogo: file(
@@ -65,6 +69,7 @@ const ContactPage = () => {
   const [state, handleSubmit] = useForm('meqnyjkp');
 
   const twitterLogo = data.twitterLogo;
+  const stamp = data.stampImage;
   const githubLogo = data.githubLogo;
   const linkedinLogo = data.linkedinLogo;
 
@@ -78,34 +83,52 @@ const ContactPage = () => {
         <h1 className="m-0 pt-2">Contact</h1>
         <hr className="m-0" />
         {!state.succeeded ? (
-          <Form onSubmit={handleSubmit} className="mt-4">
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                name="_replyto"
-                placeholder="Enter email"
+          <>
+            {/* <div className="row justify-content-end mr-1">
+              <GatsbyImage
+                className="stampImage"
+                image={getImage(stamp)}
+                alt="Stamp Image"
               />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Message *</Form.Label>
-              <Form.Control as="textarea" rows={3} name="message" />
-            </Form.Group>
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
-            <Button variant="primary" type="submit" disabled={state.submitting}>
-              Submit
-            </Button>
-          </Form>
+            </div> */}
+            <Form onSubmit={handleSubmit} className="mt-3">
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address *</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="_replyto"
+                  placeholder="Enter email"
+                />
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Organization Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Organization"
+                  name="organization"
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Message *</Form.Label>
+                <Form.Control as="textarea" rows={3} name="message" />
+              </Form.Group>
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+              <Button
+                variant="primary"
+                type="submit"
+                disabled={state.submitting}
+              >
+                Submit
+              </Button>
+            </Form>
+          </>
         ) : (
           <p className="mt-4">Thanks for your message!</p>
         )}
