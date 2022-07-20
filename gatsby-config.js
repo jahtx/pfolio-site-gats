@@ -6,7 +6,6 @@ module.exports = {
     author: `James A. Hernandez`,
   },
   plugins: [
-    `gatsby-plugin-csp`,
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-styled-components',
     {
