@@ -79,6 +79,11 @@ const ContactPage = () => {
                 name="_replyto"
                 placeholder="Enter email"
               />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
             </Form.Group>
             <Form.Group>
               <Form.Label>Organization Name</Form.Label>
@@ -86,6 +91,12 @@ const ContactPage = () => {
                 type="text"
                 placeholder="Organization"
                 name="organization"
+                required
+              />
+              <ValidationError
+                prefix="Organization"
+                field="organization"
+                errors={state.errors}
               />
             </Form.Group>
             <Form.Group
@@ -93,7 +104,12 @@ const ContactPage = () => {
               controlId="exampleForm.ControlTextarea1"
             >
               <Form.Label>Message *</Form.Label>
-              <Form.Control as="textarea" rows={3} name="message" />
+              <Form.Control as="textarea" rows={3} name="message" required />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
             </Form.Group>
             <ValidationError
               prefix="Message"
@@ -103,6 +119,7 @@ const ContactPage = () => {
             <Button variant="primary" type="submit" disabled={state.submitting}>
               Send
             </Button>
+            <ValidationError errors={state.errors} />
           </Form>
         ) : (
           <p className="mt-4">Thanks for your message!</p>
