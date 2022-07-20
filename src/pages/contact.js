@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from '@formspree/react';
+import { useForm, ValidationError } from '@formspree/react';
 import { graphql, useStaticQuery } from 'gatsby';
 import MainLayout from '../layouts/MainLayout/MainLayout';
 import Container from 'react-bootstrap/Container';
@@ -83,15 +83,24 @@ const ContactPage = () => {
         <Form onSubmit={handleSubmit} className="mt-4">
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control
+              type="email"
+              name="_replyto"
+              placeholder="Enter email"
+            />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>Message *</Form.Label>
-            <Form.Control as="textarea" rows={3} />
+            <Form.Control as="textarea" rows={3} name="message" />
           </Form.Group>
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
           <Button variant="primary" type="submit" disabled={state.submitting}>
             Submit
           </Button>
