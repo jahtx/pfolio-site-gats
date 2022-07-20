@@ -68,9 +68,6 @@ const ContactPage = () => {
   const githubLogo = data.githubLogo;
   const linkedinLogo = data.linkedinLogo;
 
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
   return (
     <MainLayout pageClasses="contactPage general">
       <Container fluid="lg">
@@ -80,32 +77,40 @@ const ContactPage = () => {
         </Breadcrumb>
         <h1 className="m-0 pt-2">Contact</h1>
         <hr className="m-0" />
-        <Form onSubmit={handleSubmit} className="mt-4">
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              type="email"
-              name="_replyto"
-              placeholder="Enter email"
+        {!state.succeeded ? (
+          <Form onSubmit={handleSubmit} className="mt-4">
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                type="email"
+                name="_replyto"
+                placeholder="Enter email"
+              />
+              <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>Message *</Form.Label>
+              <Form.Control as="textarea" rows={3} name="message" />
+            </Form.Group>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
             />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Message *</Form.Label>
-            <Form.Control as="textarea" rows={3} name="message" />
-          </Form.Group>
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
-          />
-          <Button variant="primary" type="submit" disabled={state.submitting}>
-            Submit
-          </Button>
-        </Form>
-        {/* <div className="contactPage__spacer"></div> */}
+            <Button variant="primary" type="submit" disabled={state.submitting}>
+              Submit
+            </Button>
+          </Form>
+        ) : (
+          <p className="mt-4">Thanks for your message!</p>
+        )}
+
+        {/* <p className="mt-4">Thanks for your message!</p> */}
 
         <div className="text-center contactNote mt-3 mb-3">
           <a
