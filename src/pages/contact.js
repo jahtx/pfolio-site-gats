@@ -56,7 +56,6 @@ const ContactPage = () => {
     `
   );
   const [state, handleSubmit] = useForm('meqnyjkp');
-
   const twitterLogo = data.twitterLogo;
   const githubLogo = data.githubLogo;
   const linkedinLogo = data.linkedinLogo;
@@ -73,10 +72,10 @@ const ContactPage = () => {
         {!state.succeeded ? (
           <Form onSubmit={handleSubmit} className="mt-3">
             <Form.Group>
-              <Form.Label>Your name</Form.Label>
+              <Form.Label className="contactFormLabel">Your name *</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="First/Last Name"
+                placeholder="enter first/last name"
                 name="yourName"
                 required
               />
@@ -87,12 +86,11 @@ const ContactPage = () => {
               />
             </Form.Group>{' '}
             <Form.Group>
-              <Form.Label>Organization</Form.Label>
+              <Form.Label className="contactFormLabel">Organization</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Organization"
+                placeholder="enter organization"
                 name="organization"
-                required
               />
               <ValidationError
                 prefix="Organization"
@@ -101,7 +99,9 @@ const ContactPage = () => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address *</Form.Label>
+              <Form.Label className="contactFormLabel">
+                Email address *
+              </Form.Label>
               <Form.Control
                 type="email"
                 name="_replyto"
@@ -117,7 +117,7 @@ const ContactPage = () => {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>Message *</Form.Label>
+              <Form.Label className="contactFormLabel">Message *</Form.Label>
               <Form.Control as="textarea" rows={3} name="message" required />
               <ValidationError
                 prefix="Message"
