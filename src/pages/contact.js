@@ -144,7 +144,7 @@ const ContactPage = () => {
         )}
 
         {/* <p className="mt-4">Thanks for your message!</p> */}
-
+        {/* <div className="mailBackground mt-5"></div> */}
         <div className="text-center contactNote mt-3 mb-3">
           <a
             href="https://twitter.com/jah_uxdev"
