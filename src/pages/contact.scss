@@ -1,13 +1,5 @@
 @import '../styles/includeInAll/index.scss';
 
-.contactPage {
-  display: block;
-
-  &__spacer {
-    height: 200px;
-  }
-}
-
 .contactIcon {
   margin: 0 15px;
   width: auto;
@@ -15,16 +7,4 @@
   @include MQ(S) {
     margin: 0 20px;
   }
-}
-.stampImage {
-  height: 136px;
-}
-.general .contactNote {
-  font-family: 'Nothing You Could Do';
-  font-size: 1.5em;
-}
-
-.bizCard {
-  height: 225px;
-  background-size: contain;
 }
