@@ -56,9 +56,6 @@ const ContactPage = () => {
     `
   );
   const [state, handleSubmit] = useForm('meqnyjkp');
-  const twitterLogo = data.twitterLogo;
-  const githubLogo = data.githubLogo;
-  const linkedinLogo = data.linkedinLogo;
 
   return (
     <MainLayout pageClasses="contactPage general">
@@ -130,9 +127,16 @@ const ContactPage = () => {
               field="message"
               errors={state.errors}
             />
-            <Button variant="primary" type="submit" disabled={state.submitting}>
-              Send
-            </Button>
+            <div className="buttonContainer">
+              <Button
+                className="flushButton"
+                variant="primary"
+                type="submit"
+                disabled={state.submitting}
+              >
+                Send
+              </Button>
+            </div>
             <ValidationError errors={state.errors} />
           </Form>
         ) : (
@@ -149,7 +153,7 @@ const ContactPage = () => {
           >
             <GatsbyImage
               className="contactIcon"
-              image={getImage(twitterLogo)}
+              image={getImage(data.twitterLogo)}
               alt="Twitter Profile"
             />
           </a>
@@ -160,7 +164,7 @@ const ContactPage = () => {
           >
             <GatsbyImage
               className="contactIcon"
-              image={getImage(githubLogo)}
+              image={getImage(data.githubLogo)}
               alt="Github Profile"
             />
           </a>
@@ -171,7 +175,7 @@ const ContactPage = () => {
           >
             <GatsbyImage
               className="contactIcon"
-              image={getImage(linkedinLogo)}
+              image={getImage(data.linkedinLogo)}
               alt="LinkedIn Profile"
             />
           </a>

@@ -13,3 +13,17 @@
   font-weight: bold;
   font-size: 0.9rem;
 }
+
+.buttonContainer {
+  width: 100%;
+  @include MQ(S) {
+    justify-content: flex-end;
+  }
+  display: flex;
+}
+.flushButton {
+  width: 100%;
+  @include MQ(S) {
+    width: 10rem;
+  }
+}
