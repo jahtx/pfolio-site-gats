@@ -1,14 +1,14 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import MainLayout from '../layouts/MainLayout/MainLayout'
-import './indexPage.scss'
-import Container from 'react-bootstrap/Container'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { default as IndexHeroBackground } from '../components/backgrounds/index/IndexHero'
-import { default as SectionUXBackground } from '../components/backgrounds/SectionUX'
-import { default as SectionDevBackground } from '../components/backgrounds/SectionDev'
-import { default as SectionPortBackground } from '../components/backgrounds/SectionPort'
-import Button from 'react-bootstrap/Button'
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import MainLayout from '../layouts/MainLayout/MainLayout';
+import './indexPage.scss';
+import Container from 'react-bootstrap/Container';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { default as IndexHeroBackground } from '../components/backgrounds/index/IndexHero';
+import { default as SectionUXBackground } from '../components/backgrounds/SectionUX';
+import { default as SectionDevBackground } from '../components/backgrounds/SectionDev';
+import { default as SectionPortBackground } from '../components/backgrounds/SectionPort';
+import Button from 'react-bootstrap/Button';
 
 const IndexPage = () => {
   const data = useStaticQuery(
@@ -66,12 +66,12 @@ const IndexPage = () => {
         }
       }
     `
-  )
+  );
 
-  const workLogos = data.workLogos
-  const uxLogos = data.uxLogos
-  const devLogos = data.devLogos
-  const portIcon = data.portIcon
+  const workLogos = data.workLogos;
+  const uxLogos = data.uxLogos;
+  const devLogos = data.devLogos;
+  const portIcon = data.portIcon;
 
   return (
     <MainLayout showVacMsg>
@@ -93,7 +93,7 @@ const IndexPage = () => {
           <div className="hero-content-section w-100 text-center">
             <p className="pt-9-rem">
               During my career, I have contributed to efforts for web projects
-              for USAA, Accenture, RBFCU, the&nbsp;
+              for USAA, Accenture, Outside Analytics, RBFCU, the&nbsp;
               <span className="no-break">U.S. Air Force,</span>&nbsp;and
               the&nbsp;
               <span className="no-break">U.S. Department of Education.</span>
@@ -201,7 +201,7 @@ const IndexPage = () => {
         </Container>
       </SectionPortBackground>
     </MainLayout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
