@@ -72,6 +72,34 @@ const ContactPage = () => {
         <hr className="m-0" />
         {!state.succeeded ? (
           <Form onSubmit={handleSubmit} className="mt-3">
+            <Form.Group>
+              <Form.Label>Your name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="First/Last Name"
+                name="yourName"
+                required
+              />
+              <ValidationError
+                prefix="Name"
+                field="yourName"
+                errors={state.errors}
+              />
+            </Form.Group>{' '}
+            <Form.Group>
+              <Form.Label>Organization</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Organization"
+                name="organization"
+                required
+              />
+              <ValidationError
+                prefix="Organization"
+                field="organization"
+                errors={state.errors}
+              />
+            </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address *</Form.Label>
               <Form.Control
@@ -82,20 +110,6 @@ const ContactPage = () => {
               <ValidationError
                 prefix="Email"
                 field="email"
-                errors={state.errors}
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Organization Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Organization"
-                name="organization"
-                required
-              />
-              <ValidationError
-                prefix="Organization"
-                field="organization"
                 errors={state.errors}
               />
             </Form.Group>
