@@ -9,17 +9,37 @@
   }
 }
 
+.topSection {
+  width: 100%;
+  @include MQ(S) {
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: space-between;
+  }
+  &__left {
+    @include MQ(S) {
+      width: 70%;
+    }
+  }
+}
 .contactFormLabel {
   font-weight: bold;
-  font-size: 0.9rem;
+}
+
+.stampImage {
+  display: none;
+  @include MQ(S) {
+    display: block;
+    height: 150px;
+  }
 }
 
 .buttonContainer {
   width: 100%;
+  display: flex;
   @include MQ(S) {
     justify-content: flex-end;
   }
-  display: flex;
 }
 .flushButton {
   width: 100%;

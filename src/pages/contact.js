@@ -13,6 +13,17 @@ const ContactPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
+        stampImage: file(relativePath: { eq: "contact-logos/stamp.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              placeholder: BLURRED
+              formats: [WEBP]
+              height: 150
+              transformOptions: { fit: CONTAIN, cropFocus: CENTER }
+            )
+          }
+        }
         twitterLogo: file(
           relativePath: { eq: "contact-logos/twitter-logo.png" }
         ) {
@@ -76,37 +87,46 @@ const ContactPage = () => {
             <div className="letterBack mt-4">
               <div className="letterInside">
                 <Form onSubmit={handleSubmit}>
-                  <Form.Group>
-                    <Form.Label className="contactFormLabel">
-                      Your name *
-                    </Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="enter first/last name"
-                      name="yourName"
-                      required
+                  <div className="topSection">
+                    <div className="topSection__left">
+                      <Form.Group>
+                        <Form.Label className="contactFormLabel">
+                          Your name *
+                        </Form.Label>
+                        <Form.Control
+                          type="text"
+                          placeholder="enter first/last name"
+                          name="yourName"
+                          required
+                        />
+                        <ValidationError
+                          prefix="Name"
+                          field="yourName"
+                          errors={state.errors}
+                        />
+                      </Form.Group>{' '}
+                      <Form.Group>
+                        <Form.Label className="contactFormLabel">
+                          Organization
+                        </Form.Label>
+                        <Form.Control
+                          type="text"
+                          placeholder="enter organization"
+                          name="organization"
+                        />
+                        <ValidationError
+                          prefix="Organization"
+                          field="organization"
+                          errors={state.errors}
+                        />
+                      </Form.Group>
+                    </div>
+                    <GatsbyImage
+                      className="stampImage"
+                      image={getImage(data.stampImage)}
+                      alt="Github Profile"
                     />
-                    <ValidationError
-                      prefix="Name"
-                      field="yourName"
-                      errors={state.errors}
-                    />
-                  </Form.Group>{' '}
-                  <Form.Group>
-                    <Form.Label className="contactFormLabel">
-                      Organization
-                    </Form.Label>
-                    <Form.Control
-                      type="text"
-                      placeholder="enter organization"
-                      name="organization"
-                    />
-                    <ValidationError
-                      prefix="Organization"
-                      field="organization"
-                      errors={state.errors}
-                    />
-                  </Form.Group>
+                  </div>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label className="contactFormLabel">
                       Email address *
