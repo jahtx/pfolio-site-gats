@@ -67,93 +67,100 @@ const ContactPage = () => {
         <h1 className="m-0 pt-2">Contact</h1>
         <hr className="m-0" />
         {!state.succeeded ? (
-          <div className="letterBack mt-4">
-            <div className="letterInside">
-              <Form onSubmit={handleSubmit}>
-                <Form.Group>
-                  <Form.Label className="contactFormLabel">
-                    Your name *
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="enter first/last name"
-                    name="yourName"
-                    required
-                  />
-                  <ValidationError
-                    prefix="Name"
-                    field="yourName"
-                    errors={state.errors}
-                  />
-                </Form.Group>{' '}
-                <Form.Group>
-                  <Form.Label className="contactFormLabel">
-                    Organization
-                  </Form.Label>
-                  <Form.Control
-                    type="text"
-                    placeholder="enter organization"
-                    name="organization"
-                  />
-                  <ValidationError
-                    prefix="Organization"
-                    field="organization"
-                    errors={state.errors}
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label className="contactFormLabel">
-                    Email address *
-                  </Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="_replyto"
-                    placeholder="Enter email"
-                  />
-                  <ValidationError
-                    prefix="Email"
-                    field="email"
-                    errors={state.errors}
-                  />
-                </Form.Group>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <Form.Label className="contactFormLabel">
-                    Message *
-                  </Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows={3}
-                    name="message"
-                    required
-                  />
+          <>
+            <p className="pt-9-rem mt-4">
+              I'm available for side-projects involving UX, web-development,
+              general consulting, and full-time employment. Send me a note and
+              we'll be in touch!
+            </p>
+            <div className="letterBack mt-4">
+              <div className="letterInside">
+                <Form onSubmit={handleSubmit}>
+                  <Form.Group>
+                    <Form.Label className="contactFormLabel">
+                      Your name *
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="enter first/last name"
+                      name="yourName"
+                      required
+                    />
+                    <ValidationError
+                      prefix="Name"
+                      field="yourName"
+                      errors={state.errors}
+                    />
+                  </Form.Group>{' '}
+                  <Form.Group>
+                    <Form.Label className="contactFormLabel">
+                      Organization
+                    </Form.Label>
+                    <Form.Control
+                      type="text"
+                      placeholder="enter organization"
+                      name="organization"
+                    />
+                    <ValidationError
+                      prefix="Organization"
+                      field="organization"
+                      errors={state.errors}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label className="contactFormLabel">
+                      Email address *
+                    </Form.Label>
+                    <Form.Control
+                      type="email"
+                      name="_replyto"
+                      placeholder="Enter email"
+                    />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
+                    />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label className="contactFormLabel">
+                      Message *
+                    </Form.Label>
+                    <Form.Control
+                      as="textarea"
+                      rows={3}
+                      name="message"
+                      required
+                    />
+                    <ValidationError
+                      prefix="Message"
+                      field="message"
+                      errors={state.errors}
+                    />
+                  </Form.Group>
                   <ValidationError
                     prefix="Message"
                     field="message"
                     errors={state.errors}
                   />
-                </Form.Group>
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
-                />
-                <div className="buttonContainer">
-                  <Button
-                    className="flushButton"
-                    variant="primary"
-                    type="submit"
-                    disabled={state.submitting}
-                  >
-                    Send
-                  </Button>
-                </div>
-                <ValidationError errors={state.errors} />
-              </Form>
+                  <div className="buttonContainer">
+                    <Button
+                      className="flushButton"
+                      variant="primary"
+                      type="submit"
+                      disabled={state.submitting}
+                    >
+                      Send
+                    </Button>
+                  </div>
+                  <ValidationError errors={state.errors} />
+                </Form>
+              </div>
             </div>
-          </div>
+          </>
         ) : (
           <p className="mt-4">Thanks for your message!</p>
         )}
