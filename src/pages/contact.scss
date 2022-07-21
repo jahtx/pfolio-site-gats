@@ -27,10 +27,23 @@
     width: 10rem;
   }
 }
-
-.mailBackground {
-  height: 500px;
+.contactIconArea {
+  display: block;
+}
+.letterBack {
   width: 100%;
-  background-image: url('../images/backgrounds/mail-pattern-2.png');
+  background-image: url('../images/backgrounds/line-pattern.png');
   background-repeat: repeat;
+  background-size: 100px;
+  @include MQ(S) {
+    padding: 20px;
+    border: 1px solid silver;
+  }
+}
+
+.letterInside {
+  background-color: white;
+  @include MQ(S) {
+    padding: 20px;
+  }
 }
