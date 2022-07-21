@@ -135,6 +135,7 @@ const ContactPage = () => {
                       type="email"
                       name="_replyto"
                       placeholder="Enter email"
+                      required
                     />
                     <ValidationError
                       prefix="Email"

@@ -29,7 +29,7 @@
 .stampImage {
   display: none;
   @include MQ(S) {
-    display: block;
+    display: inline-block;
     height: 150px;
   }
 }
