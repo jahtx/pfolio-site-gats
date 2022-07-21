@@ -13,7 +13,20 @@ const ContactPage = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        stampImage: file(relativePath: { eq: "contact-logos/stamp.png" }) {
+        mailboxImage: file(
+          relativePath: { eq: "contact-page/yellow-mailbox.png" }
+        ) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 85
+              placeholder: BLURRED
+              formats: [WEBP]
+              height: 280
+              transformOptions: { fit: CONTAIN, cropFocus: CENTER }
+            )
+          }
+        }
+        stampImage: file(relativePath: { eq: "contact-page/stamp.png" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 85
@@ -182,10 +195,22 @@ const ContactPage = () => {
             </div>
           </>
         ) : (
-          <p className="mt-4">Thanks for your message!</p>
+          <div className="sentResponse mt-3 d-flex">
+            <div className="sentResponse__messageSection">
+              <p className="mt-4">
+                Thanks for your message! You will receive a response in less
+                than 24 hours.
+              </p>
+            </div>
+            <div className="sentResponse__mailSection d-flex justify-content-center">
+              <GatsbyImage
+                image={getImage(data.mailboxImage)}
+                alt="Mailbox Image"
+              />
+            </div>
+          </div>
         )}
 
-        {/* <p className="mt-4">Thanks for your message!</p> */}
         <div className="text-center mt-5 mb-3">
           <a
             href="https://twitter.com/jah_uxdev"
