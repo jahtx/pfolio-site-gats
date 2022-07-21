@@ -9,28 +9,19 @@
   }
 }
 
-.contactFormLabel {
-  font-weight: bold;
-}
-
 .buttonContainer {
-  width: 100%;
-  display: flex;
   @include MQ(S) {
     justify-content: flex-end;
   }
 }
-.flushButton {
+.sendButton {
   width: 100%;
   @include MQ(S) {
     width: 10rem;
   }
 }
-.contactIconArea {
-  display: block;
-}
-.letterBack {
-  width: 100%;
+
+.letterContainer {
   background-image: url('../images/backgrounds/line-pattern.png');
   background-repeat: repeat;
   background-size: 100px;
@@ -38,30 +29,29 @@
     padding: 20px;
     border: 1px solid silver;
   }
-}
-
-.letterInside {
-  background-color: white;
-  @include MQ(S) {
-    padding: 20px;
-  }
-  .topSection {
-    width: 100%;
+  &__inner {
+    background-color: white;
     @include MQ(S) {
-      display: flex;
-      font-size: 0.9rem;
-      justify-content: space-between;
+      padding: 20px;
     }
-    &__left {
+    .topSection {
+      width: 100%;
       @include MQ(S) {
-        width: 70%;
+        display: flex;
+        font-size: 0.9rem;
+        justify-content: space-between;
       }
-    }
-    .gatsby-image-wrapper {
-      display: none;
-      @include MQ(S) {
-        display: inline-block;
-        height: 150px;
+      &__left {
+        @include MQ(S) {
+          width: 70%;
+        }
+      }
+      .gatsby-image-wrapper {
+        display: none;
+        @include MQ(S) {
+          display: inline-block;
+          height: 150px;
+        }
       }
     }
   }

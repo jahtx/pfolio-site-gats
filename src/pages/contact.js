@@ -84,13 +84,13 @@ const ContactPage = () => {
               general consulting, and full-time employment. Send me a note and
               we'll be in touch!
             </p>
-            <div className="letterBack mt-4">
-              <div className="letterInside">
+            <div className="letterContainer mt-4 w-100">
+              <div className="letterContainer__inner">
                 <Form onSubmit={handleSubmit}>
                   <div className="topSection">
                     <div className="topSection__left">
                       <Form.Group>
-                        <Form.Label className="contactFormLabel">
+                        <Form.Label className="font-weight-bold">
                           Your name *
                         </Form.Label>
                         <Form.Control
@@ -106,7 +106,7 @@ const ContactPage = () => {
                         />
                       </Form.Group>{' '}
                       <Form.Group>
-                        <Form.Label className="contactFormLabel">
+                        <Form.Label className="font-weight-bold">
                           Organization
                         </Form.Label>
                         <Form.Control
@@ -127,7 +127,7 @@ const ContactPage = () => {
                     />
                   </div>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label className="contactFormLabel">
+                    <Form.Label className="font-weight-bold">
                       Email address *
                     </Form.Label>
                     <Form.Control
@@ -146,7 +146,7 @@ const ContactPage = () => {
                     className="mb-3"
                     controlId="exampleForm.ControlTextarea1"
                   >
-                    <Form.Label className="contactFormLabel">
+                    <Form.Label className="font-weight-bold">
                       Message *
                     </Form.Label>
                     <Form.Control
@@ -166,9 +166,9 @@ const ContactPage = () => {
                     field="message"
                     errors={state.errors}
                   />
-                  <div className="buttonContainer">
+                  <div className="w-100 d-flex buttonContainer">
                     <Button
-                      className="flushButton"
+                      className="sendButton"
                       variant="primary"
                       type="submit"
                       disabled={state.submitting}
@@ -186,7 +186,7 @@ const ContactPage = () => {
         )}
 
         {/* <p className="mt-4">Thanks for your message!</p> */}
-        <div className="text-center contactIconArea mt-5 mb-3">
+        <div className="text-center mt-5 mb-3">
           <a
             href="https://twitter.com/jah_uxdev"
             target="_blank"
