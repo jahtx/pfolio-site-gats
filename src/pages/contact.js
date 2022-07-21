@@ -122,7 +122,6 @@ const ContactPage = () => {
                       </Form.Group>
                     </div>
                     <GatsbyImage
-                      className="stampImage"
                       image={getImage(data.stampImage)}
                       alt="Github Profile"
                     />

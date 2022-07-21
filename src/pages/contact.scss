@@ -9,19 +9,6 @@
   }
 }
 
-.topSection {
-  width: 100%;
-  @include MQ(S) {
-    display: flex;
-    font-size: 0.9rem;
-    justify-content: space-between;
-  }
-  &__left {
-    @include MQ(S) {
-      width: 70%;
-    }
-  }
-}
 .contactFormLabel {
   font-weight: bold;
 }
@@ -58,17 +45,24 @@
   @include MQ(S) {
     padding: 20px;
   }
-  .stampImage {
-    display: none;
+  .topSection {
+    width: 100%;
     @include MQ(S) {
-      display: inline-block;
-      height: 150px;
+      display: flex;
+      font-size: 0.9rem;
+      justify-content: space-between;
     }
-  }
-  .gatsby-image-wrapper {
-    display: none;
-    @include MQ(S) {
-      display: inline-block;
+    &__left {
+      @include MQ(S) {
+        width: 70%;
+      }
+    }
+    .gatsby-image-wrapper {
+      display: none;
+      @include MQ(S) {
+        display: inline-block;
+        height: 150px;
+      }
     }
   }
 }
