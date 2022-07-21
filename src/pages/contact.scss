@@ -26,14 +26,6 @@
   font-weight: bold;
 }
 
-.stampImage {
-  display: none;
-  @include MQ(S) {
-    display: inline-block;
-    height: 150px;
-  }
-}
-
 .buttonContainer {
   width: 100%;
   display: flex;
@@ -65,5 +57,18 @@
   background-color: white;
   @include MQ(S) {
     padding: 20px;
+  }
+  .stampImage {
+    display: none;
+    @include MQ(S) {
+      display: inline-block;
+      height: 150px;
+    }
+  }
+  .gatsby-image-wrapper {
+    display: none;
+    @include MQ(S) {
+      display: inline-block;
+    }
   }
 }
