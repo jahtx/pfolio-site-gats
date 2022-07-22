@@ -1,30 +1,48 @@
 @import '../styles/includeInAll/index.scss';
 
-.contactIcon {
-  margin: 0 15px;
-  width: auto;
-  height: 50px;
+.letterContainer {
+  background-image: url('../images/backgrounds/line-pattern.png');
+  background-repeat: repeat;
+  background-size: 100px;
   @include MQ(S) {
-    margin: 0 20px;
+    padding: 20px;
+    border: 1px solid silver;
   }
-}
+  &__inner {
+    background-color: white;
+    @include MQ(S) {
+      padding: 20px;
+    }
 
-.buttonContainer {
-  @include MQ(S) {
-    justify-content: flex-end;
-  }
-}
-.sendButton {
-  width: 100%;
-  @include MQ(S) {
-    width: 10rem;
-  }
-}
-.hyperBoxContainer {
-  flex-direction: column;
-  justify-content: left;
-  @include MQ(S) {
-    flex-direction: row;
+    .topSection {
+      width: 100%;
+      @include MQ(S) {
+        display: flex;
+        font-size: 0.9rem;
+        justify-content: space-between;
+      }
+      &__left {
+        @include MQ(S) {
+          width: 70%;
+        }
+      }
+      .gatsby-image-wrapper {
+        display: none;
+        @include MQ(S) {
+          display: inline-block;
+          height: 150px;
+        }
+      }
+    }
+    .buttonContainer {
+      justify-content: flex-end;
+      .sendButton {
+        width: 100%;
+        @include MQ(S) {
+          width: 10rem;
+        }
+      }
+    }
   }
 }
 
@@ -51,38 +69,11 @@
   }
 }
 
-.letterContainer {
-  background-image: url('../images/backgrounds/line-pattern.png');
-  background-repeat: repeat;
-  background-size: 100px;
+.contactIcon {
+  margin: 0 15px;
+  width: auto;
+  height: 50px;
   @include MQ(S) {
-    padding: 20px;
-    border: 1px solid silver;
-  }
-  &__inner {
-    background-color: white;
-    @include MQ(S) {
-      padding: 20px;
-    }
-    .topSection {
-      width: 100%;
-      @include MQ(S) {
-        display: flex;
-        font-size: 0.9rem;
-        justify-content: space-between;
-      }
-      &__left {
-        @include MQ(S) {
-          width: 70%;
-        }
-      }
-      .gatsby-image-wrapper {
-        display: none;
-        @include MQ(S) {
-          display: inline-block;
-          height: 150px;
-        }
-      }
-    }
+    margin: 0 20px;
   }
 }
