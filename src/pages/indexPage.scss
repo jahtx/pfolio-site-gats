@@ -17,6 +17,7 @@
     flex-flow: row;
     padding-bottom: 0;
   }
+
   &__part1 {
     margin: 1rem 0 2rem 0;
     @include MQ(S) {

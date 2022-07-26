@@ -35,7 +35,7 @@ const IndexPage = () => {
               placeholder: BLURRED
               formats: [WEBP]
               layout: FIXED
-              height: 140
+              height: 170
               transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
             )
           }
@@ -47,7 +47,7 @@ const IndexPage = () => {
               placeholder: BLURRED
               formats: [WEBP]
               layout: FIXED
-              height: 140
+              height: 170
               transformOptions: { fit: OUTSIDE, cropFocus: CENTER }
             )
           }
